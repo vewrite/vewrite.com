@@ -1,0 +1,486 @@
+@import './variables';
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $font-family-main;
+    background-color: $white;
+    font-size: $font-size-sm;
+}
+
+#__nuxt {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#__next {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.inner-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: $spacing-md;
+    display: flex;
+    flex-direction: column;
+    color: $black;
+
+    @media (max-width: 1000px) {
+        margin: 0;
+    }
+}
+
+.scrollable {
+    overflow-y: auto;
+    max-height: 100%;
+
+    &.has-wizard {
+        max-height: calc(100% - 85px);
+    }
+}
+
+/* Notifications */
+
+.notification {
+    padding: $spacing-md;
+    border-radius: $br-md;
+    color: $purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.info {
+        background: rgba($purple, 0.1);
+        color: $purple;
+    }
+
+    &.success {
+        background: rgba($mint, 0.1);
+        color: $mint;
+    }
+
+    &.error {
+        background: rgba($red, 0.1);
+        color: $red;
+    }
+}
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $font-family-main;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: $font-size-xxl;
+    margin: $spacing-md 0;
+}
+
+h2 {
+    font-size: $font-size-xl;
+    margin: $spacing-md 0;
+}
+
+h3 {
+    font-size: $font-size-lg;
+    margin: 0 0 $spacing-sm 0;
+}
+
+h4 {
+    font-size: $font-size-md;
+    margin: $spacing-md 0;
+}
+
+h5 {
+    font-size: $font-size-sm;
+    margin: $spacing-md 0;
+}
+
+p {
+    margin: 0 0 $spacing-sm 0;
+    line-height: 1.5;
+}
+
+p.details {
+    color: rgba($black, 0.5);
+    font-size: $font-size-xs;
+}
+
+p.or-select {
+    margin: $spacing-md 0;
+    color: rgba($black, 0.5);
+    font-size: $font-size-xxs;
+    width: 100%;
+    text-align: center;
+    position: relative;
+
+    &:before {
+        width: 35%;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        border-top: 1px solid rgba($black, 0.1);
+    }
+
+    &:after {
+        width: 35%;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        border-top: 1px solid rgba($black, 0.1);
+    }
+}
+
+pre {
+    background-color: rgba($black, 0.1);
+    padding: $spacing-sm;
+    margin: 0 0 $spacing-md 0;
+    overflow-x: auto;
+    max-height: 400px;
+    font-size: $font-size-xs;
+}
+
+/* Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 $spacing-md 0;
+}
+
+th {
+    text-align: left;
+    padding: $spacing-xs;
+    border-bottom: 1px solid rgba($black, 0.1);
+}
+
+td {
+    padding: $spacing-xs;
+    border-bottom: 1px solid rgba($black, 0.1);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Forms */
+
+label {
+    display: block;
+    font-size: $font-size-xs;
+    color: rgba($black,0.5);
+    font-weight: 400;
+    background-color: $white;
+    padding: $spacing-xs $spacing-xs 0 $spacing-xs;
+}
+
+input,
+textarea,
+select {
+    border: 1px solid transparent;
+    padding: $spacing-xxs $spacing-xs $spacing-xs $spacing-xs;
+    background-color: $white;
+    color: $black;
+    border-radius: $br-md;
+    font-size: $font-size-sm;
+    font-weight: 400;
+    transition: all 0.2s ease;
+    font-family: $font-family-main;
+    width:  100%;
+}
+
+    select {
+        -moz-appearance:none;
+        -webkit-appearance:none;
+        appearance:none;
+        background-image: url('/icons/down-arrow.svg');
+        background-repeat: no-repeat;
+        background-position: right .5em top 50%, 0 0;
+    }
+
+input:focus,
+textarea:focus,
+select:focus,
+input:hover,
+textarea:hover,
+select:hover {
+    // border: 1px solid rgba($purple, 0.9);
+    outline: none;
+}
+
+input[disabled] {
+    color: rgba($black, 0.65);
+    background-color: rgba($orange, 0.05);
+    cursor: not-allowed;
+}
+
+textarea {
+    width: 100%;
+    margin: 0 0 $spacing-sm 0;
+}
+
+.search-bar {
+    width: 100%;
+    padding: $spacing-md $spacing-md 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: $spacing-md;
+
+    input {
+        border: 1px solid rgba($black, 0.1);
+        padding: $spacing-xs;
+        width: 100%;
+        font-size: $font-size-sm;
+        font-weight: 400;
+        font-family: $font-family-main;
+
+        &:focus-within {
+            border: 1px solid rgba($purple, 0.9);
+        }
+    }
+
+    .list-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: $spacing-xxs;
+        height: 100%;
+
+        button {
+            box-shadow: none;
+            border-color: transparent;
+            border-radius: 0;
+            background-color: transparent;
+            padding: 0;
+            height: 100%;
+            width: 36px;
+        }
+
+        .active {
+            border-bottom: 1px solid $purple;
+
+            svg {
+
+                path,
+                mask path {
+                    stroke: $purple;
+                    stroke-opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.form-group {
+    margin: 0 0 $spacing-sm 0;
+    position: relative;
+
+    div {
+        position: relative;
+    }
+}
+
+.form-input {
+    border: 1px solid rgba($purple, 0.3);
+    border-radius: $br-md;
+    margin-bottom: $spacing-sm;
+    transition: all 0.2s ease;
+    width: 100%;
+    overflow: hidden;
+
+    &:focus,
+    &:hover,
+    &:focus-within,
+    &:active {
+        border: 1px solid rgba($purple, 0.9);
+    }
+}
+
+.form-block {
+    padding: 0 0 $spacing-md 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $spacing-lg;
+
+    &:last-of-type {
+        border-bottom: none;
+    }
+
+    .form-details {
+        width: 33%;
+
+        h4 {
+            margin: 0 0 $spacing-xs 0;
+        }
+    }
+    
+    .form-content {
+        width: 66%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .vc-container {
+            align-self: flex-end;
+        }
+    }
+
+    .form-content-full {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+
+.form-group-footer {
+    padding: $spacing-md 0;
+}
+
+.form-errors {
+    margin: 0 0 $spacing-md 0;
+    padding: $spacing-sm;
+    border: 1px solid rgba($red, 0.1);
+    border-radius: $br-md;
+    background-color: rgba($red, 0.05);
+    color: $red;
+    font-size: $font-size-sm;
+    transition: all 0.2s ease;
+}
+
+.form-error {
+    color: $white;
+    background-color: rgba($red, 1);
+    padding: $spacing-xxs $spacing-xs;
+    border-radius: $br-sm;
+    font-size: $font-size-xs;
+    margin: -$spacing-xs 0;
+    display: inline-block;
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+/* Button */
+
+button,
+.button {
+    color: $purple;
+    background: rgba($purple, 0);
+    border-radius: $br-xl;
+    border: 1px solid rgba($purple, 0.1);
+    text-align: center;
+    text-decoration: none;
+    padding: calc($spacing-xxs + 2px) $spacing-sm $spacing-xxs;
+    cursor: pointer;
+    font-size: $font-size-sm;
+    font-weight: 400;
+    transition: all 0.2s ease;
+    font-family: $font-family-main;
+    display: flex;
+    justify-content: center;
+    gap: $spacing-sm;
+    align-items: center;
+
+    &.no-uppercase {
+        text-transform: capitalize;
+        font-size: $font-size-xs;
+    }
+
+    &:hover {
+        border: 1px solid rgba($purple, 1);
+        background: rgba($purple, 0);
+    }
+}
+
+button.large,
+.button.large {
+    padding: $spacing-sm $spacing-md;
+    font-size: $font-size-sm;
+    text-transform: capitalize;
+}
+
+button.wide,
+.button.wide {
+    padding: $spacing-xs;
+    text-transform: capitalize;
+    width: 100%;
+}
+
+
+button.dark,
+.button.dark {
+    border: 1px solid rgba($purple-dark, 0.9);
+    background-color: rgba($purple-light, 0.75);
+    color: $white;
+
+    &:hover {
+        border: 1px solid rgba($purple-dark, 1);
+        background-color: rgba($purple, 1);
+    }
+}
+
+button.primary,
+.button.primary {
+    border: 1px solid rgba($purple-dark, 0.9);
+    background-color: rgba($purple, 0.75);
+    color: $white;
+
+    &:hover {
+        border: 1px solid rgba($purple-dark, 1);
+        background-color: rgba($purple, 1);
+    }
+}
+
+button.green,
+.button.green {
+    border: 1px solid rgba($mint-dark, 0.3);
+    background-color: rgba($mint, 0.75);
+    color: $black;
+
+    &:hover {
+        border: 1px solid rgba($mint-dark, 1);
+        background-color: rgba($mint, 1);
+    }
+}
+
+button.red,
+.button.red {
+    border: 1px solid rgba($red-dark, 0.3);
+    background-color: rgba($red, 0.75);
+    color: $white;
+
+    &:hover {
+        border: 1px solid rgba($red-dark, 1);
+        background-color: rgba($red, 1);
+    }
+}
