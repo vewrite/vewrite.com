@@ -15,5 +15,13 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ['@nuxtjs/google-fonts', '@nuxt/content'],
+  modules: [
+    '@nuxtjs/google-fonts',
+    '@nuxt/content',
+    '@nuxtjs/supabase',
+  ],
+
+  supabase: {
+    redirect: false,
+  }
 })
