@@ -1,10 +1,12 @@
 <template>
   <main id="Header">
-    <div class="container">
+    <div class="container wide">
       <Logo />
       <nav>
-        <NuxtLink to="/">Home</NuxtLink>
-        <NuxtLink to="/about">About</NuxtLink>
+        <a href="#join">Join Waitlist</a>
+        <a href="#teams">Teams</a>
+        <a href="#writers">Writers</a>
+        <NuxtLink to="/articles">Articles</NuxtLink>
       </nav>
     </div>
   </main>
@@ -19,10 +21,10 @@
 @import 'assets/_variables.scss';
 
 #Header {
-  background: $purple url('/images/main.jpg') no-repeat center center;
+  background: $purple;
   background-size: cover;
   color: $white;
-  padding: $spacing-lg 0;
+  padding: $spacing-lg;
   width: 100%;
 
   .container {
@@ -40,6 +42,8 @@
       a {
         color: $white;
         text-decoration: none;
+        font-size: $font-size-lg;
+        font-family: $font-family-condensed;
       }
 
     }

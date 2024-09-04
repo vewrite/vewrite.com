@@ -3,7 +3,6 @@
     <Header />
     <main>
       <slot />
-      home template
     </main>
     <footer>
       <!-- Footer content -->

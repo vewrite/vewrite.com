@@ -31,27 +31,9 @@ body,
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-}
 
-.inner-container {
-    width: 100%;
-    margin: 0 auto;
-    padding: $spacing-md;
-    display: flex;
-    flex-direction: column;
-    color: $black;
-
-    @media (max-width: 1000px) {
-        margin: 0;
-    }
-}
-
-.scrollable {
-    overflow-y: auto;
-    max-height: 100%;
-
-    &.has-wizard {
-        max-height: calc(100% - 85px);
+    &.wide {
+        max-width: 100%;
     }
 }
 
@@ -88,7 +70,7 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: $font-family-main;
+    font-family: $font-family-secondary;
     font-weight: 500;
 }
 
@@ -463,13 +445,13 @@ button.primary,
 
 button.green,
 .button.green {
-    border: 1px solid rgba($mint-dark, 0.3);
-    background-color: rgba($mint, 0.75);
+    border: 1px solid rgba($green-dark, 0.3);
+    background-color: rgba($green, 1);
     color: $black;
 
     &:hover {
-        border: 1px solid rgba($mint-dark, 1);
-        background-color: rgba($mint, 1);
+        border: 1px solid rgba($green-dark, 1);
+        background-color: rgba($green, 0.9);
     }
 }
 
