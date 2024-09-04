@@ -25,23 +25,31 @@
   <div id="Personas">
     <div class="container">
       
-      <span class="marker team">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18 19C18.5523 19 19.0016 18.5521 18.975 18.0004C18.9599 17.6868 18.9357 17.3593 18.8969 17.1156C18.8125 16.6047 18.1047 15.9297 15.0953 14.8234C12.1328 13.7359 12.3156 14.2656 12.3156 12.2641C12.3156 10.9656 12.9766 11.7203 13.3984 9.25469C13.5625 8.28438 13.6937 8.93125 14.05 7.375C14.2375 6.55938 13.9234 6.49844 13.9609 6.10938C13.9984 5.72031 14.0359 5.37344 14.1063 4.57656C14.1906 3.59219 13.2766 1 10 1C6.72344 1 5.80938 3.59219 5.89844 4.58125C5.96875 5.37344 6.00625 5.725 6.04375 6.11406C6.08125 6.50313 5.76719 6.56406 5.95469 7.37969C6.31094 8.93125 6.44219 8.28437 6.60625 9.25937C7.02813 11.725 7.68906 10.9703 7.68906 12.2687C7.68906 14.275 7.87187 13.7453 4.90937 14.8281C1.9 15.9297 1.1875 16.6094 1.10781 17.1203C1.06725 17.3619 1.04194 17.6879 1.02616 18.0004C0.998311 18.552 1.44772 19 2 19H10H18Z" stroke="#8D00FB" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        For teams
-      </span>
       
-      <h2>
-        Efficiently manage your Technical Writing team
-      </h2>
+
+      <div class="row">
+        <div class="col half">
+          <span class="marker team">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 19C18.5523 19 19.0016 18.5521 18.975 18.0004C18.9599 17.6868 18.9357 17.3593 18.8969 17.1156C18.8125 16.6047 18.1047 15.9297 15.0953 14.8234C12.1328 13.7359 12.3156 14.2656 12.3156 12.2641C12.3156 10.9656 12.9766 11.7203 13.3984 9.25469C13.5625 8.28438 13.6937 8.93125 14.05 7.375C14.2375 6.55938 13.9234 6.49844 13.9609 6.10938C13.9984 5.72031 14.0359 5.37344 14.1063 4.57656C14.1906 3.59219 13.2766 1 10 1C6.72344 1 5.80938 3.59219 5.89844 4.58125C5.96875 5.37344 6.00625 5.725 6.04375 6.11406C6.08125 6.50313 5.76719 6.56406 5.95469 7.37969C6.31094 8.93125 6.44219 8.28437 6.60625 9.25937C7.02813 11.725 7.68906 10.9703 7.68906 12.2687C7.68906 14.275 7.87187 13.7453 4.90937 14.8281C1.9 15.9297 1.1875 16.6094 1.10781 17.1203C1.06725 17.3619 1.04194 17.6879 1.02616 18.0004C0.998311 18.552 1.44772 19 2 19H10H18Z" stroke="#8D00FB" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            For teams
+          </span>
+          <h2>Efficiently manage your Technical Writing team</h2>
+          <p>Our software provides your team with a customizable, tailored alternative for project management of technical writing projects.</p>
+          <p>You don’t have to use tools made for developers and marketers to get your work done on-time and within budget.</p>
+        </div>
+        <div class="col half">
+          <img src="/images/stakeholder.svg" alt="Stakeholder approval" />
+        </div>
+      </div>
       
-      <p>Our software provides your team with a customizable, tailored alternative for project management of technical writing projects. You don’t have to use tools made for developers and marketers to get your work done on-time and within budget.</p>
       
-      <div class="illustration stakeholder">
+      
+      <!-- <div class="illustration stakeholder">
         <div class="text bottom-left">
           <h3>Stakeholder visibility</h3>
-          <p>Vewrite prioritizes stakeholder visibility as a part of its workflows. This reduces inefficient back and forth,  improving team efficiency, and your bottom line.</p>
+          <p>Vewrite prioritizes stakeholder visibility as a part of its workflows. This reduces inefficient back and forth, keeps your team happy, and improves your bottom line.</p>
         </div>
       </div>
 
@@ -61,7 +69,7 @@
           <h3>Custom workflows</h3>
           <p>Already have an established process? Vewrite allows you to build custom worksflows that fit your existing pipeline.</p>
         </div>
-      </div>
+      </div> -->
       
       
       <span class="marker writer">
@@ -432,6 +440,7 @@ definePageMeta({
         text-align: left;
         padding: $spacing-md $spacing-lg;
         border: none;
+        text-align: center;
 
         &:nth-child(1) {
           width: 5%;
@@ -481,6 +490,7 @@ definePageMeta({
         text-align: left;
         padding: $spacing-lg;
         border-top: 2px solid white;
+        text-align: center;
 
         span {
           display: block;
@@ -529,6 +539,10 @@ definePageMeta({
 
         &:nth-child(1) {
           border-radius: $br-xl 0 0 $br-xl;
+        }
+
+        &:nth-child(4) {
+          background: $purple url('/images/circles.png') no-repeat center center;
         }
 
         &:nth-child(5) {
