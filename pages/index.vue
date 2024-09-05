@@ -25,8 +25,6 @@
   <div id="Personas">
     <div class="container">
       
-      
-
       <div class="row">
         <div class="col half">
           <span class="marker team">
@@ -50,63 +48,36 @@
       <div class="row">
         <div class="col quarter">
           <div class="icon">
-            <img src="/images/stakeholder.svg" alt="Stakeholder approval" />
+            <img src="/images/stakeholder-visibility.svg" alt="Stakeholder visibility" />
           </div>
-          <h3>Stakeholder visibility</h3>
+          <h3  class="no-margin">Stakeholder visibility</h3>
           <p class="light">Vewrite prioritizes stakeholder visibility as a part of its workflows. This reduces inefficient back and forth, keeps your team happy, and improves your bottom line.</p>
         </div>
         <div class="col quarter bump">
           <div class="icon">
-            <img src="/images/stakeholder.svg" alt="Stakeholder approval" />
+            <img src="/images/state-management.svg" alt="State Management" />
           </div>
-          <h3>Stakeholder visibility</h3>
-          <p class="light">Vewrite prioritizes stakeholder visibility as a part of its workflows. This reduces inefficient back and forth, keeps your team happy, and improves your bottom line.</p>
+          <h3  class="no-margin">State management</h3>
+          <p class="light">As deliverables make their way through your workflow, they have discrete states that have clear meanings that map to your business processes.</p>
         </div>
         <div class="col quarter">
           <div class="icon">
-            <img src="/images/stakeholder.svg" alt="Stakeholder approval" />
+            <img src="/images/smart-templates.svg" alt="Smart Templates" />
           </div>
-          <h3>Stakeholder visibility</h3>
-          <p class="light">Vewrite prioritizes stakeholder visibility as a part of its workflows. This reduces inefficient back and forth, keeps your team happy, and improves your bottom line.</p>
+          <h3  class="no-margin">Smart templates</h3>
+          <p class="light">Teams that are just getting started can rely on our smart default templates to quickly set up their processes and hit the ground running.</p>
         </div>
         <div class="col quarter bump">
           <div class="icon">
-            <img src="/images/stakeholder.svg" alt="Stakeholder approval" />
+            <img src="/images/custom-workflows.svg" alt="Custom Workflows" />
           </div>
-          <h3>Stakeholder visibility</h3>
-          <p class="light">Vewrite prioritizes stakeholder visibility as a part of its workflows. This reduces inefficient back and forth, keeps your team happy, and improves your bottom line.</p>
+          <h3  class="no-margin">Custom workflows</h3>
+          <p class="light">Already have an established process? Vewrite allows you to build custom worksflows that fit your existing pipeline.</p>
         </div>
       </div>
     </div>
 
     <div class="container">
-      
-      
-      <!-- <div class="illustration stakeholder">
-        <div class="text bottom-left">
-          <h3>Stakeholder visibility</h3>
-          <p>Vewrite prioritizes stakeholder visibility as a part of its workflows. This reduces inefficient back and forth, keeps your team happy, and improves your bottom line.</p>
-        </div>
-      </div>
-
-      <div class="illustration-row">
-        <div class="illustration-bubble">
-          <h3>State management</h3>
-          <p>As deliverables make their way through your workflow, they have discrete states that have clear meanings that map to your business processes.</p>
-        </div>
-        <div class="illustration-bubble">
-          <h3>Smart templates</h3>
-          <p>Teams that are just getting started can rely on our smart default templates to quickly set up their processes and hit the ground running.</p>
-        </div>
-      </div>
-
-      <div class="illustration workflows">
-        <div class="text bottom-left">
-          <h3>Custom workflows</h3>
-          <p>Already have an established process? Vewrite allows you to build custom worksflows that fit your existing pipeline.</p>
-        </div>
-      </div> -->
-      
       
       <span class="marker writer">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -116,7 +87,7 @@
       </span>
 
       <h2>Find well-paid work as a Technical Writer within our integrated Talent Marketplace</h2>
-      <p>Vewrite tightly integrates a marketplace for technical writers into its project management suite. Writers who want to work on awesome projects can now do so without losing a large percentage of their earnings to marketplace fees.</p>
+      <p class="light">Vewrite tightly integrates a marketplace for technical writers into its project management suite. Writers who want to work on awesome projects can now do so without losing a large percentage of their earnings to marketplace fees.</p>
 
       <table class="commission-rates">
         <thead>
@@ -167,8 +138,27 @@
         </tbody>
       </table>
 
+      <div>
+        <h3>Write where you work</h3>
+        <p class="light">Vewrite provides teams an integrated working environment so they do not have to struggle with managing many remote files in different states. Never lose time working on the wrong document again.</p>
+      </div>
 
-
+      <div class="row">
+        <div class="col half">
+          <div class="icon">
+            <img src="/images/tight-integration.svg" alt="Tight Integration" />
+          </div>
+          <h3 class="no-margin">Tight integration</h3>
+          <p class="light">Your tasks live within one application which means your focus can stay on producing your best work, instead of micromanaging your deliverables and their states.</p>
+        </div>
+        <div class="col half">
+          <div class="icon">
+            <img src="/images/prompt-payment.svg" alt="Prompt Payment" />
+          </div>
+          <h3 class="no-margin">Prompt payouts</h3>
+          <p class="light">When your work moves to the approved state, and all stakeholders are satisfied, it’s time to get you paid. Vewrite provides prompt payouts with no risk to you.</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -359,10 +349,11 @@ definePageMeta({
         background: $purple-dark;
         color: $white;
         outline: 2px solid transparent;
-        outline-offset: 4px;
+        outline-offset: 0px;
 
         &:active, &:focus {
-          outline: 2px solid $purple-light;
+          outline: 2px solid $white;
+          outline-offset: 8px;
         }
       }
 
