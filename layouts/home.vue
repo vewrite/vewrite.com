@@ -5,7 +5,7 @@
       <slot />
     </main>
     <footer>
-      <!-- Footer content -->
+      <Footer />
     </footer>
   </main>
 </template>
