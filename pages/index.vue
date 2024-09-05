@@ -166,13 +166,24 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const isScrolled = ref(false);
+const isInView = ref(false);
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 0;
+  const heroSection = document.getElementById('hero');
+  const rect = heroSection.getBoundingClientRect();
+  isInView.value = rect.top < window.innerHeight && rect.bottom > 0;
+
+  if (isInView.value) {
+    const scrollY = window.scrollY;
+    const translateY = scrollY * 0.5;
+    document.documentElement.style.setProperty('--before-translate-y', `${translateY}px`);
+  }
 };
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Initial check
 });
 
 onUnmounted(() => {
@@ -323,6 +334,7 @@ definePageMeta({
         mix-blend-mode: overlay;
         background-size: contain;
         z-index: -1;
+        transform: translateY(var(--before-translate-y, 0));
       }
     }
 
@@ -346,6 +358,7 @@ definePageMeta({
         mix-blend-mode: overlay;
         background-size: contain;
         z-index: -1;
+        transform: translateY(var(--before-translate-y, 0));
       }
 
     }
