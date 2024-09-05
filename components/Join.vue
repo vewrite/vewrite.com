@@ -5,7 +5,7 @@
     <form class="hero-waitlist" @submit.prevent="submitEmail">
       <input type="email" name="email" placeholder="Enter your email">
       <button type="submit" class="green large" :disabled="loading">
-        <span v-if="loading">Updating...</span>
+        <Loading v-if="loading" type="small" />
         <span v-else>Join Waitlist</span>
       </button>
     </form>

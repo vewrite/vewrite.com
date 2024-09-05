@@ -1,5 +1,6 @@
 <template>
   <footer id="footer">
+    <a name="join" class="target"></a>
     <div class="container">
       <div class="join-us">
         <svg width="150" height="31" viewBox="0 0 150 31" fill="none" xmlns="http://www.w3.org/2000/svg">

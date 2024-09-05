@@ -1,6 +1,5 @@
 <template>
-  <main id="hero">
-    <a name="join" class="target"></a>
+  <main id="hero" :class="{'scrolled': isScrolled}">
     <div class="container">
       <div class="hero-article">
         <span class="new">
@@ -16,14 +15,12 @@
       <h2>
         Vewrite is launching a project management toolset for technical writing teams that has a talent marketplace deeply integrated into it. 
       </h2>
-
       <Join />
-      
     </div>
   </main>
+  <a name="teams" class="target"></a>
   <div id="Personas">
     <div class="container">
-      
       <div class="row">
         <div class="col half">
           <span class="marker team">
@@ -79,7 +76,7 @@
     </div>
 
     <div class="container">
-      
+      <a name="writers" class="target"></a>
       <span class="marker writer">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M1.2897 14.9077C1.10412 15.0949 1 15.3479 1 15.6116V18C1 18.5523 1.44772 19 2 19H4.38313C4.64992 19 4.90564 18.8934 5.09343 18.7039L15.0993 8.60709C15.4868 8.21606 15.4854 7.58536 15.0961 7.19609L12.7103 4.81031C12.3185 4.41854 11.6829 4.41998 11.2929 4.81352L1.2897 14.9077ZM18.7 5C19.1 4.6 19.1 4 18.7 3.6L16.4 1.3C16 0.9 15.4 0.9 15 1.3L13.9071 2.39289C13.5166 2.78342 13.5166 3.41658 13.9071 3.80711L16.2525 6.15252C16.6585 6.55846 17.3221 6.54004 17.7049 6.11221L18.7 5Z" stroke="#68834A" stroke-width="2" stroke-linecap="round"/>
@@ -165,9 +162,27 @@
 </template>
 
 <script setup>
+
+import { ref, onMounted, onUnmounted } from 'vue';
+
+const isScrolled = ref(false);
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 0;
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
+
 definePageMeta({
   layout: 'home'
 });
+
 </script>
 
 <style lang="scss" scoped>
@@ -195,7 +210,7 @@ definePageMeta({
   height: 100%;
   position: relative;
   overflow: hidden;
-  margin: 0 $spacing-lg;
+  margin: 100px $spacing-lg 0;
   border-radius: 0 0 $br-xl $br-xl;
 
   @media (max-width: 1400px) {

@@ -17,14 +17,6 @@ body {
     box-sizing: border-box;
 }
 
-html,
-body,
-#__next {
-    height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
-}
-
 /* Notifications */
 
 .notification {
@@ -420,6 +412,7 @@ button,
     transition: all 0.2s ease;
     font-family: $font-family-main;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: $spacing-sm;
     align-items: center;
