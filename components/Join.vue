@@ -1,13 +1,15 @@
 <template>
-  <div v-if="successMessage" class="notification success">{{ successMessage }}</div>
-  <div v-if="errorMessage" class="notification error">{{ errorMessage }}</div>
-  <form class="hero-waitlist" @submit.prevent="submitEmail" v-if="!successMessage">
-    <input type="email" name="email" placeholder="Enter your email">
-    <button type="submit" class="green large" :disabled="loading">
-      <span v-if="loading">Updating...</span>
-      <span v-else>Join Waitlist</span>
-    </button>
-  </form>
+  <div class="join-container">
+    <div v-if="successMessage" class="notification success">{{ successMessage }}</div>
+    <div v-if="errorMessage" class="notification error">{{ errorMessage }}</div>
+    <form class="hero-waitlist" @submit.prevent="submitEmail">
+      <input type="email" name="email" placeholder="Enter your email">
+      <button type="submit" class="green large" :disabled="loading">
+        <span v-if="loading">Updating...</span>
+        <span v-else>Join Waitlist</span>
+      </button>
+    </form>
+  </div>
 </template>
 
 <script setup>
@@ -19,6 +21,8 @@ const successMessage = ref(null);
 
 async function submitEmail(event) {
   loading.value = true;
+  errorMessage.value = null;
+  successMessage.value = null;
   const email = event.target.elements.email.value;
   console.log('Submitting email:', email);
 
@@ -52,12 +56,23 @@ async function submitEmail(event) {
 
 @import 'assets/_variables.scss';
 
-.hero-waitlist {
+.join-container {
+  position: relative;
   display: flex;
   flex-direction: row;
   gap: $spacing-sm;
   width: 80%;
   position: relative;
+
+  .notification {
+    position: absolute;
+    top: 80px;
+    right: 0;
+  }
+}
+
+.hero-waitlist {
+  width: 100%;
 
   input {
     padding: $spacing-md;
@@ -70,6 +85,7 @@ async function submitEmail(event) {
     color: $white;
     outline: 2px solid transparent;
     outline-offset: 0px;
+    width: 100%;
 
     &:active, &:focus {
       outline: 2px solid $white;
