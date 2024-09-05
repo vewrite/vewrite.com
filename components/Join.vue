@@ -1,9 +1,52 @@
 <template>
-  <form class="hero-waitlist">
-    <input type="email" placeholder="Enter your email">
-    <button class="green large">Join Waitlist ➔</button>
+  <div v-if="successMessage" class="notification success">{{ successMessage }}</div>
+  <div v-if="errorMessage" class="notification error">{{ errorMessage }}</div>
+  <form class="hero-waitlist" @submit.prevent="submitEmail" v-if="!successMessage">
+    <input type="email" name="email" placeholder="Enter your email">
+    <button type="submit" class="green large" :disabled="loading">
+      <span v-if="loading">Updating...</span>
+      <span v-else>Join Waitlist</span>
+    </button>
   </form>
 </template>
+
+<script setup>
+
+const { $supabase } = useNuxtApp()
+const loading = ref(false);
+const errorMessage = ref(null);
+const successMessage = ref(null);
+
+async function submitEmail(event) {
+  loading.value = true;
+  const email = event.target.elements.email.value;
+  console.log('Submitting email:', email);
+
+  try {
+    const { data, error } = await $supabase
+      .from('waitlist')
+      .insert([{ email: email }]);
+
+    if (error) {
+      console.error('Supabase error:', error);
+      // Handle error (e.g., show error message to user)
+      if (error.code === '23505') {
+        errorMessage.value = 'Email already exists';
+      }
+    } else {
+      console.log('Submission successful:', data);
+      // Handle success (e.g., show success message to user)
+      successMessage.value = 'Success! You have been added to the waitlist.';
+    }
+  } catch (err) {
+    console.error('Unexpected error:', err);
+    // Handle unexpected errors
+  } finally {
+    loading.value = false;
+  }
+}
+
+</script>
 
 <style lang="scss" scoped>
 

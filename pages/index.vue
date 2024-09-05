@@ -34,7 +34,9 @@
           </span>
           <h2>Efficiently manage your Technical Writing team</h2>
           <p class="light">Our software provides your team with a customizable, tailored alternative for project management of technical writing projects.</p>
+          <p class="light">Focus on pushing your work through a sensible workflow, instead of trying to tackle a pile of tasks.</p>
           <p class="light">You don’t have to use tools made for developers and marketers to get your work done on-time and within budget.</p>
+          <p><strong>Vewrite is the better way to work you've been looking for.</strong></p>
         </div>
         <div class="col half">
           <img src="/images/stakeholder.svg" alt="Stakeholder approval" />
@@ -303,6 +305,7 @@ definePageMeta({
         width: 600px;
         height: 600px;
         background: transparent url('/images/triangle.png') no-repeat center center;
+        mix-blend-mode: overlay;
         background-size: contain;
         z-index: -1;
       }
@@ -325,6 +328,7 @@ definePageMeta({
         width: 700px;
         height: 700px;
         background: transparent url('/images/circle.png') no-repeat center center;
+        mix-blend-mode: overlay;
         background-size: contain;
         z-index: -1;
       }

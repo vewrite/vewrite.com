@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer id="footer">
     <div class="container">
       <div class="join-us">
         <svg width="150" height="31" viewBox="0 0 150 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,6 +32,16 @@ footer {
   background-color: $purple;
   color: $white;
   padding: $spacing-lg;
+  overflow: hidden;
+  width: calc(100% - 2 * $spacing-lg);
+  margin: $spacing-xxl $spacing-lg 0;
+  border-radius: $br-xl $br-xl 0 0;
+
+  @media (max-width: 1400px) {
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
+  }
 
   .join-us {
     display: flex;
@@ -39,6 +49,33 @@ footer {
     align-items: center;
     margin: $spacing-lg;
     gap: $spacing-lg;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 200px;
+      right: -780px;
+      width: 700px;
+      height: 700px;
+      background: transparent url('/images/triangle.png') no-repeat center center;
+      background-size: contain;
+      z-index: 1;
+      opacity: 0.5;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: -680px;
+      width: 600px;
+      height: 600px;
+      background: transparent url('/images/circle.png') no-repeat center center;
+      background-size: contain;
+      z-index: 1;
+      opacity: 0.5;
+    }
 
     svg {
       margin-top: $spacing-md;
