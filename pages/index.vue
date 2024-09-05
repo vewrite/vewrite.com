@@ -36,14 +36,50 @@
             For teams
           </span>
           <h2>Efficiently manage your Technical Writing team</h2>
-          <p>Our software provides your team with a customizable, tailored alternative for project management of technical writing projects.</p>
-          <p>You don’t have to use tools made for developers and marketers to get your work done on-time and within budget.</p>
+          <p class="light">Our software provides your team with a customizable, tailored alternative for project management of technical writing projects.</p>
+          <p class="light">You don’t have to use tools made for developers and marketers to get your work done on-time and within budget.</p>
         </div>
         <div class="col half">
           <img src="/images/stakeholder.svg" alt="Stakeholder approval" />
         </div>
       </div>
       
+    </div>
+
+    <div class="container mid">
+      <div class="row">
+        <div class="col quarter">
+          <div class="icon">
+            <img src="/images/stakeholder.svg" alt="Stakeholder approval" />
+          </div>
+          <h3>Stakeholder visibility</h3>
+          <p class="light">Vewrite prioritizes stakeholder visibility as a part of its workflows. This reduces inefficient back and forth, keeps your team happy, and improves your bottom line.</p>
+        </div>
+        <div class="col quarter bump">
+          <div class="icon">
+            <img src="/images/stakeholder.svg" alt="Stakeholder approval" />
+          </div>
+          <h3>Stakeholder visibility</h3>
+          <p class="light">Vewrite prioritizes stakeholder visibility as a part of its workflows. This reduces inefficient back and forth, keeps your team happy, and improves your bottom line.</p>
+        </div>
+        <div class="col quarter">
+          <div class="icon">
+            <img src="/images/stakeholder.svg" alt="Stakeholder approval" />
+          </div>
+          <h3>Stakeholder visibility</h3>
+          <p class="light">Vewrite prioritizes stakeholder visibility as a part of its workflows. This reduces inefficient back and forth, keeps your team happy, and improves your bottom line.</p>
+        </div>
+        <div class="col quarter bump">
+          <div class="icon">
+            <img src="/images/stakeholder.svg" alt="Stakeholder approval" />
+          </div>
+          <h3>Stakeholder visibility</h3>
+          <p class="light">Vewrite prioritizes stakeholder visibility as a part of its workflows. This reduces inefficient back and forth, keeps your team happy, and improves your bottom line.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
       
       
       <!-- <div class="illustration stakeholder">
@@ -164,10 +200,18 @@ definePageMeta({
   background-size: cover;
   color: $white;
   padding-top: $spacing-xl;
-  width: 100%;
+  width: calc(100% - 2 * $spacing-lg);
   height: 100%;
   position: relative;
   overflow: hidden;
+  margin: 0 $spacing-lg;
+  border-radius: 0 0 $br-xl $br-xl;
+
+  @media (max-width: 1400px) {
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
+  }
 
   .target {
     height: 0;

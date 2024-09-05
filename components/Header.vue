@@ -25,7 +25,14 @@
   background-size: cover;
   color: $white;
   padding: $spacing-lg;
-  width: 100%;
+  width: calc(100% - 2 * $spacing-lg);
+  margin: 0 $spacing-lg 0 $spacing-lg;
+
+  @media (max-width: 1400px) {
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
+  }
 
   .container {
     display: flex;
