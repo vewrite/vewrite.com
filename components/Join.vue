@@ -3,11 +3,24 @@
     <div v-if="successMessage" class="notification success">{{ successMessage }}</div>
     <div v-if="errorMessage" class="notification error">{{ errorMessage }}</div>
     <form class="hero-waitlist" @submit.prevent="submitEmail">
-      <input type="email" name="email" placeholder="Enter your email">
-      <button type="submit" class="green large" :disabled="loading">
-        <Loading v-if="loading" type="small" />
-        <span v-else>Join Waitlist</span>
-      </button>
+      <div class="hero-checkboxes">
+        <h3>I'm interested in Vewrite for</h3>
+        <div>
+          <input type="checkbox" id="teams" name="teams" value="teams" v-model="submission.teams">
+          <label for="teams">Teams</label>
+        </div>
+        <div>
+          <input type="checkbox" id="writers" name="writers" value="writers" v-model="submission.writers">
+          <label for="writers">Writers</label>
+        </div>
+      </div>
+      <div class="hero-container">
+        <input type="email" name="email" placeholder="Enter your email" v-model="submission.email">
+        <button type="submit" class="green large" :disabled="loading">
+          <Loading v-if="loading" type="small" />
+          <span v-else>Join Waitlist</span>
+        </button>
+      </div>
     </form>
   </div>
 </template>
@@ -19,6 +32,12 @@ const loading = ref(false);
 const errorMessage = ref(null);
 const successMessage = ref(null);
 
+const submission = ref({
+  email: '',
+  teams: false,
+  writers: false,
+});
+
 async function submitEmail(event) {
   loading.value = true;
   errorMessage.value = null;
@@ -29,7 +48,7 @@ async function submitEmail(event) {
   try {
     const { data, error } = await $supabase
       .from('waitlist')
-      .insert([{ email: email }]);
+      .insert([{ email: submission.value.email, teams: submission.value.teams, writers: submission.value.writers }]);
 
     if (error) {
       console.error('Supabase error:', error);
@@ -63,10 +82,12 @@ async function submitEmail(event) {
   gap: $spacing-sm;
   width: 80%;
   position: relative;
+  border-top: 2px solid rgba($white, 0.2);
+  padding-top: $spacing-lg;
 
   .notification {
     position: absolute;
-    top: 80px;
+    bottom: -100px;
     right: 0;
   }
 }
@@ -74,38 +95,84 @@ async function submitEmail(event) {
 .hero-waitlist {
   width: 100%;
 
-  input {
-    padding: $spacing-md;
-    border: none;
-    border-radius: 40px;
-    font-size: $font-size-md;
+  h3 {
     font-family: $font-family-condensed;
-    width: 100%;
-    background: $purple-dark;
+    font-size: $font-size-lg;
+    font-weight: 500;
     color: $white;
-    outline: 2px solid transparent;
-    outline-offset: 0px;
-    width: 100%;
+    margin-bottom: 0;
+  }
 
-    &:active, &:focus {
-      outline: 2px solid $white;
-      outline-offset: 8px;
+  .hero-checkboxes {
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-md;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: $spacing-md;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      gap: $spacing-sm;
+      align-items: center;
+      justify-content: center;
+
+      input {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+
+        &:checked {
+          background: $green;
+        }
+      }
+
+      label {
+        font-family: $font-family-condensed;
+        font-size: $font-size-lg;
+        color: $white;
+      }
     }
   }
 
-  button {
-    position: absolute;
-    right: 14px;
-    top: 12px;
-    font-size: $font-size-md;
-    outline: 2px solid $green;
-    outline-offset: 0px;
+  .hero-container {
+    position: relative;
 
-    &:hover {
-      outline-offset: 2px;
-      transform: scale(1.05);
+    input {
+      padding: $spacing-md;
+      border: none;
+      border-radius: 40px;
+      font-size: $font-size-md;
+      font-family: $font-family-condensed;
+      width: 100%;
+      background: $purple-dark;
+      color: $white;
+      outline: 2px solid transparent;
+      outline-offset: 0px;
+      width: 100%;
+
+      &:active, &:focus {
+        outline: 2px solid $white;
+        outline-offset: 8px;
+      }
+    }
+
+    button {
+      position: absolute;
+      right: 14px;
+      top: 12px;
+      font-size: $font-size-md;
+      outline: 2px solid $green;
+      outline-offset: 0px;
+
+      &:hover {
+        outline-offset: 2px;
+        transform: scale(1.05);
+      }
     }
   }
+
 }
 
 </style>

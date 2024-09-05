@@ -196,12 +196,17 @@ table {
 /* Forms */
 
 label {
-    display: block;
-    font-size: $font-size-xs;
-    color: rgba($black,0.5);
-    font-weight: 400;
-    background-color: $white;
-    padding: $spacing-xs $spacing-xs 0 $spacing-xs;
+    color: $white;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+
+    &:checked {
+        background-color: $purple;
+        color: $white;
+    }
 }
 
 input,
