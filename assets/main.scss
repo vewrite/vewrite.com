@@ -123,6 +123,8 @@ table {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
+    gap: $spacing-lg;
 
     @media (max-width: 1200px) {
         padding: 0 $spacing-md;
@@ -131,6 +133,14 @@ table {
     &.mid {
         max-width: 80%;
         margin: 0 auto;
+        flex-direction: row;
+        gap: $spacing-lg;
+
+        @media (max-width: 1200px) {
+            max-width: 1200px;
+            width: 100%;
+            flex-wrap: wrap;
+        }
     }
     
     &.wide {
@@ -163,8 +173,20 @@ table {
     &.quarter {
         width: 25%;
 
+        @media (max-width: 1000px) {
+            width: 50%;
+        }
+
+        @media (max-width: 600px) {
+            width: 100%;
+        }
+
         &.bump {
             padding-top: $spacing-xxl;
+
+            @media (max-width: 1000px) {
+                padding-top: 0;
+            }
         }
     }
     

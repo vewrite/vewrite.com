@@ -39,40 +39,37 @@
           <img src="/images/stakeholder.svg" alt="Stakeholder approval" />
         </div>
       </div>
-      
     </div>
 
-    <div class="container mid">
-      <div class="row">
-        <div class="col quarter">
+    <div id="Advantages">
+        <div>
           <div class="icon">
             <img src="/images/stakeholder-visibility.svg" alt="Stakeholder visibility" />
           </div>
           <h3  class="no-margin">Stakeholder visibility</h3>
           <p class="light">Vewrite prioritizes stakeholder visibility as a part of its workflows. This reduces inefficient back and forth, keeps your team happy, and improves your bottom line.</p>
         </div>
-        <div class="col quarter bump">
+        <div class="bump">
           <div class="icon">
             <img src="/images/state-management.svg" alt="State Management" />
           </div>
           <h3  class="no-margin">State management</h3>
           <p class="light">As deliverables make their way through your workflow, they have discrete states that have clear meanings that map to your business processes.</p>
         </div>
-        <div class="col quarter">
+        <div>
           <div class="icon">
             <img src="/images/smart-templates.svg" alt="Smart Templates" />
           </div>
           <h3  class="no-margin">Smart templates</h3>
           <p class="light">Teams that are just getting started can rely on our smart default templates to quickly set up their processes and hit the ground running.</p>
         </div>
-        <div class="col quarter bump">
+        <div class="bump">
           <div class="icon">
             <img src="/images/custom-workflows.svg" alt="Custom Workflows" />
           </div>
           <h3  class="no-margin">Custom workflows</h3>
           <p class="light">Already have an established process? Vewrite allows you to build custom worksflows that fit your existing pipeline.</p>
         </div>
-      </div>
     </div>
 
     <div class="container">
@@ -372,11 +369,10 @@ definePageMeta({
   font-family: $font-family-condensed;
 
   .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: $spacing-lg;
+     img {
+      max-width: 100%;
+      height: auto;
+     }
   }
 
   .marker {
@@ -450,6 +446,47 @@ definePageMeta({
     border-radius: $br-xl;
     width: 50%;
     background: rgba($purple, 0.05);
+  }
+}
+
+#Advantages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-xl;
+  max-width: 80%;
+  margin: $spacing-lg auto;
+
+  @media (max-width: 1280px) {
+    max-width: 100%;
+    margin: $spacing-lg $spacing-md;
+  }
+
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  div {
+
+    h3 {
+      margin-bottom: $spacing-md;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    &.bump {
+      padding-top: $spacing-xl;
+
+      @media (max-width: 1000px) {
+        padding-top: 0;
+      }
+    }
   }
 }
 
