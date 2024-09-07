@@ -182,7 +182,7 @@ async function submitEmail(event) {
       top: 12px;
       font-size: $font-size-md;
       outline: 2px solid $green;
-      outline-offset: 0px;
+      outline-offset: -2px;
 
       &:hover {
         outline-offset: 2px;

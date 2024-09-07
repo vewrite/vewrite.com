@@ -3,10 +3,14 @@
     <div class="container wide">
       <nuxt-link to="/"><Logo /></nuxt-link>
       <nav>
-        <a href="#join">Join Waitlist</a>
-        <a href="#teams">Teams</a>
-        <a href="#writers">Writers</a>
+        <nuxt-link to="/">Home</nuxt-link>
+        <!-- <section class="home-links">
+          <a href="#join">Join Waitlist</a>
+          <a href="#teams">Teams</a>
+          <a href="#writers">Writers</a>
+        </section> -->
         <NuxtLink to="/articles">Articles</NuxtLink>
+        <NuxtLink to="/contact">Contact</NuxtLink>
       </nav>
     </div>
   </main>
@@ -78,11 +82,28 @@ onUnmounted(() => {
       align-items: center;
       gap: $spacing-md;
 
+      section.home-links {
+        display: flex;
+        flex-direction: row;
+        gap: $spacing-md;
+        padding-right: $spacing-md;
+        border-right: 1px solid rgba($white, 0.4);
+      }
+
       a {
-        color: $white;
+        color: rgba($white, 0.4);
         text-decoration: none;
         font-size: $font-size-lg;
         font-family: $font-family-condensed;
+        transition: all 0.3s ease-in-out;
+
+        &.router-link-exact-active {
+          color: $white;
+        }
+
+        &:hover {
+          color: $white;
+        }
       }
 
     }
