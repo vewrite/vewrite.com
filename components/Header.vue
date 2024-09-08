@@ -55,7 +55,7 @@ onUnmounted(() => {
   right: 0;
   z-index: 80;
   height: 80px;
-  border-bottom: 2px solid rgba($black, 0);
+  border-bottom: 2px solid rgba($white, 0.4);
 
   a svg {
     transition: all 0.3s ease-in-out;
@@ -70,8 +70,8 @@ onUnmounted(() => {
 
   &.scrolled {
     background-color: rgba($white, 0.77);
-    backdrop-filter: blur(8px);
-    border-bottom: 2px solid rgba($black, 1);
+    backdrop-filter: blur(14px);
+    // border-bottom: 2px solid rgba($black, 1);
 
     // svg {
     //   fill: $white;

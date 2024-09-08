@@ -8,6 +8,7 @@ body {
     background-color: $white;
     font-size: $font-size-sm;
     overflow-x: hidden;
+    background: $white url('/images/big-bg.png') top center no-repeat;
 }
 
 #__nuxt {

@@ -4,14 +4,14 @@
     <div v-if="errorMessage" class="notification error">{{ errorMessage }}</div>
     <form class="hero-waitlist" @submit.prevent="submitEmail">
       <div class="hero-checkboxes">
-        <h3>I'm interested in using Vewrite for</h3>
+        <h3>I'm interested in using Vewrite</h3>
         <div>
           <input type="checkbox" id="teams" name="teams" value="teams" v-model="submission.teams">
-          <label for="teams">Teams</label>
+          <label for="teams">As a team</label>
         </div>
         <div>
           <input type="checkbox" id="writers" name="writers" value="writers" v-model="submission.writers">
-          <label for="writers">Writers</label>
+          <label for="writers">As a freelance writer</label>
         </div>
       </div>
       <div class="hero-container">
@@ -108,7 +108,7 @@ async function submitEmail(event) {
     flex-direction: row;
     gap: $spacing-md;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     margin-bottom: $spacing-md;
 
     div {

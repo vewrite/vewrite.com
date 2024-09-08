@@ -158,33 +158,33 @@
 
 <script setup>
 
-// import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
-// const isScrolled = ref(false);
-// const isInView = ref(false);
+const isScrolled = ref(false);
+const isInView = ref(false);
 
-// const handleScroll = () => {
-//   isScrolled.value = window.scrollY > 0;
-//   const heroSection = document.getElementById('hero');
-//   const rect = heroSection.getBoundingClientRect();
-//   isInView.value = rect.top < window.innerHeight && rect.bottom > 0;
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 0;
+  const heroSection = document.getElementById('hero');
+  const rect = heroSection.getBoundingClientRect();
+  isInView.value = rect.top < window.innerHeight && rect.bottom > 0;
 
-//   if (isInView.value) {
-//     const scrollY = window.scrollY;
-//     const translateY = scrollY * -0.25;
-//     document.documentElement.style.setProperty('--before-translate-y', `${translateY}px`);
-//     console.log(document.documentElement);
-//   }
-// };
+  if (isInView.value) {
+    const scrollY = window.scrollY;
+    const translateY = scrollY * -0.25;
+    document.documentElement.style.setProperty('--before-translate-y', `${translateY}px`);
+    console.log(document.documentElement);
+  }
+};
 
-// onMounted(() => {
-//   window.addEventListener('scroll', handleScroll);
-//   handleScroll(); // Initial check
-// });
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Initial check
+});
 
-// onUnmounted(() => {
-//   window.removeEventListener('scroll', handleScroll);
-// });
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 
 definePageMeta({
   layout: 'home'
@@ -199,17 +199,19 @@ definePageMeta({
 @keyframes pulse {
   0% {
     transform: scale(0.4);
+    box-shadow: 0px 0px 6px 2px rgba($white, 0.8);
   }
   50% {
-    transform: scale(0.9);
+    transform: scale(1.4);
+    box-shadow: 0px 0px 26px 0px rgba($purple, 1);
   }
   100% {
     transform: scale(0.4);
+    box-shadow: 0px 0px 6px 2px rgba($white, 0.8);
   }
 }
 
 #hero {
-  background: $white;
   background-size: cover;
   color: $black;
   padding-top: $spacing-xl;
@@ -263,7 +265,7 @@ definePageMeta({
           height: 18px;
           position: relative;
           background: $black;
-          box-shadow: 0px 0px 6px 2px rgba($purple, 0.8);
+          box-shadow: 0px 0px 6px 2px rgba($white, 0.8);
           border-radius: 30px;
           position: absolute;
           left: 6px;
@@ -330,13 +332,14 @@ definePageMeta({
       &:before {
         content: '';
         position: absolute;
-        top: -400px;
-        right: -900px;
+        top: -700px;
+        right: -800px;
         width: 840px;
         height: 1260px;
         background: transparent url('/images/folder-pen.png') no-repeat center center;
         background-size: cover;
         z-index: 1;
+        transform: translateY(var(--before-translate-y, 0));
       }
 
     }
