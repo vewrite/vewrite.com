@@ -7,6 +7,7 @@ body {
     font-family: $font-family-main;
     background-color: $white;
     font-size: $font-size-sm;
+    overflow-x: hidden;
 }
 
 #__nuxt {

@@ -22,7 +22,7 @@
   <div id="Personas">
     <div class="container">
       <div class="row">
-        <div class="col half">
+        <div class="col">
           <span class="marker team">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M18 19C18.5523 19 19.0016 18.5521 18.975 18.0004C18.9599 17.6868 18.9357 17.3593 18.8969 17.1156C18.8125 16.6047 18.1047 15.9297 15.0953 14.8234C12.1328 13.7359 12.3156 14.2656 12.3156 12.2641C12.3156 10.9656 12.9766 11.7203 13.3984 9.25469C13.5625 8.28438 13.6937 8.93125 14.05 7.375C14.2375 6.55938 13.9234 6.49844 13.9609 6.10938C13.9984 5.72031 14.0359 5.37344 14.1063 4.57656C14.1906 3.59219 13.2766 1 10 1C6.72344 1 5.80938 3.59219 5.89844 4.58125C5.96875 5.37344 6.00625 5.725 6.04375 6.11406C6.08125 6.50313 5.76719 6.56406 5.95469 7.37969C6.31094 8.93125 6.44219 8.28437 6.60625 9.25937C7.02813 11.725 7.68906 10.9703 7.68906 12.2687C7.68906 14.275 7.87187 13.7453 4.90937 14.8281C1.9 15.9297 1.1875 16.6094 1.10781 17.1203C1.06725 17.3619 1.04194 17.6879 1.02616 18.0004C0.998311 18.552 1.44772 19 2 19H10H18Z" stroke="#8D00FB" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round"/>
@@ -30,42 +30,40 @@
             For teams
           </span>
           <h2>Efficiently manage your Technical Writing team</h2>
-          <p class="light">Our software provides your team with a customizable, tailored alternative for project management of technical writing projects.</p>
-          <p class="light">Focus on pushing your work through a sensible workflow, instead of trying to tackle a pile of tasks.</p>
-          <p class="light">You don’t have to use tools made for developers and marketers to get your work done on-time and within budget.</p>
+          <p class="light">Our software provides your team with a customizable, tailored alternative for project management of technical writing projects. Focus on pushing your work through a sensible workflow, instead of trying to tackle a pile of tasks. You don’t have to use tools made for developers and marketers to get your work done on-time and within budget.</p>
           <p><strong>Vewrite is the better way to work you've been looking for.</strong></p>
         </div>
-        <div class="col half">
-          <img src="/images/stakeholder.svg" alt="Stakeholder approval" />
-        </div>
+        <!-- <div class="col half">
+          <img src="/images/stakeholder.png" alt="Stakeholder approval" />
+        </div> -->
       </div>
     </div>
 
     <div id="Advantages">
         <div>
           <div class="icon">
-            <img src="/images/stakeholder-visibility.svg" alt="Stakeholder visibility" />
+            <img src="/images/stakeholder-visibility.png" alt="Stakeholder visibility" />
           </div>
           <h3  class="no-margin">Stakeholder visibility</h3>
           <p class="light">Vewrite prioritizes stakeholder visibility as a part of its workflows. This reduces inefficient back and forth, keeps your team happy, and improves your bottom line.</p>
         </div>
         <div class="bump">
           <div class="icon">
-            <img src="/images/state-management.svg" alt="State Management" />
+            <img src="/images/state-management.png" alt="State Management" />
           </div>
           <h3  class="no-margin">State management</h3>
           <p class="light">As deliverables make their way through your workflow, they have discrete states that have clear meanings that map to your business processes.</p>
         </div>
         <div>
           <div class="icon">
-            <img src="/images/smart-templates.svg" alt="Smart Templates" />
+            <img src="/images/smart-templates.png" alt="Smart Templates" />
           </div>
           <h3  class="no-margin">Smart templates</h3>
           <p class="light">Teams that are just getting started can rely on our smart default templates to quickly set up their processes and hit the ground running.</p>
         </div>
         <div class="bump">
           <div class="icon">
-            <img src="/images/custom-workflows.svg" alt="Custom Workflows" />
+            <img src="/images/custom-workflows.png" alt="Custom Workflows" />
           </div>
           <h3  class="no-margin">Custom workflows</h3>
           <p class="light">Already have an established process? Vewrite allows you to build custom worksflows that fit your existing pipeline.</p>
@@ -141,14 +139,14 @@
       <div class="row">
         <div class="col half">
           <div class="icon">
-            <img src="/images/tight-integration.svg" alt="Tight Integration" />
+            <img src="/images/tight-integration.png" alt="Tight Integration" />
           </div>
           <h3 class="no-margin">Tight integration</h3>
           <p class="light">Your tasks live within one application which means your focus can stay on producing your best work, instead of micromanaging your deliverables and their states.</p>
         </div>
         <div class="col half">
           <div class="icon">
-            <img src="/images/prompt-payment.svg" alt="Prompt Payment" />
+            <img src="/images/prompt-payment.png" alt="Prompt Payment" />
           </div>
           <h3 class="no-margin">Prompt payouts</h3>
           <p class="light">When your work moves to the approved state, and all stakeholders are satisfied, it’s time to get you paid. Vewrite provides prompt payouts with no risk to you.</p>
@@ -160,32 +158,33 @@
 
 <script setup>
 
-import { ref, onMounted, onUnmounted } from 'vue';
+// import { ref, onMounted, onUnmounted } from 'vue';
 
-const isScrolled = ref(false);
-const isInView = ref(false);
+// const isScrolled = ref(false);
+// const isInView = ref(false);
 
-const handleScroll = () => {
-  isScrolled.value = window.scrollY > 0;
-  const heroSection = document.getElementById('hero');
-  const rect = heroSection.getBoundingClientRect();
-  isInView.value = rect.top < window.innerHeight && rect.bottom > 0;
+// const handleScroll = () => {
+//   isScrolled.value = window.scrollY > 0;
+//   const heroSection = document.getElementById('hero');
+//   const rect = heroSection.getBoundingClientRect();
+//   isInView.value = rect.top < window.innerHeight && rect.bottom > 0;
 
-  if (isInView.value) {
-    const scrollY = window.scrollY;
-    const translateY = scrollY * 0.5;
-    document.documentElement.style.setProperty('--before-translate-y', `${translateY}px`);
-  }
-};
+//   if (isInView.value) {
+//     const scrollY = window.scrollY;
+//     const translateY = scrollY * -0.25;
+//     document.documentElement.style.setProperty('--before-translate-y', `${translateY}px`);
+//     console.log(document.documentElement);
+//   }
+// };
 
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll);
-  handleScroll(); // Initial check
-});
+// onMounted(() => {
+//   window.addEventListener('scroll', handleScroll);
+//   handleScroll(); // Initial check
+// });
 
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll);
-});
+// onUnmounted(() => {
+//   window.removeEventListener('scroll', handleScroll);
+// });
 
 definePageMeta({
   layout: 'home'
@@ -210,16 +209,15 @@ definePageMeta({
 }
 
 #hero {
-  background: $purple;
+  background: $white;
   background-size: cover;
-  color: $white;
+  color: $black;
   padding-top: $spacing-xl;
-  width: calc(100% - 2 * $spacing-lg);
+  width: 100%;
   height: 100%;
   position: relative;
-  overflow: hidden;
-  margin: 100px $spacing-lg 0;
-  border-radius: 0 0 $br-xl $br-xl;
+  margin: $spacing-xxl 0 0;
+  border-radius: $br-xl;
 
   @media (max-width: 1400px) {
       width: 100%;
@@ -244,18 +242,6 @@ definePageMeta({
     z-index: 1;
     padding-bottom: $spacing-xxl;
 
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: -1px;
-      right: -300px;
-      width: 300px;
-      height: 400px;
-      background: transparent url('/images/white_overlay.svg') no-repeat center center;
-      background-size: cover;
-      z-index: 1;
-    }
-
     .hero-article {
       display: flex;
       flex-direction: row;
@@ -264,11 +250,10 @@ definePageMeta({
       gap: $spacing-sm;
 
       .new {
-        font-size: $font-size-xs;
+        font-size: $font-size-md;
         font-family: $font-family-condensed;
-        font-weight: bold;
         color: $white;
-        background: $purple-dark;
+        background: rgba($black, 1);
         padding: 6px 8px 6px 32px;
         border-radius: $br-md;
         position: relative;
@@ -277,13 +262,12 @@ definePageMeta({
           width: 18px;
           height: 18px;
           position: relative;
-          background: $purple;
-          mix-blend-mode: normal;
-          box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.6);
+          background: $black;
+          box-shadow: 0px 0px 6px 2px rgba($purple, 0.8);
           border-radius: 30px;
           position: absolute;
-          left: 5px;
-          top: 3px;
+          left: 6px;
+          top: 4px;
           transform: scale(0.4);
           animation: pulse 2s infinite;
 
@@ -294,7 +278,7 @@ definePageMeta({
             left: 5px;
             width: 8px;
             height: 8px;
-            background: $white;
+            background: $white-light;
             mix-blend-mode: normal;
             border-radius: 30px;
           }
@@ -304,9 +288,9 @@ definePageMeta({
       }
 
       a {
-        color: $white;
+        color: $black;
         text-decoration: none;
-        font-size: $font-size-md;
+        font-size: $font-size-lg;
         font-family: $font-family-condensed;
       }
 
@@ -323,11 +307,11 @@ definePageMeta({
       &:before {
         content: '';
         position: absolute;
-        top: -100px;
-        left: -680px;
-        width: 600px;
-        height: 600px;
-        background: transparent url('/images/triangle.png') no-repeat center center;
+        top: 300px;
+        left: -800px;
+        width: 840px;
+        height: 1020px;
+        background: transparent url('/images/book.png') no-repeat center center;
         background-size: contain;
         z-index: -1;
         transform: translateY(var(--before-translate-y, 0));
@@ -346,14 +330,13 @@ definePageMeta({
       &:before {
         content: '';
         position: absolute;
-        top: -200px;
-        right: -780px;
-        width: 700px;
-        height: 700px;
-        background: transparent url('/images/circle.png') no-repeat center center;
-        background-size: contain;
-        z-index: -1;
-        transform: translateY(var(--before-translate-y, 0));
+        top: -400px;
+        right: -900px;
+        width: 840px;
+        height: 1260px;
+        background: transparent url('/images/folder-pen.png') no-repeat center center;
+        background-size: cover;
+        z-index: 1;
       }
 
     }

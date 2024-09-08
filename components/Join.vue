@@ -99,7 +99,7 @@ async function submitEmail(event) {
     font-family: $font-family-condensed;
     font-size: $font-size-lg;
     font-weight: 500;
-    color: $white;
+    color: $black;
     margin-bottom: 0;
   }
 
@@ -123,7 +123,7 @@ async function submitEmail(event) {
         height: 20px;
         cursor: pointer;
         border: 2px solid $green;
-        background: $purple-dark;
+        background: $white;
         appearance: none;
         display: inline-block;
         position: relative;
@@ -149,7 +149,7 @@ async function submitEmail(event) {
       label {
         font-family: $font-family-condensed;
         font-size: $font-size-lg;
-        color: $white;
+        color: $black;
       }
     }
   }
@@ -164,14 +164,14 @@ async function submitEmail(event) {
       font-size: $font-size-md;
       font-family: $font-family-condensed;
       width: 100%;
-      background: $purple-dark;
-      color: $white;
-      outline: 2px solid transparent;
+      background: $white;
+      color: $black;
+      outline: 2px solid $black;
       outline-offset: 0px;
       width: 100%;
 
-      &:active, &:focus {
-        outline: 2px solid $white;
+      &:hover, &:active, &:focus {
+        outline: 2px solid $green;
         outline-offset: 8px;
       }
     }
@@ -181,11 +181,9 @@ async function submitEmail(event) {
       right: 14px;
       top: 12px;
       font-size: $font-size-md;
-      outline: 2px solid $green;
       outline-offset: -2px;
 
       &:hover {
-        outline-offset: 2px;
         transform: scale(1.05);
       }
     }

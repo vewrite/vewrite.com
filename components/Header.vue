@@ -39,23 +39,28 @@ onUnmounted(() => {
 @import 'assets/_variables.scss';
 
 #Header {
-  background: $purple;
+  background: $white;
   background-size: cover;
-  color: $white;
+  color: $black;
   padding: 0 $spacing-lg;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: calc(100% - 2 * $spacing-lg);
-  margin: 0 $spacing-lg 0 $spacing-lg;
+  width: 100%;
   transition: all 0.3s ease-in-out;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
-  height: 100px;
+  z-index: 80;
+  height: 80px;
+  border-bottom: 2px solid rgba($black, 0);
+
+  a svg {
+    transition: all 0.3s ease-in-out;
+    fill: $black;
+  }
 
   @media (max-width: 1400px) {
       width: 100%;
@@ -64,10 +69,21 @@ onUnmounted(() => {
   }
 
   &.scrolled {
-    border-radius: 0 0 $br-xl $br-xl;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    background-color: rgba($purple, 0.9);
+    background-color: rgba($white, 0.77);
     backdrop-filter: blur(8px);
+    border-bottom: 2px solid rgba($black, 1);
+
+    // svg {
+    //   fill: $white;
+    // }
+
+    // .container nav a {
+    //   color: rgba($white, 0.5);
+
+    //   &.router-link-exact-active {
+    //     color: $white;
+    //   }
+    // }
   }
 
   .container {
@@ -91,14 +107,18 @@ onUnmounted(() => {
       }
 
       a {
-        color: rgba($white, 0.4);
+        color: rgba($black, 0.6);
         text-decoration: none;
-        font-size: $font-size-lg;
+        font-size: $font-size-md;
         font-family: $font-family-condensed;
         transition: all 0.3s ease-in-out;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &.router-link-exact-active {
-          color: $white;
+          color: $black;
         }
 
         &:hover {
