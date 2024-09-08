@@ -1,8 +1,10 @@
 <template>
   <main>
-    using default template
+    <Header />
     <slot />
   </main>
+  <Footer />
+  
 </template>
 
 <script setup>

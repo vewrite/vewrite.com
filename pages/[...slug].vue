@@ -2,6 +2,7 @@
   <div>
     <section class="top-article">
       <div class="container">
+        <nuxt-link class="button dark" to="/articles">Back to articles</nuxt-link>
         <h1>{{ data?.title }}</h1>
       </div>
     </section>
@@ -46,6 +47,7 @@ definePageMeta({
 
   .container {
     position: relative;
+    gap: 0;
 
     &:after {
       content: '';
@@ -60,11 +62,15 @@ definePageMeta({
     }
   }
 
+  .button {
+    margin: $spacing-lg 0 $spacing-md;
+  }
+
   h1 {
       font-size: $font-size-mega;
       line-height: 90%;
       font-weight: bold;
-      margin: $spacing-xl 0 $spacing-xl;
+      margin: $spacing-sm 0 $spacing-xl;
       position: relative;
       width: 80%;
 
