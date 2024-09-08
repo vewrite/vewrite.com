@@ -328,7 +328,6 @@ definePageMeta({
         width: 600px;
         height: 600px;
         background: transparent url('/images/triangle.png') no-repeat center center;
-        mix-blend-mode: overlay;
         background-size: contain;
         z-index: -1;
         transform: translateY(var(--before-translate-y, 0));
@@ -352,7 +351,6 @@ definePageMeta({
         width: 700px;
         height: 700px;
         background: transparent url('/images/circle.png') no-repeat center center;
-        mix-blend-mode: overlay;
         background-size: contain;
         z-index: -1;
         transform: translateY(var(--before-translate-y, 0));

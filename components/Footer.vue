@@ -97,7 +97,6 @@ footer {
 
   .copyright {
     width: 100%;
-    border-top: 2px solid rgba($white, 0.25);
     font-size: $font-size-md;
     padding-top: $spacing-lg;
     margin: $spacing-xl 0;
