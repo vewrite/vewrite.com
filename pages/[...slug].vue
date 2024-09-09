@@ -2,7 +2,7 @@
   <div>
     <section class="top-article">
       <div class="container">
-        <nuxt-link class="button dark" to="/articles">Back to articles</nuxt-link>
+        <nuxt-link class="button large" to="/articles">Back to articles</nuxt-link>
         <h1>{{ data?.title }}</h1>
       </div>
     </section>
@@ -34,12 +34,7 @@ definePageMeta({
 @import 'assets/_variables.scss';
 
 .top-article {
-  background: $purple;
-  background-size: cover;
-  color: $white;
   padding: $spacing-xl 0 0 0;
-  width: calc(100% - 2 * $spacing-lg);
-  height: 100%;
   position: relative;
   overflow: hidden;
   margin: 100px $spacing-lg 0;

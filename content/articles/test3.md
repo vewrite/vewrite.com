@@ -1,5 +1,5 @@
 ---
-title: "This is a very long title Hello Vewrite"
+title: "Hello Vewrite"
 image: "/images/content/test.png"
 description: "This is a test article."
 date: "2024-09-01"

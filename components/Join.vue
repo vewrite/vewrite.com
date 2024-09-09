@@ -82,7 +82,7 @@ async function submitEmail(event) {
   gap: $spacing-sm;
   width: 80%;
   position: relative;
-  border-top: 2px solid rgba($white, 0.2);
+  border-top: 1px solid rgba($white, 0.2);
   padding-top: $spacing-lg;
 
   .notification {
@@ -122,26 +122,26 @@ async function submitEmail(event) {
         width: 20px;
         height: 20px;
         cursor: pointer;
-        border: 2px solid $green;
-        background: $white;
+        border: 1px solid $purple;
+        background: $purple;
         appearance: none;
         display: inline-block;
         position: relative;
         padding: 0;
 
         &:checked {
-          background: $green;
+          background: $purple-dark;
 
           &::before {
             content: '';
             display: block;
             width: 4px;
             height: 10px;
-            border: solid $purple;
-            border-width: 0 2px 2px 0;
+            border: solid $white;
+            border-width: 0 1px 1px 0;
             transform: rotate(45deg);
             margin-top: 2px;
-            margin-left: 5px;
+            margin-left: 7px;
           }
         }
       }
@@ -166,12 +166,12 @@ async function submitEmail(event) {
       width: 100%;
       background: $white;
       color: $black;
-      outline: 2px solid $black;
+      outline: 1px solid $black;
       outline-offset: 0px;
       width: 100%;
 
       &:hover, &:active, &:focus {
-        outline: 2px solid $green;
+        outline: 1px solid $green;
         outline-offset: 8px;
       }
     }

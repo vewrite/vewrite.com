@@ -2,17 +2,17 @@
   <section class="template-top">
     <div class="container">
       <h1>Articles</h1>
+      <p class="light">As avid, experienced Technical Writers and Project Managers, we have a lot of strong opinions on documentation, writing, and how Developer Relations should be done as to achieve success. Below are a collection of articles on those topics.</p>
     </div>
   </section>
   <main class="articles">
-    <div class="container">
-      <ContentList path="/articles" v-slot="{ list }">
-        <nuxt-link v-for="article in list" :key="article._path" :to="article._path">
-          <h2>{{ article.title }}</h2>
-          <p>{{ article.description }}</p>
-        </nuxt-link>
-      </ContentList>
-    </div>
+    <ContentList path="/articles" v-slot="{ list }">
+      <nuxt-link v-for="article in list" :key="article._path" :to="article._path">
+        <img :src="article.image" :alt="article.title" />
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.description }}</p>
+      </nuxt-link>
+    </ContentList>
   </main>
 </template>
 
@@ -25,9 +25,6 @@
 @import 'assets/_variables.scss';
 
 .template-top {
-  background: $purple;
-  background-size: cover;
-  color: $white;
   padding: $spacing-xl 0;
   width: calc(100% - 2 * $spacing-lg);
   height: 100%;
@@ -39,9 +36,18 @@
 }
 
 .articles {
-  display: flex;
-  gap: $spacing-lg;
-  margin: $spacing-lg 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-xl;
+  margin: $spacing-lg auto;
+  max-width: 80%;
+
+  img {
+    border-radius: $br-xl;
+    margin: 0 0 $spacing-md;
+    width: 100%;
+    border: 2px solid rgba($purple-dark, 0.1);
+  }
 
   a {
     color: $black;

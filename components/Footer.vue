@@ -44,7 +44,7 @@ footer {
     position: relative;
     
     h1 {
-      color: $purple;
+      color: $black;
     }
 
     svg {
