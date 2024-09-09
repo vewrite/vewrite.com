@@ -3,7 +3,7 @@
     <a name="join" class="target"></a>
     <div class="container">
       <div class="join-us">
-        <Logo />
+        <img src="/images/logo-footer.png" alt="Vewrite logo" />
         <div>
           <h1>Launching soon</h1>
           <h2>If you’re interested in being one of the first to use our innovative new tool, make sure to join our waiting list below.</h2>
@@ -42,6 +42,10 @@ footer {
     margin: $spacing-lg;
     gap: $spacing-lg;
     position: relative;
+    
+    h1 {
+      color: $purple;
+    }
 
     svg {
       fill: $black;
@@ -96,6 +100,7 @@ footer {
     padding-top: $spacing-lg;
     margin: $spacing-xl 0;
     text-align: center;
+    opacity: 0.25;
   }
 }
 

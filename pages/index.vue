@@ -18,6 +18,29 @@
       <Join />
     </div>
   </main>
+
+  <div id="Potentials">
+    <div class="container">
+      <div class="row">
+        <div class="col one-third">
+          <img src="/images/potential-team.png" alt="Writing Teams" />
+          <h2>Small Writing Teams</h2>
+          <p class="light">With so many projects and so many deliverables, you're spending precious time understanding what has been done and what is left to do. Vewrite provides you with an easy to use workflow management tool that makes sure you can focus on what is important: delivering high-quality work for your clients.</p>
+        </div>
+        <div class="col one-third">
+          <img src="/images/potential-writer.png" alt="Freelance Technical Writers" />
+          <h2>Technical Writers</h2>
+          <p class="light">In a crowded market, it can be hard to be seen. Vewrite ensures that your skills are right where they need to be: embedded directly into the workflows of the teams who are producing deliverables for clients.</p>
+        </div>
+        <div class="col one-third">
+          <img src="/images/potential-devrel.png" alt="Developer Relations" />
+          <h2>Developer Relations</h2>
+          <p class="light">When you are enlightening developers about your company's products, you should be free to focus on producing excellent content instead of micro-managing your workflow. With Vewrite you can ensure that your stakeholders have critical visibility while you spread the word about their innovations. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <a name="teams" class="target"></a>
   <div id="Personas">
     <div class="container">
@@ -31,11 +54,8 @@
           </span>
           <h2>Efficiently manage your Technical Writing team</h2>
           <p class="light">Our software provides your team with a customizable, tailored alternative for project management of technical writing projects. Focus on pushing your work through a sensible workflow, instead of trying to tackle a pile of tasks. You don’t have to use tools made for developers and marketers to get your work done on-time and within budget.</p>
-          <p><strong>Vewrite is the better way to work you've been looking for.</strong></p>
+          <p><strong>Vewrite is the better way to work that you've been looking for.</strong></p>
         </div>
-        <!-- <div class="col half">
-          <img src="/images/stakeholder.png" alt="Stakeholder approval" />
-        </div> -->
       </div>
     </div>
 
@@ -345,6 +365,28 @@ definePageMeta({
     }
   }
 
+}
+
+#Potentials {
+  padding: $spacing-xl 0;
+  width: 100%;
+  font-family: $font-family-condensed;
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: $spacing-md;
+
+    h2 {
+      text-align: center;
+    }
+     
+    p {
+      text-align: center;
+    }
+  }
 }
 
 #Personas {
