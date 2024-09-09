@@ -1,6 +1,6 @@
 <template>
   <main  id="Header" :class="{'scrolled': isScrolled}"> 
-    <div class="container wide">
+    <div class="container mid">
       <nuxt-link to="/"><Logo /></nuxt-link>
       <nav>
         <nuxt-link to="/">Home</nuxt-link>
@@ -10,8 +10,9 @@
           <a href="#writers">Writers</a>
         </section> -->
         <NuxtLink to="/articles">Articles</NuxtLink>
-        <NuxtLink to="/contact">Contact</NuxtLink>
+        <!-- <NuxtLink to="/contact">Contact</NuxtLink> -->
       </nav>
+      <button class="primary large">Contact</button>
     </div>
   </main>
 </template>
@@ -39,10 +40,10 @@ onUnmounted(() => {
 @import 'assets/_variables.scss';
 
 #Header {
-  background: $white;
+  background: $purple;
   background-size: cover;
   color: $black;
-  padding: 0 $spacing-lg;
+  padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -51,27 +52,24 @@ onUnmounted(() => {
   transition: all 0.3s ease-in-out;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+
   z-index: 80;
   height: 80px;
-  border-bottom: 2px solid rgba($white, 0.4);
+
 
   a svg {
     transition: all 0.3s ease-in-out;
-    fill: $black;
+    fill: $white;
   }
 
-  @media (max-width: 1400px) {
-      width: 100%;
-      margin: 0;
-      border-radius: 0;
+  @media (max-width: 1000px) {
+      padding: 0 $spacing-xs;
   }
 
   &.scrolled {
-    background-color: rgba($white, 0.77);
-    backdrop-filter: blur(14px);
-    // border-bottom: 2px solid rgba($black, 1);
+    // background-color: rgba($white, 0.77);
+    box-shadow: 0 6px 10px 0 rgba($black, 0.1), 0 20px 20px 0 rgba($purple, 0.04);
+    // backdrop-filter: blur(14px);
 
     // svg {
     //   fill: $white;
@@ -107,18 +105,19 @@ onUnmounted(() => {
       }
 
       a {
-        color: rgba($black, 0.6);
+        color: rgba($white, 0.6);
         text-decoration: none;
-        font-size: $font-size-md;
+        font-size: $font-size-lg;
+        font-weight: 500;
         font-family: $font-family-condensed;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.13s ease-in-out;
         height: 80px;
         display: flex;
         justify-content: center;
         align-items: center;
 
         &.router-link-exact-active {
-          color: $black;
+          color: $white;
         }
 
         &:hover {
