@@ -42,6 +42,10 @@
   margin: $spacing-lg auto;
   max-width: 80%;
 
+  @media (max-width:1000px) {
+    grid-template-columns: 1fr;
+  }
+
   img {
     border-radius: $br-xl;
     margin: 0 0 $spacing-md;

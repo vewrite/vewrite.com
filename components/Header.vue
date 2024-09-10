@@ -107,7 +107,7 @@ onUnmounted(() => {
       a {
         color: rgba($white, 0.6);
         text-decoration: none;
-        font-size: $font-size-lg;
+        font-size: $font-size-md;
         font-weight: 500;
         font-family: $font-family-condensed;
         transition: all 0.13s ease-in-out;

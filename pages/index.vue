@@ -1,6 +1,7 @@
 <template>
   <main id="hero" :class="{'scrolled': isScrolled}">
     <div class="container">
+      <Logo color="black" size="large" />
       <div class="hero-article">
         <span class="new">
           <span class="bubble"></span>

@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Header />
+    <!-- <Header /> -->
     <main class="single-article">
         <slot />
     </main>
