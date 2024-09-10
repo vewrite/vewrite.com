@@ -1,5 +1,5 @@
 ---
-title: "Hello Vewrite"
+title: "Introducing Vewrite"
 image: "/images/content/test.png"
 description: "This is a test article."
 date: "2024-09-01"

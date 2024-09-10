@@ -2,6 +2,7 @@
   <div>
     <section class="top-article">
       <div class="container">
+        <nuxt-link to="/"><Logo color="purple" size="large" /></nuxt-link>
         <nuxt-link class="button large" to="/articles">Back to articles</nuxt-link>
         <h1>{{ data?.title }}</h1>
       </div>
@@ -10,7 +11,7 @@
       <div class="container">
         <ContentDoc>
           <template #not-found>
-            <p>Document not found.</p>
+            <h1>Document not found</h1>
           </template>
         </ContentDoc>
       </div>
@@ -105,7 +106,7 @@ definePageMeta({
 }
 
 .single-article {
-  padding: $spacing-xl 0;
+  padding: 0 0 $spacing-xl 0;
 }
 
 

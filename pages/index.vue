@@ -7,8 +7,10 @@
           <span class="bubble"></span>
           New
         </span>
-        <nuxt-link to="/" class="hero-article-title">Introducing Vewrite ➔</nuxt-link>
+        <nuxt-link to="/articles/introducing-vewrite" class="hero-article-title">Introducing Vewrite ➔</nuxt-link>
       </div>
+      <div class="hero-element-wrapper devices"><div class="hero-element-devices"></div></div>
+      <div class="hero-element-wrapper office"><div class="hero-element-office"></div></div>
       <h1>
         More writing,<br>
         less hassle
@@ -16,7 +18,7 @@
       <h2>
         Vewrite is launching a project management toolset for technical writing teams that has a talent marketplace deeply integrated into it. 
       </h2>
-      <Join />
+      <Join id="hero-join" />
     </div>
   </main>
 
@@ -26,17 +28,20 @@
         <div class="col one-third">
           <img src="/images/potential-team.png" alt="Writing Teams" />
           <h2>Small Writing Teams</h2>
-          <p class="light">With so many projects and so many deliverables, you're spending precious time understanding what has been done and what is left to do. Vewrite provides you with an easy to use workflow management tool that makes sure you can focus on what is important: delivering high-quality work for your clients.</p>
+          <p class="light">With so many projects and so many deliverables, you're spending precious time tracking progress instead of making it.</p>
+          <p>Vewrite provides you with an easy to use workflow management tool that makes sure that you can focus on what is important: delivering high-quality work for your clients.</p>
         </div>
         <div class="col one-third">
           <img src="/images/potential-writer.png" alt="Freelance Technical Writers" />
           <h2>Technical Writers</h2>
-          <p class="light">In a crowded market, it can be hard to be seen. Vewrite ensures that your skills are right where they need to be: embedded directly into the workflows of the teams who are producing deliverables for clients.</p>
+          <p class="light">In a crowded market, it can be hard to be seen, and harder to make a living doing what you are good at.</p>
+          <p>Vewrite ensures that you are embedded directly into the workflows of the teams who value you the most.</p>
         </div>
         <div class="col one-third">
           <img src="/images/potential-devrel.png" alt="Developer Relations" />
           <h2>Developer Relations</h2>
-          <p class="light">When you are enlightening developers about your company's products, you should be free to focus on producing excellent content instead of micro-managing your workflow. With Vewrite you can ensure that your stakeholders have critical visibility while you spread the word about their innovations. </p>
+          <p class="light">When you are enlightening developers about your company's products, you should be free to focus on producing excellent content instead of micro-managing your workflow.</p>
+          <p>With Vewrite you can ensure that your stakeholders have critical visibility while you spread the word about their innovations. </p>
         </div>
       </div>
     </div>
@@ -55,7 +60,7 @@
           </span>
           <h2>Efficiently manage your Technical Writing team</h2>
           <p class="light">Our software provides your team with a customizable, tailored alternative for project management of technical writing projects. Focus on pushing your work through a sensible workflow, instead of trying to tackle a pile of tasks. You don’t have to use tools made for developers and marketers to get your work done on-time and within budget.</p>
-          <p><strong>Vewrite is the better way to work that you've been looking for.</strong></p>
+          <p>Vewrite is the better way to work that you've been looking for.</p>
         </div>
       </div>
     </div>
@@ -193,7 +198,7 @@ const handleScroll = () => {
   if (isInView.value) {
     const scrollY = window.scrollY;
     const translateY = scrollY * -0.25;
-    document.documentElement.style.setProperty('--before-translate-y', `${translateY}px`);
+    document.documentElement.style.setProperty('--element-translate-y', `${translateY}px`);
     console.log(document.documentElement);
   }
 };
@@ -213,9 +218,21 @@ definePageMeta({
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 @import 'assets/_variables.scss';
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 
 @keyframes pulse {
   0% {
@@ -232,6 +249,22 @@ definePageMeta({
   }
 }
 
+.hero-element-wrapper {
+  transform: translateY(var(--element-translate-y, 0));
+
+  &.devices {
+    position: absolute;
+    top: 300px;
+    left: -800px;
+  }
+
+  &.office {
+    position: absolute;
+    top: -250px;
+    right: 0px;
+  }
+}
+
 #hero {
   background-size: cover;
   color: $black;
@@ -241,6 +274,17 @@ definePageMeta({
   position: relative;
   margin: $spacing-xxl 0 0;
   border-radius: $br-xl;
+
+  .container .logo {
+    opacity: 0;
+    animation: fadeIn .35s ease-in forwards;
+  }
+
+  .container #hero-join {
+    opacity: 0;
+    animation: fadeIn .35s ease-in-out forwards;
+    animation-delay: 1.05s;
+  }
 
   @media (max-width: 1400px) {
       width: 100%;
@@ -271,6 +315,9 @@ definePageMeta({
       justify-content: center;
       align-items: center;
       gap: $spacing-sm;
+      opacity: 0;
+      animation: fadeIn .35s ease-in-out forwards;
+      animation-delay: 0.35s;
 
       .new {
         font-size: $font-size-md;
@@ -311,10 +358,17 @@ definePageMeta({
       }
 
       a {
-        color: $black;
+        color: $purple;
         text-decoration: none;
+        border-bottom: 1px solid rgba($purple, 0.3);
         font-size: $font-size-lg;
         font-family: $font-family-condensed;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: $purple-dark;
+          border-bottom: 1px solid rgba($purple, 1);
+        }
       }
 
     }
@@ -326,19 +380,20 @@ definePageMeta({
       margin: $spacing-md 0;
       position: relative;
       width: 80%;
+      opacity: 0;
+      animation: fadeIn .35s ease-in-out forwards;
+      animation-delay: 0.7s;
+    }
 
-      &:before {
-        content: '';
-        position: absolute;
-        top: 300px;
-        left: -800px;
-        width: 840px;
-        height: 1020px;
-        background: transparent url('/images/book.png') no-repeat center center;
-        background-size: contain;
-        z-index: -1;
-        transform: translateY(var(--before-translate-y, 0));
-      }
+    .hero-element-devices {
+      width: 840px;
+      height: 1020px;
+      background: transparent url('/images/book.png') no-repeat center center;
+      background-size: contain;
+      z-index: -1;
+      opacity: 0;
+      animation: fadeIn .35s ease-in-out forwards;
+      animation-delay: 1.7s;
     }
 
     h2 {
@@ -349,20 +404,24 @@ definePageMeta({
       margin: $spacing-md 0 $spacing-lg 0;
       position: relative;
       width: 80%;
+      opacity: 0;
+      animation: fadeIn .35s ease-in-out forwards;
+      animation-delay: 1.05s;
+    }
 
-      &:before {
-        content: '';
-        position: absolute;
-        top: -700px;
-        right: -800px;
-        width: 840px;
-        height: 1260px;
-        background: transparent url('/images/folder-pen.png') no-repeat center center;
-        background-size: cover;
-        z-index: 1;
-        transform: translateY(var(--before-translate-y, 0));
-      }
-
+    .hero-element-office {
+      position: absolute;
+      top: -100px;
+      right: -500px;
+      width: 840px;
+      height: 1260px;
+      background: transparent url('/images/folder-pen.png') no-repeat center center;
+      background-size: cover;
+      z-index: 1;
+      transform: translateY(var(--element-translate-y, 0));
+      opacity: 0;
+      animation: fadeIn .35s ease-in-out forwards;
+      animation-delay: 1.35s;
     }
   }
 
