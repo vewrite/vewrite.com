@@ -19,6 +19,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/google-fonts',
     '@nuxt/content',
+    'nuxt-module-hotjar'
   ],
 
   runtimeConfig: {
@@ -34,5 +35,10 @@ export default defineNuxtConfig({
       anchorLinks: false,
 
     },
+  },
+
+  hotjar: {
+    hotjarId: 5129596,
+    scriptVersion: 6,
   }
 })
