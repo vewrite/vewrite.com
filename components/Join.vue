@@ -123,21 +123,21 @@ async function submitEmail(event) {
         height: 20px;
         cursor: pointer;
         border: 1px solid $purple;
-        background: $purple;
+        background: $white;
         appearance: none;
         display: inline-block;
         position: relative;
         padding: 0;
 
         &:checked {
-          background: $purple-dark;
+          border: 1px solid $purple;
 
           &::before {
             content: '';
             display: block;
             width: 4px;
             height: 10px;
-            border: solid $white;
+            border: solid $purple;
             border-width: 0 1px 1px 0;
             transform: rotate(45deg);
             margin-top: 2px;
@@ -166,7 +166,7 @@ async function submitEmail(event) {
       width: 100%;
       background: $white;
       color: $black;
-      outline: 1px solid $black;
+      outline: 1px solid $purple;
       outline-offset: 0px;
       width: 100%;
 

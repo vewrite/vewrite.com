@@ -5,7 +5,7 @@
       <div class="hero-article">
         <span class="new">
           <span class="bubble"></span>
-          New
+          New article
         </span>
         <nuxt-link to="/articles/introducing-vewrite" class="hero-article-title">Introducing Vewrite ➔</nuxt-link>
       </div>
