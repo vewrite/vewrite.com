@@ -14,11 +14,19 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 @import 'assets/_variables.scss';
 
 .single-article {
+
+  h2 {
+    margin: $spacing-xl 0 $spacing-md;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
 }
 
 </style>

@@ -41,7 +41,7 @@
           <img src="/images/potential-devrel.png" alt="Developer Relations" />
           <h2>Developer Relations</h2>
           <p class="light">When you are enlightening developers about your company's products, you should be free to focus on producing excellent content instead of micro-managing your workflow.</p>
-          <p>With Vewrite you can ensure that your stakeholders have critical visibility while you spread the word about their innovations. </p>
+          <p>With Vewrite your stakeholders have critical visibility while your DevRel team spreads the word about their innovations. </p>
         </div>
       </div>
     </div>
