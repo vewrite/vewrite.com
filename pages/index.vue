@@ -298,6 +298,7 @@ definePageMeta({
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-bottom: 2px solid rgba($purple, 0.1);
 
   .hero-buttons {
     opacity: 0;
