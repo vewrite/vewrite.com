@@ -12,7 +12,7 @@
           less hassle
         </h1>
         <p>
-          <span class="purple">Project management tailored for technical writing teams</span>, <span class="green">with an integrated talent marketplace</span>.
+          <span>Project management tailored for technical writing teams</span>, <span class="green">with an integrated talent marketplace</span>.
         </p>
       </section>
       <section class="hero-buttons">
@@ -297,10 +297,6 @@ definePageMeta({
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 1000px) {
-    height: auto;
-  }
-
   .hero-buttons {
     opacity: 0;
     animation: fadeIn .35s ease-in-out forwards;
@@ -324,8 +320,11 @@ definePageMeta({
     position: relative;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
     z-index: 1;
+    height: 100%;
+    padding-top: $spacing-xl;
+    padding-bottom: $spacing-xl;
 
     @media (max-width: 1000px) {
       gap: $spacing-lg;
@@ -415,7 +414,7 @@ definePageMeta({
 }
 
 #Personas {
-  // background-color: rgba($purple, 0.05);
+  padding: $spacing-xl 0 0 0;
   width: 100%;
 
   .container {
