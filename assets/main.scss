@@ -9,6 +9,7 @@ body {
     font-size: $font-size-sm;
     overflow-x: hidden;
     background: $white url('/images/big-bg.png') top center no-repeat;
+    background-size: 100vw;
 
     @media (max-width: 1000px) {
         background: $white url('/images/small-bg.png') top right no-repeat;
@@ -68,16 +69,16 @@ h1 {
     margin: 0;
 
     @media (max-width: 1000px) {
-        font-size: $font-size-xxl;
+        font-size: $font-size-max;
     }
 }
 
 h2 {
-    font-size: $font-size-xxl;
+    font-size: $font-size-max;
     margin: 0;
 
     @media (max-width: 1000px) {
-        font-size: $font-size-xl;
+        font-size: $font-size-xxl;
     }
 }
 
@@ -140,6 +141,10 @@ pre {
     font-size: $font-size-xs;
 }
 
+.green {
+    color: $green-dark;
+}
+
 /* Table */
 
 table {
@@ -155,6 +160,7 @@ table {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 $spacing-lg;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -162,7 +168,7 @@ table {
     gap: $spacing-lg;
 
     @media (max-width: 1200px) {
-        padding: 0 $spacing-md;
+        padding: 0 $spacing-lg;
     }
 
     &.mid {
@@ -196,6 +202,10 @@ table {
     align-items: center;
     gap: $spacing-xl;
     width: 100%;
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+    }
 }
 
 .col {
@@ -232,7 +242,8 @@ table {
             width: 100%;
 
             img {
-                width: 50% !important;
+                width: 100%;
+                max-width: 300px;
                 margin: 0 auto;
             }
         }
@@ -263,6 +274,10 @@ table {
 
         img {
             width: 100%;
+
+            @media (max-width: 1000px) {
+                max-width: 200px;
+            }
         }
     }
 }
@@ -512,6 +527,12 @@ button.large,
     padding: $spacing-sm $spacing-md;
     font-size: $font-size-md;
     text-transform: capitalize;
+    border-radius: $br-xxl;
+}
+
+button.clear,
+.button.clear {
+    border-color: transparent;
 }
 
 button.wide,

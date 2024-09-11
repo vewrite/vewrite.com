@@ -1,47 +1,63 @@
 <template>
-  <main id="hero" :class="{'scrolled': isScrolled}">
+  <main id="Hero" :class="{'scrolled': isScrolled}">
+    
     <div class="container">
-      <Logo color="black" size="large" />
-      <div class="hero-article">
-        <span class="new">
-          <span class="bubble"></span>
-          <div>New</div>
-        </span>
-        <nuxt-link to="/articles/introducing-vewrite" class="hero-article-title">Introducing Vewrite ➔</nuxt-link>
+      <div class="hero-element-wrapper office">
+        <div class="hero-element-office"></div>
       </div>
-      <div class="hero-element-wrapper devices"><div class="hero-element-devices"></div></div>
-      <div class="hero-element-wrapper office"><div class="hero-element-office"></div></div>
+      <Logo color="black" size="large" />
       <section class="hero-text">
         <h1>
           More writing,<br>
           less hassle
         </h1>
-        <p class="light">
-          Project management for technical writing teams with a deeply integrated talent marketplace. 
+        <p>
+          Project management for technical writing teams with an integrated talent marketplace.
         </p>
       </section>
-      <Join id="hero-join" />
+      <section class="hero-buttons">
+        <nuxt-link to="/articles/introducing-vewrite" class="button primary large">Learn more about Vewrite</nuxt-link>
+        <a href="#join" class="button clear large">+ Join the beta</a>
+      </section>
     </div>
   </main>
+
+  <a name="join" class="target"></a>
+  <div id="Join">
+    <div class="container">
+      <div class="row">
+        <div class="col one-third">
+          <img src="/images/book.png">
+        </div>
+        <div class="col two-thirds">
+          <h2 class="green">Join the Vewrite beta</h2>
+          <p>We are looking to work with teams and freelance writers who are interested in improving their workflows and making more money along the way.</p>
+          <Join id="hero-join" />
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
 
   <div id="Potentials">
     <div class="container">
       <div class="row">
         <div class="col one-third">
           <img src="/images/potential-team.png" alt="Writing Teams" />
-          <h2>Small Writing Teams</h2>
+          <h3>Improving the efficiency of small writing teams</h3>
           <p class="light">With so many projects and so many deliverables, you're spending precious time tracking progress instead of making it.</p>
           <p>Vewrite provides you with an easy to use workflow management tool that makes sure that you can focus on what is important: delivering high-quality work for your clients.</p>
         </div>
         <div class="col one-third">
           <img src="/images/potential-writer.png" alt="Freelance Technical Writers" />
-          <h2>Technical Writers</h2>
+          <h3>Connecting technical writers with clients</h3>
           <p class="light">In a crowded market, it can be hard to be seen, and harder to make a living doing what you are good at.</p>
           <p>Vewrite ensures that you are embedded directly into the workflows of the teams who value you the most.</p>
         </div>
         <div class="col one-third">
           <img src="/images/potential-devrel.png" alt="Developer Relations" />
-          <h2>Developer Relations</h2>
+          <h3>Smoothing the process for developer relations</h3>
           <p class="light">When you are enlightening developers about your company's products, you should be free to focus on producing excellent content instead of micro-managing your workflow.</p>
           <p>With Vewrite your stakeholders have critical visibility while your DevRel team spreads the word about their innovations. </p>
         </div>
@@ -60,7 +76,7 @@
             </svg>
             For teams
           </span>
-          <h2>Efficiently manage your Technical Writing team</h2>
+          <h3>Efficiently manage your Technical Writing team</h3>
           <p class="light">Our software provides your team with a customizable, tailored alternative for project management of technical writing projects. Focus on pushing your work through a sensible workflow, instead of trying to tackle a pile of tasks. You don’t have to use tools made for developers and marketers to get your work done on-time and within budget.</p>
           <p>Vewrite is the better way to work that you've been looking for.</p>
         </div>
@@ -69,30 +85,22 @@
 
     <div id="Advantages">
         <div>
-          <div class="icon">
-            <img src="/images/stakeholder-visibility.png" alt="Stakeholder visibility" />
-          </div>
+          <img src="/images/stakeholder-visibility.png" alt="Stakeholder visibility" />
           <h3  class="no-margin">Stakeholder visibility</h3>
           <p class="light">Vewrite prioritizes stakeholder visibility as a part of its workflows. This reduces inefficient back and forth, keeps your team happy, and improves your bottom line.</p>
         </div>
         <div class="bump">
-          <div class="icon">
-            <img src="/images/state-management.png" alt="State Management" />
-          </div>
+          <img src="/images/state-management.png" alt="State Management" />
           <h3  class="no-margin">State management</h3>
           <p class="light">As deliverables make their way through your workflow, they have discrete states that have clear meanings that map to your business processes.</p>
         </div>
         <div>
-          <div class="icon">
-            <img src="/images/smart-templates.png" alt="Smart Templates" />
-          </div>
+          <img src="/images/smart-templates.png" alt="Smart Templates" />
           <h3  class="no-margin">Smart templates</h3>
           <p class="light">Teams that are just getting started can rely on our smart default templates to quickly set up their processes and hit the ground running.</p>
         </div>
         <div class="bump">
-          <div class="icon">
-            <img src="/images/custom-workflows.png" alt="Custom Workflows" />
-          </div>
+          <img src="/images/custom-workflows.png" alt="Custom Workflows" />
           <h3  class="no-margin">Custom workflows</h3>
           <p class="light">Already have an established process? Vewrite allows you to build custom worksflows that fit your existing pipeline.</p>
         </div>
@@ -193,7 +201,7 @@ const isInView = ref(false);
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 0;
-  const heroSection = document.getElementById('hero');
+  const heroSection = document.getElementById('Hero');
   const rect = heroSection.getBoundingClientRect();
   isInView.value = rect.top < window.innerHeight && rect.bottom > 0;
 
@@ -201,7 +209,6 @@ const handleScroll = () => {
     const scrollY = window.scrollY;
     const translateY = scrollY * -0.25;
     document.documentElement.style.setProperty('--element-translate-y', `${translateY}px`);
-    console.log(document.documentElement);
   }
 };
 
@@ -253,43 +260,62 @@ definePageMeta({
 
 .hero-element-wrapper {
   transform: translateY(var(--element-translate-y, 0));
+  position: absolute;
+  top: 0px;
+  right: 0px;
 
-  @media (max-width: 1000px) {
-    display: none;
-  }
-
-  &.devices {
+  .hero-element-office {
     position: absolute;
-    top: 200px;
-    left: -600px;
-  }
+    top: -100px;
+    right: -150px;
+    width: 700px;
+    height: 700px;
+    background: transparent url('/images/folder-pen.png') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+    transform: translateY(var(--element-translate-y, 0));
+    opacity: 0;
+    animation: fadeIn .35s ease-in-out forwards;
+    animation-delay: 1.35s;
 
-  &.office {
-    position: absolute;
-    top: -250px;
-    right: 0px;
+    @media (max-width: 1000px) {
+      width: 400px;
+      height: 400px;
+      top: -260px;
+      right: -100px;
+      transform: rotate(-5deg);
+    }
+
   }
 }
 
-#hero {
-  background-size: cover;
-  color: $black;
+#Hero {
   width: 100%;
-  height: 100%;
-  position: relative;
-  margin: $spacing-xl 0 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-
-  @media (max-width: 1000px) {
-    margin: $spacing-lg 0 0;
-  }
-
-  .container .logo {
+  .hero-buttons {
     opacity: 0;
-    animation: fadeIn .35s ease-in forwards;
+    animation: fadeIn .35s ease-in-out forwards;
+    animation-delay: 1.4s;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      gap: $spacing-md;
+
+      .button {
+        width: 100%;
+      }
+    }
   }
 
-  .container #hero-join {
+  #hero-join {
     opacity: 0;
     animation: fadeIn .35s ease-in-out forwards;
     animation-delay: 1.05s;
@@ -303,103 +329,19 @@ definePageMeta({
   }
 
   .container {
-    height: 100%;
-    width: 100%;
     position: relative;
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     z-index: 1;
-    padding-bottom: $spacing-xxl;
 
     @media (max-width: 1000px) {
       gap: $spacing-lg;
     }
 
-    .hero-article {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: $spacing-sm;
+    .logo {
       opacity: 0;
-      animation: fadeIn .35s ease-in-out forwards;
-      animation-delay: 0.35s;
-
-      .new {
-        font-size: $font-size-md;
-        font-family: $font-family-condensed;
-        color: $white;
-        background: rgba($purple, 1);
-        padding: 6px 8px 6px 32px;
-        border-radius: $br-md;
-        position: relative;
-        height: 28px;
-
-        @media (max-width: 1000px) {
-          padding: 6px;
-          width: 30px;
-        }
-
-        div {
-          @media (max-width: 1000px) {
-            display: none;
-          }
-        }
-
-        @media (max-width: 1000px) {
-          font-size: $font-size-sm;
-          display: flex;
-          flex-direction: column;
-        }
-
-        .bubble {
-          width: 18px;
-          height: 18px;
-          position: relative;
-          background: $purple;
-          box-shadow: 0px 0px 6px 2px rgba($white, 0.8);
-          border-radius: 30px;
-          position: absolute;
-          left: 6px;
-          top: 4px;
-          transform: scale(0.4);
-          animation: pulse 2s infinite;
-
-          &:before {
-            content: '';
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            width: 8px;
-            height: 8px;
-            background: $white-light;
-            mix-blend-mode: normal;
-            border-radius: 30px;
-          }
-
-        }
-
-      }
-
-      a {
-        color: $purple;
-        text-decoration: none;
-        border-bottom: 1px solid rgba($purple, 0.3);
-        font-size: $font-size-lg;
-        font-family: $font-family-condensed;
-        transition: all 0.3s ease-in-out;
-
-        @media (max-width: 1000px) {
-          font-size: $font-size-md;
-        }
-
-        &:hover {
-          color: $purple-dark;
-          border-bottom: 1px solid rgba($purple, 1);
-        }
-      }
-
+      animation: fadeIn .35s ease-in forwards;
     }
 
     .hero-text {
@@ -415,21 +357,11 @@ definePageMeta({
       opacity: 0;
       animation: fadeIn .35s ease-in-out forwards;
       animation-delay: 0.7s;
+      text-shadow: 0 4px 0 white;
 
       @media (max-width: 1000px) {
         width: 100%;
       }
-    }
-
-    .hero-element-devices {
-      width: 630px;
-      height: 765px;
-      background: transparent url('/images/book.png') no-repeat center center;
-      background-size: contain;
-      z-index: -1;
-      opacity: 0;
-      animation: fadeIn .35s ease-in-out forwards;
-      animation-delay: 1.7s;
     }
 
     p {
@@ -448,31 +380,21 @@ definePageMeta({
         width: 100%;
       }
     }
-
-    .hero-element-office {
-      position: absolute;
-      top: 50px;
-      right: -250px;
-      width: 630px;
-      height: 945px;
-      background: transparent url('/images/folder-pen.png') no-repeat center center;
-      background-size: cover;
-      z-index: 1;
-      transform: translateY(var(--element-translate-y, 0));
-      opacity: 0;
-      animation: fadeIn .35s ease-in-out forwards;
-      animation-delay: 1.35s;
-
-      @media (max-width: 1000px) {
-        width: 555px;
-        height: 832px;
-        top: 0px;
-        right: -200px;
-      }
-
-    }
   }
 
+}
+
+#Join {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 1000px) {
+    margin: $spacing-xl 0 ;
+  }
 }
 
 #Potentials {
@@ -495,7 +417,7 @@ definePageMeta({
     align-items: center;
     gap: $spacing-md;
 
-    h2 {
+    h3 {
       text-align: center;
     }
      
@@ -527,6 +449,10 @@ definePageMeta({
     gap: $spacing-sm;
     font-family: $font-family-secondary;
     font-size: $font-size-xl;
+
+    @media (max-width: 1000px) {
+      font-size: $font-size-md;
+    }
 
     &.team {
       background: rgba($purple, 0.15);
@@ -620,6 +546,11 @@ definePageMeta({
     img {
       max-width: 100%;
       height: auto;
+
+      @media (max-width: 768px) {
+        max-width: 50%;
+        margin: 0 auto;
+      }
     }
 
     &.bump {
@@ -646,6 +577,11 @@ definePageMeta({
         padding: $spacing-md $spacing-lg;
         border: none;
         text-align: center;
+
+        @media (max-width: 768px) {
+          padding: $spacing-sm;
+          font-size: $font-size-md;
+        }
 
         &:nth-child(1) {
           width: 5%;
@@ -696,10 +632,19 @@ definePageMeta({
         padding: $spacing-lg;
         border-top: 2px solid white;
         text-align: center;
+        
+        @media (max-width: 768px) {
+          padding: $spacing-sm;
+          font-size: $font-size-md;
+        }
 
         span {
           display: block;
           font-size: $font-size-lg;
+
+          @media (max-width: 768px) {
+            font-size: $font-size-md;
+          }
 
           small {
             font-size: $font-size-xs;
@@ -742,12 +687,21 @@ definePageMeta({
         padding: $spacing-lg;
         border-top: none;
 
+        @media (max-width: 768px) {
+          padding: $spacing-sm;
+          font-size: $font-size-md;
+        }
+
         &:nth-child(1) {
           border-radius: $br-xl 0 0 $br-xl;
         }
 
         &:nth-child(4) {
           background: $purple url('/images/circles.png') no-repeat center center;
+
+          @media (max-width: 768px) {
+            background: $purple;
+          }
         }
 
         &:nth-child(5) {

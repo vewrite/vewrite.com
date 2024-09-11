@@ -78,17 +78,10 @@ async function submitEmail(event) {
 .join-container {
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width: 100%;
   gap: $spacing-sm;
-  width: 80%;
   position: relative;
-  border-top: 1px solid rgba($white, 0.2);
-
-  @media (max-width: 1000px) {
-    flex-direction: column;
-    width: 100%;
-    padding-top: 0;
-  }
 
   .notification {
     position: absolute;
@@ -104,30 +97,23 @@ async function submitEmail(event) {
     font-family: $font-family-condensed;
     font-size: $font-size-lg;
     font-weight: 500;
-    color: $purple;
+    color: $green-dark;
     margin-bottom: 0;
   }
 
   .hero-checkboxes {
     display: flex;
-    flex-direction: row;
-    gap: $spacing-md;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: $spacing-sm;
     margin-bottom: $spacing-md;
-
-    @media (max-width: 1000px) {
-      flex-direction: column;
-      width: 100%;
-      align-items: flex-start;
-      justify-content: flex-start;
-      gap: $spacing-sm;
-    }
 
     div {
       display: flex;
       flex-direction: row;
-      gap: $spacing-xxs;
+      gap: $spacing-sm;
       align-items: center;
       justify-content: center;
 
@@ -135,7 +121,7 @@ async function submitEmail(event) {
         width: 20px;
         height: 20px;
         cursor: pointer;
-        border: 1px solid $purple;
+        border: 1px solid $green;
         background: $white;
         appearance: none;
         display: inline-block;
@@ -143,14 +129,14 @@ async function submitEmail(event) {
         padding: 0;
 
         &:checked {
-          border: 1px solid $purple;
+          border: 1px solid $green-dark;
 
           &::before {
             content: '';
             display: block;
             width: 4px;
             height: 10px;
-            border: solid $purple;
+            border: solid $black;
             border-width: 0 1px 1px 0;
             transform: rotate(45deg);
             margin-top: 2px;
@@ -162,7 +148,7 @@ async function submitEmail(event) {
       label {
         font-family: $font-family-condensed;
         font-size: $font-size-lg;
-        color: $black;
+        color: $green-dark;
 
         @media (max-width: 1000px) {
           font-size: $font-size-md;
@@ -182,7 +168,7 @@ async function submitEmail(event) {
       font-family: $font-family-condensed;
       background: $white;
       color: $black;
-      outline: 1px solid $purple;
+      outline: 1px solid rgba($purple, 0.1);
       outline-offset: 0px;
       width: 100%;
 
@@ -196,8 +182,8 @@ async function submitEmail(event) {
       }
 
       &:hover, &:active, &:focus {
-        outline: 1px solid $green;
-        outline-offset: 8px;
+        outline: 1px solid $purple;
+        outline-offset: 4px;
       }
     }
 
