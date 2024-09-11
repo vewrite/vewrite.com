@@ -79,7 +79,7 @@ h1 {
     line-height: 94%;
     margin: 0;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1200px) {
         font-size: $font-size-max;
     }
 }
@@ -184,8 +184,15 @@ table {
     align-items: flex-start;
     gap: $spacing-lg;
 
+    @media (max-width: 1200px) {
+        padding-left: $spacing-lg;
+        padding-right: $spacing-lg;
+    }
+
     @media (max-width: 1000px) {
         gap: $spacing-md;
+        padding-left: $spacing-md;
+        padding-right: $spacing-md;
     }
 
     &.mid {

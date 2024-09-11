@@ -328,7 +328,7 @@ definePageMeta({
     padding-top: $spacing-lg;
 
     #Witch {
-      transform: scale(1.5) translateX(00px);
+      transform: scale(1.25) translateX(00px);
     }
 
     .row {
