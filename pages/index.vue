@@ -37,20 +37,20 @@
     <div class="container">
       <div class="row">
         <div class="col one-third">
-          <h3>Improving the efficiency of small writing teams</h3>
           <img src="/images/potential-team.png" alt="Writing Teams" />
+          <h3>Improving the efficiency of small writing teams</h3>
           <p class="light">With so many projects and so many deliverables, you're spending precious time tracking progress instead of making it.</p>
           <p>Vewrite provides you with an easy to use workflow management tool that makes sure that you can focus on what is important: delivering high-quality work for your clients.</p>
         </div>
         <div class="col one-third">
-          <h3>Connecting technical writers with clients</h3>
           <img src="/images/potential-writer.png" alt="Freelance Technical Writers" />
+          <h3>Connecting technical writers with clients</h3>
           <p class="light">In a crowded market, it can be hard to be seen, and harder to make a living doing what you are good at.</p>
           <p>Vewrite ensures that you are embedded directly into the workflows of the teams who value you the most.</p>
         </div>
         <div class="col one-third">
-          <h3>Smoothing the process for developer relations</h3>
           <img src="/images/potential-devrel.png" alt="Developer Relations" />
+          <h3>Smoothing the process for developer relations</h3>
           <p class="light">When you are enlightening developers about your company's products, you should be free to focus on producing excellent content instead of micro-managing your workflow.</p>
           <p>With Vewrite your stakeholders have critical visibility while your DevRel team spreads the word about their innovations. </p>
         </div>
@@ -167,16 +167,12 @@
 
       <div class="row">
         <div class="col half">
-          <div class="icon">
-            <img src="/images/tight-integration.png" alt="Tight Integration" />
-          </div>
+          <img src="/images/tight-integration.png" alt="Tight Integration" />
           <h3 class="no-margin">Tight integration</h3>
           <p class="light">Your tasks live within one application which means your focus can stay on producing your best work, instead of micromanaging your deliverables and their states.</p>
         </div>
         <div class="col half">
-          <div class="icon">
-            <img src="/images/prompt-payment.png" alt="Prompt Payment" />
-          </div>
+          <img src="/images/prompt-payment.png" alt="Prompt Payment" />
           <h3 class="no-margin">Prompt payouts</h3>
           <p class="light">When your work moves to the approved state, and all stakeholders are satisfied, it’s time to get you paid. Vewrite provides prompt payouts with no risk to you.</p>
         </div>
@@ -300,7 +296,6 @@ definePageMeta({
 
 #Hero {
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -357,13 +352,13 @@ definePageMeta({
     }
 
     h1 {
-      line-height: 76%;
       margin: 0;
       position: relative;
       width: 100%;
       opacity: 0;
       animation: fadeIn .35s ease-in-out forwards;
       animation-delay: 0.7s;
+      font-weight: black;
 
       @media (max-width: 1000px) {
         width: 100%;
@@ -421,26 +416,19 @@ definePageMeta({
     align-items: center;
     gap: $spacing-md;
 
-    h3 {
-      text-align: center;
-    }
+    // h3 {
+    //   text-align: center;
+    // }
      
-    p {
-      text-align: center;
-    }
+    // p {
+    //   text-align: center;
+    // }
   }
 }
 
 #Personas {
   padding: $spacing-xl 0 0 0;
   width: 100%;
-
-  .container {
-     img {
-      max-width: 100%;
-      height: auto;
-     }
-  }
 
   .marker {
     display: flex;

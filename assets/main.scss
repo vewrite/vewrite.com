@@ -70,13 +70,13 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: $font-family-secondary;
-    font-weight: 400;
+    font-family: $font-family-main;
+    font-weight: bold;
 }
 
 h1 {
     font-size: $font-size-mega;
-    line-height: 84%;
+    line-height: 94%;
     margin: 0;
 
     @media (max-width: 1000px) {
@@ -260,13 +260,13 @@ table {
 
             img {
                 width: 100%;
-                max-width: 300px;
+                max-width: 200px;
                 margin: 0 auto;
             }
         }
 
         img {
-            width: 100%;
+            width: 50%;
         }
     }
 
@@ -287,6 +287,11 @@ table {
 
         @media (max-width: 1000px) {
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
 
         img {
