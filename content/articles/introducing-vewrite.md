@@ -7,9 +7,11 @@ date: "2024-09-11"
 
 ## Hello World
 
-As a team with experience as technical writers, project managers, and developer relations specialists, we know how painful it can be to try and manage a large set of content that is in production. 
+As an experienced team of technical writers, project managers, and developer relations specialists, we know how painful it can be to try and manage a large set of content that is in production. 
 
-The market currently does not provide a toolset that caters to the work that we do. We end up using tools that are either a bad fit for our workflow, or are tailored for an entirely different use-case. We aren't developers, working with an agile methodology, and we aren't marketers with a stream of tasks. We have many deliverables, stakeholders who require visibility, and we are juggling multiple projects at once.
+The market currently does not provide a toolset that caters to the work that we do. We make do.
+
+We end up using tools that are either a bad fit for our workflow, or are tailored for an entirely different use-case. We aren't developers, working with an agile methodology, and we aren't marketers with a stream of tasks. We have many deliverables, stakeholders who require visibility, and we are juggling multiple projects at once.
 
 Vewrite is a product tailored to that problem-set. We want technical writers, developer relations specialists, and the teams that they work on to have clear workflows, excellent visibility, and access to resources that help them get their work done on-time and on-budget.
 

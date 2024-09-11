@@ -1,14 +1,10 @@
 <template>
   <div>
-    <section class="top-article">
-      <div class="container">
-        <nuxt-link to="/"><Logo color="purple" size="large" /></nuxt-link>
-        <nuxt-link class="button large" to="/articles">Back to articles</nuxt-link>
-        <h1>{{ data?.title }}</h1>
-      </div>
-    </section>
     <section class="single-article">
       <div class="container">
+        <!-- <nuxt-link class="button clear" to="/articles">Back to articles</nuxt-link> -->
+        <nuxt-link to="/"><Logo color="purple" size="large" /></nuxt-link>
+        <h1>{{ data?.title }}</h1>
         <ContentDoc>
           <template #not-found>
             <h1>Document not found</h1>
@@ -37,37 +33,11 @@ definePageMeta({
 .top-article {
   position: relative;
   overflow: hidden;
-  margin: $spacing-xl 0;
-  border-radius: 0 0 $br-xl $br-xl;
-
-  .container {
-    position: relative;
-    gap: 0;
-
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: -1px;
-      right: -300px;
-      width: 300px;
-      height: 400px;
-      background: transparent url('/images/white_overlay.svg') no-repeat center center;
-      background-size: cover;
-      z-index: 1;
-    }
-  }
-
-  .button {
-    margin: $spacing-lg 0 $spacing-md;
-  }
 
   h1 {
-      font-size: $font-size-mega;
       line-height: 90%;
-      font-weight: bold;
-      margin: $spacing-sm 0 $spacing-xl;
       position: relative;
-      width: 80%;
+      width: 100%;
 
       &:before {
         content: '';

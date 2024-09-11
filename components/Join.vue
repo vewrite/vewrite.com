@@ -98,6 +98,12 @@ async function submitEmail(event) {
         flex-direction: row;
         align-items: center;
         justify-content: center;
+
+        @media (max-width: 1000px) {
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+        }
       }
     }
   }
@@ -128,6 +134,12 @@ async function submitEmail(event) {
     justify-content: flex-start;
     gap: $spacing-sm;
     margin-bottom: $spacing-md;
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
 
     div {
       display: flex;

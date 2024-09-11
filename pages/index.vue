@@ -297,6 +297,10 @@ definePageMeta({
   align-items: center;
   justify-content: center;
 
+  @media (max-width: 1000px) {
+    height: auto;
+  }
+
   .hero-buttons {
     opacity: 0;
     animation: fadeIn .35s ease-in-out forwards;
@@ -308,7 +312,7 @@ definePageMeta({
 
     @media (max-width: 1000px) {
       flex-direction: column;
-      gap: $spacing-md;
+      gap: $spacing-xs;
 
       .button {
         width: 100%;
@@ -345,7 +349,6 @@ definePageMeta({
       opacity: 0;
       animation: fadeIn .35s ease-in-out forwards;
       animation-delay: 0.7s;
-      text-shadow: 0 4px 0 white;
 
       @media (max-width: 1000px) {
         width: 100%;
@@ -380,14 +383,9 @@ definePageMeta({
   align-items: center;
   justify-content: center;
   background-color: rgba($green, 0.1);
-
-  @media (max-width: 1000px) {
-    margin: $spacing-xl 0 ;
-  }
 }
 
 #Potentials {
-  padding: $spacing-xl 0;
   width: 100%;
   font-family: $font-family-condensed;
 
@@ -417,9 +415,8 @@ definePageMeta({
 }
 
 #Personas {
-  padding: $spacing-xl 0;
+  // background-color: rgba($purple, 0.05);
   width: 100%;
-  font-family: $font-family-condensed;
 
   .container {
      img {
@@ -429,8 +426,6 @@ definePageMeta({
   }
 
   .marker {
-    padding: $spacing-sm $spacing-md;
-    border-radius: $br-xxl;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -440,16 +435,14 @@ definePageMeta({
     font-size: $font-size-xl;
 
     @media (max-width: 1000px) {
-      font-size: $font-size-md;
+      font-size: $font-size-lg;
     }
 
     &.team {
-      background: rgba($purple, 0.15);
       color: $purple;
     }
 
     &.writer {
-      background: rgba($green, 0.15);
       color: $green-dark;
       margin-top: $spacing-xxl;
     }

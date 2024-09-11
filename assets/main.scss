@@ -172,8 +172,8 @@ table {
     align-items: flex-start;
     gap: $spacing-lg;
 
-    @media (max-width: 1200px) {
-        padding: 0 $spacing-lg;
+    @media (max-width: 1000px) {
+        padding: $spacing-xl $spacing-md;
     }
 
     &.mid {
