@@ -25,7 +25,15 @@
             </section>
           </div>
           <div class="col half" id="Witch">
-            <img src="/images/folder-pen.png">
+            <img src="/images/excitement.png" class="excitement">
+            <img src="/images/man.png" class="man">
+            <img src="/images/skull.png" class="skull">
+            
+            <img src="/images/spark1.png" class="spark1">
+            <img src="/images/spark2.png" class="spark2">
+            <img src="/images/spark3.png" class="spark3">
+            <img src="/images/spark4.png" class="spark4">
+            <img src="/images/spark5.png" class="spark5">
           </div>
         </div>
       </section>
@@ -261,6 +269,58 @@ definePageMeta({
   }
 }
 
+@keyframes rotateSkull {
+  0% {
+    transform: rotate(-105deg);
+  }
+  80% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes excited {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spark {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: scale(.4) translateX(00px) translateY(0px) rotate(-5deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(.5) translateX(00px) translateY(-100px) rotate(0deg);
+  }
+}
+
 .hero-element-wrapper {
   transform: translateY(var(--element-translate-y, 0));
   position: absolute;
@@ -326,10 +386,102 @@ definePageMeta({
     justify-content: center;
     z-index: 1;
     height: 100%;
-    padding-top: $spacing-lg;
+    margin-top: $spacing-xxl;
 
     #Witch {
-      transform: scale(1.25) translateX(00px);
+      transform: scale(.5) translateX(00px) translateY(-100px) rotate(0deg);
+      position: relative;
+      opacity: 0;
+      animation: fadeUp .75s forwards;
+
+      img {
+        position: absolute;
+        top: -100px;
+
+        &.excitement {
+          top: -390px;
+          left: -60px;
+          width: 912px;
+          height: 511px;
+          transform-origin: 473px 480px;
+          opacity: 0;
+          animation: excited .6s forwards;
+          animation-delay: .75s;
+        }
+
+        &.man {
+          top: 0;
+          left: 0;
+          width: 550px;
+          height: 562px;
+        }
+
+        &.skull {
+          top: -63px;
+          left: 440px;
+          width: 416px;
+          height: 377px;
+          transform-origin: 20px 214px;
+          transform: rotate(-105deg);
+          animation: rotateSkull .8s forwards;
+          animation-delay: .4s;
+        }
+
+        &.spark1 {
+          top: -143px;
+          left: -90px;
+          width: 211px;
+          height: 211px;
+          animation: spark .45s forwards;
+          animation-delay: .8s;
+          opacity: 0;
+          transform: scale(0);
+        }
+
+        &.spark2 {
+          top: -503px;
+          left: 20px;
+          width: 222px;
+          height: 222px;
+          animation: spark .45s forwards;
+          animation-delay: .9s;
+          opacity: 0;
+          transform: scale(0);
+        }
+
+        &.spark3 {
+          top: -423px;
+          left: 490px;
+          width: 162px;
+          height: 162px;
+          animation: spark .45s forwards;
+          animation-delay: 1s;
+          opacity: 0;
+          transform: scale(0);
+        }
+
+        &.spark4 {
+          top: -303px;
+          left: 210px;
+          width: 202px;
+          height: 202px;
+          animation: spark .45s forwards;
+          animation-delay: 1.1s;
+          opacity: 0;
+          transform: scale(0);
+        }
+
+        &.spark5 {
+          top: -213px;
+          left: 720px;
+          width: 140px;
+          height: 140px;
+          animation: spark .45s forwards;
+          animation-delay: 1.2s;
+          opacity: 0;
+          transform: scale(0);
+        }
+      }
     }
 
     .row {
