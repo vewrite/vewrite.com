@@ -61,11 +61,19 @@ h5 {
 h1 {
     font-size: $font-size-mega;
     margin: 0;
+
+    @media (max-width: 1000px) {
+        font-size: $font-size-xxl;
+    }
 }
 
 h2 {
     font-size: $font-size-xxl;
     margin: 0;
+
+    @media (max-width: 1000px) {
+        font-size: $font-size-lg;
+    }
 }
 
 h3 {

@@ -35,10 +35,9 @@ definePageMeta({
 @import 'assets/_variables.scss';
 
 .top-article {
-  padding: $spacing-xl 0 0 0;
   position: relative;
   overflow: hidden;
-  margin: 100px $spacing-lg 0;
+  margin: $spacing-xl 0;
   border-radius: 0 0 $br-xl $br-xl;
 
   .container {

@@ -26,12 +26,12 @@
 @import 'assets/_variables.scss';
 
 .template-top {
-  padding: $spacing-xl 0;
+  padding: $spacing-lg 0;
   width: calc(100% - 2 * $spacing-lg);
   height: 100%;
   position: relative;
   overflow: hidden;
-  margin: 100px $spacing-lg 0;
+  margin: 0 $spacing-lg 0;
   border-radius: 0 0 $br-xl $br-xl;
 
 }

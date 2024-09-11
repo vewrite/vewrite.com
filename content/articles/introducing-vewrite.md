@@ -31,7 +31,8 @@ Most modern project management software, including JIRA, Monday, etc. are task-o
 
 ## Project-level Progess Visibility
 
+Most project management tools aren't there to make your job easier. They are there to make your project manager's job easier. They act as a way to collate the status of all the myriad tasks that have been assigned. Often they include a way to create reports and other analytics which show success (or failure) over time.
 
+The effect of this, for daily users, is that they feel like they work for the software that they use, instead of the other way around. 
 
-## Work Smarter, Not Harder
-
+## Thank you

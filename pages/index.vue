@@ -225,12 +225,12 @@ definePageMeta({
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    // transform: translateY(20px);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    // transform: translateY(0px);
   }
 }
 
@@ -254,8 +254,8 @@ definePageMeta({
 
   &.devices {
     position: absolute;
-    top: 300px;
-    left: -800px;
+    top: 200px;
+    left: -600px;
   }
 
   &.office {
@@ -268,12 +268,15 @@ definePageMeta({
 #hero {
   background-size: cover;
   color: $black;
-  padding-top: $spacing-xl;
   width: 100%;
   height: 100%;
   position: relative;
-  margin: $spacing-xxl 0 0;
-  border-radius: $br-xl;
+  margin: $spacing-xl 0 0;
+
+
+  @media (max-width: 1000px) {
+    margin: $spacing-xl 0 0;
+  }
 
   .container .logo {
     opacity: 0;
@@ -284,12 +287,6 @@ definePageMeta({
     opacity: 0;
     animation: fadeIn .35s ease-in-out forwards;
     animation-delay: 1.05s;
-  }
-
-  @media (max-width: 1400px) {
-      width: 100%;
-      margin: 0;
-      border-radius: 0;
   }
 
   .target {
@@ -374,7 +371,6 @@ definePageMeta({
     }
 
     h1 {
-      font-size: $font-size-mega;
       line-height: 90%;
       font-weight: bold;
       margin: $spacing-md 0;
@@ -383,21 +379,28 @@ definePageMeta({
       opacity: 0;
       animation: fadeIn .35s ease-in-out forwards;
       animation-delay: 0.7s;
+
+      @media (max-width: 1000px) {
+        margin: 0 ;
+      }
     }
 
     .hero-element-devices {
-      width: 840px;
-      height: 1020px;
+      width: 630px;
+      height: 765px;
       background: transparent url('/images/book.png') no-repeat center center;
       background-size: contain;
       z-index: -1;
       opacity: 0;
       animation: fadeIn .35s ease-in-out forwards;
       animation-delay: 1.7s;
+
+      @media (max-width: 400px) {
+        display: none;
+      }
     }
 
     h2 {
-      font-size: $font-size-xl;
       font-family: $font-family-condensed;
       line-height: 150%;
       font-weight: normal;
@@ -407,14 +410,18 @@ definePageMeta({
       opacity: 0;
       animation: fadeIn .35s ease-in-out forwards;
       animation-delay: 1.05s;
+
+      @media (max-width: 1000px) {
+        margin: 0;
+      }
     }
 
     .hero-element-office {
       position: absolute;
-      top: -100px;
-      right: -500px;
-      width: 840px;
-      height: 1260px;
+      top: 150px;
+      right: -350px;
+      width: 630px;
+      height: 945px;
       background: transparent url('/images/folder-pen.png') no-repeat center center;
       background-size: cover;
       z-index: 1;
@@ -422,6 +429,27 @@ definePageMeta({
       opacity: 0;
       animation: fadeIn .35s ease-in-out forwards;
       animation-delay: 1.35s;
+
+      @media (max-width: 1000px) {
+        width: 555px;
+        height: 832px;
+        top: 0px;
+        right: -200px;
+      }
+
+      @media (max-width: 768px) {
+        width: 555px;
+        height: 832px;
+        top: 0px;
+        right: -200px;
+      }
+      
+      @media (max-width: 600px) {
+        width: 210px;
+        height: 315px;
+        top: 140px;
+        right: -40px;
+      }
     }
   }
 
