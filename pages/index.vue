@@ -6,7 +6,7 @@
         <div class="row">
           <div class="col half">
             <h1>
-              Write more,<br>
+              More writing,<br>
               less hassle
             </h1>
             <p>
