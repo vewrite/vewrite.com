@@ -472,7 +472,7 @@ definePageMeta({
 }
 
 #Potentials {
-  padding: $spacing-xl 0;
+  padding: 0 0 $spacing-xl 0;
   width: 100%;
   font-family: $font-family-condensed;
 
