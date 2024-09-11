@@ -388,15 +388,25 @@ definePageMeta({
     height: 100%;
     margin-top: $spacing-xxl;
 
+    @media (max-width: 1000px) {
+      margin-top: 300px;
+    }
+
     #Witch {
       transform: scale(.5) translateX(00px) translateY(-100px) rotate(0deg);
       position: relative;
       opacity: 0;
       animation: fadeUp .75s forwards;
 
+      @media (max-width: 1000px) {
+        transform: scale(.24) translateX(00px) translateY(-520px) rotate(0deg);
+        animation: none;
+        opacity: 1;
+      }
+
       img {
         position: absolute;
-        top: -100px;
+        max-width: unset;
 
         &.excitement {
           top: -390px;
@@ -414,6 +424,8 @@ definePageMeta({
           left: 0;
           width: 550px;
           height: 562px;
+          opacity: 0;
+          animation: fadeIn .35s ease-in forwards;
         }
 
         &.skull {
