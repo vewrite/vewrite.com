@@ -83,7 +83,6 @@ async function submitEmail(event) {
   width: 80%;
   position: relative;
   border-top: 1px solid rgba($white, 0.2);
-  padding-top: $spacing-lg;
 
   @media (max-width: 1000px) {
     flex-direction: column;
@@ -164,6 +163,10 @@ async function submitEmail(event) {
         font-family: $font-family-condensed;
         font-size: $font-size-lg;
         color: $black;
+
+        @media (max-width: 1000px) {
+          font-size: $font-size-md;
+        }
       }
     }
   }
@@ -177,12 +180,20 @@ async function submitEmail(event) {
       border-radius: 40px;
       font-size: $font-size-md;
       font-family: $font-family-condensed;
-      width: 100%;
       background: $white;
       color: $black;
       outline: 1px solid $purple;
       outline-offset: 0px;
       width: 100%;
+
+      @media (max-width: 1000px) {
+        border-radius: $br-md;
+        padding: $spacing-sm;
+      }
+
+      @media (max-width: 1000px) {
+        font-size: $font-size-md;
+      }
 
       &:hover, &:active, &:focus {
         outline: 1px solid $green;
@@ -196,6 +207,12 @@ async function submitEmail(event) {
       top: 12px;
       font-size: $font-size-md;
       outline-offset: -2px;
+
+      @media (max-width: 1000px) {
+        position: relative;
+        width: 100%;
+        right: 0;
+      }
 
       &:hover {
         transform: scale(1.05);

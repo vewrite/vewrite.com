@@ -9,6 +9,11 @@ body {
     font-size: $font-size-sm;
     overflow-x: hidden;
     background: $white url('/images/big-bg.png') top center no-repeat;
+
+    @media (max-width: 1000px) {
+        background: $white url('/images/small-bg.png') top right no-repeat;
+        background-size: 100vw;
+    }
 }
 
 #__nuxt {
@@ -72,7 +77,7 @@ h2 {
     margin: 0;
 
     @media (max-width: 1000px) {
-        font-size: $font-size-lg;
+        font-size: $font-size-xl;
     }
 }
 
@@ -100,6 +105,10 @@ p {
     line-height: 1.44;
     font-size: $font-size-lg;
 
+    @media (max-width: 1000px) {
+        font-size: $font-size-md;
+    }
+
     &.light {
         color: rgba($black, 0.5);
         font-family: $font-family-condensed;
@@ -110,6 +119,10 @@ ol, ul {
     margin: 0 0 $spacing-md 0;
     padding: 0 0 0 $spacing-md;
     list-style-position: inside;
+
+    @media (max-width: 1000px) {
+        font-size: $font-size-md;
+    }
 }
 
 li {
@@ -215,6 +228,15 @@ table {
     &.one-third {
         width: 33.333%;
 
+        @media (max-width: 1000px) {
+            width: 100%;
+
+            img {
+                width: 50% !important;
+                margin: 0 auto;
+            }
+        }
+
         img {
             width: 100%;
         }
@@ -223,6 +245,10 @@ table {
     &.two-thirds {
         width: 66.666%;
 
+        @media (max-width: 1000px) {
+            width: 100%;
+        }
+
         img {
             width: 100%;
         }
@@ -230,6 +256,10 @@ table {
 
     &.half {
         width: 50%;
+
+        @media (max-width: 1000px) {
+            width: 100%;
+        }
 
         img {
             width: 100%;

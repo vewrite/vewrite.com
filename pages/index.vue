@@ -5,19 +5,21 @@
       <div class="hero-article">
         <span class="new">
           <span class="bubble"></span>
-          New article
+          <div>New</div>
         </span>
         <nuxt-link to="/articles/introducing-vewrite" class="hero-article-title">Introducing Vewrite ➔</nuxt-link>
       </div>
       <div class="hero-element-wrapper devices"><div class="hero-element-devices"></div></div>
       <div class="hero-element-wrapper office"><div class="hero-element-office"></div></div>
-      <h1>
-        More writing,<br>
-        less hassle
-      </h1>
-      <h2>
-        Vewrite is launching a project management toolset for technical writing teams that has a talent marketplace deeply integrated into it. 
-      </h2>
+      <section>
+        <h1>
+          More writing,<br>
+          less hassle
+        </h1>
+        <p>
+          Vewrite is launching a project management toolset for technical writing teams that has a talent marketplace deeply integrated into it. 
+        </p>
+      </section>
       <Join id="hero-join" />
     </div>
   </main>
@@ -252,6 +254,10 @@ definePageMeta({
 .hero-element-wrapper {
   transform: translateY(var(--element-translate-y, 0));
 
+  @media (max-width: 1000px) {
+    display: none;
+  }
+
   &.devices {
     position: absolute;
     top: 200px;
@@ -275,7 +281,7 @@ definePageMeta({
 
 
   @media (max-width: 1000px) {
-    margin: $spacing-xl 0 0;
+    margin: $spacing-lg 0 0;
   }
 
   .container .logo {
@@ -306,6 +312,10 @@ definePageMeta({
     z-index: 1;
     padding-bottom: $spacing-xxl;
 
+    @media (max-width: 1000px) {
+      gap: $spacing-lg;
+    }
+
     .hero-article {
       display: flex;
       flex-direction: row;
@@ -320,16 +330,34 @@ definePageMeta({
         font-size: $font-size-md;
         font-family: $font-family-condensed;
         color: $white;
-        background: rgba($black, 1);
+        background: rgba($purple, 1);
         padding: 6px 8px 6px 32px;
         border-radius: $br-md;
         position: relative;
+        height: 28px;
+
+        @media (max-width: 1000px) {
+          padding: 6px;
+          width: 30px;
+        }
+
+        div {
+          @media (max-width: 1000px) {
+            display: none;
+          }
+        }
+
+        @media (max-width: 1000px) {
+          font-size: $font-size-sm;
+          display: flex;
+          flex-direction: column;
+        }
 
         .bubble {
           width: 18px;
           height: 18px;
           position: relative;
-          background: $black;
+          background: $purple;
           box-shadow: 0px 0px 6px 2px rgba($white, 0.8);
           border-radius: 30px;
           position: absolute;
@@ -362,6 +390,10 @@ definePageMeta({
         font-family: $font-family-condensed;
         transition: all 0.3s ease-in-out;
 
+        @media (max-width: 1000px) {
+          font-size: $font-size-md;
+        }
+
         &:hover {
           color: $purple-dark;
           border-bottom: 1px solid rgba($purple, 1);
@@ -373,7 +405,7 @@ definePageMeta({
     h1 {
       line-height: 90%;
       font-weight: bold;
-      margin: $spacing-md 0;
+      margin: 0 0 $spacing-md 0;
       position: relative;
       width: 80%;
       opacity: 0;
@@ -381,7 +413,7 @@ definePageMeta({
       animation-delay: 0.7s;
 
       @media (max-width: 1000px) {
-        margin: 0 ;
+        width: 100%;
       }
     }
 
@@ -394,13 +426,9 @@ definePageMeta({
       opacity: 0;
       animation: fadeIn .35s ease-in-out forwards;
       animation-delay: 1.7s;
-
-      @media (max-width: 400px) {
-        display: none;
-      }
     }
 
-    h2 {
+    p {
       font-family: $font-family-condensed;
       line-height: 150%;
       font-weight: normal;
@@ -413,13 +441,14 @@ definePageMeta({
 
       @media (max-width: 1000px) {
         margin: 0;
+        width: 100%;
       }
     }
 
     .hero-element-office {
       position: absolute;
-      top: 150px;
-      right: -350px;
+      top: 50px;
+      right: -250px;
       width: 630px;
       height: 945px;
       background: transparent url('/images/folder-pen.png') no-repeat center center;
@@ -437,19 +466,6 @@ definePageMeta({
         right: -200px;
       }
 
-      @media (max-width: 768px) {
-        width: 555px;
-        height: 832px;
-        top: 0px;
-        right: -200px;
-      }
-      
-      @media (max-width: 600px) {
-        width: 210px;
-        height: 315px;
-        top: 140px;
-        right: -40px;
-      }
     }
   }
 
@@ -460,11 +476,19 @@ definePageMeta({
   width: 100%;
   font-family: $font-family-condensed;
 
+  .row {
+    @media (max-width: 1000px) {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-lg;
+    }
+  }
+
   .col {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: $spacing-md;
 
     h2 {
