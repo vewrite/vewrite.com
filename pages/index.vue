@@ -24,7 +24,7 @@
               </a>
             </section>
           </div>
-          <div class="col half">
+          <div class="col half" id="Witch">
             <img src="/images/folder-pen.png">
           </div>
         </div>
@@ -326,6 +326,10 @@ definePageMeta({
     z-index: 1;
     height: 100%;
     padding-top: $spacing-lg;
+
+    #Witch {
+      transform: scale(1.5) translateX(00px);
+    }
 
     .row {
       gap:0;
