@@ -31,7 +31,7 @@ defineProps({
 @import 'assets/_variables.scss';
   
 .black path {
-  fill: $black;
+  fill: rgba($black, 0.5);
 }
 
 .purple path {

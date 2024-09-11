@@ -1,5 +1,5 @@
 <template>
-  <div class="join-container">
+  <div :class="['join-container', wide]">
     <div v-if="successMessage" class="notification success">{{ successMessage }}</div>
     <div v-if="errorMessage" class="notification error">{{ errorMessage }}</div>
     <form class="hero-waitlist" @submit.prevent="submitEmail">
@@ -31,6 +31,13 @@ const { $supabase } = useNuxtApp()
 const loading = ref(false);
 const errorMessage = ref(null);
 const successMessage = ref(null);
+
+defineProps({
+  wide: {
+    type: String,
+    default: '',
+  },
+});
 
 const submission = ref({
   email: '',
@@ -82,6 +89,18 @@ async function submitEmail(event) {
   width: 100%;
   gap: $spacing-sm;
   position: relative;
+
+  &.wide {
+
+    .hero-waitlist {
+      
+      .hero-checkboxes {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
 
   .notification {
     position: absolute;
@@ -168,7 +187,7 @@ async function submitEmail(event) {
       font-family: $font-family-condensed;
       background: $white;
       color: $black;
-      outline: 1px solid rgba($purple, 0.1);
+      outline: 1px solid rgba($green, 0.1);
       outline-offset: 0px;
       width: 100%;
 
@@ -182,7 +201,7 @@ async function submitEmail(event) {
       }
 
       &:hover, &:active, &:focus {
-        outline: 1px solid $purple;
+        outline: 1px solid $green;
         outline-offset: 4px;
       }
     }

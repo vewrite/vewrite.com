@@ -12,7 +12,7 @@
           less hassle
         </h1>
         <p>
-          Project management for technical writing teams with an integrated talent marketplace.
+          <span class="purple">Project management tailored for technical writing teams</span>, <span class="green">with an integrated talent marketplace</span>.
         </p>
       </section>
       <section class="hero-buttons">
@@ -304,6 +304,7 @@ definePageMeta({
     display: flex;
     flex-direction: row;
     width: 100%;
+    gap: $spacing-sm;
 
     @media (max-width: 1000px) {
       flex-direction: column;
@@ -313,19 +314,6 @@ definePageMeta({
         width: 100%;
       }
     }
-  }
-
-  #hero-join {
-    opacity: 0;
-    animation: fadeIn .35s ease-in-out forwards;
-    animation-delay: 1.05s;
-  }
-
-  .target {
-    height: 0;
-    width: 0;
-    visibility: hidden;
-    display: none;
   }
 
   .container {
@@ -391,6 +379,7 @@ definePageMeta({
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: rgba($green, 0.1);
 
   @media (max-width: 1000px) {
     margin: $spacing-xl 0 ;
@@ -398,7 +387,7 @@ definePageMeta({
 }
 
 #Potentials {
-  padding: 0 0 $spacing-xl 0;
+  padding: $spacing-xl 0;
   width: 100%;
   font-family: $font-family-condensed;
 
@@ -522,6 +511,7 @@ definePageMeta({
   grid-template-columns: repeat(4, 1fr);
   gap: $spacing-xl;
   max-width: 80%;
+  padding: $spacing-xl 0;
   margin: $spacing-lg auto;
 
   @media (max-width: 1280px) {

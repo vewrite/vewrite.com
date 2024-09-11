@@ -66,6 +66,7 @@ h5 {
 
 h1 {
     font-size: $font-size-mega;
+    font-weight: 700;
     margin: 0;
 
     @media (max-width: 1000px) {
@@ -143,6 +144,10 @@ pre {
 
 .green {
     color: $green-dark;
+}
+
+.purple {
+    color: $purple;
 }
 
 /* Table */
@@ -496,7 +501,7 @@ button,
     color: $purple;
     background: rgba($purple, 0);
     border-radius: $br-xl;
-    border: 1px solid rgba($purple, 0.1);
+    border: 1px solid rgba($purple, 0);
     text-align: center;
     text-decoration: none;
     padding: calc($spacing-xxs + 2px) $spacing-sm $spacing-xxs;
@@ -533,6 +538,11 @@ button.large,
 button.clear,
 .button.clear {
     border-color: transparent;
+    background-color: rgba($purple-light, 0.05);
+
+    &:hover {
+        background-color: rgba($purple-light, 0.1);
+    }
 }
 
 button.wide,
@@ -545,7 +555,7 @@ button.wide,
 
 button.dark,
 .button.dark {
-    border: 1px solid rgba($purple-dark, 0.9);
+    border: 1px solid rgba($purple-dark, 0);
     background-color: rgba($purple-light, 0.75);
     color: $white;
 
@@ -557,7 +567,7 @@ button.dark,
 
 button.primary,
 .button.primary {
-    border: 1px solid rgba($purple-dark, 0.9);
+    border: 1px solid rgba($purple-dark, 0);
     background-color: rgba($purple, 0.75);
     color: $white;
 
@@ -569,7 +579,7 @@ button.primary,
 
 button.green,
 .button.green {
-    border: 1px solid rgba($green-dark, 0.3);
+    border: 1px solid rgba($green-dark, 0);
     background-color: rgba($green, 1);
     color: $black;
 

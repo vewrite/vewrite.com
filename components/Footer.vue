@@ -1,15 +1,13 @@
 <template>
-  <footer id="footer">
-    <a name="join" class="target"></a>
+  <footer id="Footer">
     <div class="container">
       <div class="join-us">
-        <img src="/images/logo-footer.png" alt="Vewrite logo" />
         <div>
           <h1>Launching soon</h1>
           <h2>If you’re interested in being one of the first to use our innovative new tool, make sure to join our waiting list below.</h2>
         </div>
 
-        <Join />
+        <Join wide="wide" />
 
       </div>
       <p class="copyright">Vewrite &copy; 2024</p>
@@ -21,13 +19,10 @@
 
 @import 'assets/_variables.scss';
 
-footer {
-  color: $black;
-  padding: $spacing-lg;
-  overflow: hidden;
-  width: calc(100% - 2 * $spacing-lg);
-  margin: $spacing-xxl $spacing-lg 0;
-  border-radius: $br-xl $br-xl 0 0;
+#Footer {
+  background-color: rgba($green, 0.1);
+  color: $green-dark;
+  padding: $spacing-xl 0;
 
   @media (max-width: 1400px) {
       width: 100%;
@@ -39,43 +34,9 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: $spacing-lg;
     gap: $spacing-lg;
     position: relative;
-    
-    h1 {
-      color: $black;
-    }
-
-    svg {
-      fill: $black;
-    }
-
-    // &:before {
-    //   content: '';
-    //   position: absolute;
-    //   top: 200px;
-    //   right: -780px;
-    //   width: 700px;
-    //   height: 700px;
-    //   background: transparent url('/images/triangle.png') no-repeat center center;
-    //   background-size: contain;
-    //   z-index: 1;
-    //   opacity: 0.5;
-    // }
-
-    // &:after {
-    //   content: '';
-    //   position: absolute;
-    //   top: -100px;
-    //   left: -680px;
-    //   width: 600px;
-    //   height: 600px;
-    //   background: transparent url('/images/circle.png') no-repeat center center;
-    //   background-size: contain;
-    //   z-index: 1;
-    //   opacity: 0.5;
-    // }
+    width: 100%;
 
     svg {
       margin-top: $spacing-md;
