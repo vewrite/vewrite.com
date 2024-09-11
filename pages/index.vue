@@ -33,7 +33,7 @@
     </div>
   </main>
 
-  <div id="Potentials">
+  <!-- <div id="Potentials">
     <div class="container">
       <div class="row">
         <div class="col one-third">
@@ -56,7 +56,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <a name="teams" class="target"></a>
   <div id="Personas">
@@ -76,6 +76,7 @@
       </div>
     </div>
 
+    <a name="advantages" class="target"></a>
     <div id="Advantages">
         <div>
           <img src="/images/stakeholder-visibility.png" alt="Stakeholder visibility" />
@@ -99,8 +100,8 @@
         </div>
     </div>
 
-    <div class="container">
-      <a name="writers" class="target"></a>
+    <a name="writers" class="target"></a>
+    <div id="Writers" class="container">
       <span class="marker writer">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M1.2897 14.9077C1.10412 15.0949 1 15.3479 1 15.6116V18C1 18.5523 1.44772 19 2 19H4.38313C4.64992 19 4.90564 18.8934 5.09343 18.7039L15.0993 8.60709C15.4868 8.21606 15.4854 7.58536 15.0961 7.19609L12.7103 4.81031C12.3185 4.41854 11.6829 4.41998 11.2929 4.81352L1.2897 14.9077ZM18.7 5C19.1 4.6 19.1 4 18.7 3.6L16.4 1.3C16 0.9 15.4 0.9 15 1.3L13.9071 2.39289C13.5166 2.78342 13.5166 3.41658 13.9071 3.80711L16.2525 6.15252C16.6585 6.55846 17.3221 6.54004 17.7049 6.11221L18.7 5Z" stroke="#68834A" stroke-width="2" stroke-linecap="round"/>
@@ -179,21 +180,18 @@
       </div>
     </div>
 
-    <a name="join" class="target"></a>
+    <!-- <a name="join" class="target"></a>
     <div id="Join">
       <div class="container">
         <div class="row">
-          <div class="col one-third">
-            <img src="/images/book.png">
-          </div>
-          <div class="col two-thirds">
+          <div class="col full">
             <h1 class="green">Join our journey</h1>
             <p>We are looking to work with teams and freelance writers who are interested in improving their workflows and making more money along the way.</p>
             <Join id="hero-join" />
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -509,8 +507,7 @@ definePageMeta({
   grid-template-columns: repeat(4, 1fr);
   gap: $spacing-xl;
   max-width: 80%;
-  padding: $spacing-xl 0;
-  margin: $spacing-lg auto;
+  margin: 0 auto;
 
   @media (max-width: 1280px) {
     max-width: 100%;
@@ -547,6 +544,15 @@ definePageMeta({
       @media (max-width: 1000px) {
         padding-top: 0;
       }
+    }
+  }
+}
+
+#Writers {
+  .col {
+    img {
+      max-width: 200px;
+      height: auto;
     }
   }
 }
