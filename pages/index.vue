@@ -30,7 +30,7 @@
           <img src="/images/book.png">
         </div>
         <div class="col two-thirds">
-          <h2 class="green">Join the Vewrite beta</h2>
+          <h1 class="green">Join our journey</h1>
           <p>We are looking to work with teams and freelance writers who are interested in improving their workflows and making more money along the way.</p>
           <Join id="hero-join" />
         </div>
@@ -76,9 +76,9 @@
             </svg>
             For teams
           </span>
+          <h2 class="purple">Vewrite is the better way to work that you've been looking for.</h2>
           <h3>Efficiently manage your Technical Writing team</h3>
           <p class="light">Our software provides your team with a customizable, tailored alternative for project management of technical writing projects. Focus on pushing your work through a sensible workflow, instead of trying to tackle a pile of tasks. You don’t have to use tools made for developers and marketers to get your work done on-time and within budget.</p>
-          <p>Vewrite is the better way to work that you've been looking for.</p>
         </div>
       </div>
     </div>
@@ -115,7 +115,7 @@
         For writers
       </span>
 
-      <h2>Find well-paid work as a Technical Writer within our integrated Talent Marketplace</h2>
+      <h2 class="green">Find well-paid work as a Technical Writer within our integrated Talent Marketplace</h2>
       <p class="light">Vewrite tightly integrates a marketplace for technical writers into its project management suite. Writers who want to work on awesome projects can now do so without losing a large percentage of their earnings to marketplace fees.</p>
 
       <table class="commission-rates">
@@ -626,7 +626,7 @@ definePageMeta({
           font-size: $font-size-lg;
 
           @media (max-width: 768px) {
-            font-size: $font-size-md;
+            font-size: $font-size-sm;
           }
 
           small {

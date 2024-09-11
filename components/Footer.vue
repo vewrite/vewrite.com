@@ -1,15 +1,9 @@
 <template>
   <footer id="Footer">
     <div class="container">
-      <div class="join-us">
-        <div>
-          <h1>Launching soon</h1>
-          <h2>If you’re interested in being one of the first to use our innovative new tool, make sure to join our waiting list below.</h2>
-        </div>
-
-        <Join wide="wide" />
-
-      </div>
+      <h2>Launching soon</h2>
+      <p>If you’re interested in being one of the first to use our innovative new tool, make sure to join our waiting list below.</p>
+      <Join wide="wide" />
       <p class="copyright">Vewrite &copy; 2024</p>
     </div>
   </footer>
@@ -40,18 +34,6 @@
 
     svg {
       margin-top: $spacing-md;
-    }
-
-    h1 {
-      margin: 0 0 $spacing-md 0;
-      text-align: center;
-    }
-
-    h2 {
-      font-size: $font-size-lg;
-      font-family: $font-family-condensed;
-      text-align: center;
-      margin: 0 0 $spacing-md 0;
     }
   }
 
