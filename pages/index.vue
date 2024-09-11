@@ -2,62 +2,55 @@
   <main id="Hero" :class="{'scrolled': isScrolled}">
     
     <div class="container">
-      <div class="hero-element-wrapper office">
-        <div class="hero-element-office"></div>
-      </div>
-      <Logo color="black" size="large" />
       <section class="hero-text">
-        <h1>
-          More writing,<br>
-          less hassle
-        </h1>
-        <p>
-          <span>Project management tailored for technical writing teams</span>, <span class="green">with an integrated talent marketplace</span>.
-        </p>
+        <div class="row">
+          <div class="col half">
+            <h1>
+              Write more,<br>
+              less hassle
+            </h1>
+            <p>
+              <span>Project management tailored for technical writing teams</span>, <span class="green">with an integrated talent marketplace</span>.
+            </p>
+            <section class="hero-buttons">
+              <nuxt-link to="/articles/introducing-vewrite" class="button primary large">Learn more about Vewrite</nuxt-link>
+              <a href="#join" class="button clear">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="7" cy="7" r="7" fill="#8D00FB"/>
+                  <path d="M3 7H11" stroke="white"/>
+                  <path d="M7 3L7 11" stroke="white"/>
+                </svg>
+                Join the beta
+              </a>
+            </section>
+          </div>
+          <div class="col half">
+            <img src="/images/folder-pen.png">
+          </div>
+        </div>
       </section>
-      <section class="hero-buttons">
-        <nuxt-link to="/articles/introducing-vewrite" class="button primary large">Learn more about Vewrite</nuxt-link>
-        <a href="#join" class="button clear large">+ Join the beta</a>
-      </section>
+
     </div>
   </main>
-
-  <a name="join" class="target"></a>
-  <div id="Join">
-    <div class="container">
-      <div class="row">
-        <div class="col one-third">
-          <img src="/images/book.png">
-        </div>
-        <div class="col two-thirds">
-          <h1 class="green">Join our journey</h1>
-          <p>We are looking to work with teams and freelance writers who are interested in improving their workflows and making more money along the way.</p>
-          <Join id="hero-join" />
-        </div>
-        
-      </div>
-      
-    </div>
-  </div>
 
   <div id="Potentials">
     <div class="container">
       <div class="row">
         <div class="col one-third">
-          <img src="/images/potential-team.png" alt="Writing Teams" />
           <h3>Improving the efficiency of small writing teams</h3>
+          <img src="/images/potential-team.png" alt="Writing Teams" />
           <p class="light">With so many projects and so many deliverables, you're spending precious time tracking progress instead of making it.</p>
           <p>Vewrite provides you with an easy to use workflow management tool that makes sure that you can focus on what is important: delivering high-quality work for your clients.</p>
         </div>
         <div class="col one-third">
-          <img src="/images/potential-writer.png" alt="Freelance Technical Writers" />
           <h3>Connecting technical writers with clients</h3>
+          <img src="/images/potential-writer.png" alt="Freelance Technical Writers" />
           <p class="light">In a crowded market, it can be hard to be seen, and harder to make a living doing what you are good at.</p>
           <p>Vewrite ensures that you are embedded directly into the workflows of the teams who value you the most.</p>
         </div>
         <div class="col one-third">
-          <img src="/images/potential-devrel.png" alt="Developer Relations" />
           <h3>Smoothing the process for developer relations</h3>
+          <img src="/images/potential-devrel.png" alt="Developer Relations" />
           <p class="light">When you are enlightening developers about your company's products, you should be free to focus on producing excellent content instead of micro-managing your workflow.</p>
           <p>With Vewrite your stakeholders have critical visibility while your DevRel team spreads the word about their innovations. </p>
         </div>
@@ -186,6 +179,22 @@
           </div>
           <h3 class="no-margin">Prompt payouts</h3>
           <p class="light">When your work moves to the approved state, and all stakeholders are satisfied, it’s time to get you paid. Vewrite provides prompt payouts with no risk to you.</p>
+        </div>
+      </div>
+    </div>
+
+    <a name="join" class="target"></a>
+    <div id="Join">
+      <div class="container">
+        <div class="row">
+          <div class="col one-third">
+            <img src="/images/book.png">
+          </div>
+          <div class="col two-thirds">
+            <h1 class="green">Join our journey</h1>
+            <p>We are looking to work with teams and freelance writers who are interested in improving their workflows and making more money along the way.</p>
+            <Join id="hero-join" />
+          </div>
         </div>
       </div>
     </div>
@@ -319,12 +328,20 @@ definePageMeta({
   .container {
     position: relative;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     z-index: 1;
     height: 100%;
-    padding-top: $spacing-xl;
-    padding-bottom: $spacing-xl;
+    padding-top: $spacing-lg;
+
+    .row {
+      gap:0;
+
+      @media (max-width: 1000px) {
+        gap: $spacing-sm;
+        flex-direction: column-reverse;
+      }
+    }
 
     @media (max-width: 1000px) {
       gap: $spacing-lg;
@@ -340,11 +357,10 @@ definePageMeta({
     }
 
     h1 {
-      line-height: 90%;
-      font-weight: bold;
-      margin: 0 0 $spacing-md 0;
+      line-height: 76%;
+      margin: 0;
       position: relative;
-      width: 80%;
+      width: 100%;
       opacity: 0;
       animation: fadeIn .35s ease-in-out forwards;
       animation-delay: 0.7s;
@@ -356,9 +372,10 @@ definePageMeta({
 
     p {
       font-family: $font-family-condensed;
+      font-size: $font-size-xl;
       line-height: 150%;
       font-weight: normal;
-      margin: $spacing-md 0 $spacing-lg 0;
+      margin: 0;
       position: relative;
       width: 80%;
       opacity: 0;
@@ -368,6 +385,7 @@ definePageMeta({
       @media (max-width: 1000px) {
         margin: 0;
         width: 100%;
+        font-size: $font-size-lg;
       }
     }
   }

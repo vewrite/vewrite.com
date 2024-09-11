@@ -25,6 +25,16 @@ body {
     box-sizing: border-box;
 }
 
+/* Utilities */
+
+.desktop {
+    display: block;
+
+    @media (max-width: 1000px) {
+        display: none !important;
+    }
+}
+
 /* Notifications */
 
 .notification {
@@ -165,7 +175,9 @@ table {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    // padding: 0 $spacing-lg;
+    padding-left: $spacing-md;
+    padding-right: $spacing-md;
+    padding-bottom: $spacing-xl;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -173,7 +185,6 @@ table {
     gap: $spacing-lg;
 
     @media (max-width: 1000px) {
-        padding: $spacing-xl $spacing-md;
         gap: $spacing-md;
     }
 
@@ -514,7 +525,7 @@ button,
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: $spacing-sm;
+    gap: $spacing-xs;
     align-items: center;
 
     &.no-uppercase {
@@ -539,10 +550,10 @@ button.large,
 button.clear,
 .button.clear {
     border-color: transparent;
-    background-color: rgba($purple-light, 0.05);
+    background-color: lighten($purple-light, 36%);
 
     &:hover {
-        background-color: rgba($purple-light, 0.1);
+        background-color: lighten($purple-light, 32%);
     }
 }
 

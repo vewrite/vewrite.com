@@ -1,19 +1,24 @@
 <template>
   <main  id="Header" :class="{'scrolled': isScrolled}"> 
-    <div class="container mid">
-      <nuxt-link to="/"><Logo /></nuxt-link>
-      <nav>
-        <nuxt-link to="/">Home</nuxt-link>
-        <!-- <section class="home-links">
-          <a href="#join">Join Waitlist</a>
-          <a href="#teams">Teams</a>
-          <a href="#writers">Writers</a>
-        </section> -->
-        <NuxtLink to="/articles">Articles</NuxtLink>
-        <!-- <NuxtLink to="/contact">Contact</NuxtLink> -->
-      </nav>
-      <button class="primary large">Contact</button>
-    </div>
+    <nuxt-link to="/"><Logo /></nuxt-link>
+    <!-- <nav>
+      <nuxt-link to="/">Home</nuxt-link>
+      <section class="home-links">
+        <a href="#join">Join Waitlist</a>
+        <a href="#teams">Teams</a>
+        <a href="#writers">Writers</a>
+      </section>
+      <NuxtLink to="/articles">Articles</NuxtLink>
+      <NuxtLink to="/contact">Contact</NuxtLink>
+    </nav> -->
+    <a href="#join" class="button clear">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="7" cy="7" r="7" fill="#8D00FB"/>
+        <path d="M3 7H11" stroke="white"/>
+        <path d="M7 3L7 11" stroke="white"/>
+      </svg>
+      Join the beta
+    </a>
   </main>
 </template>
 
@@ -40,10 +45,10 @@ onUnmounted(() => {
 @import 'assets/_variables.scss';
 
 #Header {
-  background: $purple;
+  background: transparent;
   background-size: cover;
   color: $black;
-  padding: 0;
+  padding: $spacing-sm;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -52,36 +57,12 @@ onUnmounted(() => {
   transition: all 0.3s ease-in-out;
   position: fixed;
   top: 0;
-
   z-index: 80;
-  height: 80px;
-
-
-  a svg {
-    transition: all 0.3s ease-in-out;
-    fill: $white;
-  }
-
-  @media (max-width: 1000px) {
-      padding: 0 $spacing-xs;
-  }
 
   &.scrolled {
-    // background-color: rgba($white, 0.77);
-    box-shadow: 0 6px 10px 0 rgba($black, 0.1), 0 20px 20px 0 rgba($purple, 0.04);
-    // backdrop-filter: blur(14px);
-
-    // svg {
-    //   fill: $white;
-    // }
-
-    // .container nav a {
-    //   color: rgba($white, 0.5);
-
-    //   &.router-link-exact-active {
-    //     color: $white;
-    //   }
-    // }
+    background-color: rgba($white, 0.17);
+    box-shadow: 0 1px 1px 0 rgba($black, 0.05), 0 2px 2px 0 rgba($purple, 0.04);
+    backdrop-filter: blur(14px);
   }
 
   .container {
