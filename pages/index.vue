@@ -11,13 +11,13 @@
       </div>
       <div class="hero-element-wrapper devices"><div class="hero-element-devices"></div></div>
       <div class="hero-element-wrapper office"><div class="hero-element-office"></div></div>
-      <section>
+      <section class="hero-text">
         <h1>
           More writing,<br>
           less hassle
         </h1>
-        <p>
-          Vewrite is launching a project management toolset for technical writing teams that has a talent marketplace deeply integrated into it. 
+        <p class="light">
+          Project management for technical writing teams with a deeply integrated talent marketplace. 
         </p>
       </section>
       <Join id="hero-join" />
@@ -400,6 +400,10 @@ definePageMeta({
         }
       }
 
+    }
+
+    .hero-text {
+      width: 100%;
     }
 
     h1 {

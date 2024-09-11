@@ -4,7 +4,7 @@
     <div v-if="errorMessage" class="notification error">{{ errorMessage }}</div>
     <form class="hero-waitlist" @submit.prevent="submitEmail">
       <div class="hero-checkboxes">
-        <h3><strong>I'm interested in using Vewrite</strong></h3>
+        <h3>I'm interested in using Vewrite</h3>
         <div>
           <input type="checkbox" id="teams" name="teams" value="teams" v-model="submission.teams">
           <label for="teams">As a team</label>
@@ -104,7 +104,7 @@ async function submitEmail(event) {
     font-family: $font-family-condensed;
     font-size: $font-size-lg;
     font-weight: 500;
-    color: $black;
+    color: $purple;
     margin-bottom: 0;
   }
 
