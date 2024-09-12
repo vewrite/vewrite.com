@@ -11,9 +11,9 @@
               More writing,<br>
               less hassle
             </h1>
-            <p>
+            <h3>
               <span>Project management tailored for technical writing teams</span>, <span class="green">with an integrated talent marketplace</span>.
-            </p>
+            </h3>
             <section class="hero-buttons">
               <nuxt-link to="/articles/introducing-vewrite" class="button primary">Learn more about Vewrite</nuxt-link>
               <div class="button clear" @click="joinStore.toggleJoin">
@@ -495,11 +495,7 @@ const { joining } = storeToRefs(joinStore);
       }
     }
 
-    p {
-      font-family: $font-family-condensed;
-      font-size: $font-size-xl;
-      line-height: 150%;
-      font-weight: normal;
+    h3 {
       margin: 0;
       position: relative;
       opacity: 0;
