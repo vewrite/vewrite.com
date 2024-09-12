@@ -1,6 +1,20 @@
 <template>
+  <section id="JoinPopup" :class="isJoining">
+    <div class="blur" @click="toggleJoin()"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col full">
+          <div class="popup">
+            <h2>Join our journey</h2>
+            <p>We are looking to work with experienced technical writing teams and freelance writers who are interested in improving their workflows and making more money along the way.</p>
+            <Join id="hero-join" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <main id="Hero" :class="{'scrolled': isScrolled}">
-    
     <div class="container">
       <section class="hero-text">
         <div class="row">
@@ -14,7 +28,7 @@
             </p>
             <section class="hero-buttons">
               <nuxt-link to="/articles/introducing-vewrite" class="button primary large">Learn more about Vewrite</nuxt-link>
-              <a href="#join" class="button clear">
+              <a href="#join" class="button clear" @click="toggleJoin()">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="7" cy="7" r="7" fill="#8D00FB"/>
                   <path d="M3 7H11" stroke="white"/>
@@ -190,18 +204,6 @@
       </div>
     </div>
 
-    <!-- <a name="join" class="target"></a>
-    <div id="Join">
-      <div class="container">
-        <div class="row">
-          <div class="col full">
-            <h1 class="green">Join our journey</h1>
-            <p>We are looking to work with teams and freelance writers who are interested in improving their workflows and making more money along the way.</p>
-            <Join id="hero-join" />
-          </div>
-        </div>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -210,6 +212,7 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const isScrolled = ref(false);
+const isJoining = ref('');
 const isInView = ref(false);
 
 const handleScroll = () => {
@@ -222,6 +225,14 @@ const handleScroll = () => {
     const scrollY = window.scrollY;
     const translateY = scrollY * -0.25;
     document.documentElement.style.setProperty('--element-translate-y', `${translateY}px`);
+  }
+};
+
+const toggleJoin = () => {
+  if (isJoining.value === '') {
+    isJoining.value = 'joining';
+  } else {
+    isJoining.value = '';
   }
 };
 
@@ -321,34 +332,63 @@ definePageMeta({
   }
 }
 
-.hero-element-wrapper {
-  transform: translateY(var(--element-translate-y, 0));
-  position: absolute;
-  top: 0px;
-  right: 0px;
+#JoinPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
 
-  .hero-element-office {
-    position: absolute;
-    top: -100px;
-    right: -150px;
-    width: 700px;
-    height: 700px;
-    background: transparent url('/images/folder-pen.png') no-repeat center center;
-    background-size: cover;
+  .blur {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba($black, 0.2);
     z-index: 1;
-    transform: translateY(var(--element-translate-y, 0));
-    opacity: 0;
-    animation: fadeIn .35s ease-in-out forwards;
-    animation-delay: 1.35s;
+    pointer-events: none;
+  }
 
-    @media (max-width: 1000px) {
-      width: 400px;
-      height: 400px;
-      top: -260px;
-      right: -100px;
-      transform: rotate(-5deg);
+  &.joining {
+    pointer-events: all;
+    animation: fadeIn .35s ease-in-out forwards;
+
+    .blur {
+      pointer-events: all;
+      animation: fadeIn .35s ease-in-out forwards;
+    }
+  }
+
+  .popup {
+    max-width: 600px;
+    border-radius: $br-xl;
+    background: $white;
+    z-index: 2;
+
+    #hero-join {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: $spacing-sm;
+      padding: $spacing-lg;
+      background: rgba($green, 0.1);
     }
 
+    h2 {
+      margin: $spacing-lg $spacing-lg 0 $spacing-lg;
+    }
+
+    p {
+      margin: $spacing-sm $spacing-lg $spacing-lg $spacing-lg;
+    }
   }
 }
 
