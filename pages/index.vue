@@ -312,12 +312,12 @@ definePageMeta({
 @keyframes fadeUp {
   0% {
     opacity: 0;
-    transform: scale(.4) translateX(00px) translateY(0px) rotate(-5deg);
+    transform: scale(.2) translateX(00px) translateY(0px) rotate(-15deg);
   }
 
   100% {
     opacity: 1;
-    transform: scale(.5) translateX(160px) translateY(-100px) rotate(0deg);
+    transform: scale(.46) translateX(160px) translateY(-100px) rotate(0deg);
   }
 }
 
@@ -393,7 +393,6 @@ definePageMeta({
     }
 
     #Witch {
-      transform: scale(.5) translateX(160px) translateY(-100px) rotate(0deg);
       position: relative;
       opacity: 0;
       animation: fadeUp .75s forwards;

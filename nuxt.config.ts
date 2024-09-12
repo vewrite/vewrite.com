@@ -1,15 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
-  devtools: { enabled: true },
-  hotjar: {
-    hotjarId: 5129596,
-    scriptVersion: 6,
-  },
   css: [
     '@/assets/main.scss',
     '@/assets/_variables.scss',
   ],
+  app: {
+    head: {
+      htmlAttrs: {
+          lang: 'en',
+      },
+      title: 'Vewrite - Modern Productivity for Technical Writers',
+      charset: 'utf-8',
+      meta: [
+        { name: 'author', content: 'Vewrite' },
+        { name: 'description', content: 'Project management tailored for technical writing teams, with an integrated talent marketplace.' }
+      ],
+    }
+  },
   googleFonts: {
     families: {
       Roboto: true,
@@ -24,6 +31,10 @@ export default defineNuxtConfig({
     '@nuxt/content',
     'nuxt-module-hotjar'
   ],
+  hotjar: {
+    hotjarId: 5129596,
+    scriptVersion: 6,
+  },
   runtimeConfig: {
     public: {
       supabaseUrl: process.env.SUPABASE_URL,
