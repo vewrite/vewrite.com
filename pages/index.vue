@@ -323,7 +323,6 @@ const { joining } = storeToRefs(joinStore);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-bottom: 2px solid rgba($purple, 0.1);
 
   .hero-buttons {
     opacity: 0;
@@ -351,7 +350,7 @@ const { joining } = storeToRefs(joinStore);
     justify-content: center;
     z-index: 1;
     height: 100%;
-    margin-top: $spacing-xxl;
+    margin-top: $spacing-xl;
 
     @media (max-width: 1000px) {
       margin-top: 300px;

@@ -21,8 +21,7 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {
-      Roboto: true,
-      RobotoCondensed: true,
+      RobotoFlex: [100, 300, 400, 500, 700, 900],
       Judson: true,
     }
   },
