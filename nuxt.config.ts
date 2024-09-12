@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     '@/assets/main.scss',
     '@/assets/_variables.scss',
   ],
+
   app: {
     head: {
       htmlAttrs: {
@@ -17,33 +18,38 @@ export default defineNuxtConfig({
       ],
     }
   },
+
   googleFonts: {
     families: {
       Roboto: true,
-      RobotoCondensed: {
-        weight: [400, 700, 900],
-      },
+      RobotoCondensed: true,
       Judson: true,
     }
   },
+
   modules: [
     '@nuxtjs/google-fonts',
     '@nuxt/content',
     'nuxt-module-hotjar'
   ],
+
   hotjar: {
-    hotjarId: 5129596,
-    scriptVersion: 6,
+    id: 5129596,
+    sv: 6,
   },
+
   runtimeConfig: {
     public: {
       supabaseUrl: process.env.SUPABASE_URL,
       supabaseKey: process.env.SUPABASE_KEY,
     },
   },
+
   content: {
     markdown: {
       anchorLinks: false,
     },
   },
+
+  compatibilityDate: '2024-09-12',
 })
