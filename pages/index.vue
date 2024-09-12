@@ -15,15 +15,15 @@
               <span>Project management tailored for technical writing teams</span>, <span class="green">with an integrated talent marketplace</span>.
             </p>
             <section class="hero-buttons">
-              <nuxt-link to="/articles/introducing-vewrite" class="button primary large">Learn more about Vewrite</nuxt-link>
-              <a href="#join" class="button clear" @click="joinStore.toggleJoin">
+              <nuxt-link to="/articles/introducing-vewrite" class="button primary">Learn more about Vewrite</nuxt-link>
+              <div class="button clear" @click="joinStore.toggleJoin">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="7" cy="7" r="7" fill="#8D00FB"/>
                   <path d="M3 7H11" stroke="white"/>
                   <path d="M7 3L7 11" stroke="white"/>
                 </svg>
                 Join the beta
-              </a>
+              </div>
             </section>
           </div>
           <div class="col half">
