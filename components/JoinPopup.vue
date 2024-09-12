@@ -86,6 +86,9 @@ const { joining } = storeToRefs(joinStore);
       max-width: 100%;
       width: 100dvw;
       height: 100dvh;
+      position: fixed;
+      top: 0;
+      left: 0;
     }
 
     #hero-join {
