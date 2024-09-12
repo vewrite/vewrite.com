@@ -4,14 +4,14 @@
     <div v-if="errorMessage" class="notification error">{{ errorMessage }}</div>
     <form class="hero-waitlist" @submit.prevent="submitEmail">
       <div class="hero-checkboxes">
-        <h3>I'm interested in using Vewrite</h3>
+        <h4>I'm interested in using Vewrite</h4>
         <div>
           <input type="checkbox" id="teams" name="teams" value="teams" v-model="submission.teams">
-          <label for="teams">As a team</label>
+          <label for="teams" class="purple">As a team</label>
         </div>
         <div>
           <input type="checkbox" id="writers" name="writers" value="writers" v-model="submission.writers">
-          <label for="writers">As a freelance writer</label>
+          <label for="writers" class="green">As a freelance writer</label>
         </div>
       </div>
       <div class="hero-container">
@@ -118,11 +118,7 @@ async function submitEmail(event) {
 .hero-waitlist {
   width: 100%;
 
-  h3 {
-    font-family: $font-family-condensed;
-    font-size: $font-size-lg;
-    font-weight: 500;
-    color: $green-dark;
+  h4 {
     margin-bottom: 0;
   }
 
@@ -152,7 +148,7 @@ async function submitEmail(event) {
         width: 20px;
         height: 20px;
         cursor: pointer;
-        border: 1px solid $green;
+        border: 1px solid $gray;
         background: $white;
         appearance: none;
         display: inline-block;
@@ -160,7 +156,7 @@ async function submitEmail(event) {
         padding: 0;
 
         &:checked {
-          border: 1px solid $green-dark;
+          border: 1px solid $black;
 
           &::before {
             content: '';
@@ -179,7 +175,6 @@ async function submitEmail(event) {
       label {
         font-family: $font-family-condensed;
         font-size: $font-size-lg;
-        color: $green-dark;
 
         @media (max-width: 1000px) {
           font-size: $font-size-md;
@@ -190,6 +185,9 @@ async function submitEmail(event) {
 
   .hero-container {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 
     input {
       padding: $spacing-md;
@@ -199,7 +197,7 @@ async function submitEmail(event) {
       font-family: $font-family-condensed;
       background: $white;
       color: $black;
-      outline: 1px solid rgba($green, 0.1);
+      outline: 1px solid rgba($green, 0.4);
       outline-offset: 0px;
       width: 100%;
 

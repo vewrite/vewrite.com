@@ -317,66 +317,6 @@ const { joining } = storeToRefs(joinStore);
   }
 }
 
-#JoinPopup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-
-  .blur {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba($black, 0.2);
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  &.joining {
-    pointer-events: all;
-    animation: fadeIn .35s ease-in-out forwards;
-
-    .blur {
-      pointer-events: all;
-      animation: fadeIn .35s ease-in-out forwards;
-    }
-  }
-
-  .popup {
-    max-width: 600px;
-    border-radius: $br-xl;
-    background: $white;
-    z-index: 2;
-
-    #hero-join {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      gap: $spacing-sm;
-      padding: $spacing-lg;
-      background: rgba($green, 0.1);
-    }
-
-    h2 {
-      margin: $spacing-lg $spacing-lg 0 $spacing-lg;
-    }
-
-    p {
-      margin: $spacing-sm $spacing-lg $spacing-lg $spacing-lg;
-    }
-  }
-}
-
 #Hero {
   width: 100%;
   display: flex;
@@ -606,14 +546,6 @@ const { joining } = storeToRefs(joinStore);
     justify-content: center;
     align-items: center;
     gap: $spacing-md;
-
-    // h3 {
-    //   text-align: center;
-    // }
-     
-    // p {
-    //   text-align: center;
-    // }
   }
 }
 
