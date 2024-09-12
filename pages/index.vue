@@ -24,16 +24,18 @@
               </a>
             </section>
           </div>
-          <div class="col half" id="Witch">
-            <img src="/images/excitement.png" class="excitement">
-            <img src="/images/man.png" class="man">
-            <img src="/images/skull.png" class="skull">
-            
-            <img src="/images/spark1.png" class="spark1">
-            <img src="/images/spark2.png" class="spark2">
-            <img src="/images/spark3.png" class="spark3">
-            <img src="/images/spark4.png" class="spark4">
-            <img src="/images/spark5.png" class="spark5">
+          <div class="col half">
+            <section id="Witch">
+              <img src="/images/excitement.png" class="excitement">
+              <img src="/images/man.png" class="man">
+              <img src="/images/skull.png" class="skull">
+              
+              <img src="/images/spark1.png" class="spark1">
+              <img src="/images/spark2.png" class="spark2">
+              <img src="/images/spark3.png" class="spark3">
+              <img src="/images/spark4.png" class="spark4">
+              <img src="/images/spark5.png" class="spark5">
+            </section>
           </div>
         </div>
       </section>
@@ -245,12 +247,10 @@ definePageMeta({
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    // transform: translateY(20px);
   }
 
   100% {
     opacity: 1;
-    // transform: translateY(0px);
   }
 }
 
@@ -317,7 +317,7 @@ definePageMeta({
 
   100% {
     opacity: 1;
-    transform: scale(.5) translateX(00px) translateY(-100px) rotate(0deg);
+    transform: scale(.5) translateX(160px) translateY(-100px) rotate(0deg);
   }
 }
 
@@ -393,13 +393,13 @@ definePageMeta({
     }
 
     #Witch {
-      transform: scale(.5) translateX(00px) translateY(-100px) rotate(0deg);
+      transform: scale(.5) translateX(160px) translateY(-100px) rotate(0deg);
       position: relative;
       opacity: 0;
       animation: fadeUp .75s forwards;
 
       @media (max-width: 1000px) {
-        transform: scale(.24) translateX(00px) translateY(-520px) rotate(0deg);
+        transform: scale(0.24) translateX(-300px) translateY(-520px) rotate(0deg);
         animation: none;
         opacity: 1;
       }
