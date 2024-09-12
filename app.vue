@@ -6,4 +6,8 @@
 
 <script setup>
 
+const { initialize } = useHotjar()
+
+initialize()
+
 </script>
