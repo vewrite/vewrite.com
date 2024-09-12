@@ -1,18 +1,6 @@
 <template>
-  <section id="JoinPopup" :class="isJoining">
-    <div class="blur" @click="toggleJoin()"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col full">
-          <div class="popup">
-            <h2>Join our journey</h2>
-            <p>We are looking to work with experienced technical writing teams and freelance writers who are interested in improving their workflows and making more money along the way.</p>
-            <Join id="hero-join" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
+  <JoinPopup />
 
   <main id="Hero" :class="{'scrolled': isScrolled}">
     <div class="container">
@@ -28,7 +16,7 @@
             </p>
             <section class="hero-buttons">
               <nuxt-link to="/articles/introducing-vewrite" class="button primary large">Learn more about Vewrite</nuxt-link>
-              <a href="#join" class="button clear" @click="toggleJoin()">
+              <a href="#join" class="button clear" @click="joinStore.toggleJoin">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="7" cy="7" r="7" fill="#8D00FB"/>
                   <path d="M3 7H11" stroke="white"/>
@@ -212,7 +200,6 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const isScrolled = ref(false);
-const isJoining = ref('');
 const isInView = ref(false);
 
 const handleScroll = () => {
@@ -228,14 +215,6 @@ const handleScroll = () => {
   }
 };
 
-const toggleJoin = () => {
-  if (isJoining.value === '') {
-    isJoining.value = 'joining';
-  } else {
-    isJoining.value = '';
-  }
-};
-
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
   handleScroll(); // Initial check
@@ -248,6 +227,12 @@ onUnmounted(() => {
 definePageMeta({
   layout: 'home'
 });
+
+import { useJoinStore } from '~/stores/useJoin';
+import { storeToRefs } from 'pinia';
+
+const joinStore = useJoinStore();
+const { joining } = storeToRefs(joinStore);
 
 </script>
 

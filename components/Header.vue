@@ -11,7 +11,7 @@
       <NuxtLink to="/articles">Articles</NuxtLink>
       <NuxtLink to="/contact">Contact</NuxtLink>
     </nav> -->
-    <a href="#join" class="button clear">
+    <a href="#join" class="button clear" @click="toggleJoin()">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="7" cy="7" r="7" fill="#8D00FB"/>
         <path d="M3 7H11" stroke="white"/>
@@ -24,6 +24,13 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+
+import { useJoinStore } from '~/stores/useJoin';
+const joinStore = useJoinStore();
+
+const toggleJoin = () => {
+  joinStore.toggleJoin();
+};
 
 const isScrolled = ref(false);
 

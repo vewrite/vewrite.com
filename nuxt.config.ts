@@ -27,11 +27,7 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: [
-    '@nuxtjs/google-fonts',
-    '@nuxt/content',
-    'nuxt-module-hotjar'
-  ],
+  modules: ['@nuxtjs/google-fonts', '@nuxt/content', 'nuxt-module-hotjar', '@pinia/nuxt'],
 
   hotjar: {
     hotjarId: 5129596,
