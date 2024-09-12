@@ -26,10 +26,6 @@ export default defineNuxtConfig({
     }
   },
 
-  plugins: [
-    '~/plugins/hotjar.js'
-  ],
-
   modules: ['@nuxtjs/google-fonts', '@nuxt/content', 'nuxt-module-hotjar', '@pinia/nuxt', 'nuxt-gtag'],
 
   hotjar: {
