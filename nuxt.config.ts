@@ -34,8 +34,8 @@ export default defineNuxtConfig({
   ],
 
   hotjar: {
-    id: 5129596,
-    sv: 6,
+    hotjarId: 5129596,
+    scriptVersion: 6,
   },
 
   runtimeConfig: {
