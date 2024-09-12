@@ -1,6 +1,7 @@
 <template>
   <main>
-    <!-- <Header /> -->
+    <Header />
+    <JoinPopup />
     <main class="single-article">
         <slot />
     </main>
@@ -11,6 +12,12 @@
 </template>
 
 <script setup>
+
+import { useJoinStore } from '~/stores/useJoin';
+import { storeToRefs } from 'pinia';
+
+const joinStore = useJoinStore();
+const { joining } = storeToRefs(joinStore);
 
 </script>
 

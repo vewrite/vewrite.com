@@ -350,7 +350,7 @@ const { joining } = storeToRefs(joinStore);
     justify-content: center;
     z-index: 1;
     height: 100%;
-    margin-top: $spacing-xl;
+    margin-top: $spacing-xxl;
 
     @media (max-width: 1000px) {
       margin-top: 300px;
@@ -502,7 +502,6 @@ const { joining } = storeToRefs(joinStore);
       font-weight: normal;
       margin: 0;
       position: relative;
-      width: 80%;
       opacity: 0;
       animation: fadeIn .35s ease-in-out forwards;
       animation-delay: 1.05s;
