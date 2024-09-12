@@ -26,12 +26,16 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ['@nuxtjs/google-fonts', '@nuxt/content', 'nuxt-module-hotjar', '@pinia/nuxt'],
+  modules: ['@nuxtjs/google-fonts', '@nuxt/content', 'nuxt-module-hotjar', '@pinia/nuxt', 'nuxt-gtag'],
 
   hotjar: {
     hotjarId: 5129596,
     scriptVersion: 6,
     debug: true
+  },
+
+  gtag: {
+    id: 'G-87K5F89NX5'
   },
 
   runtimeConfig: {
@@ -49,3 +53,4 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-09-12',
 })
+
