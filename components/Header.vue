@@ -51,6 +51,17 @@ onUnmounted(() => {
 
 @import 'assets/_variables.scss';
 
+@keyframes topSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 #Header {
   background: transparent;
   background-size: cover;
@@ -65,6 +76,8 @@ onUnmounted(() => {
   position: fixed;
   top: 0;
   z-index: 80;
+  opacity: 0;
+  animation: topSlideDown 0.5s 0.5s forwards;
 
   &.scrolled {
     background-color: rgba($white, 0.17);

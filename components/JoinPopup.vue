@@ -30,6 +30,21 @@ const { joining } = storeToRefs(joinStore);
 
 @import 'assets/_variables.scss';
 
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  85% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 #JoinPopup {
   position: fixed;
   top: 0;
@@ -71,6 +86,10 @@ const { joining } = storeToRefs(joinStore);
     .blur {
       pointer-events: all;
       animation: fadeIn .35s ease-in-out forwards;
+    }
+
+    .popup {
+      animation: popUp .55s ease-in-out forwards;
     }
   }
 

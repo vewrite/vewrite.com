@@ -3,46 +3,37 @@
   <JoinPopup />
 
   <main id="Hero" :class="{'scrolled': isScrolled}">
-    <div class="container">
-      <section class="hero-text">
-        <div class="row">
-          <div class="col half">
-            <h1>
-              More writing,<br>
-              less hassle
-            </h1>
-            <h3>
-              <span>Project management tailored for technical writing teams</span>, <span class="green">with an integrated talent marketplace</span>.
-            </h3>
-            <section class="hero-buttons">
-              <nuxt-link to="/articles/introducing-vewrite" class="button primary">Learn more about Vewrite</nuxt-link>
-              <div class="button clear" @click="joinStore.toggleJoin">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="7" cy="7" r="7" fill="#8D00FB"/>
-                  <path d="M3 7H11" stroke="white"/>
-                  <path d="M7 3L7 11" stroke="white"/>
-                </svg>
-                Join the beta
-              </div>
-            </section>
-          </div>
-          <div class="col half">
-            <section id="Witch">
-              <img src="/images/excitement.png" class="excitement">
-              <img src="/images/man.png" class="man">
-              <img src="/images/skull.png" class="skull">
-              
-              <img src="/images/spark1.png" class="spark1">
-              <img src="/images/spark2.png" class="spark2">
-              <img src="/images/spark3.png" class="spark3">
-              <img src="/images/spark4.png" class="spark4">
-              <img src="/images/spark5.png" class="spark5">
-            </section>
-          </div>
+    <!-- <section id="Witch">
+      <img src="/images/excitement.png" class="excitement">
+      <img src="/images/man.png" class="man">
+      <img src="/images/skull.png" class="skull">
+      
+      <img src="/images/spark1.png" class="spark1">
+      <img src="/images/spark2.png" class="spark2">
+      <img src="/images/spark3.png" class="spark3">
+      <img src="/images/spark4.png" class="spark4">
+      <img src="/images/spark5.png" class="spark5">
+    </section> -->
+    <section id="HeroVideo">
+      <video autoplay muted>
+        <source src="/images/vewrite.mp4" type="video/mp4">
+      </video>
+    </section>
+    <section id="HeroText">
+      <h1>More writing, less hassle</h1>
+      <p>Project management tailored for technical writing teams, <span class="green">with an integrated talent marketplace</span>.</p>
+      <section class="hero-buttons">
+        <nuxt-link to="/articles/introducing-vewrite" class="button primary">Learn more about Vewrite</nuxt-link>
+        <div class="button clear" @click="joinStore.toggleJoin">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7" cy="7" r="7" fill="#8D00FB"/>
+            <path d="M3 7H11" stroke="white"/>
+            <path d="M7 3L7 11" stroke="white"/>
+          </svg>
+          Join the beta
         </div>
       </section>
-
-    </div>
+    </section>
   </main>
 
   <!-- <div id="Potentials">
@@ -313,16 +304,64 @@ const { joining } = storeToRefs(joinStore);
 
   100% {
     opacity: 1;
-    transform: scale(.46) translateX(160px) translateY(-100px) rotate(0deg);
+    transform: scale(.36) translateX(160px) translateY(-100px) rotate(0deg);
+  }
+}
+
+@keyframes zoomBack {
+  0% {
+    opacity: 0;
+    transform: scale(2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes contentSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 #Hero {
   width: 100%;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  gap: $spacing-md;
+  opacity: 0;
+  animation: zoomBack 1.6s forwards;
+  mix-blend-mode: darken;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding: 0 $spacing-md;
+  }
+
+  #HeroVideo {
+    width: 35%;
+    height: auto;
+
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
 
   .hero-buttons {
     opacity: 0;
@@ -330,6 +369,8 @@ const { joining } = storeToRefs(joinStore);
     animation-delay: 1.4s;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     gap: $spacing-sm;
 
@@ -343,173 +384,138 @@ const { joining } = storeToRefs(joinStore);
     }
   }
 
-  .container {
+
+  #Witch {
+    height: 30vh;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    height: 100%;
-    margin-top: $spacing-xxl;
+    opacity: 0;
+    animation: fadeUp .75s forwards;
 
     @media (max-width: 1000px) {
-      margin-top: 300px;
+      transform: scale(0.24) translateX(-300px) translateY(-520px) rotate(0deg);
+      animation: none;
+      opacity: 1;
     }
 
-    #Witch {
-      position: relative;
-      opacity: 0;
-      animation: fadeUp .75s forwards;
+    img {
+      position: absolute;
+      max-width: unset;
 
-      @media (max-width: 1000px) {
-        transform: scale(0.24) translateX(-300px) translateY(-520px) rotate(0deg);
-        animation: none;
-        opacity: 1;
+      &.excitement {
+        top: -390px;
+        left: -60px;
+        width: 912px;
+        height: 511px;
+        transform-origin: 473px 480px;
+        opacity: 0;
+        animation: excited .6s forwards;
+        animation-delay: .75s;
       }
 
-      img {
-        position: absolute;
-        max-width: unset;
-
-        &.excitement {
-          top: -390px;
-          left: -60px;
-          width: 912px;
-          height: 511px;
-          transform-origin: 473px 480px;
-          opacity: 0;
-          animation: excited .6s forwards;
-          animation-delay: .75s;
-        }
-
-        &.man {
-          top: 0;
-          left: 0;
-          width: 550px;
-          height: 562px;
-          opacity: 0;
-          animation: fadeIn .35s ease-in forwards;
-        }
-
-        &.skull {
-          top: -63px;
-          left: 440px;
-          width: 416px;
-          height: 377px;
-          transform-origin: 20px 214px;
-          transform: rotate(-105deg);
-          animation: rotateSkull .8s forwards;
-          animation-delay: .4s;
-        }
-
-        &.spark1 {
-          top: -143px;
-          left: -90px;
-          width: 211px;
-          height: 211px;
-          animation: spark .45s forwards;
-          animation-delay: .8s;
-          opacity: 0;
-          transform: scale(0);
-        }
-
-        &.spark2 {
-          top: -503px;
-          left: 20px;
-          width: 222px;
-          height: 222px;
-          animation: spark .45s forwards;
-          animation-delay: .9s;
-          opacity: 0;
-          transform: scale(0);
-        }
-
-        &.spark3 {
-          top: -423px;
-          left: 490px;
-          width: 162px;
-          height: 162px;
-          animation: spark .45s forwards;
-          animation-delay: 1s;
-          opacity: 0;
-          transform: scale(0);
-        }
-
-        &.spark4 {
-          top: -303px;
-          left: 210px;
-          width: 202px;
-          height: 202px;
-          animation: spark .45s forwards;
-          animation-delay: 1.1s;
-          opacity: 0;
-          transform: scale(0);
-        }
-
-        &.spark5 {
-          top: -213px;
-          left: 720px;
-          width: 140px;
-          height: 140px;
-          animation: spark .45s forwards;
-          animation-delay: 1.2s;
-          opacity: 0;
-          transform: scale(0);
-        }
+      &.man {
+        top: 0;
+        left: 0;
+        width: 550px;
+        height: 562px;
+        opacity: 0;
+        animation: fadeIn .35s ease-in forwards;
       }
-    }
 
-    .row {
-      gap:0;
-
-      @media (max-width: 1000px) {
-        gap: $spacing-sm;
-        flex-direction: column-reverse;
+      &.skull {
+        top: -63px;
+        left: 440px;
+        width: 416px;
+        height: 377px;
+        transform-origin: 20px 214px;
+        transform: rotate(-105deg);
+        animation: rotateSkull .8s forwards;
+        animation-delay: .4s;
       }
-    }
 
-    @media (max-width: 1000px) {
-      gap: $spacing-lg;
-    }
-
-    .logo {
-      opacity: 0;
-      animation: fadeIn .35s ease-in forwards;
-    }
-
-    .hero-text {
-      width: 100%;
-    }
-
-    h1 {
-      margin: 0;
-      position: relative;
-      width: 100%;
-      opacity: 0;
-      animation: fadeIn .35s ease-in-out forwards;
-      animation-delay: 0.7s;
-      font-weight: black;
-
-      @media (max-width: 1000px) {
-        width: 100%;
+      &.spark1 {
+        top: -143px;
+        left: -90px;
+        width: 211px;
+        height: 211px;
+        animation: spark .45s forwards;
+        animation-delay: .8s;
+        opacity: 0;
+        transform: scale(0);
       }
-    }
 
-    h3 {
-      margin: 0;
-      position: relative;
-      opacity: 0;
-      animation: fadeIn .35s ease-in-out forwards;
-      animation-delay: 1.05s;
+      &.spark2 {
+        top: -503px;
+        left: 20px;
+        width: 222px;
+        height: 222px;
+        animation: spark .45s forwards;
+        animation-delay: .9s;
+        opacity: 0;
+        transform: scale(0);
+      }
 
-      @media (max-width: 1000px) {
-        margin: 0;
-        width: 100%;
-        font-size: $font-size-lg;
+      &.spark3 {
+        top: -423px;
+        left: 490px;
+        width: 162px;
+        height: 162px;
+        animation: spark .45s forwards;
+        animation-delay: 1s;
+        opacity: 0;
+        transform: scale(0);
+      }
+
+      &.spark4 {
+        top: -303px;
+        left: 210px;
+        width: 202px;
+        height: 202px;
+        animation: spark .45s forwards;
+        animation-delay: 1.1s;
+        opacity: 0;
+        transform: scale(0);
+      }
+
+      &.spark5 {
+        top: -213px;
+        left: 720px;
+        width: 140px;
+        height: 140px;
+        animation: spark .45s forwards;
+        animation-delay: 1.2s;
+        opacity: 0;
+        transform: scale(0);
       }
     }
   }
 
+  h1 {
+    margin: 0 0 $spacing-sm 0;
+    position: relative;
+    width: 100%;
+    // opacity: 0;
+    // animation: fadeIn .35s ease-in-out forwards;
+    // animation-delay: 0.7s;
+    font-weight: black;
+
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    position: relative;
+    // opacity: 0;
+    // animation: fadeIn .35s ease-in-out forwards;
+    // animation-delay: 1.05s;
+
+    @media (max-width: 1000px) {
+      margin: 0;
+      width: 100%;
+      font-size: $font-size-lg;
+    }
+  }
 }
 
 #Join {
@@ -546,6 +552,8 @@ const { joining } = storeToRefs(joinStore);
 #Personas {
   padding: $spacing-xl 0 0 0;
   width: 100%;
+  opacity: 0;
+  animation: contentSlideUp 1.6s forwards;
 
   .marker {
     display: flex;
