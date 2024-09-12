@@ -1,6 +1,6 @@
 <template>
   <main  id="Header" :class="{'scrolled': isScrolled}"> 
-    <nuxt-link to="/"><Logo /></nuxt-link>
+    <nuxt-link to="/"><Logo color="purple" size="small" /></nuxt-link>
     <!-- <nav>
       <nuxt-link to="/">Home</nuxt-link>
       <section class="home-links">
