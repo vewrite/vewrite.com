@@ -9,7 +9,8 @@
           <path d="M7 3L7 11" stroke="white"/>
         </svg>
       </div>
-      <h3>Join our journey</h3>
+      <Logo color="purple" size="large" />
+      <!-- <h3>Join our journey</h3> -->
       <p class="light">We are looking to work with experienced technical writing teams and freelance writers who are interested in improving their workflows and making more money along the way.</p>
       <Join id="hero-join" />
     </div>
@@ -110,6 +111,10 @@ const { joining } = storeToRefs(joinStore);
       left: 0;
     }
 
+    .logo {
+      margin: $spacing-lg $spacing-lg $spacing-md $spacing-lg;
+    }
+
     #hero-join {
       display: flex;
       flex-direction: row;
@@ -124,7 +129,7 @@ const { joining } = storeToRefs(joinStore);
     }
 
     h3 {
-      margin: $spacing-lg $spacing-lg 0 $spacing-lg;
+      margin: 0 $spacing-lg 0 $spacing-lg;
 
       @media (max-width: 600px) {
         margin: $spacing-lg $spacing-md 0 $spacing-md;
