@@ -110,8 +110,16 @@ async function submitEmail(event) {
 
   .notification {
     position: absolute;
-    bottom: -100px;
-    right: 0;
+    bottom: -$spacing-lg;
+    right: $spacing-lg;
+    left: $spacing-lg;
+    justify-content: center;
+
+    @media (max-width: 600px) {
+      bottom: -$spacing-lg;
+      left: $spacing-md;
+      right: $spacing-md;
+    }
   }
 }
 
