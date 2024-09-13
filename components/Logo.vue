@@ -43,7 +43,7 @@ defineProps({
 }
 
 .small {
-  width: 80px;
+  width: 120px;
 }
 
 .large {

@@ -3,11 +3,28 @@
   <JoinPopup />
 
   <main id="Hero" :class="{'scrolled': isScrolled}">
+    <section id="Illustrations">
+      <img src="/images/pen.png" class="pen">
+      <img src="/images/folder.png" class="folder">
+    </section>
+    <section id="Sparks">
+      <img src="/images/spark1.png" class="spark1">
+      <img src="/images/spark2.png" class="spark2">
+      <img src="/images/spark3.png" class="spark3">
+      <img src="/images/spark4.png" class="spark4">
+      <img src="/images/spark5.png" class="spark5">
+      <img src="/images/spark1.png" class="spark6">
+      <img src="/images/spark2.png" class="spark7">
+      <img src="/images/spark3.png" class="spark8">
+      <img src="/images/spark4.png" class="spark9">
+      <img src="/images/spark5.png" class="spark10">
+      <img src="/images/spark2.png" class="spark11">
+      <img src="/images/spark1.png" class="spark12">
+    </section>
     <!-- <section id="Witch">
       <img src="/images/excitement.png" class="excitement">
       <img src="/images/man.png" class="man">
       <img src="/images/skull.png" class="skull">
-      
       <img src="/images/spark1.png" class="spark1">
       <img src="/images/spark2.png" class="spark2">
       <img src="/images/spark3.png" class="spark3">
@@ -202,7 +219,9 @@ const handleScroll = () => {
   if (isInView.value) {
     const scrollY = window.scrollY;
     const translateY = scrollY * -0.25;
+    const translateYSparks = scrollY * -0.5;
     document.documentElement.style.setProperty('--element-translate-y', `${translateY}px`);
+    document.documentElement.style.setProperty('--element-translate-y-sparks', `${translateYSparks}px`);
   }
 };
 
@@ -349,6 +368,253 @@ const { joining } = storeToRefs(joinStore);
     padding: 0 $spacing-md;
   }
 
+  #Illustrations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    transform: translateY(var(--element-translate-y));
+
+    img {
+      position: absolute;
+      opacity: 0;
+      animation: spark .45s forwards;
+      animation-delay: .8s;
+      transform: scale(0);
+
+      &.pen {
+        top: 30%;
+        right: 10%;
+        width: 15vw;
+        height: 15vw;
+        animation: spark .45s forwards;
+        animation-delay: 1.2s;
+        opacity: 0;
+        transform: scale(0);
+
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+      &.folder {
+        top: 70%;
+        left: 10%;
+        width: 15vw;
+        height: 15vw;
+        animation: spark .45s forwards;
+        animation-delay: 1.2s;
+        opacity: 0;
+        transform: scale(0);
+
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  #Sparks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transform: translateY(var(--element-translate-y-sparks));
+
+    img {
+      position: absolute;
+      opacity: 0;
+      animation: spark .45s forwards;
+      animation-delay: .8s;
+      transform: scale(0);
+
+      &.spark1 {
+        top: 10%;
+        left: 10%;
+        width: 2.4vw;
+        height: 2.4vw;
+        animation: spark .45s forwards;
+        animation-delay: 1.2s;
+        opacity: 0;
+        transform: scale(0);
+
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+      &.spark2 {
+        top: 40%;
+        left: 20%;
+        width: 3.4vw;
+        height: 3.4vw;
+        animation: spark .45s forwards;
+        animation-delay: .9s;
+        opacity: 0;
+        transform: scale(0);
+
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+      &.spark3 {
+        top: 22%;
+        right: 6%;
+        width: 2.4vw;
+        height: 2.4vw;
+        animation: spark .45s forwards;
+        animation-delay: 1s;
+        opacity: 0;
+        transform: scale(0);
+
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+      &.spark4 {
+        top: 105%;
+        left: 30%;
+        width: 2.4vw;
+        height: 2.4vw;
+        animation: spark .45s forwards;
+        animation-delay: 1.1s;
+        opacity: 0;
+        transform: scale(0);
+
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+      &.spark5 {
+        top: 90%;
+        right: 20%;
+        width: 2.4vw;
+        height: 2.4vw;
+        animation: spark .45s forwards;
+        animation-delay: 1.2s;
+        opacity: 0;
+        transform: scale(0);
+
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+      &.spark6 {
+        top: 60%;
+        left: -2%;
+        width: 5.4vw;
+        height: 5.4vw;
+        animation: spark .45s forwards;
+        animation-delay: 1.2s;
+        opacity: 0;
+        transform: scale(0);
+
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+      &.spark7 {
+        top: 0%;
+        left: 32%;
+        width: 5.4vw;
+        height: 5.4vw;
+        animation: spark .45s forwards;
+        animation-delay: .9s;
+        opacity: 0;
+        transform: scale(0);
+
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+      &.spark8 {
+        top: 42%;
+        left: 02%;
+        width: 3.4vw;
+        height: 3.4vw;
+        animation: spark .45s forwards;
+        animation-delay: 1s;
+        opacity: 0;
+        transform: scale(0);
+
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+      &.spark9 {
+        top: 15%;
+        left: 70%;
+        width: 4.4vw;
+        height: 4.4vw;
+        animation: spark .45s forwards;
+        animation-delay: 1.1s;
+        opacity: 0;
+        transform: scale(0);
+
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+      &.spark10 {
+        top: 20%;
+        right: 40%;
+        width: 2.4vw;
+        height: 2.4vw;
+        animation: spark .45s forwards;
+        animation-delay: 1.2s;
+        opacity: 0;
+        transform: scale(0);
+
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+      &.spark11 {
+        top: -3%;
+        right: 14%;
+        width: 4.4vw;
+        height: 4.4vw;
+        animation: spark .45s forwards;
+        animation-delay: 1.1s;
+        opacity: 0;
+        transform: scale(0);
+
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+      &.spark12 {
+        top: 60%;
+        right: 10%;
+        width: 5.4vw;
+        height: 5.4vw;
+        animation: spark .45s forwards;
+        animation-delay: 1.2s;
+        opacity: 0;
+        transform: scale(0);
+
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+    }
+  }
+
   #HeroVideo {
     width: 35%;
     height: auto;
@@ -359,6 +625,8 @@ const { joining } = storeToRefs(joinStore);
 
     video {
       width: 100%;
+      min-width: 300px;
+      max-width: 600px;
       height: auto;
     }
   }
