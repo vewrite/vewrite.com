@@ -35,9 +35,9 @@ const { joining } = storeToRefs(joinStore);
     opacity: 0;
     transform: scale(0.8);
   }
-  85% {
+  70% {
     opacity: 1;
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
   100% {
     opacity: 1;
@@ -89,7 +89,7 @@ const { joining } = storeToRefs(joinStore);
     }
 
     .popup {
-      animation: popUp .55s ease-in-out forwards;
+      animation: popUp .35s ease-in forwards;
     }
   }
 
