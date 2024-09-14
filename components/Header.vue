@@ -1,6 +1,10 @@
 <template>
   <main  id="Header" :class="{'scrolled': isScrolled}"> 
-    <nuxt-link to="/"><Logo color="purple" size="small" /></nuxt-link>
+    <section class="nav-main">
+      <nuxt-link to="/"><Logo color="purple" size="small" /></nuxt-link>
+      <nuxt-link to="/" class="nav-item" v-if="!isHome">Home</nuxt-link>
+      <nuxt-link to="/articles" class="nav-item">Articles</nuxt-link>
+    </section>
     <!-- <nav>
       <nuxt-link to="/">Home</nuxt-link>
       <section class="home-links">
@@ -24,6 +28,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { useRouter } from 'vue-router';
 
 import { useJoinStore } from '~/stores/useJoin';
 const joinStore = useJoinStore();
@@ -31,6 +36,13 @@ const joinStore = useJoinStore();
 const toggleJoin = () => {
   joinStore.toggleJoin();
 };
+
+const router = useRouter();
+
+// console.log(router);
+
+const isHome = router.currentRoute.value.path === '/';
+const isArticle = router.currentRoute.value.path.includes('articles');
 
 const isScrolled = ref(false);
 
@@ -79,6 +91,55 @@ onUnmounted(() => {
   opacity: 0;
   animation: topSlideDown 0.5s 0.5s forwards;
 
+  .nav-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: $spacing-md;
+
+    a.nav-item {
+        color: rgba($purple, 0.6);
+        text-decoration: none;
+        font-size: $font-size-md;
+        font-weight: 500;
+        font-family: $font-family-condensed;
+        transition: all 0.13s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: $spacing-xxs;
+    }
+
+    // nav {
+    //   display: flex;
+    //   justify-content: space-between;
+    //   align-items: center;
+    //   gap: $spacing-md;
+
+    //   a {
+    //     color: rgba($purple, 0.6);
+    //     text-decoration: none;
+    //     font-size: $font-size-md;
+    //     font-weight: 500;
+    //     font-family: $font-family-condensed;
+    //     transition: all 0.13s ease-in-out;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+
+    //     &.router-link-exact-active {
+    //       color: $white;
+    //     }
+
+    //     &:hover {
+    //       color: $white;
+    //     }
+    //   }
+
+    // }
+  }
+
   &.scrolled {
     background-color: rgba($white, 0.17);
     box-shadow: 0 1px 1px 0 rgba($black, 0.05), 0 2px 2px 0 rgba($purple, 0.04);
@@ -91,42 +152,6 @@ onUnmounted(() => {
     justify-content: space-between;
     align-items: center;
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: $spacing-md;
-
-      section.home-links {
-        display: flex;
-        flex-direction: row;
-        gap: $spacing-md;
-        padding-right: $spacing-md;
-        border-right: 1px solid rgba($white, 0.4);
-      }
-
-      a {
-        color: rgba($white, 0.6);
-        text-decoration: none;
-        font-size: $font-size-md;
-        font-weight: 500;
-        font-family: $font-family-condensed;
-        transition: all 0.13s ease-in-out;
-        height: 80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &.router-link-exact-active {
-          color: $white;
-        }
-
-        &:hover {
-          color: $white;
-        }
-      }
-
-    }
   }
 
 }
