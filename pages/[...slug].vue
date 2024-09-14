@@ -1,17 +1,19 @@
 <template>
-  <section class="single-article">
-    <div class="container slim">
-      <!-- <nuxt-link class="button clear" to="/articles">Back to articles</nuxt-link> -->
-      <h1 class="article-title">{{ data?.title }}</h1>
-      <img :src="data?.image" class="article-image" />
-      <PageToc />
-      <ContentDoc>
-        <template #not-found>
-          <h1>Document not found</h1>
-        </template>
-      </ContentDoc>
-    </div>
-  </section>
+  <NuxtLayout>
+    <section class="single-article">
+      <div class="container slim">
+        <!-- <nuxt-link class="button clear" to="/articles">Back to articles</nuxt-link> -->
+        <h1 class="article-title">{{ data?.title }}</h1>
+        <img :src="data?.image" class="article-image" />
+        <PageToc />
+        <ContentDoc>
+          <template #not-found>
+            <h1>Document not found</h1>
+          </template>
+        </ContentDoc>
+      </div>
+    </section>
+  </NuxtLayout>
 </template>
 
 <script setup>

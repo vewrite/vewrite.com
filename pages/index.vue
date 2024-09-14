@@ -1,206 +1,207 @@
 <template>
+  <NuxtLayout>
+    <JoinPopup />
 
-  <JoinPopup />
-
-  <main id="Hero" :class="{'scrolled': isScrolled}">
-    <section id="Illustrations">
-      <img src="/images/pen.png" class="pen">
-      <img src="/images/folder.png" class="folder">
-    </section>
-    <section id="Sparks">
-      <img src="/images/spark1.png" class="spark1">
-      <img src="/images/spark2.png" class="spark2">
-      <img src="/images/spark3.png" class="spark3">
-      <img src="/images/spark4.png" class="spark4">
-      <img src="/images/spark5.png" class="spark5">
-      <img src="/images/spark1.png" class="spark6">
-      <img src="/images/spark2.png" class="spark7">
-      <img src="/images/spark3.png" class="spark8">
-      <img src="/images/spark4.png" class="spark9">
-      <img src="/images/spark5.png" class="spark10">
-      <img src="/images/spark2.png" class="spark11">
-      <img src="/images/spark1.png" class="spark12">
-    </section>
-    <!-- <section id="Witch">
-      <img src="/images/excitement.png" class="excitement">
-      <img src="/images/man.png" class="man">
-      <img src="/images/skull.png" class="skull">
-      <img src="/images/spark1.png" class="spark1">
-      <img src="/images/spark2.png" class="spark2">
-      <img src="/images/spark3.png" class="spark3">
-      <img src="/images/spark4.png" class="spark4">
-      <img src="/images/spark5.png" class="spark5">
-    </section> -->
-    <section id="HeroVideo">
-      <video autoplay muted>
-        <source src="/images/vewrite.mp4" type="video/mp4">
-      </video>
-    </section>
-    <section id="HeroText">
-      <h1>More writing, less hassle</h1>
-      <p>Project management tailored for technical writing teams, <span class="green">with an integrated talent marketplace</span>.</p>
-      <section class="hero-buttons">
-        <nuxt-link to="/articles/introducing-vewrite" class="button primary">Learn more about Vewrite</nuxt-link>
-        <div class="button clear" @click="joinStore.toggleJoin">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="7" cy="7" r="7" fill="#8D00FB"/>
-            <path d="M3 7H11" stroke="white"/>
-            <path d="M7 3L7 11" stroke="white"/>
-          </svg>
-          Join the beta
-        </div>
+    <main id="Hero" :class="{'scrolled': isScrolled}">
+      <section id="Illustrations">
+        <img src="/images/pen.png" class="pen">
+        <img src="/images/folder.png" class="folder">
       </section>
-    </section>
-  </main>
-
-  <!-- <div id="Potentials">
-    <div class="container">
-      <div class="row">
-        <div class="col one-third">
-          <img src="/images/potential-team.png" alt="Writing Teams" />
-          <h3>Improving the efficiency of small writing teams</h3>
-          <p class="light">With so many projects and so many deliverables, you're spending precious time tracking progress instead of making it.</p>
-          <p>Vewrite provides you with an easy to use workflow management tool that makes sure that you can focus on what is important: delivering high-quality work for your clients.</p>
-        </div>
-        <div class="col one-third">
-          <img src="/images/potential-writer.png" alt="Freelance Technical Writers" />
-          <h3>Connecting technical writers with clients</h3>
-          <p class="light">In a crowded market, it can be hard to be seen, and harder to make a living doing what you are good at.</p>
-          <p>Vewrite ensures that you are embedded directly into the workflows of the teams who value you the most.</p>
-        </div>
-        <div class="col one-third">
-          <img src="/images/potential-devrel.png" alt="Developer Relations" />
-          <h3>Smoothing the process for developer relations</h3>
-          <p class="light">When you are enlightening developers about your company's products, you should be free to focus on producing excellent content instead of micro-managing your workflow.</p>
-          <p>With Vewrite your stakeholders have critical visibility while your DevRel team spreads the word about their innovations. </p>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-  <a name="teams" class="target"></a>
-  <div id="Personas">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <span class="marker team">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 19C18.5523 19 19.0016 18.5521 18.975 18.0004C18.9599 17.6868 18.9357 17.3593 18.8969 17.1156C18.8125 16.6047 18.1047 15.9297 15.0953 14.8234C12.1328 13.7359 12.3156 14.2656 12.3156 12.2641C12.3156 10.9656 12.9766 11.7203 13.3984 9.25469C13.5625 8.28438 13.6937 8.93125 14.05 7.375C14.2375 6.55938 13.9234 6.49844 13.9609 6.10938C13.9984 5.72031 14.0359 5.37344 14.1063 4.57656C14.1906 3.59219 13.2766 1 10 1C6.72344 1 5.80938 3.59219 5.89844 4.58125C5.96875 5.37344 6.00625 5.725 6.04375 6.11406C6.08125 6.50313 5.76719 6.56406 5.95469 7.37969C6.31094 8.93125 6.44219 8.28437 6.60625 9.25937C7.02813 11.725 7.68906 10.9703 7.68906 12.2687C7.68906 14.275 7.87187 13.7453 4.90937 14.8281C1.9 15.9297 1.1875 16.6094 1.10781 17.1203C1.06725 17.3619 1.04194 17.6879 1.02616 18.0004C0.998311 18.552 1.44772 19 2 19H10H18Z" stroke="#8D00FB" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round"/>
+      <section id="Sparks">
+        <img src="/images/spark1.png" class="spark1">
+        <img src="/images/spark2.png" class="spark2">
+        <img src="/images/spark3.png" class="spark3">
+        <img src="/images/spark4.png" class="spark4">
+        <img src="/images/spark5.png" class="spark5">
+        <img src="/images/spark1.png" class="spark6">
+        <img src="/images/spark2.png" class="spark7">
+        <img src="/images/spark3.png" class="spark8">
+        <img src="/images/spark4.png" class="spark9">
+        <img src="/images/spark5.png" class="spark10">
+        <img src="/images/spark2.png" class="spark11">
+        <img src="/images/spark1.png" class="spark12">
+      </section>
+      <!-- <section id="Witch">
+        <img src="/images/excitement.png" class="excitement">
+        <img src="/images/man.png" class="man">
+        <img src="/images/skull.png" class="skull">
+        <img src="/images/spark1.png" class="spark1">
+        <img src="/images/spark2.png" class="spark2">
+        <img src="/images/spark3.png" class="spark3">
+        <img src="/images/spark4.png" class="spark4">
+        <img src="/images/spark5.png" class="spark5">
+      </section> -->
+      <section id="HeroVideo">
+        <video autoplay muted>
+          <source src="/images/vewrite.mp4" type="video/mp4">
+        </video>
+      </section>
+      <section id="HeroText">
+        <h1>More writing, less hassle</h1>
+        <p>Project management tailored for technical writing teams, <span class="green">with an integrated talent marketplace</span>.</p>
+        <section class="hero-buttons">
+          <nuxt-link to="/articles/introducing-vewrite" class="button primary">Learn more about Vewrite</nuxt-link>
+          <div class="button clear" @click="joinStore.toggleJoin">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="7" cy="7" r="7" fill="#8D00FB"/>
+              <path d="M3 7H11" stroke="white"/>
+              <path d="M7 3L7 11" stroke="white"/>
             </svg>
-            For teams
-          </span>
-          <h2 class="purple">Vewrite is the better way to work that you've been looking for.</h2>
-          <h3>Efficiently manage your Technical Writing team</h3>
-          <p class="light">Our software provides your team with a customizable, tailored alternative for project management of technical writing projects. Focus on pushing your work through a sensible workflow, instead of trying to tackle a pile of tasks. You don’t have to use tools made for developers and marketers to get your work done on-time and within budget.</p>
+            Join the beta
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- <div id="Potentials">
+      <div class="container">
+        <div class="row">
+          <div class="col one-third">
+            <img src="/images/potential-team.png" alt="Writing Teams" />
+            <h3>Improving the efficiency of small writing teams</h3>
+            <p class="light">With so many projects and so many deliverables, you're spending precious time tracking progress instead of making it.</p>
+            <p>Vewrite provides you with an easy to use workflow management tool that makes sure that you can focus on what is important: delivering high-quality work for your clients.</p>
+          </div>
+          <div class="col one-third">
+            <img src="/images/potential-writer.png" alt="Freelance Technical Writers" />
+            <h3>Connecting technical writers with clients</h3>
+            <p class="light">In a crowded market, it can be hard to be seen, and harder to make a living doing what you are good at.</p>
+            <p>Vewrite ensures that you are embedded directly into the workflows of the teams who value you the most.</p>
+          </div>
+          <div class="col one-third">
+            <img src="/images/potential-devrel.png" alt="Developer Relations" />
+            <h3>Smoothing the process for developer relations</h3>
+            <p class="light">When you are enlightening developers about your company's products, you should be free to focus on producing excellent content instead of micro-managing your workflow.</p>
+            <p>With Vewrite your stakeholders have critical visibility while your DevRel team spreads the word about their innovations. </p>
+          </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <a name="advantages" class="target"></a>
-    <div id="Advantages">
+    <a name="teams" class="target"></a>
+    <div id="Personas">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <span class="marker team">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 19C18.5523 19 19.0016 18.5521 18.975 18.0004C18.9599 17.6868 18.9357 17.3593 18.8969 17.1156C18.8125 16.6047 18.1047 15.9297 15.0953 14.8234C12.1328 13.7359 12.3156 14.2656 12.3156 12.2641C12.3156 10.9656 12.9766 11.7203 13.3984 9.25469C13.5625 8.28438 13.6937 8.93125 14.05 7.375C14.2375 6.55938 13.9234 6.49844 13.9609 6.10938C13.9984 5.72031 14.0359 5.37344 14.1063 4.57656C14.1906 3.59219 13.2766 1 10 1C6.72344 1 5.80938 3.59219 5.89844 4.58125C5.96875 5.37344 6.00625 5.725 6.04375 6.11406C6.08125 6.50313 5.76719 6.56406 5.95469 7.37969C6.31094 8.93125 6.44219 8.28437 6.60625 9.25937C7.02813 11.725 7.68906 10.9703 7.68906 12.2687C7.68906 14.275 7.87187 13.7453 4.90937 14.8281C1.9 15.9297 1.1875 16.6094 1.10781 17.1203C1.06725 17.3619 1.04194 17.6879 1.02616 18.0004C0.998311 18.552 1.44772 19 2 19H10H18Z" stroke="#8D00FB" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              For teams
+            </span>
+            <h2 class="purple">Vewrite is the better way to work that you've been looking for.</h2>
+            <h3>Efficiently manage your Technical Writing team</h3>
+            <p class="light">Our software provides your team with a customizable, tailored alternative for project management of technical writing projects. Focus on pushing your work through a sensible workflow, instead of trying to tackle a pile of tasks. You don’t have to use tools made for developers and marketers to get your work done on-time and within budget.</p>
+          </div>
+        </div>
+      </div>
+
+      <a name="advantages" class="target"></a>
+      <div id="Advantages">
+          <div>
+            <img src="/images/stakeholder-visibility.png" alt="Stakeholder visibility" />
+            <h3  class="no-margin">Stakeholder visibility</h3>
+            <p class="light">Vewrite prioritizes stakeholder visibility as a part of its workflows. This reduces inefficient back and forth, keeps your team happy, and improves your bottom line.</p>
+          </div>
+          <div class="bump">
+            <img src="/images/state-management.png" alt="State Management" />
+            <h3  class="no-margin">State management</h3>
+            <p class="light">As deliverables make their way through your workflow, they have discrete states that have clear meanings that map to your business processes.</p>
+          </div>
+          <div>
+            <img src="/images/smart-templates.png" alt="Smart Templates" />
+            <h3  class="no-margin">Smart templates</h3>
+            <p class="light">Teams that are just getting started can rely on our smart default templates to quickly set up their processes and hit the ground running.</p>
+          </div>
+          <div class="bump">
+            <img src="/images/custom-workflows.png" alt="Custom Workflows" />
+            <h3  class="no-margin">Custom workflows</h3>
+            <p class="light">Already have an established process? Vewrite allows you to build custom worksflows that fit your existing pipeline.</p>
+          </div>
+      </div>
+
+      <a name="writers" class="target"></a>
+      <div id="Writers" class="container">
+        <span class="marker writer">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.2897 14.9077C1.10412 15.0949 1 15.3479 1 15.6116V18C1 18.5523 1.44772 19 2 19H4.38313C4.64992 19 4.90564 18.8934 5.09343 18.7039L15.0993 8.60709C15.4868 8.21606 15.4854 7.58536 15.0961 7.19609L12.7103 4.81031C12.3185 4.41854 11.6829 4.41998 11.2929 4.81352L1.2897 14.9077ZM18.7 5C19.1 4.6 19.1 4 18.7 3.6L16.4 1.3C16 0.9 15.4 0.9 15 1.3L13.9071 2.39289C13.5166 2.78342 13.5166 3.41658 13.9071 3.80711L16.2525 6.15252C16.6585 6.55846 17.3221 6.54004 17.7049 6.11221L18.7 5Z" stroke="#68834A" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          For writers
+        </span>
+
+        <h2 class="green">Find well-paid work as a Technical Writer within our integrated Talent Marketplace</h2>
+        <p class="light">Vewrite tightly integrates a marketplace for technical writers into its project management suite. Writers who want to work on awesome projects can now do so without losing a large percentage of their earnings to marketplace fees.</p>
+
+        <table class="commission-rates">
+          <thead>
+            <tr>
+              <th></th>
+              <th></th>
+              <th>Buyer cost</th>
+              <th>Writer cost</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="marketplace-fiverr">
+              <td></td>
+              <td><img src="/images/logo-fiverr.png" alt="Fiverr" /></td>
+              <td>
+                <span><strong>5.5% Service Fee</strong></span>
+                <span><small>+ $2.50 for transactions under $75</small></span>
+              </td>
+              <td>
+                <span><strong>20% Commission</strong></span>
+              </td>
+              <td></td>
+            </tr>
+            <tr class="marketplace-upwork">
+              <td></td>
+              <td><img src="/images/logo-upwork.png" alt="Upwork" /></td>
+              <td>
+                <span><strong>$4.95</strong></span>
+                <span><small>Initial contract cost</small></span>
+              </td>
+              <td>
+                <span><strong>10% Commission</strong></span>
+              </td>
+              <td></td>
+            </tr>
+            <tr class="marketplace-vewrite">
+              <td></td>
+              <td><img src="/images/logo-vewrite.png" alt="Vewrite" /></td>
+              <td>
+                <span><strong>2.5% Service Fee</strong></span>
+              </td>
+              <td>
+                <span><strong>Free!</strong></span>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
         <div>
-          <img src="/images/stakeholder-visibility.png" alt="Stakeholder visibility" />
-          <h3  class="no-margin">Stakeholder visibility</h3>
-          <p class="light">Vewrite prioritizes stakeholder visibility as a part of its workflows. This reduces inefficient back and forth, keeps your team happy, and improves your bottom line.</p>
+          <h3>Write where you work</h3>
+          <p class="light">Vewrite provides teams an integrated working environment so they do not have to struggle with managing many remote files in different states. Never lose time working on the wrong document again.</p>
         </div>
-        <div class="bump">
-          <img src="/images/state-management.png" alt="State Management" />
-          <h3  class="no-margin">State management</h3>
-          <p class="light">As deliverables make their way through your workflow, they have discrete states that have clear meanings that map to your business processes.</p>
-        </div>
-        <div>
-          <img src="/images/smart-templates.png" alt="Smart Templates" />
-          <h3  class="no-margin">Smart templates</h3>
-          <p class="light">Teams that are just getting started can rely on our smart default templates to quickly set up their processes and hit the ground running.</p>
-        </div>
-        <div class="bump">
-          <img src="/images/custom-workflows.png" alt="Custom Workflows" />
-          <h3  class="no-margin">Custom workflows</h3>
-          <p class="light">Already have an established process? Vewrite allows you to build custom worksflows that fit your existing pipeline.</p>
-        </div>
-    </div>
 
-    <a name="writers" class="target"></a>
-    <div id="Writers" class="container">
-      <span class="marker writer">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M1.2897 14.9077C1.10412 15.0949 1 15.3479 1 15.6116V18C1 18.5523 1.44772 19 2 19H4.38313C4.64992 19 4.90564 18.8934 5.09343 18.7039L15.0993 8.60709C15.4868 8.21606 15.4854 7.58536 15.0961 7.19609L12.7103 4.81031C12.3185 4.41854 11.6829 4.41998 11.2929 4.81352L1.2897 14.9077ZM18.7 5C19.1 4.6 19.1 4 18.7 3.6L16.4 1.3C16 0.9 15.4 0.9 15 1.3L13.9071 2.39289C13.5166 2.78342 13.5166 3.41658 13.9071 3.80711L16.2525 6.15252C16.6585 6.55846 17.3221 6.54004 17.7049 6.11221L18.7 5Z" stroke="#68834A" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        For writers
-      </span>
-
-      <h2 class="green">Find well-paid work as a Technical Writer within our integrated Talent Marketplace</h2>
-      <p class="light">Vewrite tightly integrates a marketplace for technical writers into its project management suite. Writers who want to work on awesome projects can now do so without losing a large percentage of their earnings to marketplace fees.</p>
-
-      <table class="commission-rates">
-        <thead>
-          <tr>
-            <th></th>
-            <th></th>
-            <th>Buyer cost</th>
-            <th>Writer cost</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="marketplace-fiverr">
-            <td></td>
-            <td><img src="/images/logo-fiverr.png" alt="Fiverr" /></td>
-            <td>
-              <span><strong>5.5% Service Fee</strong></span>
-              <span><small>+ $2.50 for transactions under $75</small></span>
-            </td>
-            <td>
-              <span><strong>20% Commission</strong></span>
-            </td>
-            <td></td>
-          </tr>
-          <tr class="marketplace-upwork">
-            <td></td>
-            <td><img src="/images/logo-upwork.png" alt="Upwork" /></td>
-            <td>
-              <span><strong>$4.95</strong></span>
-              <span><small>Initial contract cost</small></span>
-            </td>
-            <td>
-              <span><strong>10% Commission</strong></span>
-            </td>
-            <td></td>
-          </tr>
-          <tr class="marketplace-vewrite">
-            <td></td>
-            <td><img src="/images/logo-vewrite.png" alt="Vewrite" /></td>
-            <td>
-              <span><strong>2.5% Service Fee</strong></span>
-            </td>
-            <td>
-              <span><strong>Free!</strong></span>
-            </td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div>
-        <h3>Write where you work</h3>
-        <p class="light">Vewrite provides teams an integrated working environment so they do not have to struggle with managing many remote files in different states. Never lose time working on the wrong document again.</p>
-      </div>
-
-      <div class="row">
-        <div class="col half">
-          <img src="/images/tight-integration.png" alt="Tight Integration" />
-          <h3 class="no-margin">Tight integration</h3>
-          <p class="light">Your tasks live within one application which means your focus can stay on producing your best work, instead of micromanaging your deliverables and their states.</p>
-        </div>
-        <div class="col half">
-          <img src="/images/prompt-payment.png" alt="Prompt Payment" />
-          <h3 class="no-margin">Prompt payouts</h3>
-          <p class="light">When your work moves to the approved state, and all stakeholders are satisfied, it’s time to get you paid. Vewrite provides prompt payouts with no risk to you.</p>
+        <div class="row">
+          <div class="col half">
+            <img src="/images/tight-integration.png" alt="Tight Integration" />
+            <h3 class="no-margin">Tight integration</h3>
+            <p class="light">Your tasks live within one application which means your focus can stay on producing your best work, instead of micromanaging your deliverables and their states.</p>
+          </div>
+          <div class="col half">
+            <img src="/images/prompt-payment.png" alt="Prompt Payment" />
+            <h3 class="no-margin">Prompt payouts</h3>
+            <p class="light">When your work moves to the approved state, and all stakeholders are satisfied, it’s time to get you paid. Vewrite provides prompt payouts with no risk to you.</p>
+          </div>
         </div>
       </div>
-    </div>
 
-  </div>
+    </div>
+  </NuxtLayout>
 </template>
 
 <script setup>

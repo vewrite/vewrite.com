@@ -1,20 +1,22 @@
 <template>
-  <section class="template-top">
-    <div class="container">
-      <nuxt-link to="/"><Logo color="purple" size="large" /></nuxt-link>
-      <h1>Articles</h1>
-      <p class="light">As avid, experienced Technical Writers and Project Managers, we have a lot of strong opinions on documentation, writing, and how Developer Relations should be done as to achieve success. Below are a collection of articles on those topics.</p>
-    </div>
-  </section>
-  <main class="articles container">
-    <ContentList path="/articles" v-slot="{ list }">
-      <nuxt-link v-for="article in list" :key="article._path" :to="article._path">
-        <img :src="article.image" :alt="article.title" />
-        <h2>{{ article.title }}</h2>
-        <p>{{ article.description }}</p>
-      </nuxt-link>
-    </ContentList>
-  </main>
+  <NuxtLayout>
+    <section class="template-top">
+      <div class="container">
+        <nuxt-link to="/"><Logo color="purple" size="large" /></nuxt-link>
+        <h1>Articles</h1>
+        <p class="light">As avid, experienced Technical Writers and Project Managers, we have a lot of strong opinions on documentation, writing, and how Developer Relations should be done as to achieve success. Below are a collection of articles on those topics.</p>
+      </div>
+    </section>
+    <main class="articles container">
+      <ContentList path="/articles" v-slot="{ list }">
+        <nuxt-link v-for="article in list" :key="article._path" :to="article._path">
+          <img :src="article.image" :alt="article.title" />
+          <h2>{{ article.title }}</h2>
+          <p>{{ article.description }}</p>
+        </nuxt-link>
+      </ContentList>
+    </main>
+  </NuxtLayout>
 </template>
 
 <script setup>
@@ -37,15 +39,15 @@
 }
 
 .articles {
-  // display: grid;
-  // grid-template-columns: 1fr 1fr;
-  // gap: $spacing-xl;
-  // margin: $spacing-lg auto;
-  // max-width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-xl;
+  margin: $spacing-lg auto;
+  max-width: 80%;
 
-  // @media (max-width:1000px) {
-  //   grid-template-columns: 1fr;
-  // }
+  @media (max-width:1000px) {
+    grid-template-columns: 1fr;
+  }
 
   img {
     border-radius: $br-xl;
