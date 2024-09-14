@@ -34,6 +34,10 @@ const { joining } = storeToRefs(joinStore);
       margin-top: 0;
     }
   }
+
+  h3 {
+    margin: $spacing-xl 0 $spacing-md;
+  }
 }
 
 </style>

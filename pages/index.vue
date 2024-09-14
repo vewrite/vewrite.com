@@ -350,6 +350,17 @@ const { joining } = storeToRefs(joinStore);
   }
 }
 
+@keyframes heroAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 #Hero {
   width: 100%;
   height: 80vh;
@@ -360,7 +371,7 @@ const { joining } = storeToRefs(joinStore);
   text-align: center;
   gap: $spacing-md;
   opacity: 0;
-  animation: zoomBack 1.6s forwards;
+  animation: zoomBack 1.8s forwards;
   mix-blend-mode: darken;
 
   @media (max-width: 1000px) {
@@ -425,6 +436,7 @@ const { joining } = storeToRefs(joinStore);
     height: 100%;
     pointer-events: none;
     transform: translateY(var(--element-translate-y-sparks));
+    z-index: 1;
 
     img {
       position: absolute;
@@ -617,7 +629,9 @@ const { joining } = storeToRefs(joinStore);
 
   #HeroVideo {
     width: 35%;
-    height: auto;
+    opacity: 0;
+    animation: heroAppear .35s ease-in-out forwards;
+    z-index: 0;
 
     @media (max-width: 1000px) {
       width: 100%;
