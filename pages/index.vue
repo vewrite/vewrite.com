@@ -53,6 +53,10 @@
       </section>
     </main>
 
+    <div id="Preview" class="container">
+      <img src="/images/preview.png" alt="Vewrite Preview" />
+    </div>
+
     <!-- <div id="Potentials">
       <div class="container">
         <div class="row">
@@ -372,7 +376,7 @@ const { joining } = storeToRefs(joinStore);
   text-align: center;
   gap: $spacing-md;
   opacity: 0;
-  animation: zoomBack 1.8s forwards;
+  animation: zoomBack 1.2s forwards;
   mix-blend-mode: darken;
 
   @media (max-width: 1000px) {
@@ -829,6 +833,31 @@ const { joining } = storeToRefs(joinStore);
     justify-content: center;
     align-items: center;
     gap: $spacing-md;
+  }
+}
+
+#Preview {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-xl 0;
+
+  img {
+    width: 90%;
+    height: auto;
+    border-radius: $br-xl;
+    box-shadow: 0px 0px 20px 0px rgba($black, 0.1);
+
+    @media (max-width: 1000px) {
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    padding: 0;
   }
 }
 
