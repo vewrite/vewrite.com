@@ -42,6 +42,10 @@ defineProps({
   fill: $purple;
 }
 
+.tiny {
+  width: 80px;
+}
+
 .small {
   width: 120px;
 }

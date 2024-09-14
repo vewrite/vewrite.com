@@ -843,6 +843,8 @@ const { joining } = storeToRefs(joinStore);
   align-items: center;
   justify-content: center;
   padding: $spacing-xl 0;
+  opacity: 0;
+  animation: contentSlideUp 1.6s forwards;
 
   img {
     width: 90%;
@@ -864,8 +866,6 @@ const { joining } = storeToRefs(joinStore);
 #Personas {
   padding: $spacing-xl 0 0 0;
   width: 100%;
-  opacity: 0;
-  animation: contentSlideUp 1.6s forwards;
 
   .marker {
     display: flex;
