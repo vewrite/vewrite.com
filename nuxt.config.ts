@@ -49,6 +49,7 @@ export default defineNuxtConfig({
     markdown: {
       anchorLinks: false,
     },
+    documentDriven: true
   },
 
   compatibilityDate: '2024-09-12',

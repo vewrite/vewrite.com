@@ -7,7 +7,7 @@ date: "2024-09-11"
 
 ## What is Vewrite? 
 
-Simply put, Vewrite is a project management tool for technical writers. 
+Simply put, Vewrite is a project management tool for technical writers. With it you will be able to:
 
 - Organize your **projects**
 - Create **workflows** that fit your needs
