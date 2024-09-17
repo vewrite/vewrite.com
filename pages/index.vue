@@ -490,7 +490,6 @@ const { joining } = storeToRefs(joinStore);
         animation-delay: 1s;
         opacity: 0;
         transform: scale(0);
-        filter: blur(7px);
 
         @media (max-width: 1000px) {
           display: none;
@@ -536,7 +535,6 @@ const { joining } = storeToRefs(joinStore);
         animation-delay: 1.2s;
         opacity: 0;
         transform: scale(0);
-        filter: blur(20px);
 
         @media (max-width: 1000px) {
           display: none;
@@ -552,7 +550,6 @@ const { joining } = storeToRefs(joinStore);
         animation-delay: .9s;
         opacity: 0;
         transform: scale(0);
-        filter: blur(15px);
 
         @media (max-width: 1000px) {
           display: none;
@@ -568,7 +565,6 @@ const { joining } = storeToRefs(joinStore);
         animation-delay: 1s;
         opacity: 0;
         transform: scale(0);
-        filter: blur(6px);
 
         @media (max-width: 1000px) {
           display: none;
@@ -614,7 +610,6 @@ const { joining } = storeToRefs(joinStore);
         animation-delay: 1.1s;
         opacity: 0;
         transform: scale(0);
-        filter: blur(12px);
 
         @media (max-width: 1000px) {
           display: none;
