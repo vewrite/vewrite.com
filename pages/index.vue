@@ -635,8 +635,6 @@ const { joining } = storeToRefs(joinStore);
 
   #HeroVideo {
     width: 35%;
-    opacity: 0;
-    animation: heroAppear .15s ease-in-out forwards;
     z-index: 0;
 
     @media (max-width: 1000px) {
@@ -644,9 +642,12 @@ const { joining } = storeToRefs(joinStore);
     }
 
     img {
-      max-width: 220px;
-      height: auto;
+      width: 220px;
+      height: 220px;
       margin: $spacing-md 0 0;
+      opacity: 0;
+      animation: spark .5s ease-in-out forwards;
+      animation-delay: .6s;
 
       @media (min-width: 768px) {
         display: none;
@@ -658,6 +659,8 @@ const { joining } = storeToRefs(joinStore);
       min-width: 300px;
       max-width: 600px;
       height: auto;
+      opacity: 0;
+      animation: heroAppear .15s ease-in-out forwards;
 
       @media (max-width: 768px) {
         display: none;
