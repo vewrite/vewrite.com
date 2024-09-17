@@ -35,6 +35,7 @@
         <video autoplay muted>
           <source src="/images/vewrite.mp4" type="video/mp4">
         </video>
+        <img src="/images/potential-devrel.png" class="Vewrite">
       </section>
       <section id="HeroText">
         <h1>More writing, less hassle</h1>
@@ -368,7 +369,7 @@ const { joining } = storeToRefs(joinStore);
 
 #Hero {
   width: 100%;
-  height: 80dvh;
+  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -635,11 +636,21 @@ const { joining } = storeToRefs(joinStore);
   #HeroVideo {
     width: 35%;
     opacity: 0;
-    animation: heroAppear .35s ease-in-out forwards;
+    animation: heroAppear .15s ease-in-out forwards;
     z-index: 0;
 
     @media (max-width: 1000px) {
       width: 100%;
+    }
+
+    img {
+      max-width: 220px;
+      height: auto;
+      margin: $spacing-md 0 0;
+
+      @media (min-width: 768px) {
+        display: none;
+      }
     }
 
     video {
@@ -647,6 +658,10 @@ const { joining } = storeToRefs(joinStore);
       min-width: 300px;
       max-width: 600px;
       height: auto;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
   }
 
