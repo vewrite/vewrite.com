@@ -7,7 +7,7 @@
         <img src="/images/pen.png" class="pen">
         <img src="/images/folder.png" class="folder">
       </section>
-      <section id="Sparks">
+      <!-- <section id="Sparks">
         <img src="/images/spark1.png" class="spark1">
         <img src="/images/spark2.png" class="spark2">
         <img src="/images/spark3.png" class="spark3">
@@ -20,7 +20,7 @@
         <img src="/images/spark5.png" class="spark10">
         <img src="/images/spark2.png" class="spark11">
         <img src="/images/spark1.png" class="spark12">
-      </section>
+      </section> -->
       <!-- <section id="Witch">
         <img src="/images/excitement.png" class="excitement">
         <img src="/images/man.png" class="man">
