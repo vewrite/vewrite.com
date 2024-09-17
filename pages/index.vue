@@ -368,7 +368,7 @@ const { joining } = storeToRefs(joinStore);
 
 #Hero {
   width: 100%;
-  height: 80vh;
+  height: 80dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -376,7 +376,7 @@ const { joining } = storeToRefs(joinStore);
   text-align: center;
   gap: $spacing-md;
   opacity: 0;
-  animation: zoomBack 1.2s forwards;
+  animation: zoomBack .8s forwards;
   mix-blend-mode: darken;
 
   @media (max-width: 1000px) {
