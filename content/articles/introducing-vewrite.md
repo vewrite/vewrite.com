@@ -3,6 +3,9 @@ title: "Introducing Vewrite"
 image: "/content/introducing-vewrite.png"
 description: "Let's talk about what Vewrite is, and why we believe that is has a place in the market."
 date: "2024-09-11"
+author: "Rami James"
+authorLink: "https://www.ramijames.com"
+readingLength: 4
 ---
 
 ## What is Vewrite? 
@@ -14,11 +17,7 @@ Simply put, Vewrite is a project management tool for technical writers. With it 
 - Manage **deliverables** through workflows
 - Track **progress** for stakeholders
 
-Deeply integrated into Vewrite is a talent marketplace that allows your team to quickly add capacity if you need it. 
-
-This, of course, also means that **Vewrite is a place for technical writers to find work and get paid**.
-
-Let's take a few minutes to talk about what all that means.
+Deeply integrated into Vewrite is a talent marketplace that allows your team to quickly add capacity if you need it. This, of course, also means that **Vewrite is a place for technical writers to find work and get paid**. Let's take a few minutes to talk about what all that means.
 
 ### A Project Management tool for Technical Writers
 
@@ -80,3 +79,5 @@ With this in mind, Vewrite goes out of its way to leverage automated workflows t
 We hope that you are as excited as we are by the product concepts we've outlined above. Vewrite is in active development and the beta will be released soon to a select group of technical writing teams, and the freelance technical writer commuinity. 
 
 If you'd like to be invited, please join the waitlist.
+
+<JoinButton />

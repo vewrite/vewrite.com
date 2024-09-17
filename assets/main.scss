@@ -127,6 +127,10 @@ p {
         color: rgba($black, 0.5);
         font-family: $font-family-condensed;
     }
+
+    &.small {
+        font-size: $font-size-sm;
+    }
 }
 
 ol, ul {
@@ -140,7 +144,7 @@ ol, ul {
 }
 
 li {
-    margin: 0 0 $spacing-sm 0;
+    margin: 0 0 $spacing-xs 0;
     line-height: 1.44;
     font-size: $font-size-lg;
 }
@@ -198,7 +202,7 @@ table {
     }
 
     &.slim {
-        max-width: 800px;
+        max-width: 720px;
         margin: 0 auto;
 
         @media (max-width: 1200px) {

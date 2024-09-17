@@ -5,6 +5,8 @@ export default defineNuxtConfig({
     '@/assets/_variables.scss',
   ],
 
+  components: true,
+
   app: {
     head: {
       htmlAttrs: {
@@ -26,7 +28,7 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ['@nuxtjs/google-fonts', '@nuxt/content', 'nuxt-module-hotjar', '@pinia/nuxt', 'nuxt-gtag'],
+  modules: ['@nuxtjs/google-fonts', '@nuxt/content', 'nuxt-module-hotjar', '@pinia/nuxt', 'nuxt-gtag', '@nuxt/image'],
 
   hotjar: {
     hotjarId: 5129596,
@@ -54,4 +56,3 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-09-12',
 })
-

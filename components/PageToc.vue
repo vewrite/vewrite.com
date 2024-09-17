@@ -58,15 +58,17 @@ onMounted(() => {
 
 #Toc {
   width: 100%;
-  border-radius: $br-xl;
+  border-bottom: 1px solid $gray-light;
+  padding: 0 0 $spacing-md 0;
 
   ul {
     padding-left: 0;
-    margin: 0 0 $spacing-sm;
+    margin: 0 0 $spacing-md;
 
     li {
       margin: 0 0 $spacing-sm;
       padding: 0;
+      list-style: none;
 
       &:first-of-type {
         margin-top: $spacing-sm;
@@ -78,6 +80,7 @@ onMounted(() => {
         color: $purple-dark;
         text-decoration: none;
         transition: color 0.2s;
+        font-size: $font-size-md;
 
         &:hover {
           color: $purple;
@@ -85,10 +88,10 @@ onMounted(() => {
       }
 
       ul.sub {
-        padding-left: $spacing-md;
+        padding-left: 0;
 
         li {
-          margin: 0;
+          margin: 0 0 $spacing-xs;
           padding: 0;
 
           &:first-of-type {

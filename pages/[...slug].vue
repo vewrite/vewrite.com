@@ -1,11 +1,15 @@
 <template>
   <NuxtLayout>
     <section class="single-article">
-      <div class="container slim">
-        <!-- <nuxt-link class="button clear" to="/articles">Back to articles</nuxt-link> -->
+      <div class="container top slim">
+        <nuxt-link class="button clear" to="/articles">Back to articles</nuxt-link>
+        <p class="light small">{{ data?.date }} • {{ data?.readingLength }} min</p>
         <h1 class="article-title">{{ data?.title }}</h1>
-        <img :src="data?.image" class="article-image" />
+        <p class="light">{{ data?.description }} min</p>
         <PageToc />
+      </div>
+      <div class="container slim">
+        <img :src="data?.image" class="article-image" />
         <ContentDoc>
           <template #not-found>
             <h1>Document not found</h1>
@@ -34,16 +38,22 @@ definePageMeta({
 .single-article {
   padding: $spacing-xl 0;
 
-  .article-title {
-    text-align: center;
-    align-self: center;
+  .top {
+    margin: 0 auto;
+    gap: $spacing-sm;
+
+    .button {
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      margin: 0;
+    }
   }
 
   .article-image {
     width: 100%;
     margin-bottom: $spacing-md;
-    border: 2px solid rgba($purple-dark, 0.1);
-    border-radius: $br-xl;
     margin: 0 0 $spacing-md;
   }
 }
