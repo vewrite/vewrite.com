@@ -57,7 +57,7 @@ Common problems with the pile-o-tasks methodology are:
 
 Having a well-defined **Workflow** can ensure that there is a clear set of states that your deliverables flow through. This means that when you initialize your project you know both the scope of the deliverables your client will receive and the steps that your team needs to go through to achieve success.
 
-_illustration showing pile of tasks versus workflow, perhaps a workflow as a factory_
+![Workflow Factory](/images/workflow-factory.png)
 
 Most modern project management software, including JIRA, Monday, etc. are task-oriented and not workflow-oriented. This is why every project that you run within them feels endless. **The actual scope of work is unclear because the focus is on the deliverable and not on the process to achieve completion.**
 
@@ -71,7 +71,7 @@ When you click "done", it isn't for you. It's for the manager.
 
 The effect of this, for daily users, is that they feel like they work for the software that they use, instead of the other way around: **because they do**. The project management tool that your team uses should work for both the project manager and the team members who use it.
 
-_image showing automatic state progression_
+![State Progression](/images/state-progression.png)
 
 With this in mind, Vewrite goes out of its way to leverage automated workflows to smooth as much of the ho-hum daily state updates as it can. Our system is smart enough to know where it is in the workflow so that those who need to know do, and those who are doing the work are free to get it done.
 

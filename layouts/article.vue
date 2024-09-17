@@ -38,6 +38,10 @@ const { joining } = storeToRefs(joinStore);
   h3 {
     margin: $spacing-xl 0 $spacing-md;
   }
+
+  img {
+    max-width: 100%;
+  }
 }
 
 </style>
