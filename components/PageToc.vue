@@ -58,8 +58,6 @@ onMounted(() => {
 
 #Toc {
   width: 100%;
-  border-bottom: 1px solid $gray-light;
-  padding: 0 0 $spacing-md 0;
 
   ul {
     padding-left: 0;

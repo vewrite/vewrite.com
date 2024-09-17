@@ -5,7 +5,7 @@
         <nuxt-link class="button clear" to="/articles">Back to articles</nuxt-link>
         <p class="light small">{{ data?.date }} • {{ data?.readingLength }} min</p>
         <h1 class="article-title">{{ data?.title }}</h1>
-        <p class="light">{{ data?.description }} min</p>
+        <p class="light">{{ data?.description }}</p>
         <PageToc />
       </div>
       <div class="container slim">

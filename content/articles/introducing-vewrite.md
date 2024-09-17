@@ -1,7 +1,7 @@
 ---
 title: "Introducing Vewrite"
 image: "/content/introducing-vewrite.png"
-description: "Let's talk about what Vewrite is, and why we believe that is has a place in the market."
+description: "Let's talk about what Vewrite is, and why we believe that it has a place in the market."
 date: "2024-09-11"
 author: "Rami James"
 authorLink: "https://www.ramijames.com"
