@@ -336,7 +336,7 @@ const { joining } = storeToRefs(joinStore);
 @keyframes zoomBack {
   0% {
     opacity: 0;
-    transform: scale(2);
+    transform: scale(1.28);
   }
 
   100% {
