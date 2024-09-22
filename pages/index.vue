@@ -7,39 +7,9 @@
         <img src="/images/pen.png" class="pen">
         <img src="/images/folder.png" class="folder">
       </section>
-      <!-- <section id="Sparks">
-        <img src="/images/spark1.png" class="spark1">
-        <img src="/images/spark2.png" class="spark2">
-        <img src="/images/spark3.png" class="spark3">
-        <img src="/images/spark4.png" class="spark4">
-        <img src="/images/spark5.png" class="spark5">
-        <img src="/images/spark1.png" class="spark6">
-        <img src="/images/spark2.png" class="spark7">
-        <img src="/images/spark3.png" class="spark8">
-        <img src="/images/spark4.png" class="spark9">
-        <img src="/images/spark5.png" class="spark10">
-        <img src="/images/spark2.png" class="spark11">
-        <img src="/images/spark1.png" class="spark12">
-      </section> -->
-      <!-- <section id="Witch">
-        <img src="/images/excitement.png" class="excitement">
-        <img src="/images/man.png" class="man">
-        <img src="/images/skull.png" class="skull">
-        <img src="/images/spark1.png" class="spark1">
-        <img src="/images/spark2.png" class="spark2">
-        <img src="/images/spark3.png" class="spark3">
-        <img src="/images/spark4.png" class="spark4">
-        <img src="/images/spark5.png" class="spark5">
-      </section> -->
-      <!-- <section id="HeroVideo">
-        <video autoplay muted>
-          <source src="/images/vewrite.mp4" type="video/mp4">
-        </video>
-        <img src="/images/potential-devrel.png" class="Vewrite">
-      </section> -->
       <section id="HeroText" class="container">
         <h1>Get more writing done, with less hassle</h1>
-        <p>Project management tailored for technical writing teams, <span class="green">with an integrated talent marketplace</span>.</p>
+        <p>Project management tailored for technical writing teams.</p>
         <section class="hero-buttons">
           <nuxt-link to="/articles/introducing-vewrite" class="button primary large">Learn more about Vewrite</nuxt-link>
           <div class="button clear large" @click="joinStore.toggleJoin">
@@ -388,11 +358,21 @@ const { joining } = storeToRefs(joinStore);
   #HeroText {
 
     h1 {
-      font-size: 6dvw;
+      font-size: $font-size-home;
       line-height: 100%;
       font-weight: bold;
       text-align: left;
-      font-family: $font-family-secondary;
+      font-family: $font-family-main;
+
+      @media (max-width: 1000px) {
+        font-size: $font-size-mega;
+      }
+    }
+
+    p {
+      font-size: $font-size-xl;
+      text-align: left;
+      margin: 0 0 $spacing-md 0;
     }
 
     @media (max-width: 1000px) {
@@ -464,9 +444,6 @@ const { joining } = storeToRefs(joinStore);
     margin: 0 0 $spacing-sm 0;
     position: relative;
     width: 100%;
-    // opacity: 0;
-    // animation: fadeIn .35s ease-in-out forwards;
-    // animation-delay: 0.7s;
     font-weight: black;
 
     @media (max-width: 1000px) {
@@ -477,9 +454,6 @@ const { joining } = storeToRefs(joinStore);
   h3 {
     margin: 0;
     position: relative;
-    // opacity: 0;
-    // animation: fadeIn .35s ease-in-out forwards;
-    // animation-delay: 1.05s;
 
     @media (max-width: 1000px) {
       margin: 0;
@@ -526,12 +500,12 @@ const { joining } = storeToRefs(joinStore);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: $spacing-xl 0;
+  padding: $spacing-xl $spacing-md;
   opacity: 0;
   animation: contentSlideUp 1.6s forwards;
 
   img {
-    width: 90%;
+    width: 100%;
     height: auto;
     border-radius: $br-xl;
     box-shadow: 0px 0px 20px 0px rgba($black, 0.1);
