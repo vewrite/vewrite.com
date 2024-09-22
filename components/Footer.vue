@@ -1,10 +1,8 @@
 <template>
   <footer id="Footer">
     <div class="container">
-      <!-- <h2>Launching soon</h2> -->
-      <!-- <p>If you’re interested in being one of the first to use our innovative new tool, make sure to join our waiting list below.</p> -->
-      <!-- <Join wide="wide" /> -->
       <nuxt-link to="/"><Logo color="white" size="small" /></nuxt-link>
+      <a href="mailto:support@vewrite.com" class="button clear">Contact Support</a>
       <p class="copyright">&copy; 2024</p>
     </div>
   </footer>

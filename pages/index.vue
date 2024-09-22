@@ -31,18 +31,18 @@
         <img src="/images/spark4.png" class="spark4">
         <img src="/images/spark5.png" class="spark5">
       </section> -->
-      <section id="HeroVideo">
+      <!-- <section id="HeroVideo">
         <video autoplay muted>
           <source src="/images/vewrite.mp4" type="video/mp4">
         </video>
         <img src="/images/potential-devrel.png" class="Vewrite">
-      </section>
-      <section id="HeroText">
-        <h1>More writing, less hassle</h1>
+      </section> -->
+      <section id="HeroText" class="container">
+        <h1>Get more writing done, with less hassle</h1>
         <p>Project management tailored for technical writing teams, <span class="green">with an integrated talent marketplace</span>.</p>
         <section class="hero-buttons">
-          <nuxt-link to="/articles/introducing-vewrite" class="button primary">Learn more about Vewrite</nuxt-link>
-          <div class="button clear" @click="joinStore.toggleJoin">
+          <nuxt-link to="/articles/introducing-vewrite" class="button primary large">Learn more about Vewrite</nuxt-link>
+          <div class="button clear large" @click="joinStore.toggleJoin">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="7" cy="7" r="7" fill="#8D00FB"/>
               <path d="M3 7H11" stroke="white"/>
@@ -368,21 +368,36 @@ const { joining } = storeToRefs(joinStore);
 }
 
 #Hero {
-  width: 100%;
-  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  gap: $spacing-md;
+  gap: 0;
   opacity: 0;
   animation: zoomBack .8s forwards;
-  mix-blend-mode: darken;
+  padding: $spacing-xl 0 $spacing-md;
 
   @media (max-width: 1000px) {
     width: 100%;
-    padding: 0 $spacing-md;
+  }
+
+  .container {
+    gap: 0;
+  }
+
+  #HeroText {
+
+    h1 {
+      font-size: 6dvw;
+      line-height: 100%;
+      font-weight: bold;
+      text-align: left;
+      font-family: $font-family-secondary;
+    }
+
+    @media (max-width: 1000px) {
+      padding-right: $spacing-xl;
+    }
   }
 
   #Illustrations {
@@ -397,273 +412,31 @@ const { joining } = storeToRefs(joinStore);
 
     img {
       position: absolute;
-      opacity: 0;
-      animation: spark .45s forwards;
-      animation-delay: .8s;
-      transform: scale(0);
 
       &.pen {
-        top: 30%;
+        top: 20%;
         right: 10%;
-        width: 15vw;
-        height: 15vw;
-        animation: spark .45s forwards;
-        animation-delay: 1.2s;
-        opacity: 0;
-        transform: scale(0);
+        width: 25vw;
+        height: 25vw;
 
         @media (max-width: 1000px) {
-          display: none;
+          top: 22.5%;
+          right: 00%;
+          width: 40vw;
+          height: 40vw;
+          transform: scale(0);
         }
       }
 
       &.folder {
         top: 70%;
-        left: 10%;
-        width: 15vw;
-        height: 15vw;
-        animation: spark .45s forwards;
-        animation-delay: 1.2s;
-        opacity: 0;
-        transform: scale(0);
+        left: 2%;
+        width: 25vw;
+        height: 25vw;
 
         @media (max-width: 1000px) {
           display: none;
         }
-      }
-    }
-  }
-
-  #Sparks {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    transform: translateY(var(--element-translate-y-sparks));
-    z-index: 1;
-
-    img {
-      position: absolute;
-      opacity: 0;
-      animation: spark .45s forwards;
-      animation-delay: .8s;
-      transform: scale(0);
-
-      &.spark1 {
-        top: 10%;
-        left: 10%;
-        width: 2.4vw;
-        height: 2.4vw;
-        animation: spark .45s forwards;
-        animation-delay: 1.2s;
-        opacity: 0;
-        transform: scale(0);
-
-        @media (max-width: 1000px) {
-          display: none;
-        }
-      }
-
-      &.spark2 {
-        top: 40%;
-        left: 20%;
-        width: 3.4vw;
-        height: 3.4vw;
-        animation: spark .45s forwards;
-        animation-delay: .9s;
-        opacity: 0;
-        transform: scale(0);
-
-        @media (max-width: 1000px) {
-          display: none;
-        }
-      }
-
-      &.spark3 {
-        top: 22%;
-        right: 6%;
-        width: 2.4vw;
-        height: 2.4vw;
-        animation: spark .45s forwards;
-        animation-delay: 1s;
-        opacity: 0;
-        transform: scale(0);
-
-        @media (max-width: 1000px) {
-          display: none;
-        }
-      }
-
-      &.spark4 {
-        top: 105%;
-        left: 30%;
-        width: 2.4vw;
-        height: 2.4vw;
-        animation: spark .45s forwards;
-        animation-delay: 1.1s;
-        opacity: 0;
-        transform: scale(0);
-
-        @media (max-width: 1000px) {
-          display: none;
-        }
-      }
-
-      &.spark5 {
-        top: 90%;
-        right: 20%;
-        width: 2.4vw;
-        height: 2.4vw;
-        animation: spark .45s forwards;
-        animation-delay: 1.2s;
-        opacity: 0;
-        transform: scale(0);
-
-        @media (max-width: 1000px) {
-          display: none;
-        }
-      }
-
-      &.spark6 {
-        top: 60%;
-        left: -2%;
-        width: 5.4vw;
-        height: 5.4vw;
-        animation: spark .45s forwards;
-        animation-delay: 1.2s;
-        opacity: 0;
-        transform: scale(0);
-
-        @media (max-width: 1000px) {
-          display: none;
-        }
-      }
-
-      &.spark7 {
-        top: 0%;
-        left: 32%;
-        width: 5.4vw;
-        height: 5.4vw;
-        animation: spark .45s forwards;
-        animation-delay: .9s;
-        opacity: 0;
-        transform: scale(0);
-
-        @media (max-width: 1000px) {
-          display: none;
-        }
-      }
-
-      &.spark8 {
-        top: 42%;
-        left: 02%;
-        width: 3.4vw;
-        height: 3.4vw;
-        animation: spark .45s forwards;
-        animation-delay: 1s;
-        opacity: 0;
-        transform: scale(0);
-
-        @media (max-width: 1000px) {
-          display: none;
-        }
-      }
-
-      &.spark9 {
-        top: 15%;
-        left: 70%;
-        width: 4.4vw;
-        height: 4.4vw;
-        animation: spark .45s forwards;
-        animation-delay: 1.1s;
-        opacity: 0;
-        transform: scale(0);
-
-        @media (max-width: 1000px) {
-          display: none;
-        }
-      }
-
-      &.spark10 {
-        top: 20%;
-        right: 40%;
-        width: 2.4vw;
-        height: 2.4vw;
-        animation: spark .45s forwards;
-        animation-delay: 1.2s;
-        opacity: 0;
-        transform: scale(0);
-
-        @media (max-width: 1000px) {
-          display: none;
-        }
-      }
-
-      &.spark11 {
-        top: -3%;
-        right: 14%;
-        width: 4.4vw;
-        height: 4.4vw;
-        animation: spark .45s forwards;
-        animation-delay: 1.1s;
-        opacity: 0;
-        transform: scale(0);
-
-        @media (max-width: 1000px) {
-          display: none;
-        }
-      }
-
-      &.spark12 {
-        top: 60%;
-        right: 10%;
-        width: 5.4vw;
-        height: 5.4vw;
-        animation: spark .45s forwards;
-        animation-delay: 1.2s;
-        opacity: 0;
-        transform: scale(0);
-
-        @media (max-width: 1000px) {
-          display: none;
-        }
-      }
-    }
-  }
-
-  #HeroVideo {
-    width: 35%;
-    z-index: 0;
-
-    @media (max-width: 1000px) {
-      width: 100%;
-    }
-
-    img {
-      width: 220px;
-      height: 220px;
-      margin: $spacing-md 0 0;
-      opacity: 0;
-      animation: spark .5s ease-in-out forwards;
-      animation-delay: .6s;
-
-      @media (min-width: 768px) {
-        display: none;
-      }
-    }
-
-    video {
-      width: 100%;
-      min-width: 300px;
-      max-width: 600px;
-      height: auto;
-      opacity: 0;
-      animation: heroAppear .15s ease-in-out forwards;
-
-      @media (max-width: 768px) {
-        display: none;
       }
     }
   }
@@ -671,12 +444,9 @@ const { joining } = storeToRefs(joinStore);
   .hero-buttons {
     opacity: 0;
     animation: fadeIn .35s ease-in-out forwards;
-    animation-delay: 1.4s;
+    animation-delay: .4s;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
     gap: $spacing-sm;
 
     @media (max-width: 1000px) {
@@ -689,110 +459,6 @@ const { joining } = storeToRefs(joinStore);
     }
   }
 
-
-  #Witch {
-    height: 30vh;
-    position: relative;
-    opacity: 0;
-    animation: fadeUp .75s forwards;
-
-    @media (max-width: 1000px) {
-      transform: scale(0.24) translateX(-300px) translateY(-520px) rotate(0deg);
-      animation: none;
-      opacity: 1;
-    }
-
-    img {
-      position: absolute;
-      max-width: unset;
-
-      &.excitement {
-        top: -390px;
-        left: -60px;
-        width: 912px;
-        height: 511px;
-        transform-origin: 473px 480px;
-        opacity: 0;
-        animation: excited .6s forwards;
-        animation-delay: .75s;
-      }
-
-      &.man {
-        top: 0;
-        left: 0;
-        width: 550px;
-        height: 562px;
-        opacity: 0;
-        animation: fadeIn .35s ease-in forwards;
-      }
-
-      &.skull {
-        top: -63px;
-        left: 440px;
-        width: 416px;
-        height: 377px;
-        transform-origin: 20px 214px;
-        transform: rotate(-105deg);
-        animation: rotateSkull .8s forwards;
-        animation-delay: .4s;
-      }
-
-      &.spark1 {
-        top: -143px;
-        left: -90px;
-        width: 211px;
-        height: 211px;
-        animation: spark .45s forwards;
-        animation-delay: .8s;
-        opacity: 0;
-        transform: scale(0);
-      }
-
-      &.spark2 {
-        top: -503px;
-        left: 20px;
-        width: 222px;
-        height: 222px;
-        animation: spark .45s forwards;
-        animation-delay: .9s;
-        opacity: 0;
-        transform: scale(0);
-      }
-
-      &.spark3 {
-        top: -423px;
-        left: 490px;
-        width: 162px;
-        height: 162px;
-        animation: spark .45s forwards;
-        animation-delay: 1s;
-        opacity: 0;
-        transform: scale(0);
-      }
-
-      &.spark4 {
-        top: -303px;
-        left: 210px;
-        width: 202px;
-        height: 202px;
-        animation: spark .45s forwards;
-        animation-delay: 1.1s;
-        opacity: 0;
-        transform: scale(0);
-      }
-
-      &.spark5 {
-        top: -213px;
-        left: 720px;
-        width: 140px;
-        height: 140px;
-        animation: spark .45s forwards;
-        animation-delay: 1.2s;
-        opacity: 0;
-        transform: scale(0);
-      }
-    }
-  }
 
   h1 {
     margin: 0 0 $spacing-sm 0;
