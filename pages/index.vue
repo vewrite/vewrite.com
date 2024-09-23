@@ -318,7 +318,7 @@ const { joining } = storeToRefs(joinStore);
 @keyframes contentSlideUp {
   0% {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
@@ -508,13 +508,14 @@ const { joining } = storeToRefs(joinStore);
   justify-content: center;
   padding: $spacing-xl $spacing-md;
   opacity: 0;
-  animation: contentSlideUp 1.6s forwards;
+  animation: contentSlideUp .8s forwards;
 
   img {
     width: 100%;
     height: auto;
+    min-height: 480px;
     border-radius: $br-xl;
-    box-shadow: 0px 0px 20px 0px rgba($black, 0.1);
+    box-shadow: 0px 0px 1px 1px rgba($brand, 0.1), 0px 4px 8px 0px rgba($brand, 0.1), 0px 10px 20px 0px rgba($brand, 0.05);
 
     @media (max-width: 1000px) {
       width: 100%;
