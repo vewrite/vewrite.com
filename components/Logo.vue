@@ -38,8 +38,8 @@ defineProps({
   fill: $white;
 }
 
-.purple path {
-  fill: $purple;
+.brand path {
+  fill: $brand;
 }
 
 .tiny {

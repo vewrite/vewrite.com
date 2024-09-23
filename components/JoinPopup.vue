@@ -9,7 +9,7 @@
           <path d="M7 3L7 11" stroke="white"/>
         </svg>
       </div>
-      <Logo color="purple" size="large" />
+      <Logo color="brand" size="large" />
       <p class="light">We are looking to work with experienced technical writing teams and freelance writers who are interested in improving their workflows and making more money along the way.</p>
       <Join id="hero-join" />
     </div>

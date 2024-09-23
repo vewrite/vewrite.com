@@ -9,12 +9,12 @@
       </section>
       <section id="HeroText" class="container">
         <h1>Get more writing done, with less hassle</h1>
-        <p>Project management tailored for technical writing teams.</p>
+        <p>Vewrite is a project management tool for technical writing teams that is focused on pushing your deliverables through workflows.</p>
         <section class="hero-buttons">
           <nuxt-link to="/articles/introducing-vewrite" class="button primary large">Learn more about Vewrite</nuxt-link>
           <div class="button clear large" @click="joinStore.toggleJoin">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="7" cy="7" r="7" fill="#8D00FB"/>
+              <circle cx="7" cy="7" r="7" fill="#1864DA"/>
               <path d="M3 7H11" stroke="white"/>
               <path d="M7 3L7 11" stroke="white"/>
             </svg>
@@ -60,11 +60,11 @@
           <div class="col">
             <span class="marker team">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 19C18.5523 19 19.0016 18.5521 18.975 18.0004C18.9599 17.6868 18.9357 17.3593 18.8969 17.1156C18.8125 16.6047 18.1047 15.9297 15.0953 14.8234C12.1328 13.7359 12.3156 14.2656 12.3156 12.2641C12.3156 10.9656 12.9766 11.7203 13.3984 9.25469C13.5625 8.28438 13.6937 8.93125 14.05 7.375C14.2375 6.55938 13.9234 6.49844 13.9609 6.10938C13.9984 5.72031 14.0359 5.37344 14.1063 4.57656C14.1906 3.59219 13.2766 1 10 1C6.72344 1 5.80938 3.59219 5.89844 4.58125C5.96875 5.37344 6.00625 5.725 6.04375 6.11406C6.08125 6.50313 5.76719 6.56406 5.95469 7.37969C6.31094 8.93125 6.44219 8.28437 6.60625 9.25937C7.02813 11.725 7.68906 10.9703 7.68906 12.2687C7.68906 14.275 7.87187 13.7453 4.90937 14.8281C1.9 15.9297 1.1875 16.6094 1.10781 17.1203C1.06725 17.3619 1.04194 17.6879 1.02616 18.0004C0.998311 18.552 1.44772 19 2 19H10H18Z" stroke="#8D00FB" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round"/>
+                <path d="M18 19C18.5523 19 19.0016 18.5521 18.975 18.0004C18.9599 17.6868 18.9357 17.3593 18.8969 17.1156C18.8125 16.6047 18.1047 15.9297 15.0953 14.8234C12.1328 13.7359 12.3156 14.2656 12.3156 12.2641C12.3156 10.9656 12.9766 11.7203 13.3984 9.25469C13.5625 8.28438 13.6937 8.93125 14.05 7.375C14.2375 6.55938 13.9234 6.49844 13.9609 6.10938C13.9984 5.72031 14.0359 5.37344 14.1063 4.57656C14.1906 3.59219 13.2766 1 10 1C6.72344 1 5.80938 3.59219 5.89844 4.58125C5.96875 5.37344 6.00625 5.725 6.04375 6.11406C6.08125 6.50313 5.76719 6.56406 5.95469 7.37969C6.31094 8.93125 6.44219 8.28437 6.60625 9.25937C7.02813 11.725 7.68906 10.9703 7.68906 12.2687C7.68906 14.275 7.87187 13.7453 4.90937 14.8281C1.9 15.9297 1.1875 16.6094 1.10781 17.1203C1.06725 17.3619 1.04194 17.6879 1.02616 18.0004C0.998311 18.552 1.44772 19 2 19H10H18Z" stroke="#1864DA" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round"/>
               </svg>
               For teams
             </span>
-            <h2 class="purple">Vewrite is the better way to work that you've been looking for.</h2>
+            <h2 class="brand">Vewrite is the better way to work that you've been looking for.</h2>
             <h3>Efficiently manage your Technical Writing team</h3>
             <p class="light">Our software provides your team with a customizable, tailored alternative for project management of technical writing projects. Focus on pushing your work through a sensible workflow, instead of trying to tackle a pile of tasks. You don’t have to use tools made for developers and marketers to get your work done on-time and within budget.</p>
           </div>
@@ -243,7 +243,7 @@ const { joining } = storeToRefs(joinStore);
   }
   50% {
     transform: scale(1.4);
-    box-shadow: 0px 0px 26px 0px rgba($purple, 1);
+    box-shadow: 0px 0px 26px 0px rgba($brand, 1);
   }
   100% {
     transform: scale(0.4);
@@ -373,10 +373,16 @@ const { joining } = storeToRefs(joinStore);
       font-size: $font-size-xl;
       text-align: left;
       margin: 0 0 $spacing-md 0;
+      max-width: 50%;
+
+      @media (max-width: 1000px) {
+        max-width: 100%;
+      }
     }
 
     @media (max-width: 1000px) {
-      padding-right: $spacing-xl;
+      padding-right: 0;
+      max-width: 100%;
     }
   }
 
@@ -539,7 +545,7 @@ const { joining } = storeToRefs(joinStore);
     }
 
     &.team {
-      color: $purple;
+      color: $brand;
     }
 
     &.writer {
@@ -569,14 +575,14 @@ const { joining } = storeToRefs(joinStore);
     }
 
     &.stakeholder {
-      background: $purple url('/images/stakeholder.png') no-repeat right bottom;
+      background: $brand url('/images/stakeholder.png') no-repeat right bottom;
       background-size: cover;
       min-height: 480px;
       color: $white;
     }
 
     &.workflows {
-      background: $purple url('/images/workflows.png') no-repeat right bottom;
+      background: $brand url('/images/workflows.png') no-repeat right bottom;
       background-size: cover;
       min-height: 480px;
       color: $white;
@@ -595,7 +601,7 @@ const { joining } = storeToRefs(joinStore);
     padding: $spacing-lg;
     border-radius: $br-xl;
     width: 50%;
-    background: rgba($purple, 0.05);
+    background: rgba($brand, 0.05);
   }
 }
 
@@ -773,7 +779,7 @@ const { joining } = storeToRefs(joinStore);
     tr.marketplace-vewrite {
       
       td {
-        background: $purple;
+        background: $brand;
         color: $white;
         padding: $spacing-lg;
         border-top: none;
@@ -788,10 +794,10 @@ const { joining } = storeToRefs(joinStore);
         }
 
         &:nth-child(4) {
-          background: $purple url('/images/circles.png') no-repeat center center;
+          background: $brand url('/images/circles.png') no-repeat center center;
 
           @media (max-width: 768px) {
-            background: $purple;
+            background: $brand;
           }
         }
 

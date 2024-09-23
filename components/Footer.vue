@@ -13,7 +13,7 @@
 @import 'assets/_variables.scss';
 
 #Footer {
-  background-color: rgba($purple, 1);
+  background-color: rgba($brand, 1);
   color: $white;
 
   .container {

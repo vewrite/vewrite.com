@@ -19,9 +19,9 @@ $green: #9BDF8A;
 $green-dark: #71b160;
 $green-light: #bbf7ac;
 
-$purple: #8D00FB;
-$purple-dark: #7100c8;
-$purple-light: #a432fb;
+$brand: #1864DA;
+$brand-dark: #0f479b;
+$brand-light: #4787e8;
 
 $red: #c25020;
 $red-dark: #a64319;
@@ -85,5 +85,5 @@ $width-xl: 90rem;
 
 /* Shadows */
 // $main-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 24px 24px rgba(0, 0, 0, 0.06);
-$main-shadow: 0px 3px 5px rgba($purple, 0.05), 0px 2px 2px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba($purple, 0.02);
-$main-shadow-up: 0px 0px 2px rgba(0, 0, 0, 0.05), 0px -4px 4px rgba($purple, 0.02);
+$main-shadow: 0px 3px 5px rgba($brand, 0.05), 0px 2px 2px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba($brand, 0.02);
+$main-shadow-up: 0px 0px 2px rgba(0, 0, 0, 0.05), 0px -4px 4px rgba($brand, 0.02);

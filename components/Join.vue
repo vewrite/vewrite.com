@@ -7,7 +7,7 @@
         <h4>I'm interested in using Vewrite</h4>
         <div>
           <input type="checkbox" id="teams" name="teams" value="teams" v-model="submission.teams">
-          <label for="teams" class="purple">As a team</label>
+          <label for="teams" class="brand">As a team</label>
         </div>
         <div>
           <input type="checkbox" id="writers" name="writers" value="writers" v-model="submission.writers">

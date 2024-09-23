@@ -4,7 +4,7 @@
     <section class="template-top">
       <div class="container mid">
         <h1>Articles</h1>
-        <h3 class="purple">As experienced technical writers and team leaders, we have a lot of strong opinions on documentation, writing, and how developer relations should be done as to achieve success. Below are a collection of articles on those topics.</h3>
+        <h3 class="brand">As experienced technical writers and team leaders, we have a lot of strong opinions on documentation, writing, and how developer relations should be done as to achieve success. Below are a collection of articles on those topics.</h3>
       </div>
     </section>
     <main class="articles">
@@ -66,15 +66,15 @@ const { joining } = storeToRefs(joinStore);
       border-radius: $br-xl;
       margin: 0 0 $spacing-md;
       width: 100%;
-      border: 2px solid rgba($purple-dark, 0.1);
+      border: 2px solid rgba($brand-dark, 0.1);
       transition: all 0.3s;
     }
 
     &:hover {
-      color: $purple-dark;
+      color: $brand-dark;
 
       img {
-        border-color: $purple;
+        border-color: $brand;
       }
     }
 

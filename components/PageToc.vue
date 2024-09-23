@@ -75,13 +75,13 @@ onMounted(() => {
       a {
         font-weight: bold;
         padding: $spacing-xs 0;
-        color: $purple-dark;
+        color: $brand-dark;
         text-decoration: none;
         transition: color 0.2s;
         font-size: $font-size-md;
 
         &:hover {
-          color: $purple;
+          color: $brand;
         }
       }
 
@@ -101,7 +101,7 @@ onMounted(() => {
             transition: color 0.2s;
 
             &:hover {
-              color: $purple-dark;
+              color: $brand-dark;
             }
           }
         }

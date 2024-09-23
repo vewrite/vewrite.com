@@ -40,7 +40,7 @@ body {
 .notification {
     padding: $spacing-sm;
     border-radius: $br-md;
-    color: $purple;
+    color: $brand;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -48,8 +48,8 @@ body {
     font-size: $font-size-md;
 
     &.info {
-        background: rgba($purple, 0.1);
-        color: $purple;
+        background: rgba($brand, 0.1);
+        color: $brand;
     }
 
     &.success {
@@ -162,8 +162,8 @@ pre {
     color: $green-dark;
 }
 
-.purple {
-    color: $purple;
+.brand {
+    color: $brand;
 }
 
 /* Table */
@@ -339,7 +339,7 @@ input[type="checkbox"] {
     height: 20px;
 
     &:checked {
-        background-color: $purple;
+        background-color: $brand;
         color: $white;
     }
 }
@@ -374,7 +374,7 @@ select:focus,
 input:hover,
 textarea:hover,
 select:hover {
-    // border: 1px solid rgba($purple, 0.9);
+    // border: 1px solid rgba($brand, 0.9);
     outline: none;
 }
 
@@ -407,7 +407,7 @@ textarea {
         font-family: $font-family-main;
 
         &:focus-within {
-            border: 1px solid rgba($purple, 0.9);
+            border: 1px solid rgba($brand, 0.9);
         }
     }
 
@@ -429,13 +429,13 @@ textarea {
         }
 
         .active {
-            border-bottom: 1px solid $purple;
+            border-bottom: 1px solid $brand;
 
             svg {
 
                 path,
                 mask path {
-                    stroke: $purple;
+                    stroke: $brand;
                     stroke-opacity: 1;
                 }
             }
@@ -453,7 +453,7 @@ textarea {
 }
 
 .form-input {
-    border: 1px solid rgba($purple, 0.3);
+    border: 1px solid rgba($brand, 0.3);
     border-radius: $br-md;
     margin-bottom: $spacing-sm;
     transition: all 0.2s ease;
@@ -464,7 +464,7 @@ textarea {
     &:hover,
     &:focus-within,
     &:active {
-        border: 1px solid rgba($purple, 0.9);
+        border: 1px solid rgba($brand, 0.9);
     }
 }
 
@@ -539,10 +539,10 @@ textarea {
 
 button,
 .button {
-    color: $purple;
-    background: rgba($purple, 0);
+    color: $brand;
+    background: rgba($brand, 0);
     border-radius: $br-xl;
-    border: 1px solid rgba($purple, 0);
+    border: 1px solid rgba($brand, 0);
     text-align: center;
     text-decoration: none;
     padding: calc($spacing-xs + 2px) $spacing-md $spacing-xs;
@@ -563,8 +563,8 @@ button,
     }
 
     &:hover {
-        border: 1px solid rgba($purple, 1);
-        background: rgba($purple, 0);
+        border: 1px solid rgba($brand, 1);
+        background: rgba($brand, 0);
     }
 }
 
@@ -579,10 +579,10 @@ button.large,
 button.clear,
 .button.clear {
     border-color: transparent;
-    background-color: lighten($purple-light, 36%);
+    background-color: lighten($brand-light, 36%);
 
     &:hover {
-        background-color: lighten($purple-light, 32%);
+        background-color: lighten($brand-light, 32%);
     }
 }
 
@@ -596,25 +596,25 @@ button.wide,
 
 button.dark,
 .button.dark {
-    border: 1px solid rgba($purple-dark, 0);
-    background-color: rgba($purple-light, 0.75);
+    border: 1px solid rgba($brand-dark, 0);
+    background-color: rgba($brand-light, 0.75);
     color: $white;
 
     &:hover {
-        border: 1px solid rgba($purple-dark, 1);
-        background-color: rgba($purple, 1);
+        border: 1px solid rgba($brand-dark, 1);
+        background-color: rgba($brand, 1);
     }
 }
 
 button.primary,
 .button.primary {
-    border: 1px solid rgba($purple-dark, 0);
-    background-color: rgba($purple, 0.75);
+    border: 1px solid rgba($brand-dark, 0);
+    background-color: rgba($brand, 1);
     color: $white;
 
     &:hover {
-        border: 1px solid rgba($purple-dark, 1);
-        background-color: rgba($purple, 1);
+        border: 1px solid rgba($brand-dark, 1);
+        background-color: rgba($brand-dark, 1);
     }
 }
 
