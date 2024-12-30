@@ -358,11 +358,9 @@ const { joining } = storeToRefs(joinStore);
   #HeroText {
 
     h1 {
-      font-size: $font-size-home;
       line-height: 100%;
       font-weight: bold;
       text-align: left;
-      font-family: $font-family-main;
 
       @media (max-width: 1000px) {
         font-size: $font-size-mega;
@@ -481,7 +479,6 @@ const { joining } = storeToRefs(joinStore);
 
 #Potentials {
   width: 100%;
-  font-family: $font-family-condensed;
 
   .row {
     @media (max-width: 1000px) {
@@ -725,7 +722,6 @@ const { joining } = storeToRefs(joinStore);
 
       td {
         font-size: $font-size-md;
-        font-family: $font-family-condensed;
         text-align: left;
         padding: $spacing-lg;
         border-top: 2px solid white;

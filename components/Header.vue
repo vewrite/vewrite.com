@@ -182,8 +182,6 @@ const toggleMobileNav = () => {
         color: rgba($brand, 0.6);
         text-decoration: none;
         font-size: $font-size-md;
-        font-weight: 500;
-        font-family: $font-family-condensed;
         transition: all 0.13s ease-in-out;
         display: flex;
         justify-content: center;
