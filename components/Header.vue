@@ -9,7 +9,7 @@
       <Logo color="brand" size="tiny" />
     </div>
     <section class="nav-main">
-      <nuxt-link to="/"><Logo color="brand" size="small" /></nuxt-link>
+      <nuxt-link to="/"><Logo color="brand" size="tiny" /></nuxt-link>
       <nuxt-link to="/" class="nav-item" v-if="!isHome">Home</nuxt-link>
       <nuxt-link to="/articles" class="nav-item">Articles</nuxt-link>
     </section>
