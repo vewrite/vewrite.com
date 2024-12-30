@@ -1,11 +1,11 @@
 <template>
   <main>
-    <Header />
+    <v2Header />
     <main>
       <slot />
     </main>
     <footer>
-      <Footer />
+      <v2Footer />
     </footer>
   </main>
 </template>

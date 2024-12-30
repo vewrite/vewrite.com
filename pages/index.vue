@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout>
     <JoinPopup />
-
+<!-- 
     <main id="Hero" :class="{'scrolled': isScrolled}">
       <section id="Illustrations">
         <img src="/images/pen.png" class="pen">
@@ -26,7 +26,7 @@
 
     <div id="Preview" class="container">
       <img src="/images/preview.png" alt="Vewrite Preview" />
-    </div>
+    </div> -->
 
     <!-- <div id="Potentials">
       <div class="container">
@@ -53,7 +53,7 @@
       </div>
     </div> -->
 
-    <a name="teams" class="target"></a>
+    <!-- <a name="teams" class="target"></a>
     <div id="Personas">
       <div class="container">
         <div class="row">
@@ -173,9 +173,9 @@
             <p class="light">When your work moves to the approved state, and all stakeholders are satisfied, it’s time to get you paid. Vewrite provides prompt payouts with no risk to you.</p>
           </div>
         </div>
-      </div>
+      </div> 
 
-    </div>
+    </div>-->
   </NuxtLayout>
 </template>
 

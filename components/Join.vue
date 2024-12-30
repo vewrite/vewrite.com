@@ -181,7 +181,6 @@ async function submitEmail(event) {
       }
 
       label {
-        font-family: $font-family-condensed;
         font-size: $font-size-lg;
 
         @media (max-width: 1000px) {
@@ -202,7 +201,6 @@ async function submitEmail(event) {
       border: none;
       border-radius: 40px;
       font-size: $font-size-md;
-      font-family: $font-family-condensed;
       background: $white;
       color: $black;
       outline: 1px solid rgba($green, 0.4);

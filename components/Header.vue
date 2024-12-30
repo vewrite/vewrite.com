@@ -31,13 +31,7 @@
       </svg>
     </div>
     <nuxt-link to="/" @click="toggleMobileNav">Home</nuxt-link>
-    <!-- <section class="home-links">
-      <a href="#join">Join Waitlist</a>
-      <a href="#teams">Teams</a>
-      <a href="#writers">Writers</a>
-    </section> -->
-    <NuxtLink to="/articles" @click="toggleMobileNav">Articles</NuxtLink>
-    <!-- <NuxtLink to="/contact">Contact</NuxtLink> -->
+    <nuxt-link to="/articles" @click="toggleMobileNav">Articles</nuxt-link>
   </nav>
 </template>
 

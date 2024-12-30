@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Header />
+    <v2Header />
     <slot />
   </main>
   <Footer />
