@@ -12,7 +12,18 @@
         <v2Logo />
       </section>
     </section>
-    <section class="desktop"></section>
+    <section class="desktop">
+      <v2Logo />
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <button class="desktop-login large">Login</button>
+      </nav>
+    </section>
   </nav>
 </template>
 
@@ -33,11 +44,15 @@ const toggleMenu = function(){
 nav {
 
   .mobile {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    display: none;
+
+    @media (max-width: $breakpoint-md) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
 
     .toggle-menu-logo {
       display: flex;
@@ -47,6 +62,47 @@ nav {
       width: 100%;
       padding: $spacing-sm;
       gap: $spacing-sm;
+    }
+  }
+
+  .desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: $spacing-sm;
+    max-width: $max-width;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: $spacing-md;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: $spacing-md;
+
+        li {
+          list-style: none;
+
+          a {
+            text-decoration: none;
+            color: $brand;
+            font-weight: bold;
+          }
+        }
+      }
     }
   }
 }

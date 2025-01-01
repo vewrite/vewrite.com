@@ -36,9 +36,16 @@ $gray-dark: #CDC7D5;
 $gray-light: #E6E3EA;
 
 /* Borders */
-
 $border: 1px solid rgba($black, 0.1);
 
+/* Breakpoints */
+$breakpoint-sm: 600px;
+$breakpoint-md: 960px;
+$breakpoint-lg: 1080px;
+$breakpoint-xl: 1200px;
+
+/* Widths */
+$max-width: 1200px;
 
 /* Fonts */
 $font-family-main: 'Noto Sans', sans-serif;
