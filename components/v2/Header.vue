@@ -16,10 +16,20 @@
       <v2Logo />
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><nuxt-link to="/">Home</nuxt-link></li>
+          <li>
+            <v2Dropdown>
+              <template v-slot:trigger>
+                Product
+              </template>
+              <template v-slot:menu>
+                Test
+              </template>
+            </v2Dropdown>
+          </li>
+          <li><nuxt-link to="/resources">Resources</nuxt-link></li>
+          <li><nuxt-link to="/articles">Articles</nuxt-link></li>
+          <li><nuxt-link to="/pricing">Pricing</nuxt-link></li>
         </ul>
         <button class="desktop-login large">Login</button>
       </nav>
@@ -98,8 +108,13 @@ nav {
 
           a {
             text-decoration: none;
-            color: $brand;
-            font-weight: bold;
+            color: $black;
+
+            &:hover,
+            &:focus,
+            &.router-link-active {
+              color: $brand;
+            }
           }
         }
       }

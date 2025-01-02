@@ -186,28 +186,28 @@ import { ref, onMounted, onUnmounted } from 'vue';
 const isScrolled = ref(false);
 const isInView = ref(false);
 
-const handleScroll = () => {
-  isScrolled.value = window.scrollY > 0;
-  const heroSection = document.getElementById('Hero');
-  const rect = heroSection.getBoundingClientRect();
-  isInView.value = rect.top < window.innerHeight && rect.bottom > 0;
+// const handleScroll = () => {
+//   isScrolled.value = window.scrollY > 0;
+//   const heroSection = document.getElementById('Hero');
+//   const rect = heroSection.getBoundingClientRect();
+//   isInView.value = rect.top < window.innerHeight && rect.bottom > 0;
 
-  if (isInView.value) {
-    const scrollY = window.scrollY;
-    const translateY = scrollY * -0.25;
-    const translateYSparks = scrollY * -0.5;
-    document.documentElement.style.setProperty('--element-translate-y', `${translateY}px`);
-    document.documentElement.style.setProperty('--element-translate-y-sparks', `${translateYSparks}px`);
-  }
-};
+//   if (isInView.value) {
+//     const scrollY = window.scrollY;
+//     const translateY = scrollY * -0.25;
+//     const translateYSparks = scrollY * -0.5;
+//     document.documentElement.style.setProperty('--element-translate-y', `${translateY}px`);
+//     document.documentElement.style.setProperty('--element-translate-y-sparks', `${translateYSparks}px`);
+//   }
+// };
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll);
-  handleScroll(); // Initial check
+  // window.addEventListener('scroll', handleScroll);
+  // handleScroll(); // Initial check
 });
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll);
+  // window.removeEventListener('scroll', handleScroll);
 });
 
 definePageMeta({
