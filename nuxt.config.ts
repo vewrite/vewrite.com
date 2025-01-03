@@ -21,9 +21,11 @@ export default defineNuxtConfig({
     }
   },
 
+  plugins: ['~/plugins/spline-viewer.client.ts'],
+
   googleFonts: {
     families: {
-      NotoSans: true,
+      'Noto Sans': true,
     }
   },
 
