@@ -88,6 +88,7 @@ nav.nav-bar {
   max-width: $max-width;
   background-color: #eaecee9c;
   backdrop-filter: blur(10px);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0));
 
   &.hidden {
     transform: translateY(-120%);

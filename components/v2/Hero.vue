@@ -7,11 +7,13 @@
         <section class="hero-button">
           <nuxt-link to="/"><spline-viewer class="spline-viewer" url="https://prod.spline.design/e-9M6KJB-YAmadkR/scene.splinecode"></spline-viewer></nuxt-link>
           <!-- <button class="primary large">Get started</button> -->
-          <p class="legal-text">Free for beta users. Limited to 1 project. No credit card required.</p>
         </section>
+        <p class="legal-text">Free for beta users. Limited to 1 project. No credit card required.</p>
       </section>
       <section class="hero-image">
-        <img src="/public/images/hero-preview.png" alt="Vewrite" />
+        <div class="image-wrapper">
+          <img src="/public/images/hero-preview.png" alt="Vewrite" />
+        </div>
       </section>
     </div>
   </section>
@@ -38,6 +40,7 @@
       justify-content: center;
       text-align: center;
       padding: 0 $spacing-md $spacing-lg;
+      perspective: 1000px;
 
       h1 {
         font-size: 5vw;
@@ -58,35 +61,74 @@
         padding: 0 0 $spacing-md;
       }
 
+      p.legal-text {
+        color: rgba($black, 0.25);
+      }
+
       .hero-button {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: $spacing-xs;
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
 
         .spline-viewer {
           height: 120px;
-        }
-
-        .legal-text {
-          color: rgba($black, 0.25);
         }
       }
     }
 
     .hero-image {
       position: relative;
-      border: $border;
-      border-radius: $br-lg;
-      overflow: hidden;
-      
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
+
+      .image-wrapper {
+        position: relative;
+        overflow: visible;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          overflow: hidden;
+          border: $border;
+          border-radius: $br-lg;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0px;
+          left: calc(50% - 200px);
+          width: 600px;
+          height: 600px;
+          border-radius: 50%;
+          background: $brand;
+          opacity: 0.5;
+          filter: blur(400px);
+          z-index: -1;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0px;
+          left: calc(50% - 400px);
+          width: 600px;
+          height: 600px;
+          border-radius: 50%;
+          background: $mint;
+          opacity: 0.5;
+          filter: blur(400px);
+          z-index: -1;
+        }
       }
+      
     }
   }
 }
