@@ -5,9 +5,9 @@
         <h1>Unleash the full power of your writing team</h1>
         <p class="hero-description">Reduce your project’s timelines by leveraging our structured workflows, a modern writing experience, and built-in stakeholder review and approval.</p>
         <section class="hero-button">
-          <nuxt-link to="/articles"><spline-viewer class="spline-viewer" url="https://prod.spline.design/LAtGJGEkHL1GjOCb/scene.splinecode"></spline-viewer></nuxt-link>
+          <nuxt-link to="/"><spline-viewer class="spline-viewer" url="https://prod.spline.design/e-9M6KJB-YAmadkR/scene.splinecode"></spline-viewer></nuxt-link>
           <!-- <button class="primary large">Get started</button> -->
-          <p>Free for beta users. Limited to 1 project. No credit card required.</p>
+          <p class="legal-text">Free for beta users. Limited to 1 project. No credit card required.</p>
         </section>
       </section>
       <section class="hero-image">
@@ -41,7 +41,7 @@
 
       h1 {
         font-size: 5vw;
-        font-weight: 600;
+        font-weight: bold;
         max-width: 800px;
         margin: 0 auto;
         line-height: 1;
@@ -67,6 +67,10 @@
 
         .spline-viewer {
           height: 120px;
+        }
+
+        .legal-text {
+          color: rgba($black, 0.25);
         }
       }
     }

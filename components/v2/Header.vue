@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav :class="['nav-bar', isMenuHidden ? 'hidden' : '']" role="navigation">
     <section :class="['mobile', menu]">
       <section class="toggle-menu-logo">
         <button class="mobile-toggle large" @click="toggleMenu">
@@ -27,9 +27,9 @@
               </template>
             </v2Dropdown>
           </li>
-          <li><nuxt-link to="/resources">Resources</nuxt-link></li>
-          <li><nuxt-link to="/articles">Articles</nuxt-link></li>
-          <li><nuxt-link to="/pricing">Pricing</nuxt-link></li>
+          <li><nuxt-link to="/">Resources</nuxt-link></li>
+          <li><nuxt-link to="/">Articles</nuxt-link></li>
+          <li><nuxt-link to="/">Pricing</nuxt-link></li>
         </ul>
         <button class="desktop-login large">Login</button>
       </nav>
@@ -39,11 +39,37 @@
 
 <script setup>
 
+import { ref, onMounted, onUnmounted } from 'vue';
+
 const menu = ref(true);
 
 const toggleMenu = function(){
   return menu.value = !menu.value;
 }
+
+// When the user scrolls down, hide the menu. When the user scrolls up, show the menu.
+let lastScrollTop = 0;
+const isMenuHidden = ref(false);
+
+const onScroll = function() {
+  let st = window.scrollY || document.documentElement.scrollTop;
+  if (st > lastScrollTop){
+    isMenuHidden.value = true;
+  } else {
+    isMenuHidden.value = false;
+  }
+  lastScrollTop = st <= 0 ? 0 : st;
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', onScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', onScroll);
+});
+
+
 
 </script>
 
@@ -51,7 +77,21 @@ const toggleMenu = function(){
 
 @use 'assets/variables' as *;
 
-nav {
+nav.nav-bar {
+  z-index: 1000;
+  top: 0;
+  transform: translateY(0%);
+  transition: all 0.3s;
+  position: sticky;
+  width: calc(100% - $spacing-xs * 2);
+  margin: 0 auto;
+  max-width: $max-width;
+  background-color: #eaecee9c;
+  backdrop-filter: blur(10px);
+
+  &.hidden {
+    transform: translateY(-120%);
+  }
 
   .mobile {
     display: none;

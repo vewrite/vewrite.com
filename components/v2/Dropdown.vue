@@ -24,6 +24,16 @@ function toggleDropdown() {
   isOpen.value = !isOpen.value;
 }
 
+// if isOpen, we'll also add a class to the body
+watch(isOpen, (value) => {
+  if (value) {
+    document.body.classList.add('dropdown-open');
+  } else {
+    document.body.classList.remove('dropdown-open');
+  }
+});
+
+
 </script>
 
 <style lang="scss">

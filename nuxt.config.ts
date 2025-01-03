@@ -55,5 +55,11 @@ export default defineNuxtConfig({
     documentDriven: true
   },
 
+  vue: {
+    compilerOptions: {
+      isCustomElement: tag => tag === 'spline-viewer'
+    }
+  },
+
   compatibilityDate: '2024-09-12',
 })
