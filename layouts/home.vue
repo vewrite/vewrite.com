@@ -28,7 +28,6 @@ main {
 
 .dropdown-open #content {
   filter: blur(10px);
-  transform: translateZ(-100px);
 }
 
 </style>

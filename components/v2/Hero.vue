@@ -87,10 +87,29 @@
 
     .hero-image {
       position: relative;
+      width: 100%;
+      height: 100%;
 
       .image-wrapper {
         position: relative;
         overflow: visible;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0px;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(115deg, $white, $mint-light ,$brand, $white);
+          background-size: 200% 200%;
+          animation: gradientGlow 12s infinite;
+          filter: blur(20px);
+          z-index: -1;
+          opacity: 0.25;
+        }
 
         img {
           width: 100%;
@@ -102,36 +121,25 @@
           border-radius: $br-lg;
         }
 
-        &:before {
-          content: '';
-          position: absolute;
-          top: 0px;
-          left: calc(50% - 200px);
-          width: 600px;
-          height: 600px;
-          border-radius: 50%;
-          background: $brand;
-          opacity: 0.5;
-          filter: blur(400px);
-          z-index: -1;
-        }
 
-        &:after {
-          content: '';
-          position: absolute;
-          top: 0px;
-          left: calc(50% - 400px);
-          width: 600px;
-          height: 600px;
-          border-radius: 50%;
-          background: $mint;
-          opacity: 0.5;
-          filter: blur(400px);
-          z-index: -1;
-        }
       }
       
     }
+  }
+}
+
+@keyframes gradientGlow {
+  0% { 
+    opacity: 0.25;
+    background-position: 0% 50%; 
+  }
+  50% { 
+    opacity: 0.5;
+    background-position: 100% 50%; 
+  }
+  100% { 
+    opacity: 0.25;
+    background-position: 0% 50%; 
   }
 }
 
