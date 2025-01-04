@@ -83,12 +83,22 @@ nav.nav-bar {
   transform: translateY(0%);
   transition: all 0.3s;
   position: sticky;
-  width: calc(100% - $spacing-xs * 2);
+  width: 100%;
   margin: 0 auto;
-  max-width: $max-width;
-  background-color: #eaecee9c;
+  background-color: #ffffff9c;
   backdrop-filter: blur(10px);
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0));
+  overflow: visible;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, $white, transparent);
+    z-index: -1;
+  }
 
   &.hidden {
     transform: translateY(-120%);

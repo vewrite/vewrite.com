@@ -1,7 +1,8 @@
 <template>
   <NuxtLayout>
-    <JoinPopup />
+    <!-- <JoinPopup /> -->
     <v2Hero />
+    <v2Build />
 <!-- 
     <main id="Hero" :class="{'scrolled': isScrolled}">
       <section id="Illustrations">

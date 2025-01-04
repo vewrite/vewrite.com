@@ -3,7 +3,7 @@
     <div class="home-hero-content">
       <section class="hero-text">
         <h1>Unleash the full power of your writing team</h1>
-        <p class="hero-description">Reduce your project’s timelines by leveraging our structured workflows, a modern writing experience, and built-in stakeholder review and approval.</p>
+        <p class="hero-description">Shorten your project’s timelines by leveraging our structured workflows, a modern writing experience, and built-in stakeholder review and approval.</p>
         <section class="hero-button">
           <nuxt-link to="/"><spline-viewer class="spline-viewer" url="https://prod.spline.design/e-9M6KJB-YAmadkR/scene.splinecode"></spline-viewer></nuxt-link>
           <!-- <button class="primary large">Get started</button> -->
@@ -25,6 +25,7 @@
 
 .home-hero {
   width: 100%;
+  background: linear-gradient(to top, $white 0%, #EAECEE 80%, $white 100%);
 
   .home-hero-content {
     max-width: $max-width;
@@ -43,7 +44,7 @@
       perspective: 1000px;
 
       h1 {
-        font-size: 5vw;
+        font-size: 84px;
         font-weight: bold;
         max-width: 800px;
         margin: 0 auto;
@@ -53,6 +54,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: inline-block;
+        letter-spacing: -2px;
       }
 
       p.hero-description {

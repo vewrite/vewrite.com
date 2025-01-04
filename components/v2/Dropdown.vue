@@ -140,9 +140,13 @@ watch(isOpen, (value) => {
   position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
-  z-index: 99;
+  min-height: 100vh;
+  min-width: 100vw;
+  z-index: 200;
 }
 
 </style>
