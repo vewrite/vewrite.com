@@ -5,7 +5,7 @@
         <img src="/public/images/donald.png" alt="Donald R., Head of DevRel" />
       </div>
       <div class="user-content">
-        <h3>“I finally always know where all of my documents are.”</h3>
+        <h3>“I finally always know where all of my documents are. It's such a relief.”</h3>
         <p class="user-name">Donald R., Head of DevRel</p>
         <hr />
         <h4>Save time with structured documents</h4>
@@ -17,7 +17,7 @@
         <img src="/public/images/lily.png" alt="Lily A., Marketing Lead" />
       </div>
       <div class="user-content">
-        <h3>“It’s so nice always knowing when we can start on the next content piece.”</h3>
+        <h3>“It’s so nice always knowing when we can start on the next content piece. I'll never go back.”</h3>
         <p class="user-name">Lily A., Marketing Lead</p>
         <hr />
         <h4>Always know the state of your project</h4>
@@ -29,7 +29,7 @@
         <img src="/public/images/katie.png" alt="Katie D., VP Marketing" />
       </div>
       <div class="user-content">
-        <h3>“I got so tired of every project running over time. I never knew when we were done.”</h3>
+        <h3>“I got so tired of every project running over time. I never knew when we were done. Now, I do.”</h3>
         <p class="user-name">Katie D., VP Marketing</p>
         <hr />
         <h4>Stay on target</h4>
@@ -60,6 +60,7 @@
   grid-template-columns: 1fr 1fr;
   gap: $spacing-xl;
   margin: $spacing-xl auto;
+  padding: 0 $spacing-lg;
   max-width: $max-width;
 
   .single-quote {

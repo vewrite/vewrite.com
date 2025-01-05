@@ -1,7 +1,7 @@
 <template>
   <section class="build">
     <div class="column-left">
-      <h2 v-gsap.whenVisible.from="{ opacity: 0 }">Build the best writing process for your team.</h2>
+      <h2 v-gsap.parallax.faster>Build the best writing process for your team.</h2>
       <div class="build-box" v-gsap.whenVisible.delay-1000.from="{ opacity: 0 }">
         <spline-viewer class="spline-viewer" url="https://prod.spline.design/cPM2h0zY-BHZ0r2B/scene.splinecode"></spline-viewer>
         <h3>Workflows that work for you</h3>
