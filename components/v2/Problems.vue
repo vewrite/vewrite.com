@@ -1,4 +1,5 @@
 <template>
+  <h3 class="problem-header">Writing good content doesn’t need to be so frustrating.</h3>
   <section class="problems">
     <div class="single-quote" v-gsap.whenVisible.from="{ opacity: 0 }">
       <div class="user-image">
@@ -55,6 +56,19 @@
 
 @use 'assets/variables' as *;
 
+.problem-header {
+  font-size: $font-size-mega;
+  max-width: $max-width;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  width: 100%;
+  font-weight: bold;
+  color: rgba($black, 0.2);
+  text-align: center;
+  padding: 0 $spacing-md;
+  margin: $spacing-xxl auto $spacing-xl;
+}
+
 .problems {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -62,6 +76,11 @@
   margin: $spacing-xl auto;
   padding: 0 $spacing-lg;
   max-width: $max-width;
+
+
+  @media (max-width: $breakpoint-xl) {
+    display: none;
+  }
 
   .single-quote {
     padding: $spacing-md;

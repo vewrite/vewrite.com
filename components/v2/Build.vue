@@ -6,6 +6,7 @@
         <spline-viewer class="spline-viewer" url="https://prod.spline.design/cPM2h0zY-BHZ0r2B/scene.splinecode"></spline-viewer>
         <h3>Workflows that work for you</h3>
         <p>You can shorten your project’s timelines (make more money) by leveraging our workflows, a modern writing experience, and our built-in stakeholder review and approval.</p>
+        <p><button>Learn more about Workflows</button></p>
       </div>
     </div>
     <div class="column-right">
@@ -13,11 +14,13 @@
         <spline-viewer class="spline-viewer" url="https://prod.spline.design/AMi8-7-wfTORRSEZ/scene.splinecode"></spline-viewer>
         <h3>Be more organized</h3>
         <p>Vewrite’s project management system is simple and straightforward, leaving you free to focus on content creation.</p>
+        <p><button>Learn more about Projects</button></p>
       </div>
-      <div class="build-box top-aligned" v-gsap.whenVisible.delay-1000.from="{ opacity: 0 }">
+      <div class="build-box" v-gsap.whenVisible.delay-1000.from="{ opacity: 0 }">
+        <spline-viewer class="spline-viewer" url="https://prod.spline.design/LAtGJGEkHL1GjOCb/scene.splinecode"></spline-viewer>
         <h3>Understand the full scope of work</h3>
         <p>Having a project be successful is not just about what you deliver, but also is about the back and forth with your writers and stakeholders to get you across the finish line.</p>
-        <spline-viewer class="spline-viewer" url="https://prod.spline.design/LAtGJGEkHL1GjOCb/scene.splinecode"></spline-viewer>
+        <p><button>Learn more about Reviews</button></p>
       </div>
     </div>
   </section>
@@ -32,12 +35,12 @@
   max-width: $max-width;
   margin: 0 auto;
   padding: $spacing-lg $spacing-md;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: $spacing-md;
 
   @media (max-width: $breakpoint-md) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .column-left {
@@ -75,6 +78,10 @@
     gap: $spacing-xxs;
     justify-content: flex-end;
     background: #F3F4F5;
+
+    button {
+      align-self: flex-start;
+    }
 
     &.top-aligned {
       justify-content: flex-start;

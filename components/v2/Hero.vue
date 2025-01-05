@@ -119,7 +119,7 @@
 
         .loader {
           position: absolute;
-          top: 30px;
+          top: 50px;
           left: 50%;
           transform: translate(-50%, -50%);
           animation: spin .5s linear infinite;
@@ -150,33 +150,38 @@
       .mobile-image-wrapper {
         position: absolute;
         overflow: visible;
-        width: 20%;
-        aspect-ratio: 9/16;
-        right: 10%;
+        width: 25%;
+        aspect-ratio: 7.5/16;
+        right: -5%;
         top: 10%;
         z-index: 2;
-        box-shadow: $big-shadow;
-        border-radius: $br-lg;
-        background: $white;
         opacity: 0;
-
-        background: black;
-        box-shadow: inset 0 -4px 4px 0px rgba(white, 0.32), inset 0 0 2px 4px rgba(white, 0.12), 0 14px 1px 0px rgba($brand, 0.05), 0 16px 20px 5px rgba($brand, 0.12);
+        background: rgba($black, 1);
+        box-shadow: inset 0 4px 0px 0px rgba(white, 0.22), inset 0 0 2px 4px rgba(white, 0.12), 0 14px 1px 0px rgba($brand, 0.05), 0 16px 20px 5px rgba($brand, 0.12);
         margin: 15px;
-        min-height: 460px;
-        border-radius: 25px;
+        border-radius: 35px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        padding: 8px;
+        transition: all 0.3s;
+
+        @media (max-width: $breakpoint-xxl) {
+          right: 5%;
+        }
+
+        @media (max-width: $breakpoint-xl) {
+          display: none;
+        }
 
         .screen {
           background: $black;
           width: 100%;
           height: 100%;
-          border-radius: 26px;
-          border: 1px solid $brand;
+          border-radius: 30px;
+          border: 1px solid rgba($black, 0.1);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -187,27 +192,9 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center;
+            object-position: top;
             overflow: hidden;
             border: $border;
-          }
-
-          .notch {
-            height: 10px;
-            width: 65px;
-            position: absolute;
-            top: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: black;
-            border-radius: 20px;
-            z-index: 10;
-
-            @media screen and (max-width: 768px){
-              height: 15px;
-              width: 50px;
-              border-radius: 10px;
-            }
           }
 
         }
@@ -217,9 +204,8 @@
       .desktop-image-wrapper {
         position: relative;
         overflow: visible;
-        width: 90%;
+        width: 100%;
         height: 100%;
-        max-width: 800px;
         margin: 0 auto;
         z-index: 1;
         perspective: 1000px;
