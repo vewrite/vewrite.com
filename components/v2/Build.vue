@@ -72,7 +72,8 @@
     flex-direction: column;
     gap: $spacing-xxs;
     justify-content: flex-end;
-    background: #F3F4F5;
+    background: linear-gradient(165deg, #F3F4F5 70%, $white 100%);
+    overflow: hidden;
 
     button {
       align-self: flex-start;

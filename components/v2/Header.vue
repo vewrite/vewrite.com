@@ -27,9 +27,9 @@
               </template>
             </v2Dropdown>
           </li>
-          <li><nuxt-link to="/">Resources</nuxt-link></li>
-          <li><nuxt-link to="/">Articles</nuxt-link></li>
-          <li><nuxt-link to="/">Pricing</nuxt-link></li>
+          <li><nuxt-link to="/resources">Resources</nuxt-link></li>
+          <li><nuxt-link to="/articles">Articles</nuxt-link></li>
+          <li><nuxt-link to="/pricing">Pricing</nuxt-link></li>
         </ul>
         <button class="desktop-login large">Login</button>
       </nav>
