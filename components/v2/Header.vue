@@ -133,7 +133,6 @@ nav.nav-bar {
     align-items: center;
     width: 100%;
     padding: $spacing-sm $spacing-md;
-    max-width: $max-width;
     margin: 0 auto;
 
     @media (max-width: $breakpoint-md) {

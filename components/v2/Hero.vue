@@ -11,8 +11,11 @@
         <p class="legal-text">Free for beta users. Limited to 1 project. No credit card required.</p>
       </section>
       <section class="hero-image">
-        <div class="image-wrapper">
+        <div class="desktop-image-wrapper" v-gsap.parallax.faster>
           <img src="/public/images/hero-preview.png" alt="Vewrite" />
+        </div>
+        <div class="mobile-image-wrapper" v-gsap.parallax.faster-10>
+          <img src="/public/images/hero-preview-mobile.png" alt="Vewrite" />
         </div>
       </section>
     </div>
@@ -61,10 +64,12 @@
         max-width: 600px;
         margin: 0 auto;
         padding: 0 0 $spacing-md;
+        font-size: $font-size-lg;
       }
 
       p.legal-text {
         color: rgba($black, 0.25);
+        font-size: $font-size-xs;
       }
 
       .hero-button {
@@ -90,19 +95,46 @@
       width: 100%;
       height: 100%;
 
-      .image-wrapper {
+      .mobile-image-wrapper {
+        position: absolute;
+        overflow: visible;
+        width: 20%;
+        aspect-ratio: 9/16;
+        right: 10%;
+        top: -10%;
+        z-index: 2;
+        box-shadow: $big-shadow;
+        border-radius: $br-lg;
+        background: $white;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          overflow: hidden;
+          border: $border;
+          opacity: 0;
+        }
+      }
+
+      .desktop-image-wrapper {
         position: relative;
         overflow: visible;
-        width: 100%;
+        width: 90%;
         height: 100%;
+        max-width: 800px;
+        margin: 0 auto;
         z-index: 1;
+        perspective: 1000px;
 
         &:before {
           content: '';
           position: absolute;
           top: 0px;
           width: 100%;
-          height: 100%;
+          height: 90%;
+          transform: rotate3d(1, 0, 0, -10deg);
           background: linear-gradient(115deg, $white, $mint-light ,$brand, $white);
           background-size: 200% 200%;
           animation: gradientGlow 12s infinite;
