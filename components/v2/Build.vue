@@ -1,15 +1,13 @@
 <template>
   <section class="build">
-    <div class="column-left">
-      <h2 v-gsap.parallax.faster>Build the best writing process for your team.</h2>
+    <h2 class="build-header">Build the best writing process for your team.</h2>
+    <div class="column-right">
       <div class="build-box" v-gsap.whenVisible.delay-1000.from="{ opacity: 0 }">
         <spline-viewer class="spline-viewer" url="https://prod.spline.design/cPM2h0zY-BHZ0r2B/scene.splinecode"></spline-viewer>
         <h3>Workflows that work for you</h3>
         <p>You can shorten your project’s timelines (make more money) by leveraging our workflows, a modern writing experience, and our built-in stakeholder review and approval.</p>
         <p><button>Explore Workflows</button></p>
       </div>
-    </div>
-    <div class="column-right">
       <div class="build-box" v-gsap.whenVisible.delay-1000.from="{ opacity: 0 }">
         <spline-viewer class="spline-viewer" url="https://prod.spline.design/AMi8-7-wfTORRSEZ/scene.splinecode"></spline-viewer>
         <h3>Be more organized</h3>
@@ -31,42 +29,39 @@
 @use 'assets/variables' as *;
 
 .build {
+  display: flex;
+  flex-direction: row;
+  gap: $spacing-md;
+  margin: $spacing-xl auto;
   width: 100%;
   max-width: $max-width;
-  margin: 0 auto;
-  padding: $spacing-lg $spacing-md;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: $spacing-md;
+  position: relative;
 
-  @media (max-width: $breakpoint-md) {
-    grid-template-columns: 1fr;
-  }
 
-  .column-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: $spacing-md;
-
-    h2 {
-      font-size: 60px;
-      font-weight: bold;
-      line-height: 1;
-      text-align: left;
-      background: linear-gradient(to right, #4D70E7 60%, #3F5CBE 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
-      letter-spacing: -1px;
-      padding: $spacing-sm 0;
-    }
+  .build-header {
+    font-size: 52px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: left;
+    color: $brand-light;
+    margin: $spacing-md;
+    display: inline-block;
+    letter-spacing: -1px;
+    width: 100%;
+    font-weight: bold;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 200px;
+    overflow: visible;
+    text-wrap: balance;
   }
 
   .column-right {
     display: flex;
     flex-direction: column;
     gap: $spacing-md;
+    padding: $spacing-xl $spacing-md;
   }
 
   .build-box {
@@ -83,23 +78,12 @@
       align-self: flex-start;
     }
 
-    &.top-aligned {
-      justify-content: flex-start;
-
-      h3 {
-        margin-top: $spacing-md;
-      }
-
-      p {
-        margin-bottom: $spacing-md;
-      }
-    }
-
     h3 {
       font-size: 24px;
       font-weight: bold;
       letter-spacing: -0.4px;
       margin: 0 $spacing-md;
+      color: $brand;
     }
 
     p {

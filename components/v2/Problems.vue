@@ -1,52 +1,54 @@
 <template>
-  <h3 class="problem-header">Writing good content doesn’t need to be so frustrating.</h3>
   <section class="problems">
-    <div class="single-quote" v-gsap.whenVisible.from="{ opacity: 0 }">
-      <div class="user-image">
-        <img src="/public/images/donald.png" alt="Donald R., Head of DevRel" />
+    <h3 class="problem-header">Writing good content doesn’t need to be so frustrating.</h3>
+    <div class="quotes-wrapper">
+      <div class="single-quote" v-gsap.whenVisible.from="{ opacity: 0 }">
+        <div class="user-image">
+          <img src="/public/images/donald.png" alt="Donald R., Head of DevRel" />
+        </div>
+        <div class="user-content">
+          <h3>“I finally always know where all of my documents are. It's such a relief.”</h3>
+          <p class="user-name">Donald R., Head of DevRel</p>
+          <hr />
+          <h4>Save time with structured documents</h4>
+          <p classs="vewrite-explainer">Reduce your project’s timelines by leveraging our structured workflows, a modern writing experience, and built-in stakeholder review and approval.</p>
+        </div>
       </div>
-      <div class="user-content">
-        <h3>“I finally always know where all of my documents are. It's such a relief.”</h3>
-        <p class="user-name">Donald R., Head of DevRel</p>
-        <hr />
-        <h4>Save time with structured documents</h4>
-        <p classs="vewrite-explainer">Reduce your project’s timelines by leveraging our structured workflows, a modern writing experience, and built-in stakeholder review and approval.</p>
+      <div class="single-quote"  v-gsap.whenVisible.delay-1000.from="{ opacity: 0 }">
+        <div class="user-image">
+          <img src="/public/images/lily.png" alt="Lily A., Marketing Lead" />
+        </div>
+        <div class="user-content">
+          <h3>“It’s so nice always knowing when we can start on the next content piece. I'll never go back.”</h3>
+          <p class="user-name">Lily A., Marketing Lead</p>
+          <hr />
+          <h4>Always know the state of your project</h4>
+          <p classs="vewrite-explainer">A big time-sink for project managers is manually following up on the state of every piece of content in production. Vewrite does this for you automatically, saving you both time and effort.</p>
+        </div>
       </div>
-    </div>
-    <div class="single-quote"  v-gsap.whenVisible.delay-1000.from="{ opacity: 0 }">
-      <div class="user-image">
-        <img src="/public/images/lily.png" alt="Lily A., Marketing Lead" />
+      <div class="single-quote"  v-gsap.whenVisible.from="{ opacity: 0 }">
+        <div class="user-image">
+          <img src="/public/images/katie.png" alt="Katie D., VP Marketing" />
+        </div>
+        <div class="user-content">
+          <h3>“I got so tired of every project running over time. I never knew when we were done. Now, I do.”</h3>
+          <p class="user-name">Katie D., VP Marketing</p>
+          <hr />
+          <h4>Stay on target</h4>
+          <p classs="vewrite-explainer">Projects can be unwieldy if you don’t take into account review times, stakeholder review and feedback, and the iterative cycle. Vewrite can help hold your hand through the process so that your team can focus on creating the best content possible.</p>
+        </div>
       </div>
-      <div class="user-content">
-        <h3>“It’s so nice always knowing when we can start on the next content piece. I'll never go back.”</h3>
-        <p class="user-name">Lily A., Marketing Lead</p>
-        <hr />
-        <h4>Always know the state of your project</h4>
-        <p classs="vewrite-explainer">A big time-sink for project managers is manually following up on the state of every piece of content in production. Vewrite does this for you automatically, saving you both time and effort.</p>
-      </div>
-    </div>
-    <div class="single-quote"  v-gsap.whenVisible.from="{ opacity: 0 }">
-      <div class="user-image">
-        <img src="/public/images/katie.png" alt="Katie D., VP Marketing" />
-      </div>
-      <div class="user-content">
-        <h3>“I got so tired of every project running over time. I never knew when we were done. Now, I do.”</h3>
-        <p class="user-name">Katie D., VP Marketing</p>
-        <hr />
-        <h4>Stay on target</h4>
-        <p classs="vewrite-explainer">Projects can be unwieldy if you don’t take into account review times, stakeholder review and feedback, and the iterative cycle. Vewrite can help hold your hand through the process so that your team can focus on creating the best content possible.</p>
-      </div>
-    </div>
-    <div class="single-quote"  v-gsap.whenVisible.delay-1000.from="{ opacity: 0 }">
-      <div class="user-image">
-        <img src="/public/images/adonis.png" alt="Adonis V., Technical Writer" />
-      </div>
-      <div class="user-content">
-        <h3>“No more manually following up with stakeholders? Yes, please!”</h3>
-        <p class="user-name">Adonis V., Technical Writer</p>
-        <hr />
-        <h4>Focus on what’s important</h4>
-        <p classs="vewrite-explainer">Following up with clients and stakeholders can be difficult. Vewrite can help by automating notifications for them, taking that off of your plate so that you can focus on the work at hand.</p>
+      <div class="single-quote"  v-gsap.whenVisible.delay-1000.from="{ opacity: 0 }">
+        <div class="user-image">
+          <img src="/public/images/adonis.png" alt="Adonis V., Technical Writer" />
+        </div>
+        <div class="user-content">
+          <h3>“No more manually following up with stakeholders? Yes, please!”</h3>
+          <p class="user-name">Adonis V., Technical Writer</p>
+          <hr />
+          <h4>Focus on what’s important</h4>
+          <p classs="vewrite-explainer">Following up with clients and stakeholders can be difficult. Vewrite can help by automating notifications for them, taking that off of your plate so that you can focus on the work at hand.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -56,36 +58,39 @@
 
 @use 'assets/variables' as *;
 
-.problem-header {
-  font-size: $font-size-mega;
-  max-width: $max-width;
-  line-height: 1.1;
-  letter-spacing: -1px;
-  width: 100%;
-  font-weight: bold;
-  color: rgba($black, 0.2);
-  text-align: center;
-  padding: 0 $spacing-md;
-  margin: $spacing-xxl auto $spacing-xl;
-
-  @media (max-width: $breakpoint-xl) {
-    display: none;
-  }
-}
-
 .problems {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: $spacing-xl;
+  display: flex;
+  flex-direction: row;
+  gap: $spacing-md;
   margin: $spacing-xl auto;
-  padding: 0 $spacing-lg;
+  width: 100%;
   max-width: $max-width;
+  position: relative;
 
+  .problem-header {
+    font-size: 52px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: left;
+    color: $mint-light;
+    margin: $spacing-md;
+    display: inline-block;
+    letter-spacing: -1px;
+    width: 100%;
+    font-weight: bold;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 200px;
+    overflow: visible;
+    text-wrap: balance;
+  }
 
-  @media (max-width: $breakpoint-xl) {
-    grid-template-columns: 1fr;
-    padding: 0 $spacing-md 0 0;
+  .quotes-wrapper {
+    display: flex;
+    flex-direction: column;
     gap: $spacing-md;
+    padding: $spacing-xl $spacing-md;
   }
 
   .single-quote {
@@ -94,7 +99,6 @@
     flex: 1 auto;
     flex-direction: row;
     gap: $spacing-md;
-    overflow: hidden;
 
     .user-image {
       border: $border;
@@ -123,7 +127,7 @@
       h3 {
         font-size: $font-size-lg;
         font-weight: bold;
-        color: $brand;
+        color: $mint;
         line-height: 1.2;
         margin: 0;
       }

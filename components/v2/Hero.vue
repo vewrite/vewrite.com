@@ -63,6 +63,7 @@
   width: 100%;
   background: linear-gradient(to top, $white 0%, rgba($brand, 0.1) 80%, $white 100%);
   perspective: 1000px;
+  padding: 0 0 $spacing-xxl;
 
   .home-hero-content {
     max-width: $max-width;
@@ -183,7 +184,7 @@
         justify-content: center;
         overflow: hidden;
         padding: 8px;
-        transition: all 0.3s;
+        transition: all 0.1s;
         outline: 2px solid rgba($brand, 0.6);
         outline-offset: -2px;
 
