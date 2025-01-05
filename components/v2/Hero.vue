@@ -61,7 +61,8 @@
 
 .home-hero {
   width: 100%;
-  background: linear-gradient(to top, $white 0%, #EAECEE 80%, $white 100%);
+  background: linear-gradient(to top, $white 0%, rgba($brand, 0.1) 80%, $white 100%);
+  perspective: 1000px;
 
   .home-hero-content {
     max-width: $max-width;
@@ -72,6 +73,21 @@
     flex-direction: column;
     opacity: 0;
     animation: fadeIn 1s forwards;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) rotate3d(1, 1, 1, 45deg);
+      width: 600px;
+      height: 600px;
+      background: $white;
+      filter: blur(200px);
+      z-index: -1;
+      opacity: 0.5;
+    }
 
     .hero-text {
       display: flex;
@@ -157,7 +173,8 @@
         z-index: 2;
         opacity: 0;
         background: rgba($black, 1);
-        box-shadow: inset 0 4px 0px 0px rgba(white, 0.22), inset 0 0 2px 4px rgba(white, 0.12), 0 14px 1px 0px rgba($brand, 0.05), 0 16px 20px 5px rgba($brand, 0.12);
+        box-shadow: inset 0 2px 1px 1px rgba(white, 0.42), inset 0 2px 2px 4px rgba(white, 0.32), inset 0 0 2px 10px rgba(white, 0.12), 0 14px 1px 0px rgba($brand, 0.05), 0 16px 20px 5px rgba($brand, 0.12);
+        border: 1px solid rgba($black, 0.8);
         margin: 15px;
         border-radius: 35px;
         display: flex;
@@ -167,6 +184,8 @@
         overflow: hidden;
         padding: 8px;
         transition: all 0.3s;
+        outline: 2px solid rgba($brand, 0.6);
+        outline-offset: -2px;
 
         @media (max-width: $breakpoint-xxl) {
           right: 5%;

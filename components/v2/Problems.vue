@@ -67,6 +67,10 @@
   text-align: center;
   padding: 0 $spacing-md;
   margin: $spacing-xxl auto $spacing-xl;
+
+  @media (max-width: $breakpoint-xl) {
+    display: none;
+  }
 }
 
 .problems {
@@ -79,7 +83,9 @@
 
 
   @media (max-width: $breakpoint-xl) {
-    display: none;
+    grid-template-columns: 1fr;
+    padding: 0 $spacing-md 0 0;
+    gap: $spacing-md;
   }
 
   .single-quote {
