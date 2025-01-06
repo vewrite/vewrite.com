@@ -72,7 +72,7 @@
     font-weight: bold;
     line-height: 1;
     text-align: left;
-    color: $mint-light;
+    color: $mint;
     margin: $spacing-md;
     display: inline-block;
     letter-spacing: -1px;

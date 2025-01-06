@@ -2,16 +2,19 @@
   <section class="home-hero">
     <div class="home-hero-content">
       <section class="hero-text">
+        <section class="hero-spline">
+          <spline-viewer class="spline-viewer" url="https://prod.spline.design/R1M8Euzsleqainhm/scene.splinecode"></spline-viewer>
+        </section>
         <h1>Unleash the full power of your writing team</h1>
         <p class="hero-description">Shorten your project’s timelines by leveraging our structured workflows, a modern writing experience, and built-in stakeholder review and approval.</p>
         <section class="hero-button">
           <div class="loader"></div>
-          <nuxt-link to="/"><spline-viewer class="spline-viewer" url="https://prod.spline.design/e-9M6KJB-YAmadkR/scene.splinecode"></spline-viewer></nuxt-link>
+          <nuxt-link to="/"><spline-viewer class="spline-viewer-button" url="https://prod.spline.design/e-9M6KJB-YAmadkR/scene.splinecode"></spline-viewer></nuxt-link>
           <!-- <button class="primary large">Get started</button> -->
         </section>
         <p class="legal-text">Free for beta users. Limited to 1 project. No credit card required.</p>
       </section>
-      <section class="hero-image">
+      <!-- <section class="hero-image">
         <div class="desktop-image-wrapper">
           <img src="/public/images/hero-preview.png" alt="Vewrite" />
         </div>
@@ -21,7 +24,7 @@
             <img src="/public/images/hero-preview-mobile.png" alt="Vewrite" />
           </div>
         </div>
-      </section>
+      </section> -->
     </div>
   </section>
 </template>
@@ -59,19 +62,28 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .home-hero {
   width: 100%;
   background: linear-gradient(to top, $white 0%, rgba($brand, 0.1) 80%, $white 100%);
   perspective: 1000px;
   padding: 0 0 $spacing-xxl;
+  overflow: hidden;
 
   .home-hero-content {
-    max-width: $max-width;
     margin: 0 auto;
     padding: $spacing-lg $spacing-md;
     min-height: 400px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     opacity: 0;
     animation: fadeIn 1s forwards;
     position: relative;
@@ -93,16 +105,18 @@
     .hero-text {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      text-align: center;
+      justify-content: flex-start;
+      text-align: left;
       padding: 0 $spacing-md $spacing-lg;
       perspective: 1000px;
+      width: 100%;
+      max-width: $max-width;
+      margin: 0 auto;
 
       h1 {
         font-size: 84px;
         font-weight: bold;
         max-width: 800px;
-        margin: 0 auto;
         line-height: 1;
         padding: $spacing-md 0;
         background: linear-gradient(to right, #4D70E7 60%, #3F5CBE 100%);
@@ -114,9 +128,9 @@
 
       p.hero-description {
         max-width: 600px;
-        margin: 0 auto;
         padding: 0 0 $spacing-md;
         font-size: $font-size-lg;
+        color: $brand;
       }
 
       p.legal-text {
@@ -127,12 +141,12 @@
       .hero-button {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
         gap: $spacing-xs;
         transition: transform 0.2s ease;
         min-height: 120px;
         position: relative;
+        width: 300px;
 
         .loader {
           position: absolute;
@@ -151,10 +165,21 @@
           transform: scale(1.05);
         }
 
-        .spline-viewer {
+        .spline-viewer-button {
           height: 120px;
         }
       }
+    }
+
+    .hero-spline {
+      position: absolute;
+      width: 100%;
+      top: -20%;
+      right: -40%;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 0.5s;
+      z-index: -1;
     }
 
     .hero-image {
@@ -162,7 +187,8 @@
       width: 100%;
       height: 100%;
       opacity: 0;
-      animation: topSlide 1s forwards;
+      animation: fadeIn 1s forwards;
+      animation-delay: 0.5s;
 
       .mobile-image-wrapper {
         position: absolute;
