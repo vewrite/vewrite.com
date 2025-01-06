@@ -241,8 +241,9 @@
         margin: 0 auto;
         z-index: 1;
         perspective: 1000px;
-        background: linear-gradient(165deg, rgba($brand, 0.1) 70%, #C8D3F7 100%);
-        box-shadow: inset 0 2px 1px 1px rgba(white, 0.42), inset 0 2px 2px 4px rgba(white, 0.32), inset 0 0 2px 10px rgba(white, 0.12), 0 14px 1px 0px rgba($brand, 0.05), 0 16px 20px 5px rgba($brand, 0.12);
+        backdrop-filter: blur(24px);
+        background: linear-gradient(165deg, rgba($brand, 0.3) 70%, #C8D3F7 100%);
+        box-shadow: inset 0 2px 1px 1px rgba(white, 0.42), inset 0 2px 2px 4px rgba(white, 0.32), inset 0 0 2px 10px rgba(white, 0.12), 0 6px 1px 0px rgba($brand, 0.05), 0 6px 10px 5px rgba($brand, 0.05);
         padding: $spacing-sm $spacing-sm 8px;
         border-radius: $br-xl;
 
@@ -250,15 +251,16 @@
           content: '';
           position: absolute;
           top: 0px;
-          width: 100%;
+          left: -5%;
+          width: 110%;
           height: 90%;
-          transform: rotate3d(1, 0, 0, -10deg);
-          background: linear-gradient(115deg, $white, $mint-light ,$brand, $white);
+          transform: rotate3d(4, 0, 0, -10deg);
+          background: linear-gradient(115deg, $white, $mint-light, $white, rgba($brand, 0.35), $mint-light, $white);
           background-size: 200% 200%;
-          animation: gradientGlow 12s infinite;
-          filter: blur(20px);
+          animation: gradientGlow 10s infinite;
+          filter: blur(100px);
           z-index: -1;
-          opacity: 0.25;
+          opacity: 0.95;
         }
 
         img {
@@ -279,15 +281,15 @@
 
 @keyframes gradientGlow {
   0% { 
-    opacity: 0.25;
+    opacity: 0.45;
     background-position: 0% 50%; 
   }
   50% { 
-    opacity: 0.5;
+    opacity: 0.75;
     background-position: 100% 50%; 
   }
   100% { 
-    opacity: 0.25;
+    opacity: 0.45;
     background-position: 0% 50%; 
   }
 }
