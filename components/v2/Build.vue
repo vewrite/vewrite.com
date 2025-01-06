@@ -37,6 +37,11 @@
   max-width: $max-width;
   position: relative;
 
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+    gap: 0;
+    margin: $spacing-md auto;
+  }
 
   .build-header {
     font-size: 52px;
@@ -55,6 +60,13 @@
     max-height: 200px;
     overflow: visible;
     text-wrap: balance;
+
+    @media (max-width: $breakpoint-md) {
+      position: relative;
+      top: 0;
+      text-align: center;
+      width: calc(100% - #{$spacing-md * 2});
+    }
   }
 
   .column-right {
@@ -62,11 +74,15 @@
     flex-direction: column;
     gap: $spacing-lg;
     padding: $spacing-xl $spacing-md;
+
+    @media (max-width: $breakpoint-md) {
+      padding: $spacing-md;
+    }
   }
 
   .build-box {
     border-radius: $br-xl;
-    min-height: 520px;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     gap: $spacing-xxs;
@@ -78,6 +94,19 @@
     .spline-viewer {
       margin: 20px;
       width: calc(100% - 40px);
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: inset 0 0 40px 30px rgba($brand, 1);
+        z-index: 1;
+      }
+      
     }
 
     button {

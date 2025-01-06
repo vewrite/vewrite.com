@@ -67,6 +67,12 @@
   max-width: $max-width;
   position: relative;
 
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+    gap: 0;
+    margin: $spacing-md auto;
+  }
+
   .problem-header {
     font-size: 52px;
     font-weight: bold;
@@ -84,6 +90,13 @@
     max-height: 200px;
     overflow: visible;
     text-wrap: balance;
+
+    @media (max-width: $breakpoint-md) {
+      position: relative;
+      top: 0;
+      text-align: center;
+      width: calc(100% - #{$spacing-md * 2});
+    }
   }
 
   .quotes-wrapper {
@@ -91,6 +104,10 @@
     flex-direction: column;
     gap: $spacing-md;
     padding: $spacing-xl $spacing-md;
+
+    @media (max-width: $breakpoint-md) {
+      padding: $spacing-md;
+    }
   }
 
   .single-quote {
