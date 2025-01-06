@@ -4,6 +4,7 @@
     <v2Hero />
     <v2Problems />
     <v2Build />
+    <v2GetStarted />
   </NuxtLayout>
 </template>
 
