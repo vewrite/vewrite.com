@@ -2,19 +2,16 @@
   <section class="home-hero">
     <div class="home-hero-content">
       <section class="hero-text">
-        <section class="hero-spline">
-          <spline-viewer class="spline-viewer" url="https://prod.spline.design/R1M8Euzsleqainhm/scene.splinecode"></spline-viewer>
-        </section>
         <h1>Unleash the full power of your writing team</h1>
         <p class="hero-description">Shorten your project’s timelines by leveraging our structured workflows, a modern writing experience, and built-in stakeholder review and approval.</p>
         <section class="hero-button">
           <div class="loader"></div>
-          <nuxt-link to="/"><spline-viewer class="spline-viewer-button" url="https://prod.spline.design/e-9M6KJB-YAmadkR/scene.splinecode"></spline-viewer></nuxt-link>
+          <nuxt-link to="/"><spline-viewer class="spline-viewer" url="https://prod.spline.design/e-9M6KJB-YAmadkR/scene.splinecode"></spline-viewer></nuxt-link>
           <!-- <button class="primary large">Get started</button> -->
         </section>
         <p class="legal-text">Free for beta users. Limited to 1 project. No credit card required.</p>
       </section>
-      <!-- <section class="hero-image">
+      <section class="hero-image">
         <div class="desktop-image-wrapper">
           <img src="/public/images/hero-preview.png" alt="Vewrite" />
         </div>
@@ -24,7 +21,7 @@
             <img src="/public/images/hero-preview-mobile.png" alt="Vewrite" />
           </div>
         </div>
-      </section> -->
+      </section>
     </div>
   </section>
 </template>
@@ -76,14 +73,14 @@
   background: linear-gradient(to top, $white 0%, rgba($brand, 0.1) 80%, $white 100%);
   perspective: 1000px;
   padding: 0 0 $spacing-xxl;
-  overflow: hidden;
 
   .home-hero-content {
+    max-width: $max-width;
     margin: 0 auto;
     padding: $spacing-lg $spacing-md;
     min-height: 400px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     opacity: 0;
     animation: fadeIn 1s forwards;
     position: relative;
@@ -105,18 +102,16 @@
     .hero-text {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      text-align: left;
+      justify-content: center;
+      text-align: center;
       padding: 0 $spacing-md $spacing-lg;
       perspective: 1000px;
-      width: 100%;
-      max-width: $max-width;
-      margin: 0 auto;
 
       h1 {
         font-size: 84px;
         font-weight: bold;
         max-width: 800px;
+        margin: 0 auto;
         line-height: 1;
         padding: $spacing-md 0;
         background: linear-gradient(to right, #4D70E7 60%, #3F5CBE 100%);
@@ -128,6 +123,7 @@
 
       p.hero-description {
         max-width: 600px;
+        margin: 0 auto;
         padding: 0 0 $spacing-md;
         font-size: $font-size-lg;
         color: $brand;
@@ -141,12 +137,14 @@
       .hero-button {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
+        align-items: center;
         gap: $spacing-xs;
         transition: transform 0.2s ease;
-        min-height: 120px;
+        height: 120px;
         position: relative;
         width: 300px;
+        margin: 0 auto;
 
         .loader {
           position: absolute;
@@ -165,21 +163,10 @@
           transform: scale(1.05);
         }
 
-        .spline-viewer-button {
+        .spline-viewer {
           height: 120px;
         }
       }
-    }
-
-    .hero-spline {
-      position: absolute;
-      width: 100%;
-      top: -20%;
-      right: -40%;
-      opacity: 0;
-      animation: fadeIn 1s forwards;
-      animation-delay: 0.5s;
-      z-index: -1;
     }
 
     .hero-image {
@@ -199,9 +186,8 @@
         top: 10%;
         z-index: 2;
         opacity: 0;
-        background: rgba($black, 1);
+        background: linear-gradient(165deg, $brand 70%, #C8D3F7 100%);
         box-shadow: inset 0 2px 1px 1px rgba(white, 0.42), inset 0 2px 2px 4px rgba(white, 0.32), inset 0 0 2px 10px rgba(white, 0.12), 0 14px 1px 0px rgba($brand, 0.05), 0 16px 20px 5px rgba($brand, 0.12);
-        border: 1px solid rgba($black, 0.8);
         margin: 15px;
         border-radius: 35px;
         display: flex;
@@ -211,8 +197,6 @@
         overflow: hidden;
         padding: 8px;
         transition: all 0.1s;
-        outline: 2px solid rgba($brand, 0.6);
-        outline-offset: -2px;
 
         @media (max-width: $breakpoint-xxl) {
           right: 5%;
@@ -223,11 +207,11 @@
         }
 
         .screen {
-          background: $black;
+          background: $brand;
           width: 100%;
           height: 100%;
           border-radius: 30px;
-          border: 1px solid rgba($black, 0.1);
+          border: 1px solid rgba($brand, 0.1);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -255,6 +239,10 @@
         margin: 0 auto;
         z-index: 1;
         perspective: 1000px;
+        background: linear-gradient(165deg, $brand 70%, #C8D3F7 100%);
+        box-shadow: inset 0 2px 1px 1px rgba(white, 0.42), inset 0 2px 2px 4px rgba(white, 0.32), inset 0 0 2px 10px rgba(white, 0.12), 0 14px 1px 0px rgba($brand, 0.05), 0 16px 20px 5px rgba($brand, 0.12);
+        padding: 10px;
+        border-radius: $br-xl;
 
         &:before {
           content: '';
