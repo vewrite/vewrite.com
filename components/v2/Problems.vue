@@ -26,7 +26,7 @@
           <p classs="vewrite-explainer">A big time-sink for project managers is manually following up on the state of every piece of content in production. Vewrite does this for you automatically, saving you both time and effort.</p>
         </div>
       </div>
-      <div class="single-quote"  v-gsap.whenVisible.from="{ opacity: 0 }">
+      <div class="single-quote"  v-gsap.whenVisible.delay-1000.from="{ opacity: 0 }">
         <div class="user-image">
           <img src="/public/images/katie.png" alt="Katie D., VP Marketing" />
         </div>
@@ -150,16 +150,17 @@
         text-wrap: balance;
 
         .highlight {
-          background: rgba($mint, 0.1);
+          background: linear-gradient(165deg, rgba($mint, 0.1) 70%, rgba($mint, 0.5) 100%);
           padding: 0px 5px;
           border-radius: $br-md;
+          transform: skew(-12.5deg);
+          display: inline-block;
         }
       }
 
       .user-name {
         font-size: $font-size-sm;
-        font-weight: bold;
-        color:rgba($black, 0.5);
+        color:rgba($black, 0.25);
         margin: 0;
       }
 

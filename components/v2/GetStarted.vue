@@ -1,8 +1,8 @@
 <template>
   <section class="get-started">
     <div class="container">
-      <h2 class="get-started-header">We're accepting applications for beta testers now.</h2>
-      <p>To ensure that </p>
+      <h2 class="get-started-header">We're accepting beta testers <span class="highlight">right now</span>.</h2>
+      <p class="get-started-convincer">To ensure that we stay focused, we are limiting access to the first 100 users who apply. Don't miss your opportunity to try out the future of project management for content creation.</p>
       <!-- <div class="column-right">
         <p>Having a project be successful is not just about what you deliver, but also is about the back and forth with your writers and stakeholders to get you across the finish line.</p>
         <p><button class="button light">Explore Reviews</button></p>
@@ -22,7 +22,7 @@
 
 .get-started {
   padding: $spacing-lg 0;
-  background: linear-gradient(to bottom, $white, rgba($mint-light, 0.2) 20%, rgba($mint-light, 0.2) 80%, $white);
+  background: linear-gradient(to bottom, $white, rgba($brand-light, 0.1) 20%, rgba($brand-light, 0.2) 80%, $white);
 
   .container {
     display: flex;
@@ -41,15 +41,22 @@
     .get-started-header {
       font-size: 52px;
       font-weight: bold;
-      line-height: 1;
+      line-height: 1.2;
       text-align: center;
       color: $brand;
-      margin: $spacing-md;
       display: inline-block;
       letter-spacing: -1px;
       width: 100%;
       font-weight: bold;
       text-wrap: balance;
+
+      .highlight {
+        background:  linear-gradient(165deg, rgba($brand, 0.1) 70%, rgba($brand, 0.5) 100%);
+        padding: 0px $spacing-sm;
+        border-radius: $br-lg;
+        transform: skew(-7.5deg);
+        display: inline-block;
+      }
 
       @media (max-width: $breakpoint-md) {
         position: relative;
@@ -57,6 +64,15 @@
         text-align: center;
         width: calc(100% - #{$spacing-md * 2});
       }
+    }
+
+    p.get-started-convincer {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 0 $spacing-md;
+      font-size: $font-size-lg;
+      color: $brand;
+      text-align: center;
     }
 
     .spline-viewer {
