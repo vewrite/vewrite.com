@@ -20,7 +20,7 @@
           <li>
             <v2Dropdown>
               <template v-slot:trigger>
-                Explore
+                Product
               </template>
               <template v-slot:menu>
                 <nuxt-link class="dropdown-item" to="/feature/projects">Project management</nuxt-link>

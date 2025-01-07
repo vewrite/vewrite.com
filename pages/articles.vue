@@ -46,10 +46,10 @@ const { joining } = storeToRefs(joinStore);
 
 .articles {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: $spacing-xl;
   margin: 0 auto $spacing-xxl;
-  max-width: 80%;
+  max-width: $max-width;
 
   @media (max-width:1000px) {
     grid-template-columns: 1fr;

@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout>
-    <!-- <JoinPopup /> -->
+    <JoinPopup />
     <v2Hero />
     <v2Problems />
     <v2Build />

@@ -3,7 +3,7 @@
     <v2Header />
     <slot />
   </main>
-  <Footer />
+  <v2Footer />
   
 </template>
 

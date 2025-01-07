@@ -3,12 +3,19 @@
     <div class="container">
       <h2 class="get-started-header">We're accepting beta testers <span class="highlight brand big">right now</span>.</h2>
       <p class="get-started-convincer">To ensure that we stay focused, we are limiting access to the first users who apply. Don't miss your opportunity to try out the future of project management for content creation.</p>
-      <nuxt-link to="/"><spline-viewer class="spline-viewer" url="https://prod.spline.design/e-9M6KJB-YAmadkR/scene.splinecode"></spline-viewer></nuxt-link>
+      <spline-viewer class="spline-viewer" url="https://prod.spline.design/e-9M6KJB-YAmadkR/scene.splinecode" @click="toggleJoin()"></spline-viewer>
     </div>
   </section>
 </template>
 
 <script setup>
+
+import { useJoinStore } from '~/stores/useJoin';
+const joinStore = useJoinStore();
+
+const toggleJoin = () => {
+  joinStore.toggleJoin();
+};
 
 </script>
 
@@ -18,7 +25,7 @@
 
 .get-started {
   padding: $spacing-lg 0;
-  background: linear-gradient(to bottom, $white, rgba($brand-light, 0.05) 20%, rgba($brand-light, 0.05) 80%);
+  background: linear-gradient(to bottom, rgba($mint-light, 0.3) 20%, rgba($brand-light, 0.05) 50%);
 
   .container {
     display: flex;
@@ -67,6 +74,7 @@
 
     .spline-viewer {
       height: 120px;
+      cursor: pointer;
     }
   }
 }

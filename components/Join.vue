@@ -16,7 +16,7 @@
       </div>
       <div class="hero-container">
         <input type="email" name="email" placeholder="Enter your email" v-model="submission.email">
-        <button type="submit" class="green large" :disabled="loading">
+        <button type="submit" class="primary large" :disabled="loading">
           <Loading v-if="loading" type="small" />
           <span v-else>Join Waitlist</span>
         </button>
@@ -127,7 +127,9 @@ async function submitEmail(event) {
   width: 100%;
 
   h4 {
-    margin-bottom: 0;
+    margin: 0;
+    font-size: $font-size-lg;
+    font-weight: bold;
   }
 
   .hero-checkboxes {
@@ -153,39 +155,39 @@ async function submitEmail(event) {
       justify-content: center;
 
       input[type="checkbox"] {
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
         cursor: pointer;
-        border: 1px solid $gray;
-        background: $white;
+        border: 1px solid $brand;
+        background: $brand;
         appearance: none;
         display: inline-block;
         position: relative;
         padding: 0;
+        margin: 0;
 
         &:checked {
-          border: 1px solid $black;
+          border: 1px solid $white;
 
           &::before {
             content: '';
             display: block;
             width: 4px;
             height: 10px;
-            border: solid $black;
-            border-width: 0 1px 1px 0;
+            border: solid $white;
+            border-width: 0 2px 2px 0;
             transform: rotate(45deg);
-            margin-top: 2px;
-            margin-left: 7px;
+            margin-top: 4px;
+            margin-left: 8px;
           }
         }
       }
 
       label {
-        font-size: $font-size-lg;
-
-        @media (max-width: 1000px) {
-          font-size: $font-size-md;
-        }
+        font-size: $font-size-md;
+        color: $black;
+        margin: 0;
+        padding: 0;
       }
     }
   }
@@ -197,13 +199,13 @@ async function submitEmail(event) {
     gap: 1rem;
 
     input {
-      padding: $spacing-md;
+      padding: $spacing-sm;
       border: none;
-      border-radius: 40px;
+      border-radius: $br-lg;
       font-size: $font-size-md;
       background: $white;
       color: $black;
-      outline: 1px solid rgba($green, 0.4);
+      outline: 1px solid rgba($black, 0.1);
       outline-offset: 0px;
       width: 100%;
 
@@ -217,15 +219,14 @@ async function submitEmail(event) {
       }
 
       &:hover, &:active, &:focus {
-        outline: 1px solid $green;
-        outline-offset: 4px;
+        outline: 1px solid $brand;
       }
     }
 
     button {
       position: absolute;
-      right: 14px;
-      top: 12px;
+      right: 3px;
+      top: 3px;
       font-size: $font-size-md;
       outline-offset: -2px;
 

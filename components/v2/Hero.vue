@@ -6,7 +6,7 @@
         <p class="hero-description">Shorten your project’s timelines by leveraging our structured workflows, a modern writing experience, and built-in stakeholder review and approval.</p>
         <section class="hero-button">
           <div class="loader"></div>
-          <nuxt-link to="/"><spline-viewer class="spline-viewer" url="https://prod.spline.design/e-9M6KJB-YAmadkR/scene.splinecode"></spline-viewer></nuxt-link>
+          <spline-viewer class="spline-viewer" url="https://prod.spline.design/e-9M6KJB-YAmadkR/scene.splinecode" @click="toggleJoin()"></spline-viewer>
           <!-- <button class="primary large">Get started</button> -->
         </section>
         <p class="legal-text">Free for beta users. Limited to 1 project. No credit card required.</p>
@@ -25,6 +25,17 @@
     </div>
   </section>
 </template>
+
+<script setup>
+
+import { useJoinStore } from '~/stores/useJoin';
+const joinStore = useJoinStore();
+
+const toggleJoin = () => {
+  joinStore.toggleJoin();
+};
+
+</script>
 
 <style lang="scss" scoped>
 
@@ -165,6 +176,7 @@
 
         .spline-viewer {
           height: 120px;
+          cursor: pointer;
         }
       }
     }
