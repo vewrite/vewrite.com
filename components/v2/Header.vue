@@ -13,17 +13,21 @@
       </section>
     </section>
     <section class="desktop">
-      <v2Logo />
+      <nuxt-link to="/"><v2Logo /></nuxt-link>
       <nav>
         <ul>
           <li><nuxt-link to="/">Home</nuxt-link></li>
           <li>
             <v2Dropdown>
               <template v-slot:trigger>
-                Product
+                Explore
               </template>
               <template v-slot:menu>
-                Test
+                <nuxt-link class="dropdown-item" to="/feature/projects">Project management</nuxt-link>
+                <nuxt-link class="dropdown-item" to="/feature/projects">Content creation</nuxt-link>
+                <nuxt-link class="dropdown-item" to="/feature/workflows">Workflows</nuxt-link>
+                <nuxt-link class="dropdown-item" to="/feature/clients">Clients</nuxt-link>
+                <nuxt-link class="dropdown-item" to="/feature/teams">Teams</nuxt-link>
               </template>
             </v2Dropdown>
           </li>

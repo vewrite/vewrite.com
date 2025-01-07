@@ -111,7 +111,7 @@ watch(isOpen, (value) => {
 }
 
 .dropdown-item {
-  padding: $spacing-xs $spacing-sm;
+  padding: $spacing-xxs $spacing-sm;
   cursor: pointer !important;
   border-radius: $br-md;
   text-decoration: none;
@@ -120,7 +120,6 @@ watch(isOpen, (value) => {
   gap: $spacing-xs;
   font-size: $font-size-sm;
   color: $black;
-  font-weight: bold;
 
   &.active {
     background-color: rgba($brand, 1);
@@ -142,10 +141,7 @@ watch(isOpen, (value) => {
   left: 0;
   bottom: 0;
   right: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  min-width: 100vw;
+  height: 100vh;
   z-index: 200;
 }
 

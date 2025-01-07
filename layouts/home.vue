@@ -18,16 +18,4 @@
 
 @use 'assets/variables' as *;
 
-main {
-  perspective: 1000px;
-}
-
-#content {
-  transition: all 0.25s ease;
-}
-
-.dropdown-open #content {
-  filter: blur(10px);
-}
-
 </style>

@@ -1,12 +1,8 @@
 <template>
   <section class="get-started">
     <div class="container">
-      <h2 class="get-started-header">We're accepting beta testers <span class="highlight">right now</span>.</h2>
-      <p class="get-started-convincer">To ensure that we stay focused, we are limiting access to the first 100 users who apply. Don't miss your opportunity to try out the future of project management for content creation.</p>
-      <!-- <div class="column-right">
-        <p>Having a project be successful is not just about what you deliver, but also is about the back and forth with your writers and stakeholders to get you across the finish line.</p>
-        <p><button class="button light">Explore Reviews</button></p>
-      </div> -->
+      <h2 class="get-started-header">We're accepting beta testers <span class="highlight brand big">right now</span>.</h2>
+      <p class="get-started-convincer">To ensure that we stay focused, we are limiting access to the first users who apply. Don't miss your opportunity to try out the future of project management for content creation.</p>
       <nuxt-link to="/"><spline-viewer class="spline-viewer" url="https://prod.spline.design/e-9M6KJB-YAmadkR/scene.splinecode"></spline-viewer></nuxt-link>
     </div>
   </section>
@@ -22,7 +18,7 @@
 
 .get-started {
   padding: $spacing-lg 0;
-  background: linear-gradient(to bottom, $white, rgba($brand-light, 0.1) 20%, rgba($brand-light, 0.2) 80%, $white);
+  background: linear-gradient(to bottom, $white, rgba($brand-light, 0.05) 20%, rgba($brand-light, 0.05) 80%);
 
   .container {
     display: flex;
@@ -50,13 +46,7 @@
       font-weight: bold;
       text-wrap: balance;
 
-      .highlight {
-        background:  linear-gradient(165deg, rgba($brand, 0.1) 70%, rgba($brand, 0.5) 100%);
-        padding: 0px $spacing-sm;
-        border-radius: $br-lg;
-        transform: skew(-7.5deg);
-        display: inline-block;
-      }
+
 
       @media (max-width: $breakpoint-md) {
         position: relative;

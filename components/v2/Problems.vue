@@ -7,7 +7,7 @@
           <img src="/public/images/donald.png" alt="Donald R., Head of DevRel" />
         </div>
         <div class="user-content">
-          <h3>“I finally always know where all of my documents are. <span class="highlight">It's such a relief.</span>”</h3>
+          <h3>“I finally always know where all of my documents are. <span class="highlight mint">It's such a relief.</span>”</h3>
           <p class="user-name">Donald R., Head of DevRel</p>
           <hr />
           <h4>Save time with structured documents</h4>
@@ -19,7 +19,7 @@
           <img src="/public/images/lily.png" alt="Lily A., Marketing Lead" />
         </div>
         <div class="user-content">
-          <h3>“It’s so nice always knowing when we can start on the next content piece. <span class="highlight">I'll never go back.</span>”</h3>
+          <h3>“It’s so nice always knowing when we can start on the next content piece. <span class="highlight mint">I'll never go back.</span>”</h3>
           <p class="user-name">Lily A., Marketing Lead</p>
           <hr />
           <h4>Always know the state of your project</h4>
@@ -31,7 +31,7 @@
           <img src="/public/images/katie.png" alt="Katie D., VP Marketing" />
         </div>
         <div class="user-content">
-          <h3>“I got so tired of every project running over time. I never knew when we were done. <span class="highlight">Now, I do.</span>”</h3>
+          <h3>“I got so tired of every project running over time. I never knew when we were done. <span class="highlight mint">Now, I do.</span>”</h3>
           <p class="user-name">Katie D., VP Marketing</p>
           <hr />
           <h4>Stay on target</h4>
@@ -43,7 +43,7 @@
           <img src="/public/images/adonis.png" alt="Adonis V., Technical Writer" />
         </div>
         <div class="user-content">
-          <h3>“No more manually following up with stakeholders? <span class="highlight">Yes, please!</span>”</h3>
+          <h3>“No more manually following up with stakeholders? <span class="highlight mint">Yes, please!</span>”</h3>
           <p class="user-name">Adonis V., Technical Writer</p>
           <hr />
           <h4>Focus on what’s important</h4>
@@ -149,13 +149,7 @@
         margin: 0;
         text-wrap: balance;
 
-        .highlight {
-          background: linear-gradient(165deg, rgba($mint, 0.1) 70%, rgba($mint, 0.5) 100%);
-          padding: 0px 5px;
-          border-radius: $br-md;
-          transform: skew(-12.5deg);
-          display: inline-block;
-        }
+
       }
 
       .user-name {
