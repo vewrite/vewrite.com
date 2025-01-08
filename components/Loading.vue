@@ -1,6 +1,5 @@
 <template>
   <main id="Loading" :class="[zeroHeight]">
-    <Logo v-if="hasLogo" />
     <div :class="['spinner', type]"></div>
   </main>
 </template>

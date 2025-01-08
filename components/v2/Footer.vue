@@ -40,7 +40,7 @@
       </section>
     </section>
     <section class="addendum">
-      <p class="copyright">&copy; 2024 Vewrite. All rights reserved.</p>
+      <p class="copyright">&copy; 2024 Vewrite.</p>
       <div class="social-links">
         <a href="https://github.com/ramijames/vewrite" target="_blank" rel="noopener noreferrer">Github</a>
         <a href="https://www.linkedin.com/company/vewrite" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -58,21 +58,35 @@ footer {
   background: rgba($brand, 0.1);
   align-items: flex-start;
 
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-lg $spacing-md;
+  }
+
   .container {
     display: flex;
     flex-direction: row;
     gap: $spacing-lg;
     justify-content: space-between;
 
-    .vewrite-logo {
-      width: 100px;
-      height: fit-content;
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      padding: 0;
     }
 
     .links-wrapper {
       display: flex;
       flex-direction: row;
       gap: $spacing-lg;
+
+      @media (max-width: $breakpoint-md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .vewrite-logo {
+      width: 100px;
+      height: fit-content;
     }
 
     .links-group {
