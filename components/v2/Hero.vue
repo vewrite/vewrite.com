@@ -130,6 +130,10 @@ const toggleJoin = () => {
         -webkit-text-fill-color: transparent;
         display: inline-block;
         letter-spacing: -2px;
+
+        @media (max-width: $breakpoint-md) {
+          font-size: 52px;
+        }
       }
 
       p.hero-description {

@@ -18,7 +18,7 @@
         <input type="email" name="email" placeholder="Enter your email" v-model="submission.email">
         <button type="submit" class="primary large" :disabled="loading">
           <Loading v-if="loading" type="small" />
-          <span v-else>Join Waitlist</span>
+          <span v-else>Join the waitlist</span>
         </button>
       </div>
     </form>
@@ -208,6 +208,7 @@ async function submitEmail(event) {
       outline: 1px solid rgba($black, 0.1);
       outline-offset: 0px;
       width: 100%;
+      box-shadow: inset 0 2px 1px 1px rgba(white, 0.42), inset 0 2px 2px 4px rgba(white, 0.32), inset 0 0 2px 10px rgba(white, 0.12), 0 6px 1px 0px rgba($brand, 0.05), 0 6px 10px 5px rgba($brand, 0.05);
 
       @media (max-width: 1000px) {
         border-radius: $br-md;

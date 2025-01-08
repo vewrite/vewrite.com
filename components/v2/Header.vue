@@ -1,15 +1,23 @@
 <template>
   <nav :class="['nav-bar', isMenuHidden ? 'hidden' : '']" role="navigation">
-    <section :class="['mobile', menu]">
+    <section :class="['mobile', mobileState]">
       <section class="toggle-menu-logo">
-        <button class="mobile-toggle large" @click="toggleMenu">
-          <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1.5H17" stroke="black" stroke-width="2" stroke-linecap="round"/>
-            <path d="M1 6.5H17" stroke="black" stroke-width="2" stroke-linecap="round"/>
-            <path d="M1 11.5H17" stroke="black" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </button>
-        <v2Logo />
+        <section class="left">
+          <button class="mobile-toggle large" @click="toggleMobileNav">
+            <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1.5H17" stroke="black" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 6.5H17" stroke="black" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 11.5H17" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <v2Logo />
+        </section>
+        <button class="button mobile-login large" @click="toggleJoin()">Join</button>
+      </section>
+      <section class="mobile-links">
+        <nuxt-link to="/" @click="toggleMobileNav">Home</nuxt-link>
+        <nuxt-link to="/articles" @click="toggleMobileNav">Articles</nuxt-link>
+        <nuxt-link to="/pricing" @click="toggleMobileNav">Pricing</nuxt-link>
       </section>
     </section>
     <section class="desktop">
@@ -31,11 +39,12 @@
               </template>
             </v2Dropdown>
           </li>
-          <li><nuxt-link to="/resources">Resources</nuxt-link></li>
+          <li><nuxt-link to="/resources">Getting Started</nuxt-link></li>
           <li><nuxt-link to="/articles">Articles</nuxt-link></li>
           <li><nuxt-link to="/pricing">Pricing</nuxt-link></li>
         </ul>
-        <button class="desktop-login large">Login</button>
+        <!-- <a href="https://app.vewrite.com" class="button desktop-login large">Login</a> -->
+         <button class="button desktop-login large" @click="toggleJoin()">Join the waitlist</button>
       </nav>
     </section>
   </nav>
@@ -44,12 +53,6 @@
 <script setup>
 
 import { ref, onMounted, onUnmounted } from 'vue';
-
-const menu = ref(true);
-
-const toggleMenu = function(){
-  return menu.value = !menu.value;
-}
 
 // When the user scrolls down, hide the menu. When the user scrolls up, show the menu.
 let lastScrollTop = 0;
@@ -73,7 +76,20 @@ onUnmounted(() => {
   window.removeEventListener('scroll', onScroll);
 });
 
+// Join popup
+import { useJoinStore } from '~/stores/useJoin';
+const joinStore = useJoinStore();
 
+const toggleJoin = () => {
+  joinStore.toggleJoin();
+};
+
+// Mobile menu
+const mobileState = ref('closed');
+
+const toggleMobileNav = () => {
+  mobileState.value = mobileState.value === 'open' ? 'closed' : 'open';
+};
 
 </script>
 
@@ -106,10 +122,13 @@ nav.nav-bar {
 
   &.hidden {
     transform: translateY(-120%);
+    overflow: hidden;
+    opacity: 0;
   }
 
   .mobile {
     display: none;
+    position: fixed;
 
     @media (max-width: $breakpoint-md) {
       display: flex;
@@ -122,11 +141,48 @@ nav.nav-bar {
     .toggle-menu-logo {
       display: flex;
       flex-direction: row;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
       width: 100%;
       padding: $spacing-sm;
-      gap: $spacing-sm;
+      height: 70px;
+      background-color: #ffffffe9;
+      backdrop-filter: blur(20px);
+
+      .vewrite-logo {
+        width: 100px;
+        height: fit-content;
+      }
+
+      .left {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: $spacing-sm;
+      }
+    }
+
+    &.open {
+
+      .mobile-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: $spacing-md;
+        position: absolute;
+        top: 70px;
+        left: $spacing-sm;
+        background: $white;
+        padding: $spacing-md;
+        border-radius: $br-lg;
+        box-shadow: $big-shadow;
+      }
+    }
+
+    .mobile-links {
+      display: none;
     }
   }
 
