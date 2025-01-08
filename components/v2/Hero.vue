@@ -118,6 +118,10 @@ const toggleJoin = () => {
       padding: 0 $spacing-md $spacing-lg;
       perspective: 1000px;
 
+      @media (max-width: $breakpoint-md) {
+        padding: $spacing-lg 0;
+      }
+
       h1 {
         font-size: 84px;
         font-weight: bold;

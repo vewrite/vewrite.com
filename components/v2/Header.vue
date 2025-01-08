@@ -12,13 +12,39 @@
           </button>
           <v2Logo />
         </section>
-        <button class="button mobile-login large" @click="toggleJoin()">Join</button>
+        <button class="button mobile-login primary large" @click="toggleJoin()">Join</button>
       </section>
       <section class="mobile-links">
-        <nuxt-link to="/" @click="toggleMobileNav">Home</nuxt-link>
-        <nuxt-link to="/articles" @click="toggleMobileNav">Articles</nuxt-link>
-        <nuxt-link to="/pricing" @click="toggleMobileNav">Pricing</nuxt-link>
+        <section class="links-wrapper">
+          <nuxt-link to="/" @click="toggleMobileNav">Home</nuxt-link>
+          <nuxt-link to="/articles" @click="toggleMobileNav">Getting Started</nuxt-link>
+          <nuxt-link to="/articles" @click="toggleMobileNav">Articles</nuxt-link>
+          <nuxt-link to="/pricing" @click="toggleMobileNav">Pricing</nuxt-link>
+        </section>
+        <section class="product-links">
+          <nuxt-link to="/feature/projects" @click="toggleMobileNav">
+            <img src="/images/icons/project.svg" alt="Project management" />
+            <span>Project management</span>
+          </nuxt-link>
+          <nuxt-link to="/feature/projects" @click="toggleMobileNav">
+            <img src="/images/icons/content.svg" alt="Project management" />
+            <span>Content creation</span>
+          </nuxt-link>
+          <nuxt-link to="/feature/workflows" @click="toggleMobileNav">
+            <img src="/images/icons/workflows.svg" alt="Project management" />
+            <span>Workflows</span>
+          </nuxt-link>
+          <nuxt-link to="/feature/clients" @click="toggleMobileNav">
+            <img src="/images/icons/clients.svg" alt="Project management" />
+            <span>Clients</span>
+          </nuxt-link>
+          <nuxt-link to="/feature/teams" @click="toggleMobileNav">
+            <img src="/images/icons/teams.svg" alt="Project management" />
+            <span>Teams</span>
+          </nuxt-link>
+        </section>
       </section>
+      <section :class="['blur', mobileState]" v-if="mobileState === 'open'" @click="toggleMobileNav"></section>
     </section>
     <section class="desktop">
       <nuxt-link to="/"><v2Logo /></nuxt-link>
@@ -130,6 +156,16 @@ nav.nav-bar {
     display: none;
     position: fixed;
 
+    .blur {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 99;
+    }
+
     @media (max-width: $breakpoint-md) {
       display: flex;
       flex-direction: row;
@@ -165,19 +201,94 @@ nav.nav-bar {
 
     &.open {
 
+      .blur {
+        display: block;
+      }
+
       .mobile-links {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
-        gap: $spacing-md;
+        align-items: flex-start;
+        min-width: 300px;
+        max-width: calc(100% - 2 * $spacing-sm);
         position: absolute;
         top: 70px;
         left: $spacing-sm;
         background: $white;
-        padding: $spacing-md;
         border-radius: $br-lg;
-        box-shadow: $big-shadow;
+        box-shadow: inset 0 2px 1px 1px rgba(white, 0.42), inset 0 2px 2px 4px rgba(white, 0.32), inset 0 0 2px 10px rgba(white, 0.12), 0 6px 1px 0px rgba($brand, 0.05), 0 6px 10px 5px rgba($brand, 0.05);
+        z-index: 100;
+
+        .links-wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: $spacing-sm;
+          padding: $spacing-md;
+
+          a {
+            text-decoration: none;
+            color: $black;
+            font-size: $font-size-sm;
+
+            &:hover,
+            &:focus,
+            &.router-link-active {
+              color: $brand;
+            }
+          }
+        }
+
+        h4 {
+          font-size: $font-size-sm;
+          font-weight: bold;
+          margin: $spacing-sm 0;
+          width: 100%;
+          text-align: center;
+        }
+
+        .product-links {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: $spacing-sm;
+          padding: $spacing-md;
+          border-top: 1px solid rgba($brand, 0.1);
+          background: linear-gradient(to bottom, rgba($brand-light, 0.05) 60%, rgba($brand-light, 0.0) 100%);
+
+          a {
+            text-decoration: none;
+            color: rgba($black, 0.7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: $spacing-xs;
+            border-radius: $br-md;
+            background: rgba($white, 1);
+            box-shadow: $main-shadow;
+            text-align: center;
+            font-size: $font-size-xs;
+            gap: $spacing-xxs;
+
+            img {
+              width: 32px;
+              height: 32px;
+            }
+
+            &:hover,
+            &:focus,
+            &.router-link-active {
+              color: $brand;
+            }
+          }
+        }
+        
+        a {
+          text-decoration: none;
+          color: $black;
+        }
       }
     }
 
