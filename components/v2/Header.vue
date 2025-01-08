@@ -23,23 +23,23 @@
         </section>
         <section class="product-links">
           <nuxt-link to="/feature/projects" @click="toggleMobileNav">
-            <img src="/images/icons/project.svg" alt="Project management" />
+            <img src="/images/icons/project.svg" alt="Learn about Vewrite Projects" />
             <span>Project management</span>
           </nuxt-link>
           <nuxt-link to="/feature/projects" @click="toggleMobileNav">
-            <img src="/images/icons/content.svg" alt="Project management" />
+            <img src="/images/icons/content.svg" alt="Learn about Vewrite Content Creation" />
             <span>Content creation</span>
           </nuxt-link>
           <nuxt-link to="/feature/workflows" @click="toggleMobileNav">
-            <img src="/images/icons/workflows.svg" alt="Project management" />
+            <img src="/images/icons/workflows.svg" alt="Learn about Vewrite Workflows" />
             <span>Workflows</span>
           </nuxt-link>
           <nuxt-link to="/feature/clients" @click="toggleMobileNav">
-            <img src="/images/icons/clients.svg" alt="Project management" />
+            <img src="/images/icons/clients.svg" alt="Learn about Vewrite Clients Management" />
             <span>Clients</span>
           </nuxt-link>
           <nuxt-link to="/feature/teams" @click="toggleMobileNav">
-            <img src="/images/icons/teams.svg" alt="Project management" />
+            <img src="/images/icons/teams.svg" alt="Learn about Vewrite Teams" />
             <span>Teams</span>
           </nuxt-link>
         </section>
@@ -57,11 +57,28 @@
                 Product
               </template>
               <template v-slot:menu>
-                <nuxt-link class="dropdown-item" to="/feature/projects">Project management</nuxt-link>
-                <nuxt-link class="dropdown-item" to="/feature/projects">Content creation</nuxt-link>
-                <nuxt-link class="dropdown-item" to="/feature/workflows">Workflows</nuxt-link>
-                <nuxt-link class="dropdown-item" to="/feature/clients">Clients</nuxt-link>
-                <nuxt-link class="dropdown-item" to="/feature/teams">Teams</nuxt-link>
+                <section class="product-links">
+                  <nuxt-link to="/feature/projects">
+                    <img src="/images/icons/project.svg" alt="Learn about Vewrite Projects" />
+                    <span>Project management</span>
+                  </nuxt-link>
+                  <nuxt-link to="/feature/projects">
+                    <img src="/images/icons/content.svg" alt="Learn about Vewrite Content Creation" />
+                    <span>Content creation</span>
+                  </nuxt-link>
+                  <nuxt-link to="/feature/workflows">
+                    <img src="/images/icons/workflows.svg" alt="Learn about Vewrite Workflows" />
+                    <span>Workflows</span>
+                  </nuxt-link>
+                  <nuxt-link to="/feature/clients">
+                    <img src="/images/icons/clients.svg" alt="Learn about Vewrite Clients Management" />
+                    <span>Clients</span>
+                  </nuxt-link>
+                  <nuxt-link to="/feature/teams">
+                    <img src="/images/icons/teams.svg" alt="Learn about Vewrite Teams" />
+                    <span>Teams</span>
+                  </nuxt-link>
+                </section>
               </template>
             </v2Dropdown>
           </li>
@@ -316,6 +333,40 @@ nav.nav-bar {
       justify-content: space-between;
       align-items: center;
       gap: $spacing-md;
+
+      .product-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $spacing-sm;
+        min-width: 300px;
+
+        a {
+          text-decoration: none;
+          color: rgba($black, 0.7);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: $spacing-xs;
+          border-radius: $br-md;
+          text-align: center;
+          font-size: $font-size-xs;
+          gap: $spacing-xxs;
+          background: rgba($white, 0);
+
+          img {
+            width: 32px;
+            height: 32px;
+          }
+
+          &:hover,
+          &:focus,
+          &.router-link-active {
+            color: $brand;
+            background: rgba($brand, 0.1);
+          }
+        }
+      }
 
       ul {
         display: flex;
