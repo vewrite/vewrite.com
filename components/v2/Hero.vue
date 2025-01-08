@@ -1,6 +1,8 @@
 <template>
   <section class="home-hero">
     <div class="home-hero-content">
+      <spline-viewer class="hero-spiral" url="https://prod.spline.design/M0V-7n8yBKCYw0oC/scene.splinecode"></spline-viewer>
+      <spline-viewer class="hero-cube" url="https://prod.spline.design/XpyEEeds12UTqHgT/scene.splinecode"></spline-viewer>
       <section class="hero-text">
         <h1>Unleash the full power of your writing team</h1>
         <p class="hero-description">Shorten your project’s timelines by leveraging our structured workflows, a modern writing experience, and built-in stakeholder review and approval.</p>
@@ -95,6 +97,30 @@ const toggleJoin = () => {
     opacity: 0;
     animation: fadeIn 1s forwards;
     position: relative;
+
+    .hero-spiral {
+      position: absolute;
+      left: -300px;
+      top: 0;
+      width: 600px;
+      height: 600px;
+
+      @media (max-width: $breakpoint-md) {
+        display: none;
+      }
+    }
+
+    .hero-cube {
+      position: absolute;
+      right: -400px;
+      bottom: 450px;
+      width: 600px;
+      height: 600px;
+
+      @media (max-width: $breakpoint-md) {
+        display: none;
+      }
+    }
 
     &::before {
       content: '';
