@@ -161,27 +161,31 @@ h5 {
 }
 
 h1 {
-    font-size: $font-size-xl;
+    font-size: 84px;
     margin: 0 0 $spacing-md 0;
+
+    @media (max-width: $breakpoint-md) {
+        font-size: 52px;
+    }
 }
 
 h2 {
-    font-size: $font-size-lg;
+    font-size: $font-size-xxl;
     margin: $spacing-md 0;
 }
 
 h3 {
-    font-size: $font-size-md;
+    font-size: $font-size-xl;
     margin: 0 0 $spacing-sm 0;
 }
 
 h4 {
-    font-size: $font-size-sm;
+    font-size: $font-size-lg;
     margin: $spacing-md 0;
 }
 
 h5 {
-    font-size: $font-size-sm;
+    font-size: $font-size-md;
     margin: $spacing-md 0;
 }
 

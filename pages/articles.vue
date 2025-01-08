@@ -91,7 +91,6 @@ const { joining } = storeToRefs(joinStore);
     font-weight: bold;
     margin: 0 auto;
     line-height: 1;
-    padding: $spacing-md 0;
     color: $brand-dark;
   }
 
