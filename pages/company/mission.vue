@@ -51,7 +51,7 @@
           <img src="/images/icons/waiting.svg" alt="Waiting" />
         </div>
         <div class="milestone-content">
-          <h3>Phase 3 (Talent Marketplace) <span>Upcoming</span></h3>
+          <h3>Phase 3: Talent Marketplace <span>Upcoming</span></h3>
           <p>A big update that is planned once the core product is stabilized is the integrated Talent Marketplace. The intent here is to have in-situ resources which will allow teams to scale up or down depending on their current needs. Inversely, this will allow the wider freelance ecosystem to have a consistent place to find new work.</p>
 
           <p>This means that the Talent Marketplace should allow users to:</p>
@@ -69,7 +69,7 @@
           <img src="/images/icons/waiting.svg" alt="Waiting" />
         </div>
         <div class="milestone-content">
-          <h3>Phase 4 (Business Tooling) <span>Upcoming</span></h3>
+          <h3>Phase 4: Business Tooling <span>Upcoming</span></h3>
           <p>As the product grows and more businesses rely on it, it makes sense to expand what tooling is directly integrated into Vewrite. Part of what makes running a team painful is having to manage clients, invoicing, and calculate your finances.</p>
           <p>This means that Vewrite should allow users to:</p>
           <ul>
@@ -85,7 +85,7 @@
           <img src="/images/icons/waiting.svg" alt="Waiting" />
         </div>
         <div class="milestone-content">
-          <h3>Phase 5 (Types Expansion) <span>Upcoming</span></h3>
+          <h3>Phase 5: Types Expansion <span>Upcoming</span></h3>
           <p>As Vewrite itself grows as a product, we can address other types of deliverables that would be valuable for us to be able to manage with a workflow. Some beta testers have already expressed interest in being able to manage the creation of these types of deliverables:</p>
           <ul>
             <li>Video</li>
