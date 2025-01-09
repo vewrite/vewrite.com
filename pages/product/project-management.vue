@@ -10,20 +10,31 @@
           <span>Projects</span>
         </section>
         <section class="section-links">
-          <a href="/product/product-management#deliverables">Deliverables</a>
-          <a href="/product/product-management#automation">Automation</a>
-          <a href="/product/product-management#progress">Progress tracking</a>
+          <a href="/product/project-management#time-savers">Time Savers</a>
+          <a href="/product/project-management#automation">Automation</a>
+          <a href="/product/project-management#progress-tracking">Progress tracking</a>
         </section>
       </nav>
       <section class="product-intro">
-        <spline-viewer class="product-spline" url="https://prod.spline.design/XpyEEeds12UTqHgT/scene.splinecode"></spline-viewer>
-        <h1>The easiest way to manage complex content writing projects</h1>
-        <h2>Create projects, add deliverables, manage their state, and stay on top of things in a way you've never experienced.</h2>
-        <img src="/public/images/hero-preview.png" alt="Vewrite" class="preview" />
+        <spline-viewer class="product-spline" url="https://prod.spline.design/5H9rIjIKYzG0UWxG/scene.splinecode"></spline-viewer>
+        <h1>Let's make managing your project a breeze.</h1>
+        <h2>We'd like to take the tedious parts of managing your documents, reviews, and approvals off of your plate so that you can focus on what's really important: creating awesome content for your clients.</h2>
+        <p>Stop spending endless hours chasing after what is done and what isn't. Use a tool that helps you get things done faster, better, and cheaper.</p>
+        <div class="preview-image-wrapper">
+          <img src="/public/images/hero-preview.png" alt="Vewrite" class="preview" />
+        </div>
       </section>
     </section>
     <section class="product-content">
-      
+      <div class="time-savers" id="time-savers">
+        <!-- six things that save you time -->
+      </div>
+      <div class="automation" id="automation">
+        <!-- talk about how automation works -->
+      </div>
+      <div class="progress-tracking" id="progress-tracking">
+        <!-- talk about how automation works -->
+      </div>
     </section>
   </NuxtLayout>
 </template>
@@ -42,8 +53,8 @@ definePageMeta({
 
 .product-spline {
   position: absolute;
-  top: -100px;
-  right: -200px;
+  top: 20px;
+  right: -100px;
   z-index: 0;
   width: 600px;
   height: 600px;

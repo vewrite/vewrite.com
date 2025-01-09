@@ -17,7 +17,7 @@
 
 .product-layout {
   margin: $spacing-md auto $spacing-xl;
-  background: linear-gradient(to bottom, $white 0%, rgba($brand, 0.15) 200px, $white 800px);
+  background: linear-gradient(to bottom, $white 0%, rgba($brand, 0.05) 200px, $white 800px);
 }
 
 </style>
