@@ -6,7 +6,7 @@ body {
     margin: 0;
     font-family: $font-family-main;
     background-color: $white;
-    font-size: $font-size-sm;
+    font-size: $font-size-md;
     font-smooth: antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -171,22 +171,22 @@ h1 {
 
 h2 {
     font-size: $font-size-xxl;
-    margin: $spacing-md 0;
+    margin: $spacing-lg 0 $spacing-md;
 }
 
 h3 {
     font-size: $font-size-xl;
-    margin: 0 0 $spacing-sm 0;
+    margin: $spacing-lg 0 $spacing-md;
 }
 
 h4 {
     font-size: $font-size-lg;
-    margin: $spacing-md 0;
+    margin: $spacing-lg 0 $spacing-md;
 }
 
 h5 {
     font-size: $font-size-md;
-    margin: $spacing-md 0;
+    margin: $spacing-lg 0 $spacing-md;
 }
 
 p {
@@ -226,6 +226,10 @@ p.or-select {
         right: 0;
         border-top: 1px solid rgba($black, 0.1);
     }
+}
+
+.no-top-margin {
+    margin-top: 0;
 }
 
 pre {
@@ -803,8 +807,6 @@ button.vertical,
   .highlight {
     padding: 0px 5px;
     border-radius: $br-md;
-    transform: skew(-12.5deg);
-    display: inline-block;
 
     &.big {
         padding: 0px $spacing-sm;

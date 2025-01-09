@@ -171,7 +171,7 @@ const toggleJoin = () => {
         margin: 0 auto;
         padding: 0 0 $spacing-md;
         font-size: $font-size-lg;
-        color: $brand;
+        color: $black;
       }
 
       p.legal-text {
@@ -299,14 +299,15 @@ const toggleJoin = () => {
           top: 0px;
           left: -5%;
           width: 110%;
-          height: 90%;
+          height: 110%;
           transform: rotate3d(4, 0, 0, -10deg);
-          background: linear-gradient(115deg, $white, $mint-light, $white, rgba($brand, 0.35), $mint-light, $white);
+          background: linear-gradient(115deg, $white, $mint-light, $white, rgba($brand-light, 0.65), $mint-light, $white);
           background-size: 200% 200%;
           animation: gradientGlow 10s infinite;
           filter: blur(100px);
           z-index: -1;
-          opacity: 0.95;
+          opacity: 1;
+          mix-blend-mode: overlay;
         }
 
         img {

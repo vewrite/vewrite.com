@@ -68,7 +68,7 @@ const toggleJoin = () => {
       margin: 0 auto;
       padding: 0 0 $spacing-md;
       font-size: $font-size-lg;
-      color: $brand;
+      color: $black;
       text-align: center;
     }
 

@@ -17,28 +17,28 @@
       <section class="mobile-links">
         <section class="links-wrapper">
           <nuxt-link to="/" @click="toggleMobileNav">Home</nuxt-link>
-          <nuxt-link to="/articles" @click="toggleMobileNav">Getting Started</nuxt-link>
+          <!-- <nuxt-link to="https://docs.vewrite.com/getting-started" @click="toggleMobileNav">Getting Started</nuxt-link> -->
           <nuxt-link to="/articles" @click="toggleMobileNav">Articles</nuxt-link>
-          <nuxt-link to="/pricing" @click="toggleMobileNav">Pricing</nuxt-link>
+          <!-- <nuxt-link to="/pricing" @click="toggleMobileNav">Pricing</nuxt-link> -->
         </section>
         <section class="product-links">
-          <nuxt-link to="/feature/projects" @click="toggleMobileNav">
+          <nuxt-link to="/product/projects-management" @click="toggleMobileNav">
             <img src="/images/icons/project.svg" alt="Learn about Vewrite Projects" />
             <span>Project management</span>
           </nuxt-link>
-          <nuxt-link to="/feature/projects" @click="toggleMobileNav">
+          <nuxt-link to="/product/content-creation" @click="toggleMobileNav">
             <img src="/images/icons/content.svg" alt="Learn about Vewrite Content Creation" />
             <span>Content creation</span>
           </nuxt-link>
-          <nuxt-link to="/feature/workflows" @click="toggleMobileNav">
+          <nuxt-link to="/product/workflows" @click="toggleMobileNav">
             <img src="/images/icons/workflows.svg" alt="Learn about Vewrite Workflows" />
             <span>Workflows</span>
           </nuxt-link>
-          <nuxt-link to="/feature/clients" @click="toggleMobileNav">
+          <nuxt-link to="/product/clients-management" @click="toggleMobileNav">
             <img src="/images/icons/clients.svg" alt="Learn about Vewrite Clients Management" />
             <span>Clients</span>
           </nuxt-link>
-          <nuxt-link to="/feature/teams" @click="toggleMobileNav">
+          <nuxt-link to="/product/teams-management" @click="toggleMobileNav">
             <img src="/images/icons/teams.svg" alt="Learn about Vewrite Teams" />
             <span>Teams</span>
           </nuxt-link>
@@ -58,23 +58,23 @@
               </template>
               <template v-slot:menu>
                 <section class="product-links">
-                  <nuxt-link to="/feature/projects">
+                  <nuxt-link to="/product/project-management">
                     <img src="/images/icons/project.svg" alt="Learn about Vewrite Projects" />
                     <span>Project management</span>
                   </nuxt-link>
-                  <nuxt-link to="/feature/projects">
+                  <nuxt-link to="/product/content-creation">
                     <img src="/images/icons/content.svg" alt="Learn about Vewrite Content Creation" />
                     <span>Content creation</span>
                   </nuxt-link>
-                  <nuxt-link to="/feature/workflows">
+                  <nuxt-link to="/product/workflows">
                     <img src="/images/icons/workflows.svg" alt="Learn about Vewrite Workflows" />
                     <span>Workflows</span>
                   </nuxt-link>
-                  <nuxt-link to="/feature/clients">
+                  <nuxt-link to="/product/clients-management">
                     <img src="/images/icons/clients.svg" alt="Learn about Vewrite Clients Management" />
                     <span>Clients</span>
                   </nuxt-link>
-                  <nuxt-link to="/feature/teams">
+                  <nuxt-link to="/product/teams-management">
                     <img src="/images/icons/teams.svg" alt="Learn about Vewrite Teams" />
                     <span>Teams</span>
                   </nuxt-link>
@@ -82,9 +82,9 @@
               </template>
             </v2Dropdown>
           </li>
-          <li><nuxt-link to="/resources">Getting Started</nuxt-link></li>
+          <!-- <li><nuxt-link to="https://docs.vewrite.com/getting-started">Getting Started</nuxt-link></li> -->
           <li><nuxt-link to="/articles">Articles</nuxt-link></li>
-          <li><nuxt-link to="/pricing">Pricing</nuxt-link></li>
+          <!-- <li><nuxt-link to="/pricing">Pricing</nuxt-link></li> -->
         </ul>
         <!-- <a href="https://app.vewrite.com" class="button desktop-login large">Login</a> -->
          <button class="button desktop-login large" @click="toggleJoin()">Join the waitlist</button>

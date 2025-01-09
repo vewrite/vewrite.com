@@ -6,35 +6,34 @@
         <section class="footer-links">
           <div class="links-group">
             <h4>Product</h4>
-            <nuxt-link to="/feature/projects">Project management</nuxt-link>
-            <nuxt-link to="/feature/projects">Content creation</nuxt-link>
-            <nuxt-link to="/feature/workflows">Workflows</nuxt-link>
-            <nuxt-link to="/feature/clients">Clients</nuxt-link>
-            <nuxt-link to="/feature/teams">Teams</nuxt-link>
+            <nuxt-link to="/product/project-management">Project management</nuxt-link>
+            <nuxt-link to="/product/content-creation">Content creation</nuxt-link>
+            <nuxt-link to="/product/workflows">Workflows</nuxt-link>
+            <nuxt-link to="/product/clients-management">Clients</nuxt-link>
+            <nuxt-link to="/product/teams-management">Teams</nuxt-link>
           </div>
         </section>
         <section class="footer-links">
           <div class="links-group">
             <h4>Resources</h4>
-            <nuxt-link to="/feature/projects">Pricing</nuxt-link>
-            <nuxt-link to="/feature/projects">Support</nuxt-link>
-            <nuxt-link to="/feature/projects">Getting Started</nuxt-link>
+            <!-- <nuxt-link to="/feature/projects">Pricing</nuxt-link> -->
+            <nuxt-link to="/support">Support</nuxt-link>
+            <!-- <nuxt-link to="https://docs.vewrite.com/">Documentation</nuxt-link> -->
+            <!-- <nuxt-link to="https://docs.vewrite.com/getting-started">Getting Started</nuxt-link> -->
           </div>
         </section>
         <section class="footer-links">
           <div class="links-group">
             <h4>Popular Articles</h4>
-            <nuxt-link to="/feature/projects">Project management</nuxt-link>
-            <nuxt-link to="/feature/projects">Content creation</nuxt-link>
+            <nuxt-link to="/articles/introducing-vewrite">Introducing Vewrite</nuxt-link>
           </div>
         </section>
         <section class="footer-links">
           <div class="links-group">
             <h4>Company</h4>
-            <nuxt-link to="/feature/projects">Mission</nuxt-link>
-            <nuxt-link to="/feature/projects">Privacy Policy</nuxt-link>
-            <nuxt-link to="/feature/projects">Terms & Conditions</nuxt-link>
-            <nuxt-link to="/feature/projects">Contact</nuxt-link>
+            <nuxt-link to="/company/mission">Mission</nuxt-link>
+            <nuxt-link to="/legal/privacy">Privacy Policy</nuxt-link>
+            <nuxt-link to="/legal/terms">Terms & Conditions</nuxt-link>
           </div>
         </section>
       </section>

@@ -1,0 +1,3 @@
+<template>
+  Content Creation
+</template>

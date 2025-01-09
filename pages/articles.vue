@@ -4,7 +4,7 @@
     <section class="template-top">
       <div class="container">
         <h1>Articles</h1>
-        <h3 class="explainer">As we build, we aim to keep you informed about the Vewrite product and the content creation market that it is targeting. Here you will find articles on our progress, best practices, and perhaps a deeper insight into why we are building Vewrite.</h3>
+        <h3 class="explainer">Here you will find articles on our product's progress, best practices for content creation, and a deeper insight into why we are building Vewrite.</h3>
       </div>
     </section>
     <main class="articles">
@@ -67,7 +67,7 @@ const { joining } = storeToRefs(joinStore);
     margin: 0 auto;
     padding: 0 0 $spacing-md;
     font-size: $font-size-lg;
-    color: $brand;
+    color: $black;
     text-wrap: balance;
     text-align: center;
   }
@@ -105,7 +105,8 @@ const { joining } = storeToRefs(joinStore);
       border-radius: $br-xl;
       margin: 0 0 $spacing-md;
       width: 100%;
-      border: 2px solid rgba($brand-dark, 0.1);
+      background: linear-gradient(165deg, rgba($brand, 0.3) 70%, #C8D3F7 100%);
+        box-shadow: inset 0 2px 1px 1px rgba(white, 0.42), inset 0 2px 2px 4px rgba(white, 0.32), inset 0 0 2px 10px rgba(white, 0.12), 0 6px 1px 0px rgba($brand, 0.05), 0 6px 10px 5px rgba($brand, 0.05);
       transition: all 0.3s;
     }
 
