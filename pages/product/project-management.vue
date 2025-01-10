@@ -17,7 +17,7 @@
       </nav>
       <section class="product-intro">
         <spline-viewer class="product-spline" url="https://prod.spline.design/5H9rIjIKYzG0UWxG/scene.splinecode"></spline-viewer>
-        <h1>Let's make managing your project a breeze.</h1>
+        <h1>Let's make managing your content writing project a breeze.</h1>
         <h2>We'd like to take the tedious parts of managing your documents, reviews, and approvals off of your plate so that you can focus on what's really important: creating awesome content for your clients.</h2>
         <p>Stop spending endless hours chasing after what is done and what isn't. Use a tool that helps you get things done faster, better, and cheaper.</p>
         <div class="preview-image-wrapper">

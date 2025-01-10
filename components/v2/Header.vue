@@ -58,9 +58,10 @@
               </template>
               <template v-slot:menu>
                 <section class="product-links">
+                  <span class="section-title">About Vewrite</span>
                   <nuxt-link to="/product/project-management">
                     <img src="/images/icons/project.svg" alt="Learn about Vewrite Projects" />
-                    <span>Project management</span>
+                    <span>Project</span>
                   </nuxt-link>
                   <nuxt-link to="/product/content-creation">
                     <img src="/images/icons/content.svg" alt="Learn about Vewrite Content Creation" />
@@ -335,19 +336,27 @@ nav.nav-bar {
       gap: $spacing-md;
 
       .product-links {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: $spacing-sm;
-        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-xxs;
+        min-width: 240px;
+
+        .section-title {
+          font-size: $font-size-xs;
+          font-weight: bold;
+          margin: $spacing-sm 0 0;
+          width: 100%;
+          text-align: left;
+        }
 
         a {
           text-decoration: none;
           color: rgba($black, 0.7);
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           align-items: center;
-          justify-content: center;
-          padding: $spacing-xs;
+          justify-content: flex-start;
+          padding: $spacing-xxs;
           border-radius: $br-md;
           text-align: center;
           font-size: $font-size-xs;
@@ -355,8 +364,8 @@ nav.nav-bar {
           background: rgba($white, 0);
 
           img {
-            width: 32px;
-            height: 32px;
+            width: 24px;
+            height: 24px;
           }
 
           &:hover,
