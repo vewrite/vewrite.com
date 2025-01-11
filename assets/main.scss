@@ -896,9 +896,6 @@ button.vertical,
         line-height: 1.1;
         padding: $spacing-sm 0;
         font-weight: bold;
-        background: linear-gradient(to right, $brand 30%, $brand-dark 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         display: inline-block;
         letter-spacing: -1.5px;
         margin: 0;
@@ -913,6 +910,7 @@ button.vertical,
         width: 60%;
         text-wrap: balance;
         z-index: 1;
+        color: rgba($black, 0.75);
       }
 
       p {
@@ -921,6 +919,7 @@ button.vertical,
         width: 50%;
         text-wrap: balance;
         z-index: 1;
+        color: rgba($black, 0.75);
       }
 
       .preview-image-wrapper {

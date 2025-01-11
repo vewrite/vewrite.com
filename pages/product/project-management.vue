@@ -11,8 +11,8 @@
         </section>
         <section class="section-links">
           <a href="/product/project-management#time-savers">Time Savers</a>
-          <a href="/product/project-management#automation">Automation</a>
-          <a href="/product/project-management#progress-tracking">Progress tracking</a>
+          <!-- <a href="/product/project-management#automation">Automation</a> -->
+          <!-- <a href="/product/project-management#progress-tracking">Progress tracking</a> -->
         </section>
       </nav>
       <section class="product-intro">
@@ -71,13 +71,14 @@
           <img src="/images/project-management/download.png" alt="Vewrite project management" />
         </div>
       </div>
-      <div class="automation" id="automation">
-        <!-- talk about how automation works -->
+      <!-- <div class="automation" id="automation">
+        talk about how automation works
       </div>
       <div class="progress-tracking" id="progress-tracking">
-        <!-- talk about how automation works -->
-      </div>
+        talk about how automation works
+      </div> -->
     </section>
+    <v2GetStarted />
   </NuxtLayout>
 </template>
 
