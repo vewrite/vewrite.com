@@ -1,5 +1,6 @@
 <template>
   <NuxtLayout>
+    <JoinPopup />
     <section class="product-top container">
       <nav class="product-nav">
         <section class="section-title">
@@ -7,7 +8,7 @@
             <path d="M8 10C8 7.23858 10.2386 5 13 5H26.4792C27.2139 5 27.9231 5.26964 28.4723 5.75777L34.9931 11.554C35.6336 12.1233 36 12.9394 36 13.7963V34C36 36.7614 33.7614 39 31 39H13C10.2386 39 8 36.7614 8 34V10Z" stroke="black" stroke-width="2"/>
             <path d="M26 4V10C26 12.2091 27.7909 14 30 14H37" stroke="black" stroke-width="2"/>
           </svg>
-          <span>Content</span>
+          <span>Content creation</span>
         </section>
         <section class="section-links">
           <a href="/product/project-management#tools">Tools</a>
@@ -25,25 +26,37 @@
     </section>
     <section class="product-content">
       <h2 class="container center no-margin">The write tools for the job</h2>
-      <div class="tools" id="tools">
+      <div class="tools container" id="tools">
         <!-- I want to show vewrite's tools here:
         - Writing
         - Reviewing
         - Approving -->
         <div class="single-tool">
-          <h3>Writing</h3>
-          <p>Write your content in a modern, distraction-free environment that is designed to help you focus on what you're writing.</p>
-          <!-- <img src="/images/content-creation/writing-tool.png" alt="Vewrite writing tool" /> -->
+          <div class="content">
+            <h3>Write</h3>
+            <p>Write your content in a modern, distraction-free environment that is designed to help you focus on what you're writing.</p>
+          </div>
+          <div class="image">
+            <!-- <img src="/images/content-creation/writing-tool.png" alt="Vewrite writing tool" /> -->
+          </div>
         </div> 
         <div class="single-tool">
-          <h3>Reviewing</h3>
-          <p>Reviewing content is a breeze with Vewrite. You can easily see what's been changed and what hasn't, and leave comments for your team.</p>
-          <!-- <img src="/images/content-creation/reviewing-tool.png" alt="Vewrite reviewing tool" /> -->
+          <div class="content">
+            <h3>Review</h3>
+            <p>Reviewing content is a breeze with Vewrite. You can easily see what's been changed and what hasn't, and leave comments for your team.</p>
+          </div>
+          <div class="image">
+            <!-- <img src="/images/content-creation/reviewing-tool.png" alt="Vewrite reviewing tool" /> -->
+          </div>
         </div>
         <div class="single-tool">
-          <h3>Approving</h3>
-          <p>Approving content is as easy as clicking a button. You can see what's been approved and what hasn't, and easily move content to the next stage.</p>
-          <!-- <img src="/images/content-creation/approving-tool.png" alt="Vewrite approving tool" /> -->
+          <div class="content">
+            <h3>Approve</h3>
+            <p>Approving content is as easy as clicking a button. You can see what's been approved and what hasn't, and easily move content to the next stage.</p>
+          </div>
+          <div class="image">
+            <!-- <img src="/images/content-creation/approving-tool.png" alt="Vewrite approving tool" /> -->
+          </div>
         </div>
       </div>
     </section>
@@ -72,37 +85,57 @@ definePageMeta({
   height: 600px;
 }
 
-.time-savers {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: $spacing-md;
-  margin: 0 auto $spacing-xl;
+.tools {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
 
-  @media (max-width: $breakpoint-md) {
-    grid-template-columns: 1fr;
-  }
-
-  .single-saver {
-    min-height: 400px;
+  .single-tool {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
     overflow: hidden;
-    box-shadow: inset 0 0 20px 10px rgba($white, .8);
-    border: $border;
-    background: rgba($black, 0.05);
+    background: rgba($brand, 0.05);
     border-radius: $br-xl;
+    min-height: 600px;
 
-    h3 {
-      font-size: $font-size-md;
-      font-weight: bold;
-      margin: $spacing-md $spacing-md $spacing-xs;
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column-reverse;
     }
 
-    p {
-      font-size: $font-size-sm;
-      margin: 0 $spacing-md $spacing-md;
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: $spacing-lg;
+      width: 50%;
+
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+      }
+
+      h3 {
+        margin: 0 0 $spacing-xs;
+      }
     }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba($brand, 0.05);
+      width: 50%;
+
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
   }
 }
 

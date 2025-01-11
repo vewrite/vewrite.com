@@ -1,5 +1,6 @@
 <template>
   <NuxtLayout>
+    <JoinPopup />
     <section class="product-top container">
       <nav class="product-nav">
         <section class="section-title">
@@ -119,9 +120,7 @@ definePageMeta({
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-    box-shadow: inset 0 0 20px 10px rgba($white, .8);
-    border: $border;
-    background: rgba($black, 0.05);
+    background: rgba($brand, 0.05);
     border-radius: $br-xl;
 
     h3 {
