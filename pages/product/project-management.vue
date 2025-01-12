@@ -116,7 +116,6 @@ definePageMeta({
 
   @media (max-width: $breakpoint-md) {
     grid-template-columns: 1fr;
-    padding: 0;
   }
 
   .single-saver {

@@ -1,7 +1,7 @@
 <template>
   <section class="get-started">
     <div class="container">
-      <h2 class="get-started-header">We're accepting beta testers <span class="highlight brand big">right now</span>.</h2>
+      <h2 class="get-started-header">We're accepting beta testers <span class="highlight brand big">right now</span></h2>
       <p class="get-started-convincer">To ensure that we stay focused, we are limiting access to the first users who apply. Don't miss your opportunity to try out the future of project management for content creation.</p>
       <spline-viewer class="spline-viewer" url="https://prod.spline.design/e-9M6KJB-YAmadkR/scene.splinecode" @click="toggleJoin()"></spline-viewer>
     </div>
@@ -25,7 +25,11 @@ const toggleJoin = () => {
 
 .get-started {
   padding: $spacing-lg 0;
-  background: linear-gradient(to bottom, rgba($mint-light, 0.3) 20%, rgba($brand-light, 0.05) 50%);
+  background: linear-gradient(to bottom, rgba($mint-light, 0.3) 20%, rgba($white, 0) 50%);
+
+  @media (max-width: $breakpoint-md) {
+    padding: 0 0 $spacing-md;
+  }
 
   .container {
     display: flex;
@@ -53,13 +57,11 @@ const toggleJoin = () => {
       font-weight: bold;
       text-wrap: balance;
 
-
-
       @media (max-width: $breakpoint-md) {
         position: relative;
         top: 0;
         text-align: center;
-        width: calc(100% - #{$spacing-md * 2});
+        width: 100%;
       }
     }
 

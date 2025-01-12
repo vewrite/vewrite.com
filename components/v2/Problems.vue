@@ -106,7 +106,7 @@
     padding: $spacing-xl $spacing-md;
 
     @media (max-width: $breakpoint-md) {
-      padding: $spacing-md;
+      padding: 0;
     }
   }
 
@@ -116,6 +116,10 @@
     flex: 1 auto;
     flex-direction: row;
     gap: $spacing-md;
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+    }
 
     .user-image {
       border: $border;

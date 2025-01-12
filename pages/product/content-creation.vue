@@ -77,6 +77,10 @@ definePageMeta({
   z-index: 0;
   width: 600px;
   height: 600px;
+
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
 }
 
 .tools {
@@ -106,6 +110,7 @@ definePageMeta({
 
       @media (max-width: $breakpoint-md) {
         width: 100%;
+        padding: $spacing-md;
       }
 
       h3 {

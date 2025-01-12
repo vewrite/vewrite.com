@@ -10,7 +10,7 @@
               <path d="M1 11.5H17" stroke="black" stroke-width="2" stroke-linecap="round"/>
             </svg>
           </button>
-          <v2Logo />
+          <nuxt-link to="/"><v2Logo /></nuxt-link>
         </section>
         <button class="button mobile-login primary large" @click="toggleJoin()">Join</button>
       </section>
@@ -22,7 +22,7 @@
           <!-- <nuxt-link to="/pricing" @click="toggleMobileNav">Pricing</nuxt-link> -->
         </section>
         <section class="product-links">
-          <nuxt-link to="/product/projects-management" @click="toggleMobileNav">
+          <nuxt-link to="/product/project-management" @click="toggleMobileNav">
             <img src="/images/icons/project.svg" alt="Learn about Vewrite Projects" />
             <span>Project management</span>
           </nuxt-link>

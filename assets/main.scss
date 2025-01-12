@@ -164,6 +164,7 @@ h5 {
 h1 {
     font-size: 84px;
     margin: 0 0 $spacing-md 0;
+    letter-spacing: -2px;
 
     @media (max-width: $breakpoint-md) {
         font-size: 52px;
@@ -173,11 +174,13 @@ h1 {
 h2 {
     font-size: $font-size-xxl;
     margin: $spacing-lg 0 $spacing-md;
+    letter-spacing: -1px;
 }
 
 h3 {
     font-size: $font-size-xl;
     margin: $spacing-lg 0 $spacing-md;
+    letter-spacing: -1px;
 }
 
 h4 {
@@ -831,6 +834,10 @@ button.vertical,
     flex-direction: column;
     justify-content: space-between;
 
+    @media (max-width: $breakpoint-md) {
+      padding: 6rem $spacing-md;
+    }
+
     .product-nav {
       width: 100%;
       display: flex;
@@ -844,6 +851,10 @@ button.vertical,
       backdrop-filter: blur(10px);
       box-shadow: $main-shadow;
       z-index: 1;
+
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 0;
+      }
 
       .section-title {
         display: flex;
@@ -891,6 +902,10 @@ button.vertical,
       position: relative;
       width: 100%;
 
+      @media (max-width: $breakpoint-md) {
+        padding: $spacing-md 0;
+      }
+
       h1 {
         font-size: $font-size-mega;
         line-height: 1.1;
@@ -905,6 +920,7 @@ button.vertical,
 
         @media (max-width: $breakpoint-md) {
           width: 100%;
+          font-size: $font-size-xxl;
         }
       }
 

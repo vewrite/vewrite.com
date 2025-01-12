@@ -79,7 +79,7 @@ footer {
 
       @media (max-width: $breakpoint-md) {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
       }
     }
 
@@ -94,9 +94,10 @@ footer {
       gap: $spacing-sm;
 
       h4 {
-        margin: $spacing-xxs 0 $spacing-sm;
+        margin: $spacing-xxs 0 0;
         font-size: $font-size-sm;
         font-weight: bold;
+        color: $black;
       }
 
       a {

@@ -63,7 +63,7 @@
 
     @media (max-width: $breakpoint-md) {
       position: relative;
-      top: 0;
+      top: $spacing-lg;
       text-align: center;
       width: calc(100% - #{$spacing-md * 2});
     }
@@ -90,6 +90,10 @@
     background: linear-gradient(165deg, $brand 70%, #C8D3F7 100%);
     box-shadow: inset 0 2px 1px 1px rgba(white, 0.42), inset 0 2px 2px 4px rgba(white, 0.32), inset 0 0 2px 10px rgba(white, 0.12), 0 14px 1px 0px rgba($brand, 0.05), 0 16px 20px 5px rgba($brand, 0.12);
     overflow: hidden;
+
+    @media (max-width: $breakpoint-md) {
+      min-height: 400px;
+    }
 
     .spline-viewer {
       margin: 20px;
