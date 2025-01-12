@@ -30,7 +30,7 @@
             <img src="/images/icons/content.svg" alt="Learn about Vewrite Content Creation" />
             <span>Content creation</span>
           </nuxt-link>
-          <nuxt-link to="/product/workflows" @click="toggleMobileNav">
+          <!-- <nuxt-link to="/product/workflows" @click="toggleMobileNav">
             <img src="/images/icons/workflows.svg" alt="Learn about Vewrite Workflows" />
             <span>Workflows</span>
           </nuxt-link>
@@ -41,7 +41,7 @@
           <nuxt-link to="/product/teams-management" @click="toggleMobileNav">
             <img src="/images/icons/teams.svg" alt="Learn about Vewrite Teams" />
             <span>Teams</span>
-          </nuxt-link>
+          </nuxt-link> -->
         </section>
       </section>
       <section :class="['blur', mobileState]" v-if="mobileState === 'open'" @click="toggleMobileNav"></section>
@@ -67,7 +67,7 @@
                     <img src="/images/icons/content.svg" alt="Learn about Vewrite Content Creation" />
                     <span>Content creation</span>
                   </nuxt-link>
-                  <nuxt-link to="/product/workflows">
+                  <!-- <nuxt-link to="/product/workflows">
                     <img src="/images/icons/workflows.svg" alt="Learn about Vewrite Workflows" />
                     <span>Workflows</span>
                   </nuxt-link>
@@ -78,7 +78,7 @@
                   <nuxt-link to="/product/teams-management">
                     <img src="/images/icons/teams.svg" alt="Learn about Vewrite Teams" />
                     <span>Teams</span>
-                  </nuxt-link>
+                  </nuxt-link> -->
                 </section>
               </template>
             </v2Dropdown>

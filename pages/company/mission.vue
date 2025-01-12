@@ -1,5 +1,6 @@
 <template>
   <NuxtLayout>
+    <JoinPopup />
     <h1>Mission</h1>
     <h2 class="no-top-margin">Enabling teams who create content to work together efficiently and effectively.</h2>
     <h3 class="no-top-margin">We believe that the current project management tools on the market are focused on being excellent to-do lists, but that <span class="highlight mint">working well together is about more than just getting tasks done</span>.</h3>

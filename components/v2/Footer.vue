@@ -8,9 +8,9 @@
             <h4>Product</h4>
             <nuxt-link to="/product/project-management">Project management</nuxt-link>
             <nuxt-link to="/product/content-creation">Content creation</nuxt-link>
-            <nuxt-link to="/product/workflows">Workflows</nuxt-link>
+            <!-- <nuxt-link to="/product/workflows">Workflows</nuxt-link>
             <nuxt-link to="/product/clients-management">Clients</nuxt-link>
-            <nuxt-link to="/product/teams-management">Teams</nuxt-link>
+            <nuxt-link to="/product/teams-management">Teams</nuxt-link> -->
           </div>
         </section>
         <section class="footer-links">
