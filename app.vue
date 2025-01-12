@@ -4,4 +4,10 @@
 
 <script setup>
 
+const { initialize } = useHotjar()
+
+onMounted(() => {
+  initialize()
+})
+
 </script>
