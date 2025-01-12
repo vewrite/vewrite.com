@@ -34,7 +34,6 @@ export default defineNuxtConfig({
   hotjar: {
     hotjarId: 5129596,
     scriptVersion: 6,
-    debug: true
   },
 
   gtag: {
