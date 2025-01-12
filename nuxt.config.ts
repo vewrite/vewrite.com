@@ -29,12 +29,7 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ['@nuxtjs/google-fonts', '@nuxt/content', 'nuxt-module-hotjar', '@pinia/nuxt', 'nuxt-gtag', '@nuxt/image', 'v-gsap-nuxt'],
-
-  hotjar: {
-    hotjarId: 5264408,
-    scriptVersion: 6,
-  },
+  modules: ['@nuxtjs/google-fonts', '@nuxt/content', '@pinia/nuxt', 'nuxt-gtag', '@nuxt/image', 'v-gsap-nuxt'],
 
   gtag: {
     id: 'G-87K5F89NX5'
