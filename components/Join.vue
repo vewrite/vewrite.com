@@ -201,7 +201,7 @@ async function submitEmail(event) {
     input {
       padding: $spacing-sm;
       border: none;
-      border-radius: $br-lg;
+      border-radius: 16px;
       font-size: $font-size-md;
       background: $white;
       color: $black;
@@ -226,8 +226,9 @@ async function submitEmail(event) {
 
     button {
       position: absolute;
-      right: 3px;
-      top: 3px;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
       font-size: $font-size-md;
       outline-offset: -2px;
 
@@ -237,8 +238,9 @@ async function submitEmail(event) {
         right: 0;
       }
 
-      &:hover {
-        transform: scale(1.05);
+      &:hover, &:active, &:focus {
+        outline: 1px solid $brand;
+        transform: translateY(-50%) scale(1.02);
       }
     }
   }

@@ -173,6 +173,7 @@ nav.nav-bar {
   .mobile {
     display: none;
     position: fixed;
+    box-shadow: $main-shadow;
 
     .blur {
       display: none;
@@ -205,7 +206,7 @@ nav.nav-bar {
 
       .vewrite-logo {
         width: 100px;
-        height: fit-content;
+        height: auto;
       }
 
       .left {

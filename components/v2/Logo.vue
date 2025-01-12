@@ -6,7 +6,7 @@
 
 img.vewrite-logo {
   width: 133px;
-  height: fit-content;
+  height: auto;
 }
 
 </style>
