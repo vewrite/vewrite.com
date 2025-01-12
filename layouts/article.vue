@@ -1,13 +1,11 @@
 <template>
   <main>
-    <Header />
+    <v2Header />
     <JoinPopup />
     <main class="single-article">
         <slot />
     </main>
-    <footer>
-      <Footer />
-    </footer>
+    <v2Footer />
   </main>
 </template>
 

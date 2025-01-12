@@ -1,6 +1,6 @@
 <template>
   <v2Header />
-  <main class="default-layout container">
+  <main class="product-layout">
     <slot />
   </main>
   <v2Footer />
@@ -15,8 +15,9 @@
 
 @use 'assets/variables' as *;
 
-.default-layout {
-  margin: $spacing-xl auto;
+.product-layout {
+  margin: $spacing-md auto 0;
+  background: linear-gradient(to bottom, $white 0%, rgba($brand, 0.05) 200px, $white 800px);
 }
 
 </style>

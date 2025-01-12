@@ -21,14 +21,15 @@ export default defineNuxtConfig({
     }
   },
 
+  plugins: ['~/plugins/spline-viewer.client.ts'],
+
   googleFonts: {
     families: {
-      RobotoFlex: [100, 300, 400, 500, 700, 900],
-      Judson: true,
+      'Noto Sans': true,
     }
   },
 
-  modules: ['@nuxtjs/google-fonts', '@nuxt/content', 'nuxt-module-hotjar', '@pinia/nuxt', 'nuxt-gtag', '@nuxt/image'],
+  modules: ['@nuxtjs/google-fonts', '@nuxt/content', 'nuxt-module-hotjar', '@pinia/nuxt', 'nuxt-gtag', '@nuxt/image', 'v-gsap-nuxt'],
 
   hotjar: {
     hotjarId: 5129596,
@@ -52,6 +53,12 @@ export default defineNuxtConfig({
       anchorLinks: false,
     },
     documentDriven: true
+  },
+
+  vue: {
+    compilerOptions: {
+      isCustomElement: tag => tag === 'spline-viewer'
+    }
   },
 
   compatibilityDate: '2024-09-12',

@@ -58,6 +58,11 @@ onMounted(() => {
 
 #Toc {
   width: 100%;
+  padding: $spacing-sm $spacing-md;
+  box-shadow: inset 0 0 20px 10px rgba($white, .8);
+  border: $border;
+  background: rgba($black, 0.05);
+  border-radius: $br-xl;
 
   ul {
     padding-left: 0;
@@ -75,10 +80,10 @@ onMounted(() => {
       a {
         font-weight: bold;
         padding: $spacing-xs 0;
-        color: $brand-dark;
+        color: $black;
         text-decoration: none;
         transition: color 0.2s;
-        font-size: $font-size-md;
+        font-size: $font-size-sm;
 
         &:hover {
           color: $brand;
@@ -89,8 +94,9 @@ onMounted(() => {
         padding-left: 0;
 
         li {
-          margin: 0 0 $spacing-xs;
+          margin: 0 0 $spacing-xs $spacing-sm;
           padding: 0;
+          list-style: disc;
 
           &:first-of-type {
             margin-top: $spacing-sm;
