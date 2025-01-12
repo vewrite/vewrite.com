@@ -15,7 +15,7 @@
         </section>
       </nav>
       <section class="product-intro">
-        <spline-viewer class="product-spline" url="https://prod.spline.design/5H9rIjIKYzG0UWxG/scene.splinecode"></spline-viewer>
+        <spline-viewer class="product-spline" url="https://prod.spline.design/7O5q1-fnU6wAnrHT/scene.splinecode"></spline-viewer>
         <h1>Smart writing tools that are deeply integrated into your process.</h1>
         <h2>Modern writing tools have traditionally been focused just on the writing experience itself, and not on how the writing gets done as a team.</h2>
         <p>Vewrite's unique set of functionality allows your team to write content where the project is managed, meaning that everyone is always on the same page.</p>
@@ -36,27 +36,21 @@
             <h3>Write</h3>
             <p>Write your content in a modern, distraction-free environment that is designed to help you focus on what you're writing.</p>
           </div>
-          <div class="image">
-            <!-- <img src="/images/content-creation/writing-tool.png" alt="Vewrite writing tool" /> -->
-          </div>
+          <div class="image write"></div>
         </div> 
         <div class="single-tool">
           <div class="content">
             <h3>Review</h3>
             <p>Reviewing content is a breeze with Vewrite. You can easily see what's been changed and what hasn't, and leave comments for your team.</p>
           </div>
-          <div class="image">
-            <!-- <img src="/images/content-creation/reviewing-tool.png" alt="Vewrite reviewing tool" /> -->
-          </div>
+          <div class="image review"></div>
         </div>
         <div class="single-tool">
           <div class="content">
             <h3>Approve</h3>
             <p>Approving content is as easy as clicking a button. You can see what's been approved and what hasn't, and easily move content to the next stage.</p>
           </div>
-          <div class="image">
-            <!-- <img src="/images/content-creation/approving-tool.png" alt="Vewrite approving tool" /> -->
-          </div>
+          <div class="image approve"></div>
         </div>
       </div>
     </section>
@@ -96,7 +90,7 @@ definePageMeta({
     overflow: hidden;
     background: rgba($brand, 0.05);
     border-radius: $br-xl;
-    min-height: 600px;
+    min-height: 400px;
 
     @media (max-width: $breakpoint-md) {
       flex-direction: column-reverse;
@@ -128,11 +122,25 @@ definePageMeta({
 
       @media (max-width: $breakpoint-md) {
         width: 100%;
+        height: 200px;
       }
 
-      img {
-        max-width: 100%;
-        max-height: 100%;
+      &.write {
+        background-image: url('/images/content-creation/write.png');
+        background-size: cover;
+        background-position: top center;
+      }
+
+      &.review {
+        background-image: url('/images/content-creation/review.png');
+        background-size: cover;
+        background-position: bottom right;
+      }
+
+      &.approve {
+        background-image: url('/images/content-creation/approve.png');
+        background-size: cover;
+        background-position: bottom right;
       }
     }
 
