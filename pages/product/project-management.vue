@@ -102,6 +102,10 @@ definePageMeta({
   z-index: 0;
   width: 600px;
   height: 600px;
+
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
 }
 
 .time-savers {
@@ -112,6 +116,7 @@ definePageMeta({
 
   @media (max-width: $breakpoint-md) {
     grid-template-columns: 1fr;
+    padding: 0;
   }
 
   .single-saver {

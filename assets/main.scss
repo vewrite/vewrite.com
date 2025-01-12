@@ -902,6 +902,10 @@ button.vertical,
         width: 60%;
         text-wrap: balance;
         z-index: 1;
+
+        @media (max-width: $breakpoint-md) {
+          width: 100%;
+        }
       }
 
       h2 {
@@ -911,6 +915,10 @@ button.vertical,
         text-wrap: balance;
         z-index: 1;
         color: rgba($black, 0.75);
+
+        @media (max-width: $breakpoint-md) {
+          width: 100%;
+        }
       }
 
       p {
@@ -920,6 +928,10 @@ button.vertical,
         text-wrap: balance;
         z-index: 1;
         color: rgba($black, 0.75);
+
+        @media (max-width: $breakpoint-md) {
+          width: 100%;
+        }
       }
 
       .preview-image-wrapper {

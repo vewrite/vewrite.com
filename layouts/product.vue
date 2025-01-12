@@ -18,6 +18,7 @@
 .product-layout {
   margin: $spacing-md auto 0;
   background: linear-gradient(to bottom, $white 0%, rgba($brand, 0.05) 200px, $white 800px);
+  overflow-x: hidden;
 }
 
 </style>
