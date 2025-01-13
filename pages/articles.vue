@@ -76,7 +76,7 @@ const { joining } = storeToRefs(joinStore);
   grid-template-columns: 1fr 1fr;
   gap: $spacing-xl;
   margin: 0 auto $spacing-xxl;
-  padding: $spacing-md;
+  padding: $spacing-md 0;
   max-width: $max-width;
 
   @media (max-width: $breakpoint-md) {

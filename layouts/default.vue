@@ -16,7 +16,9 @@
 @use 'assets/variables' as *;
 
 .default-layout {
-  margin: $spacing-xl auto;
+  margin: 0 auto;
+  overflow-x: hidden;
+  padding: $spacing-xl $spacing-md;
 }
 
 </style>

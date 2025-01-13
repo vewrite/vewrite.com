@@ -26,6 +26,7 @@
           <div class="links-group">
             <h4>Popular Articles</h4>
             <nuxt-link to="/articles/introducing-vewrite">Introducing Vewrite</nuxt-link>
+            <nuxt-link to="/articles/product-report-jan-2025">Product Report January 2025</nuxt-link>
           </div>
         </section>
         <section class="footer-links">
