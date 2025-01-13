@@ -204,6 +204,7 @@ async function submitEmail(event) {
       label {
         font-size: $font-size-md;
         color: $black;
+        background: transparent;
         margin: 0;
         padding: 0;
       }
