@@ -45,32 +45,50 @@ const submission = ref({
   writers: true,
 });
 
+function isValidEmail(email) {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(email);
+}
+
 async function submitEmail(event) {
   loading.value = true;
   errorMessage.value = null;
   successMessage.value = null;
-  const email = event.target.elements.email.value;
+
+  const email = submission.value.email;
   console.log('Submitting email:', email);
+
+  if (!email) {
+    errorMessage.value = 'Email is required';
+    loading.value = false;
+    return;
+  }
+
+  if (!isValidEmail(email)) {
+    errorMessage.value = 'Invalid email address';
+    loading.value = false;
+    return;
+  }
 
   try {
     const { data, error } = await $supabase
       .from('waitlist')
-      .insert([{ email: submission.value.email, teams: submission.value.teams, writers: submission.value.writers }]);
+      .insert([{ email: email, teams: submission.value.teams, writers: submission.value.writers }]);
 
     if (error) {
       console.error('Supabase error:', error);
-      // Handle error (e.g., show error message to user)
       if (error.code === '23505') {
         errorMessage.value = 'Email already exists';
+      } else {
+        errorMessage.value = 'An error occurred. Please try again.';
       }
     } else {
       console.log('Submission successful:', data);
-      // Handle success (e.g., show success message to user)
       successMessage.value = 'Success! You have been added to the waitlist.';
     }
   } catch (err) {
     console.error('Unexpected error:', err);
-    // Handle unexpected errors
+    errorMessage.value = 'An unexpected error occurred. Please try again.';
   } finally {
     loading.value = false;
   }
@@ -236,6 +254,13 @@ async function submitEmail(event) {
         position: relative;
         width: 100%;
         right: 0;
+        top: 0;
+        transform: translateY(0);
+
+        &:hover, &:active, &:focus {
+          outline: 1px solid $brand;
+          transform: translateY(0%) scale(1) !important;
+        }
       }
 
       &:hover, &:active, &:focus {

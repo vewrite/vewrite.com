@@ -82,7 +82,7 @@ body {
 
 .notification {
     padding: $spacing-md;
-    border-radius: $br-md;
+    border-radius: $br-xl;
     gap: $spacing-xs;
     color: $brand;
     display: flex;
@@ -90,6 +90,8 @@ body {
     justify-content: center;
     align-items: center;
     text-align: left;
+    backdrop-filter: blur(20px);
+    box-shadow: $big-shadow;
 
     &.small {
         padding: $spacing-xs $spacing-sm;
@@ -115,22 +117,22 @@ body {
     }
 
     &.info {
-        background: rgba($brand, 0.1);
+        background: linear-gradient(165deg, rgba($white, 0.5) 70%, rgba($brand, 0.1) 100%);
         color: rgba($black, 0.5);
     }
 
     &.warning {
-        background: rgba($orange, 0.1);
+        background: linear-gradient(165deg, rgba($white, 0.5) 70%, rgba($orange, 0.1) 100%);
         color: $orange-dark;
     }
 
     &.success {
-        background: rgba($mint, 0.1);
+        background: linear-gradient(165deg, rgba($white, 0.5) 70%, rgba($mint, 0.1) 100%);
         color: $mint-dark;
     }
 
     &.error {
-        background: rgba($red, 0.1);
+        background: linear-gradient(165deg, rgba($white, 0.5) 70%, rgba($red, 0.1) 100%);
         color: $red;
     }
 
