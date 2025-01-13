@@ -214,7 +214,7 @@ nav.nav-bar {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        gap: $spacing-sm;
+        gap: $spacing-xxs;
 
         .mobile-toggle {
           border: none;
