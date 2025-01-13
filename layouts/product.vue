@@ -16,7 +16,7 @@
 @use 'assets/variables' as *;
 
 .product-layout {
-  margin: $spacing-md auto 0;
+  margin: 0 auto;
   background: linear-gradient(to bottom, $white 0%, rgba($brand, 0.05) 200px, $white 800px);
   overflow-x: hidden;
 }

@@ -846,12 +846,9 @@ button.vertical,
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      padding: $spacing-md;
-      border-radius: $br-xl;
+      padding: $spacing-sm 0;
       margin-bottom: $spacing-lg;
-      background: rgba($white, 0.5);
-      backdrop-filter: blur(10px);
-      box-shadow: $main-shadow;
+      border-bottom: $border;
       z-index: 1;
 
       @media (max-width: $breakpoint-md) {

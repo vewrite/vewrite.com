@@ -215,6 +215,18 @@ nav.nav-bar {
         justify-content: flex-start;
         align-items: center;
         gap: $spacing-sm;
+
+        .mobile-toggle {
+          border: none;
+          box-shadow: none;
+          background: none;
+          padding: $spacing-sm;
+          outline: none;
+
+          &:active, &:focus {
+            background: rgba($brand, 0.1);
+          }
+        }
       }
     }
 
@@ -232,7 +244,7 @@ nav.nav-bar {
         min-width: 300px;
         max-width: calc(100% - 2 * $spacing-sm);
         position: absolute;
-        top: 70px;
+        top: 60px;
         left: $spacing-sm;
         background: $white;
         border-radius: $br-lg;
