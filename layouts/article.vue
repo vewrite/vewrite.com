@@ -5,6 +5,7 @@
     <main class="single-article">
         <slot />
     </main>
+    <v2GetStarted />
     <v2Footer />
   </main>
 </template>
@@ -26,19 +27,19 @@ const { joining } = storeToRefs(joinStore);
 .single-article {
 
   h2 {
-    margin: $spacing-xl 0 $spacing-md;
-
-    &:first-of-type {
-      margin-top: 0;
-    }
+    margin: $spacing-lg 0 $spacing-md;
   }
 
   h3 {
-    margin: $spacing-lg 0 $spacing-md;
+    margin: $spacing-md 0 $spacing-sm;
   }
 
   img {
     max-width: 100%;
+    width: 100%;
+    margin: $spacing-md 0;
+    border-radius: $br-md;
+    outline: 1px solid rgba($black, 0.05);
   }
 }
 

@@ -4,7 +4,7 @@
     <section class="template-top">
       <div class="container">
         <h1>Articles</h1>
-        <h3 class="explainer">Here you will find articles on our product's progress, best practices for content creation, and a deeper insight into why we are building Vewrite.</h3>
+        <h3 class="explainer">Here you will find information on our product's progress and a deeper insight into why we are building Vewrite.</h3>
       </div>
     </section>
     <main class="articles">
@@ -51,9 +51,6 @@ const { joining } = storeToRefs(joinStore);
     margin: 0 auto;
     line-height: 1;
     padding: $spacing-md 0;
-    background: linear-gradient(to right, #4D70E7 60%, #3F5CBE 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     display: inline-block;
     letter-spacing: -2px;
 
@@ -105,8 +102,6 @@ const { joining } = storeToRefs(joinStore);
       border-radius: $br-xl;
       margin: 0 0 $spacing-md;
       width: 100%;
-      background: linear-gradient(165deg, rgba($brand, 0.3) 70%, #C8D3F7 100%);
-        box-shadow: inset 0 2px 1px 1px rgba(white, 0.42), inset 0 2px 2px 4px rgba(white, 0.32), inset 0 0 2px 10px rgba(white, 0.12), 0 6px 1px 0px rgba($brand, 0.05), 0 6px 10px 5px rgba($brand, 0.05);
       transition: all 0.3s;
     }
 
@@ -119,7 +114,7 @@ const { joining } = storeToRefs(joinStore);
     }
 
     h2 {
-      margin: 0 0 $spacing-md;
+      margin: 0 0 $spacing-sm;
     }
 
     p {

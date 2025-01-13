@@ -1,4 +1,20 @@
+<template>
+  <main id="Toc">
+    <ul v-if="toc">
+      <li v-for="link in toc" :key="link.id">
+        <a :href="`#${link.id}`">{{ link.text }}</a>
+        <ul class="sub" v-if="link.children">
+          <li v-for="child in link.children" :key="child.id">
+            <a :href="`#${child.id}`">{{ child.text }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </main>
+</template>
+
 <script setup lang="ts">
+
 import { ref, onMounted } from 'vue'
 
 interface TocLink {
@@ -35,22 +51,8 @@ const generateToc = () => {
 onMounted(() => {
   generateToc()
 })
-</script>
 
-<template>
-  <main id="Toc">
-    <ul v-if="toc">
-      <li v-for="link in toc" :key="link.id">
-        <a :href="`#${link.id}`">{{ link.text }}</a>
-        <ul class="sub" v-if="link.children">
-          <li v-for="child in link.children" :key="child.id">
-            <a :href="`#${child.id}`">{{ child.text }}</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </main>
-</template>
+</script>
 
 <style lang="scss" scoped>
 
@@ -58,11 +60,8 @@ onMounted(() => {
 
 #Toc {
   width: 100%;
-  padding: $spacing-sm $spacing-md;
-  box-shadow: inset 0 0 20px 10px rgba($white, .8);
-  border: $border;
-  background: rgba($black, 0.05);
-  border-radius: $br-xl;
+  padding: 0 0 0 $spacing-md;
+  border-left: $border;
 
   ul {
     padding-left: 0;

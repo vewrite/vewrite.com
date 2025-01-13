@@ -396,9 +396,11 @@ nav.nav-bar {
         justify-content: space-between;
         align-items: center;
         gap: $spacing-md;
+        margin: 0;
 
         li {
           list-style: none;
+          margin: 0;
 
           a {
             text-decoration: none;

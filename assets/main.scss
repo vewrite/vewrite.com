@@ -249,6 +249,18 @@ pre {
     font-size: $font-size-sm;
 }
 
+ul {
+    margin: 0 0 $spacing-md 0;
+
+    li {
+        margin: 0 0 $spacing-xxs 0;
+
+        ul {
+            margin: $spacing-xs 0;
+        }
+    }
+}
+
 /* Table */
 
 table {

@@ -1,41 +1,41 @@
 ---
 title: "Introducing Vewrite"
 image: "/content/introducing-vewrite.png"
-description: "Let's talk about what Vewrite is and why it is the future of how Technical Writing teams will work."
+description: "Let's talk about what Vewrite is and why it is the future of how content writing teams will work."
 date: "2024-09-11"
-author: "Rami James"
+author: "Rami James, Founder"
 authorLink: "https://www.ramijames.com"
 readingLength: 4
 ---
 
 ## What is Vewrite? 
 
-Simply put, Vewrite is a project management tool for technical writers. With it you will be able to:
+Simply put, Vewrite is a project management tool for content writers. With it you will be able to:
 
 - Organize your **projects**
 - Create **workflows** that fit your needs
 - Manage **deliverables** through workflows
 - Track **progress** for stakeholders
 
-Deeply integrated into Vewrite is a talent marketplace that allows your team to quickly add capacity if you need it. This, of course, also means that **Vewrite is a place for technical writers to find work and get paid**. Let's take a few minutes to talk about what all that means.
+Deeply integrated into Vewrite is a talent marketplace that allows your team to quickly add capacity if you need it. This, of course, also means that **Vewrite is a place for content writers to find work and get paid**. Let's take a few minutes to talk about what all that means.
 
-### A Project Management tool for Technical Writers
+### A Project Management tool for Content Writers
 
-As an experienced team of technical writers, project managers, and developer relations specialists, we know how painful it can be to try and manage a large set of content that is in production. The market currently does not provide a toolset that caters to the work that we do. We make do, and that's not good enough!
+As an experienced team of content writers, project managers, and developer relations specialists, we know how painful it can be to try and manage a large set of content that is in production. The market currently does not provide a toolset that caters to the work that we do. We make do, and that's not good enough!
 
 It's time that we stop using tools that are either a bad fit for our workflows, or are tailored for an entirely different use-case. We aren't developers, working with an agile methodology, and we aren't marketers with a stream of tasks. We have many deliverables, stakeholders who require visibility, and we are juggling multiple projects at once.
 
-Vewrite is a product tailored to making it easier for Technical Writing teams to successfully manage the mountains of work that they plow through every month. We want technical writers, developer relations specialists, and the teams that they work on to have clear workflows, excellent visibility, and access to resources that help them get their work done on-time and on-budget.
+Vewrite is a product tailored to making it easier for Content Writing teams to successfully manage the mountains of work that they plow through every month. We want content writers, developer relations specialists, and the teams that they work on to have clear workflows, excellent visibility, and access to resources that help them get their work done on-time and on-budget.
 
-### A Talent Marketplace for Technical Writers
+### A Talent Marketplace for Content Writers
 
-For freelance, or other contract-based, technical writers you likely encounter a host of challenges:
+For freelance, or other contract-based, content writers you likely encounter a host of challenges:
 
 - Finding clients to work with
 - Managing the work that you do with them
 - Getting paid
 
-Vewrite's talent marketplace, which is integrated directly into our project management toolset, allows you to showcase your portfolio of work, be a part of technical writing teams, and get paid all in one easy to use interface. This means that you don't have to bouce around a bunch of different tools to find work, get it done, and get paid for it. It's all streamlined together into one experience.
+Vewrite's talent marketplace, which is integrated directly into our project management toolset, allows you to showcase your portfolio of work, be a part of content writing teams, and get paid all in one easy to use interface. This means that you don't have to bouce around a bunch of different tools to find work, get it done, and get paid for it. It's all streamlined together into one experience.
 
 Of course, for the teams that you work with, this is a huge bonus, because for them you are a quickly added extension to the established process they already know. There is no on-boarding friction. There are no security concerns when adding you (and afterwards removing you) from tools. It all just happens automatically. 
 
@@ -64,7 +64,7 @@ Vewrite has a very different mentality when it comes to work and we believe you'
 
 ### Your Software Should Work For You
 
-Most project management tools aren't there to make your job easier as a technical writer. They are there to make your project manager's job easier. They act as a way to collate the status of all the myriad tasks that have been assigned and push that status up the chain. Depending on the tool your team is using, it may include a way to create reports and other analytics that show success or failure over time.
+Most project management tools aren't there to make your job easier as a content writer. They are there to make your project manager's job easier. They act as a way to collate the status of all the myriad tasks that have been assigned and push that status up the chain. Depending on the tool your team is using, it may include a way to create reports and other analytics that show success or failure over time.
 
 When you click "done", it isn't for you. It's for the manager.
 
@@ -76,8 +76,6 @@ With this in mind, Vewrite goes out of its way to leverage automated workflows t
 
 ### Join our Waitlist For Updates
 
-We hope that you are as excited as we are by the product concepts we've outlined above. Vewrite is in active development and the beta will be released soon to a select group of technical writing teams, and the freelance technical writer commuinity. 
+We hope that you are as excited as we are by the product concepts we've outlined above. Vewrite is in active development and the beta will be released soon to a select group of content writing teams, and the freelance content writer community. 
 
 If you'd like to be invited, please join the waitlist.
-
-<JoinButton />

@@ -17,15 +17,12 @@
             <section class="table-of-contents">
               <PageToc />
               <p class="reading-length">
-                <span>Estimated {{ data?.readingLength }} minutes to read</span>
-                <span>Posted on {{ data?.date }}</span>
+                <span>{{ data?.readingLength }} min. to read</span>
+                <span>{{ data?.date }}</span>
               </p>
             </section>
           </section>
         </section>
-      </div>
-      <div class="container slim">
-        
       </div>
     </section>
   </NuxtLayout>
@@ -54,13 +51,11 @@ definePageMeta({
     font-weight: bold;
     max-width: 800px;
     margin: 0 auto;
-    line-height: 1;
+    line-height: 1.2;
     padding: $spacing-md 0;
-    background: linear-gradient(to right, #4D70E7 60%, #3F5CBE 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     display: inline-block;
     letter-spacing: -2px;
+    text-align: center;
 
     @media (max-width: $breakpoint-md) {
       font-size: 52px;
@@ -69,7 +64,7 @@ definePageMeta({
 
   .article-description {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto $spacing-md;
     padding: 0 0 $spacing-md;
     font-size: $font-size-lg;
     color: $black;
@@ -97,6 +92,10 @@ definePageMeta({
       .content-wrapper {
         grid-column: span 2 / span 2;
         grid-row-start: 2;
+
+        @media (max-width: $breakpoint-lg) {
+          grid-column: span 3 / span 1;
+        }
       }
 
       .article-image {
@@ -104,8 +103,6 @@ definePageMeta({
         margin-bottom: $spacing-md;
         margin: 0 0 $spacing-md;
         grid-column: span 3 / span 3;
-        background: linear-gradient(165deg, rgba($brand, 0.3) 70%, #C8D3F7 100%);
-        box-shadow: inset 0 2px 1px 1px rgba(white, 0.42), inset 0 2px 2px 4px rgba(white, 0.32), inset 0 0 2px 10px rgba(white, 0.12), 0 6px 1px 0px rgba($brand, 0.05), 0 6px 10px 5px rgba($brand, 0.05);
         border-radius: $br-xl;
       }
 
@@ -121,6 +118,10 @@ definePageMeta({
         align-items: flex-start;
         justify-content: space-between;
         width: 100%;
+
+        @media (max-width: $breakpoint-lg) {
+          display: none;
+        }
 
         .reading-length {
           font-size: $font-size-sm;
