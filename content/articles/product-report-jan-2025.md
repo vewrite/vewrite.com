@@ -5,7 +5,7 @@ description: "We've been very busy the last few months and are dying to share wh
 date: "2025-01-13"
 author: "Rami James, Founder"
 authorLink: "https://www.ramijames.com"
-readingLength: 4
+readingLength: 6
 ---
 
 ## What's new for Vewrite in 2025

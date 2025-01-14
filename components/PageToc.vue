@@ -60,8 +60,8 @@ onMounted(() => {
 
 #Toc {
   width: 100%;
-  padding: 0 0 0 $spacing-md;
-  border-left: $border;
+  border-bottom: $border;
+  margin-bottom: $spacing-md;
 
   ul {
     padding-left: 0;

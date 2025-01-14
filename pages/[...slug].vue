@@ -7,19 +7,23 @@
         <section class="article-wrapper">
           <section class="article-content">
             <img :src="data?.image" class="article-image" />
+            <section class="table-of-contents">
+              <h4>Table of Contents</h4>
+              <PageToc />
+              <p class="author">
+                <span>By {{ data?.author }}</span>
+              </p>
+              <p class="reading-length">
+                <span>{{ data?.readingLength }} min. to read</span>
+                <span>{{ data?.date }}</span>
+              </p>
+            </section>
             <section class="content-wrapper">
               <ContentDoc>
                 <template #not-found>
                   <h1>Document not found</h1>
                 </template>
               </ContentDoc>
-            </section>
-            <section class="table-of-contents">
-              <PageToc />
-              <p class="reading-length">
-                <span>{{ data?.readingLength }} min. to read</span>
-                <span>{{ data?.date }}</span>
-              </p>
             </section>
           </section>
         </section>
@@ -84,10 +88,8 @@ definePageMeta({
     }
 
     .article-content {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-      gap: $spacing-lg;
+      display: flex;
+      flex-direction: column;
 
       .content-wrapper {
         grid-column: span 2 / span 2;
@@ -102,22 +104,19 @@ definePageMeta({
         width: 100%;
         margin-bottom: $spacing-md;
         margin: 0 0 $spacing-md;
-        grid-column: span 3 / span 3;
         border-radius: $br-xl;
       }
 
       .table-of-contents {
-        grid-column-start: 3;
-        grid-row-start: 2;
-        position: sticky;
-        top: $spacing-lg;
-        height: fit-content;
-        gap: $spacing-md;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
         width: 100%;
+
+        h4 { 
+          margin: $spacing-md 0 $spacing-sm;
+        }
 
         @media (max-width: $breakpoint-lg) {
           display: none;
