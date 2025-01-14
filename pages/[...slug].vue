@@ -10,13 +10,15 @@
             <section class="table-of-contents">
               <h4>Table of Contents</h4>
               <PageToc />
-              <p class="author">
-                <span>By {{ data?.author }}</span>
-              </p>
-              <p class="reading-length">
-                <span>{{ data?.readingLength }} min. to read</span>
-                <span>{{ data?.date }}</span>
-              </p>
+              <section class="additions">
+                <p class="author">
+                  <span>By {{ data?.author }}</span>
+                </p>
+                <p class="reading-length">
+                  <span>{{ data?.readingLength }} min. to read</span>
+                  <span>{{ data?.date }}</span>
+                </p>
+              </section>
             </section>
             <section class="content-wrapper">
               <ContentDoc>
@@ -91,13 +93,12 @@ definePageMeta({
       display: flex;
       flex-direction: column;
 
-      .content-wrapper {
-        grid-column: span 2 / span 2;
-        grid-row-start: 2;
+      p {
+        color: red;
+      }
 
-        @media (max-width: $breakpoint-lg) {
-          grid-column: span 3 / span 1;
-        }
+      .content-wrapper div {
+        max-width: 720px;
       }
 
       .article-image {
@@ -114,6 +115,33 @@ definePageMeta({
         justify-content: space-between;
         width: 100%;
 
+        .additions {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+
+          .author {
+            font-size: $font-size-sm;
+            color: rgba($black, 0.5);
+            text-align: center;
+            margin: 0 0 $spacing-md;
+          }
+
+          .reading-length {
+            font-size: $font-size-sm;
+            color: rgba($black, 0.5);
+            text-align: center;
+            margin: 0 0 $spacing-md;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: $spacing-md;
+          }
+        }
+
         h4 { 
           margin: $spacing-md 0 $spacing-sm;
         }
@@ -122,33 +150,10 @@ definePageMeta({
           display: none;
         }
 
-        .reading-length {
-          font-size: $font-size-sm;
-          color: rgba($black, 0.5);
-          text-align: center;
-          margin: 0 0 $spacing-md;
-          display: flex;
-          flex-direction: row;
-          align-items: flex-start;
-          justify-content: space-between;
-          width: 100%;
-        }
       }
     }
   }
 
-  // .top {
-  //   margin: 0 auto;
-  //   gap: $spacing-sm;
-
-  //   .button {
-  //     margin-bottom: $spacing-md;
-  //   }
-
-  //   p {
-  //     margin: 0;
-  //   }
-  // }
 }
 
 

@@ -197,7 +197,7 @@ h5 {
 
 p {
     margin: 0 0 $spacing-sm 0;
-    line-height: 1.5;
+    line-height: 1.8;
 }
 
 p.details {
@@ -249,11 +249,13 @@ pre {
     font-size: $font-size-sm;
 }
 
-ul {
+ul, ol {
     margin: 0 0 $spacing-md 0;
+    line-height: 1.8;
 
     li {
         margin: 0 0 $spacing-xxs 0;
+        line-height: 1.8;
 
         ul {
             margin: $spacing-xs 0;

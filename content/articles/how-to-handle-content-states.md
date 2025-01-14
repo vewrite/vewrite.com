@@ -1,5 +1,5 @@
 ---
-title: "How to handle content state"
+title: "How to handle content state in a writing project"
 image: "/content/product-report-jan-2025.png"
 description: "Vewrite's product is based on structured workflows with discrete content states. Let's look at how that impacts how we design the product."
 date: "2025-01-15"
@@ -8,7 +8,9 @@ authorLink: "https://www.ramijames.com"
 readingLength: 4
 ---
 
-## Problem Introduction
+## Content state is deceptively tricky
+
+### Problem Introduction
 
 We've been thinking hard about what workflow state actually means for the better part of a year now. Before we dive into the nitty-gritty details, perhaps we should define some of the basics first.
 
@@ -28,7 +30,7 @@ It's not a simple problem because what the content is often depends on the state
 
 Each state's content may be something else, and how Vewrite as a product handles these different states and the associated content is not straightforward. From a user experience perspective this can be clunky and unwieldy, and requires an elegant solution that ensures that the stream of work is easy.
 
-## Designing a solution
+### Designing a solution
 
 Our initial implementation assumed that each workflow would have a set of states, and each state would have it's content. Straightforward and simple. We implemented this in a couple of weeks, and pushed it out to our core group of beta testers. Their initial feedback was that it was clunky and misrepresented how they actually work. 
 

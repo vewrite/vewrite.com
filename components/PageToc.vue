@@ -65,20 +65,15 @@ onMounted(() => {
 
   ul {
     padding-left: 0;
-    margin: 0 0 $spacing-md;
+    margin: 0 0 $spacing-sm;
 
     li {
       margin: 0 0 $spacing-sm;
       padding: 0;
       list-style: none;
 
-      &:first-of-type {
-        margin-top: $spacing-sm;
-      }
-
       a {
         font-weight: bold;
-        padding: $spacing-xs 0;
         color: $black;
         text-decoration: none;
         transition: color 0.2s;
@@ -93,9 +88,11 @@ onMounted(() => {
         padding-left: 0;
 
         li {
-          margin: 0 0 $spacing-xs $spacing-sm;
+          margin: 0 0 0 $spacing-sm;
           padding: 0;
-          list-style: disc;
+          padding-left: $spacing-sm;
+          list-style: none;
+          border-left: 2px solid $brand;
 
           &:first-of-type {
             margin-top: $spacing-sm;
