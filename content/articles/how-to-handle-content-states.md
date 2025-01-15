@@ -14,33 +14,27 @@ readingLength: 4
 
 We've been thinking hard about what workflow state actually means for the better part of a year now. Before we dive into the nitty-gritty details, perhaps we should define some of the basics first.
 
-In Vewrite, there are a few canonical items that define how the system works. We have:
+In Vewrite, there are a few canonical items, and their relationships, that define how the system works. We have:
 
 - Workflows that have states
 - Projects that have workflows
 - Deliverables which belong to projects
 
-Deliverables are written content pieces. For example, if you have a project for a client and they require that your team writes for them ten content pieces, each of those is one deliverable. You deliver them to the client. 
+Deliverables are written content pieces. For example, if you have a project for a client and they require that your team writes ten content pieces, each of those is one deliverable. You deliver them to the client.
 
 Each of these deliverables get pushed through a workflow which will have a set of discrete states.
 
-### The Problem
+### Using Live Prototyping to Expose Product Weaknesses
 
-The problem that we have been wrangling with is, "what does it mean for the content itself as it gets pushed through the workflow?"
+At Vewrite we're big believers in using live prototyping to get a deep understanding for what actually works with real users. It's fine to have beautiful designs in Figma, and often better to have clickable prototypes that you can use to get a feel for your product, but in truth none of these things will really give you the feedback that you need to progressively improve your offering. 
 
-It's not a simple problem because what the content is often depends on the state that you are currently in within the workflow. For example, a deliverable that is in the OUTLINE state will have content that is an outline and will not be a written draft that you'd deliver to a client. It isn't equivalent to the draft and likely needs to be referenced during the writing process itself. It is its own thing.
+You need a live prototype that someone can try to use.
 
-Each state's content may be something else, and how Vewrite as a product handles these different states and the associated content is not straightforward. From a user experience perspective this can be clunky and unwieldy, and requires an elegant solution that ensures that the stream of work is easy to follow, and most importantly: doesn't get in your way as you do it.
+Our initial implementation assumed that each workflow would have a set of states, and each state would have it's own content. Conceptually this is straightforward, and from a development perspective it isn't hard. We implemented this in a couple of weeks, and pushed it out to our core group of beta testers. Their initial feedback was that it was clunky and misrepresented how they actually work. Highly valuable feedback for a gestating product!
 
-## Designing a Solution
+When we dive deeper into why our users felt that way, we can get some insight into how they are trying to use the product, and where our big gotcha is. At the heart of the problem is a **product assumption** that all states (and their content) are equal. This is, of course, **not true for most writing projects**.
 
-### On Live Prototyping
-
-Our initial implementation assumed that each workflow would have a set of states, and each state would have it's own content. Conceptually this is straightforward, and from a development perspective it isn't hard. We implemented this in a couple of weeks, and pushed it out to our core group of beta testers. Their initial feedback was that it was clunky and misrepresented how they actually work. 
-
-When we dive into what that actually means, we can get some insight into why. At the heart of the problem is a design assumption that all states (and their content) are equal. This is, of course, not true for most writing projects.
-
-When writing, you'll tend to have a core deliverable and a constellation of actionable items around that deliverable that are supportive in nature. This sounds very esoteric, so let's break it down and explain exactly what this means, because it really gets to the heart of the issue.
+When writing, you'll tend to have a core deliverable and a constellation of actionable items around that deliverable that are supportive in nature. This sounds is very abstract, so let's break it down and explain exactly what this means, because it really gets to the heart of the issue.
 
 You're writing an article which will eventually be published on a client's website. Typically, you'll agree with your client what the scope of the article should encompass. This is your topic, and there will be some research that goes into figuring out the exact details of what you'll be writing. As a way to make sure that you and your client are on the same page, it's good practice to build out a rough outline of the written piece and get that approved before you start writing the draft. Once you have this approved, you can write your draft, and get your client's feedback. It may take a few rounds, but eventually you and your client will be happy with the output and the deliverable will be approved and published.
 
@@ -50,4 +44,29 @@ If we approach this in a linear fashion then we encounter a few problems with ou
 
 1. It's hard to reference information that is critical for the writing process if it is closely tied to the the states in the workflow
 2. Referenced information like research materials, outlines, and review comments is not static and likely will change during the life-cycle of the deliverable
-3. 
+
+Not an ideal way to work, and not good enough to supplant the current ways that writers work. We can do better.
+
+### The Problem
+
+The problem that we really have been wrangling with is, **"what is content itself as it gets pushed through a workflow?"**
+
+It's not a simple problem because what the content is often depends on the state that you are currently in within the workflow. For example, a deliverable that is in the OUTLINE state will have content that is an outline and will not be a written draft that you'd deliver to a client. It isn't equivalent to the draft and likely needs to be referenced during the writing process itself. It is its own thing.
+
+Each state's content may be something else, and how Vewrite as a product handles these different states and the associated content is not straightforward. From a user experience perspective this can be clunky and unwieldy, and requires an elegant solution that ensures that the stream of work is easy to follow, and most importantly: doesn't get in your way as you do it.
+
+## Designing a Solution
+
+### Defining Success
+
+For us to be able to confirm that we have successfully designed and implemented a solution, we must be able to define what success means.
+
+In this case, we want users to be able to:
+
+1. Use the Workflow to define who does what and when
+2. Have access to supporting information, like requirements and outlines, during the writing process
+
+With this in mind, let's take a look at the proposed solutions and discuss their pros and cons.
+
+### Proposed Solutions
+

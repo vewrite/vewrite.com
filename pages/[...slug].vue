@@ -50,7 +50,7 @@ definePageMeta({
 @import 'assets/_variables.scss';
 
 .single-article {
-  padding: $spacing-xl 0;
+  padding: $spacing-md 0;
 
   .article-title {
     font-size: 84px;
