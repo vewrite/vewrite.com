@@ -1,5 +1,11 @@
 <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="9" cy="29" r="6" stroke="#4787E8" stroke-width="2" stroke-linecap="round"/>
-<path d="M15.5 29H16C19.3137 29 22 26.3137 22 23V21C22 17.6863 24.6863 15 28 15H29" stroke="#4787E8" stroke-width="2" stroke-linecap="round"/>
-<circle cx="35" cy="15" r="6" stroke="#4787E8" stroke-width="2" stroke-linecap="round"/>
+<circle cx="9" cy="29" r="7" fill="#5C7DF6"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M28 16C25.2386 16 23 18.2386 23 21V23C23 26.866 19.866 30 16 30H15.5C14.9477 30 14.5 29.5523 14.5 29C14.5 28.4477 14.9477 28 15.5 28H16C18.7614 28 21 25.7614 21 23V21C21 17.134 24.134 14 28 14H29C29.5523 14 30 14.4477 30 15C30 15.5523 29.5523 16 29 16H28Z" fill="url(#paint0_linear_37_8)"/>
+<circle cx="35" cy="15" r="7" fill="#5C7DF6"/>
+<defs>
+<linearGradient id="paint0_linear_37_8" x1="18.5789" y1="17.5556" x2="24.4076" y2="23.7585" gradientUnits="userSpaceOnUse">
+<stop offset="0.235192" stop-color="#9AB0FD"/>
+<stop offset="0.82007" stop-color="#C3D5AD"/>
+</linearGradient>
+</defs>
 </svg>
