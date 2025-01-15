@@ -12,7 +12,7 @@
               <PageToc />
               <section class="additions">
                 <p class="author">
-                  <span>By {{ data?.author }}</span>
+                  <span>By <a :href="data?.authorLink">{{ data?.author }}</a></span>
                 </p>
                 <p class="reading-length">
                   <span>{{ data?.readingLength }} min. to read</span>

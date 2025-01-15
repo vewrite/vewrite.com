@@ -257,7 +257,7 @@ ul, ol {
         margin: 0 0 $spacing-xxs 0;
         line-height: 1.8;
 
-        ul {
+        ul, ol {
             margin: $spacing-xs 0;
         }
     }

@@ -8,13 +8,12 @@
       </div>
     </section>
     <main class="articles">
-      <ContentList path="/articles" v-slot="{ list }">
-        <nuxt-link v-for="article in list" :key="article._path" :to="article._path">
-          <img :src="article.image" :alt="article.title" />
-          <h2>{{ article.title }}</h2>
-          <p class="light">{{ article.description }}</p>
-        </nuxt-link>
-      </ContentList>
+      <nuxt-link v-for="article in articles" :key="article._path" :to="article._path">
+        <img :src="article.image" :alt="article.title" />
+        <h2>{{ article.title }}</h2>
+        <!-- <p class="date">{{ article.date }}</p> -->
+        <p class="light">{{ article.description }}</p>
+      </nuxt-link>
     </main>
   </NuxtLayout>
 </template>
@@ -26,6 +25,9 @@ import { storeToRefs } from 'pinia';
 
 const joinStore = useJoinStore();
 const { joining } = storeToRefs(joinStore);
+
+const articles = await queryContent('articles')
+  .find();
 
 </script>
 
@@ -74,7 +76,7 @@ const { joining } = storeToRefs(joinStore);
 .articles {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: $spacing-xl;
+  gap: $spacing-lg;
   margin: 0 auto $spacing-xxl;
   padding: $spacing-md 0;
   max-width: $max-width;
@@ -97,6 +99,13 @@ const { joining } = storeToRefs(joinStore);
     text-decoration: none;
     transition: all 0.3s;
     width: 100%;
+    padding-bottom: $spacing-lg;
+
+    .date {
+      margin: 0 0 $spacing-sm;
+      font-size: $font-size-sm;
+      color: rgba($black, 0.35);
+    }
 
     img {
       border-radius: $br-xl;
