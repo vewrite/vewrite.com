@@ -61,7 +61,7 @@
                   <span class="section-title">About Vewrite</span>
                   <nuxt-link to="/product/project-management">
                     <img src="/images/icons/project.svg" alt="Learn about Vewrite Projects" />
-                    <span>Project</span>
+                    <span>Project manangement</span>
                   </nuxt-link>
                   <nuxt-link to="/product/content-creation">
                     <img src="/images/icons/content.svg" alt="Learn about Vewrite Content Creation" />

@@ -8,9 +8,9 @@ authorLink: "https://www.ramijames.com"
 readingLength: 4
 ---
 
-## Content state is deceptively tricky
+## Problem Introduction
 
-### Problem Introduction
+### Understanding the Role of Content in Workflows
 
 We've been thinking hard about what workflow state actually means for the better part of a year now. Before we dive into the nitty-gritty details, perhaps we should define some of the basics first.
 
@@ -24,15 +24,19 @@ Deliverables are written content pieces. For example, if you have a project for 
 
 Each of these deliverables get pushed through a workflow which will have a set of discrete states.
 
+### The Problem
+
 The problem that we have been wrangling with is, "what does it mean for the content itself as it gets pushed through the workflow?"
 
-It's not a simple problem because what the content is often depends on the state that you are currently in within the workflow. For example, a deliverable that is in the OUTLINE state will have content that is an outline and will not be a written piece that you'd deliver. 
+It's not a simple problem because what the content is often depends on the state that you are currently in within the workflow. For example, a deliverable that is in the OUTLINE state will have content that is an outline and will not be a written draft that you'd deliver to a client. It isn't equivalent to the draft and likely needs to be referenced during the writing process itself. It is its own thing.
 
-Each state's content may be something else, and how Vewrite as a product handles these different states and the associated content is not straightforward. From a user experience perspective this can be clunky and unwieldy, and requires an elegant solution that ensures that the stream of work is easy.
+Each state's content may be something else, and how Vewrite as a product handles these different states and the associated content is not straightforward. From a user experience perspective this can be clunky and unwieldy, and requires an elegant solution that ensures that the stream of work is easy to follow, and most importantly: doesn't get in your way as you do it.
 
-### Designing a solution
+## Designing a Solution
 
-Our initial implementation assumed that each workflow would have a set of states, and each state would have it's content. Straightforward and simple. We implemented this in a couple of weeks, and pushed it out to our core group of beta testers. Their initial feedback was that it was clunky and misrepresented how they actually work. 
+### On Live Prototyping
+
+Our initial implementation assumed that each workflow would have a set of states, and each state would have it's own content. Conceptually this is straightforward, and from a development perspective it isn't hard. We implemented this in a couple of weeks, and pushed it out to our core group of beta testers. Their initial feedback was that it was clunky and misrepresented how they actually work. 
 
 When we dive into what that actually means, we can get some insight into why. At the heart of the problem is a design assumption that all states (and their content) are equal. This is, of course, not true for most writing projects.
 

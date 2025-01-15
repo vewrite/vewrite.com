@@ -1,7 +1,7 @@
 <template>
   <section class="get-started">
     <div class="container">
-      <h2 class="get-started-header">We're accepting beta testers <span class="highlight brand big">right now</span></h2>
+      <h2 id="get-started" class="get-started-header">We're accepting beta testers <span class="highlight brand big">right now</span></h2>
       <p class="get-started-convincer">To ensure that we stay focused, we are limiting access to the first users who apply. Don't miss your opportunity to try out the future of project management for content creation.</p>
       <spline-viewer class="spline-viewer" url="https://prod.spline.design/e-9M6KJB-YAmadkR/scene.splinecode" @click="toggleJoin()"></spline-viewer>
     </div>

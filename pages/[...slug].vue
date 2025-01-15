@@ -45,7 +45,7 @@ definePageMeta({
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 @import 'assets/_variables.scss';
 
@@ -92,14 +92,6 @@ definePageMeta({
     .article-content {
       display: flex;
       flex-direction: column;
-
-      p {
-        color: red;
-      }
-
-      .content-wrapper div {
-        max-width: 720px;
-      }
 
       .article-image {
         width: 100%;
