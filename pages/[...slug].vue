@@ -94,7 +94,6 @@ definePageMeta({
       flex-direction: column;
 
       .article-image {
-        width: 100%;
         margin-bottom: $spacing-md;
         margin: 0 0 $spacing-md;
         border-radius: $br-xl;

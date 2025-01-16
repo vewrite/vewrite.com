@@ -35,11 +35,19 @@ const { joining } = storeToRefs(joinStore);
   }
 
   img {
-    max-width: 100%;
     width: 100%;
+    left: 0;
+    right: 0;
+    position: relative;
     margin: $spacing-md 0;
     border-radius: $br-md;
     outline: 1px solid rgba($black, 0.05);
+
+    @media (min-width: $breakpoint-xxl) {
+      width: 120%;
+      left: -10%;
+      right: -10%;
+    }
   }
 }
 
