@@ -14,6 +14,10 @@
         <p class="date">{{ article.date }}</p>
         <p class="light">{{ article.description }}</p>
       </nuxt-link> -->
+      <nuxt-link to="/articles/product-report-feb-2025">
+        <img src="/content/product-report-jan-2025.png" alt="Introducing Vewrite" />
+        <h2>Product Report February 2025</h2>
+      </nuxt-link>
       <nuxt-link to="/articles/how-to-handle-content-states">
         <img src="/content/content-state.png" alt="Introducing Vewrite" />
         <h2>How to handle content state for a writing project</h2>
