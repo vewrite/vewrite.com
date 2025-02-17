@@ -15,15 +15,15 @@
         <p class="light">{{ article.description }}</p>
       </nuxt-link> -->
       <nuxt-link to="/articles/product-report-feb-2025">
-        <img src="/content/product-report-jan-2025.png" alt="Introducing Vewrite" />
+        <img src="/content/product-report-jan-2025.png" alt="Vewrite Product Report February 2025" />
         <h2>Product Report February 2025</h2>
       </nuxt-link>
       <nuxt-link to="/articles/how-to-handle-content-states">
-        <img src="/content/content-state.png" alt="Introducing Vewrite" />
+        <img src="/content/content-state.png" alt="How to handle content state" />
         <h2>How to handle content state for a writing project</h2>
       </nuxt-link>
       <nuxt-link to="/articles/product-report-jan-2025">
-        <img src="/content/product-report-jan-2025.png" alt="Introducing Vewrite" />
+        <img src="/content/product-report-jan-2025.png" alt="Vewrite Product Report January 2025" />
         <h2>Product Report January 2025</h2>
       </nuxt-link>
       <nuxt-link to="/articles/introducing-vewrite">
