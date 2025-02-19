@@ -25,13 +25,15 @@ const { joining } = storeToRefs(joinStore);
 @import 'assets/_variables.scss';
 
 .single-article {
+  padding-bottom: $spacing-xl;
 
-  h2 {
-    margin: $spacing-lg 0 $spacing-md;
-  }
-
-  h3 {
-    margin: $spacing-md 0 $spacing-sm;
+  strong {
+    font-weight: bold;
+    background: rgba($brand, 0.1);
+    padding: 0 $spacing-xxxs;
+    border-radius: $br-md;
+    transform: skew(-5deg);
+    display: inline-block;
   }
 
   img {

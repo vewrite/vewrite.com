@@ -175,7 +175,7 @@ h1 {
 
 h2 {
     font-size: $font-size-xxl;
-    margin: $spacing-lg 0 $spacing-md;
+    margin: $spacing-xl 0 $spacing-md;
     letter-spacing: -1px;
 }
 
@@ -187,12 +187,14 @@ h3 {
 
 h4 {
     font-size: $font-size-lg;
-    margin: $spacing-lg 0 $spacing-md;
+    margin: $spacing-md 0 $spacing-sm;
+    color: $black;
 }
 
 h5 {
     font-size: $font-size-md;
-    margin: $spacing-lg 0 $spacing-md;
+    margin: $spacing-md 0 $spacing-sm;
+    color: $black;
 }
 
 p {

@@ -14,6 +14,10 @@
         <p class="date">{{ article.date }}</p>
         <p class="light">{{ article.description }}</p>
       </nuxt-link> -->
+      <nuxt-link to="/articles/why-you-should-use-a-structured-writing-workflow">
+        <img src="/content/structured-writing-workflow.png" alt="Why you should use a structured writing workflow" />
+        <h2>Why you should use a structured writing workflow</h2>
+      </nuxt-link>
       <nuxt-link to="/articles/product-report-feb-2025">
         <img src="/content/product-report-jan-2025.png" alt="Vewrite Product Report February 2025" />
         <h2>Product Report February 2025</h2>
