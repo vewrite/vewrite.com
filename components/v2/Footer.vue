@@ -27,6 +27,8 @@
             <h4>Popular Articles</h4>
             <nuxt-link to="/articles/introducing-vewrite">Introducing Vewrite</nuxt-link>
             <nuxt-link to="/articles/product-report-jan-2025">Product Report January 2025</nuxt-link>
+            <nuxt-link to="/articles/product-report-feb-2025">Product Report February 2025</nuxt-link>
+            <nuxt-link to="/articles/why-you-should-use-a-structured-writing-workflow">Why you should use a structured writing workflow</nuxt-link>
           </div>
         </section>
         <section class="footer-links">
