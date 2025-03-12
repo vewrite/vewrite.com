@@ -7,8 +7,9 @@
         <h1>Unleash the full power of your writing team</h1>
         <p class="hero-description">Vewrite is a project management and writing tool that can shorten your timelines using structured workflows, a modern writing experience, and built-in stakeholder review and approval.</p>
         <section class="hero-button">
-          <div class="loader"></div>
-          <spline-viewer class="spline-viewer" url="https://prod.spline.design/e-9M6KJB-YAmadkR/scene.splinecode" @click="toggleJoin()"></spline-viewer>
+          <a href="https://app.vewrite.com" class="button large">Get Started</a>
+          <!-- <div class="loader"></div> -->
+          <!-- <spline-viewer class="spline-viewer" url="https://prod.spline.design/e-9M6KJB-YAmadkR/scene.splinecode" @click="toggleJoin()"></spline-viewer> -->
         </section>
         <p class="legal-text">Free for beta users. Limited to 1 project. No credit card required.</p>
       </section>
@@ -175,7 +176,7 @@ const toggleJoin = () => {
       }
 
       p.legal-text {
-        color: rgba($black, 0.25);
+        color: rgba($black, 0.85);
         font-size: $font-size-xs;
       }
 
@@ -191,26 +192,14 @@ const toggleJoin = () => {
         width: 300px;
         margin: 0 auto;
 
-        .loader {
-          position: absolute;
-          top: 50px;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          animation: spin .5s linear infinite;
-          border: 2px solid rgba($black, 0.1);
-          border-top: 2px solid $brand;
-          border-radius: 50%;
-          width: 24px;
-          height: 24px;
-        }
-
-        &:hover {
-          transform: scale(1.05);
-        }
-
-        .spline-viewer {
-          height: 120px;
-          cursor: pointer;
+        .button {
+          display: flex;
+          flex-direction: row;
+          gap: $spacing-xs;
+          background: $brand;
+          color: $white;
+          font-size: $font-size-lg;
+          padding: $spacing-md $spacing-lg;
         }
       }
     }

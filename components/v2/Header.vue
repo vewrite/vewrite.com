@@ -87,8 +87,7 @@
           <li><nuxt-link to="/articles">Articles</nuxt-link></li>
           <!-- <li><nuxt-link to="/pricing">Pricing</nuxt-link></li> -->
         </ul>
-        <!-- <a href="https://app.vewrite.com" class="button desktop-login large">Login</a> -->
-        <button class="button desktop-login large" @click="toggleJoin()">Join the waitlist</button>
+        <a href="https://app.vewrite.com" class="button large">Login</a>
       </nav>
     </section>
   </nav>
