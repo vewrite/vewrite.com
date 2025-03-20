@@ -8,12 +8,6 @@
       </div>
     </section>
     <main class="articles">
-      <!-- <nuxt-link v-for="article in articles" :key="article._path" :to="article._path">
-        <img :src="article.image" :alt="article.title" />
-        <h2>{{ article.title }}</h2>
-        <p class="date">{{ article.date }}</p>
-        <p class="light">{{ article.description }}</p>
-      </nuxt-link> -->
       <nuxt-link to="/articles/product-report-mar-2025">
         <img src="/content/product-report-jan-2025.png" alt="Vewrite Product Report March 2025" />
         <h2>Product Report March 2025</h2>
