@@ -4,12 +4,10 @@
       <spline-viewer class="hero-spiral" url="https://prod.spline.design/M0V-7n8yBKCYw0oC/scene.splinecode"></spline-viewer>
       <spline-viewer class="hero-cube" url="https://prod.spline.design/XpyEEeds12UTqHgT/scene.splinecode"></spline-viewer>
       <section class="hero-text">
-        <h1>Unleash the full power of your writing team</h1>
+        <h1>Project management for content writers</h1>
         <p class="hero-description">Vewrite is a project management and writing tool that can shorten your timelines using structured workflows, a modern writing experience, and built-in stakeholder review and approval.</p>
         <section class="hero-button">
           <a href="https://app.vewrite.com" class="button large">Get Started</a>
-          <!-- <div class="loader"></div> -->
-          <!-- <spline-viewer class="spline-viewer" url="https://prod.spline.design/e-9M6KJB-YAmadkR/scene.splinecode" @click="toggleJoin()"></spline-viewer> -->
         </section>
         <p class="legal-text">Free for beta users. Limited to 1 project. No credit card required.</p>
       </section>
