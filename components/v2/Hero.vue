@@ -4,8 +4,9 @@
       <spline-viewer class="hero-spiral" url="https://prod.spline.design/M0V-7n8yBKCYw0oC/scene.splinecode"></spline-viewer>
       <spline-viewer class="hero-cube" url="https://prod.spline.design/XpyEEeds12UTqHgT/scene.splinecode"></spline-viewer>
       <section class="hero-text">
-        <h1>Project management for content writers</h1>
+        <h1>Advanced project management for content writers</h1>
         <p class="hero-description">Vewrite is a project management and writing tool that can shorten your timelines using structured workflows, a modern writing experience, and built-in stakeholder review and approval.</p>
+        <p class="hero-description">Think: Trello and Google Docs had a baby.</p>
         <section class="hero-button">
           <a href="https://app.vewrite.com" class="button large">Get Started</a>
         </section>
