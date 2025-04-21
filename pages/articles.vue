@@ -8,6 +8,10 @@
       </div>
     </section>
     <main class="articles">
+      <nuxt-link to="/articles/product-report-apr-2025">
+        <img src="/content/product-report-jan-2025.png" alt="Vewrite Product Report April 2025" />
+        <h2>Product Report April 2025</h2>
+      </nuxt-link>
       <nuxt-link to="/articles/product-report-mar-2025">
         <img src="/content/product-report-jan-2025.png" alt="Vewrite Product Report March 2025" />
         <h2>Product Report March 2025</h2>
