@@ -12,7 +12,11 @@
         </section>
         <p class="legal-text">Free for beta users. Limited to 1 project. No credit card required.</p>
 
-        <a href="https://twelve.tools" target="_blank"><img src="https://twelve.tools/badge2-white.svg" alt="Featured on Twelve Tools" width="200" height="54"></a>
+        <div class="hero-embeds">
+          <a href="https://www.producthunt.com/posts/vewrite?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-vewrite" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=955824&theme=light&t=1745311206566" alt="Vewrite - Advanced&#0032;project&#0032;management&#0032;for&#0032;content&#0032;writers | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+          <a href="https://twelve.tools" target="_blank"><img src="https://twelve.tools/badge2-white.svg" alt="Featured on Twelve Tools" width="200" height="54"></a>
+        </div>
+          
 
       </section>
       <section class="hero-image">
@@ -211,6 +215,15 @@ const toggleJoin = () => {
           font-size: $font-size-lg;
           padding: $spacing-md $spacing-lg;
         }
+      }
+
+      .hero-embeds {
+        display: flex;
+        flex-direction: row;
+        gap: $spacing-sm;
+        justify-content: center;
+        margin: $spacing-lg 0;
+
       }
     }
 
