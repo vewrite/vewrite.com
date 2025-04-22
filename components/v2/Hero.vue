@@ -11,6 +11,9 @@
           <a href="https://app.vewrite.com" class="button large">Get Started</a>
         </section>
         <p class="legal-text">Free for beta users. Limited to 1 project. No credit card required.</p>
+
+        <a href="https://twelve.tools" target="_blank"><img src="https://twelve.tools/badge2-white.svg" alt="Featured on Twelve Tools" width="200" height="54"></a>
+
       </section>
       <section class="hero-image">
         <div class="desktop-image-wrapper">
